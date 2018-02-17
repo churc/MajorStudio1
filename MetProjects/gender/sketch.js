@@ -35,7 +35,8 @@ function setup(){
 	 createCanvas(windowWidth,windowHeight);
 	 analyzeData();
 	 displayData();
-	 drawLabels();
+   displaySingleBar();
+	 // drawLabels();
    analyzeGender();
 }
 
@@ -224,36 +225,6 @@ function analyzeGender(){
 
 ///////////////
 
-
-
-
-
-// ////DRAW BAR CHART for yrFemTotals and yrMaleTotals
-// var x,y,w,h;
-// fill(80,80,255);
-
-// x = 0;
-// y = (height*(j/gender[i]));
-// w = width/max(gender)*gender[i];
-// h = (height/gender.length)-5;
-
-// push();                    // <- push a drawing context
-//     translate(x,y);            // <- move to position
-//     rect(0,0,w,h);             // <- draw a rectangle
-//     fill(255);                 // <- change colors
-//     // text(gender[i],10,h/2);      // <- draw the label 
-//     pop();                     // <- reset the drawing context
-
-
-
-
-
-
-
-
-
-
-
 ////WORKS TO DISPLAY PER YEAR by GENDER
 function displayData(){
 	noStroke();
@@ -331,75 +302,198 @@ function displayData(){
   console.log(yrMaleTotals);
 }
 
+///////////////
 
-////WORKS TO DRAW BAR CHART BY YEAR
-function drawLabels(){
-
-	//x axis
-	stroke(77,77,77);
-	//just the lines
- 	line(margin,height-margin,width-margin,height-margin);
-  	noStroke();
-  	textAlign(CENTER);
-
-  // draw the sections and add text for each section
-	//go throught the years from 1800-2017
-  for(var i=1850; i<=2017; i+=10){
-   var y = height-margin+30;
-    x = map(i,1850,2017, margin, width-margin);
-    // x = map(i,0, allYears.length,margin, width-margin);
-    noStroke();
-    fill(77,77,77);
-    // fill(0);
-    text(i, x, y);
-    stroke(77,77,77);
-    strokeWeight(1);
-    // stroke(0);
-    line(x,y-22,x, y-30);
-    //line(x,y-12,x, y-30);
-}
-
-  // label the whole axis
-  textAlign(RIGHT);
+// ////try vertical BAR CHART for totals 
+function displaySingleBar(){
   noStroke();
-  textStyle(BOLD);
-  text("Year", width-margin,height-margin+70);
+  fill(255,0,0);
 
-//   // 2. Let's draw the y Axis
-  stroke(77,77,77);
-  line(margin,height-margin ,margin,margin);
-  noStroke();
-  textAlign(RIGHT);
-  textStyle(NORMAL);
+var x,y,w,h;
 
-  for(var i=0; i<maxObjects; i+=50){
-    var x = margin-20;
-    y = map(i,0, maxObjects,height-margin, margin);
+var singleData = [2021, 10817, 128, 1314, 41];
+
+// x = 0;
+// y = (height*(j/gender[i]));
+// w = width/max(gender)*gender[i];
+// h = (height/gender.length)-5;
+
+// push();                    // <- push a drawing context
+//     translate(x,y);            // <- move to position
+//     rect(0,0,w,h);             // <- draw a rectangle
+//     fill(255);                 // <- change colors
+//     // text(gender[i],10,h/2);      // <- draw the label 
+//     pop();                     // <- reset the drawing context
+
+  var width = windowWidth, // canvas width and height
+      height = windowHeight,
+      margin = 20,
+      w = width - 2 * margin, // chart area width and height
+      h = height - 2 * margin;
+  
+  var barWidth =  (h / singleData.length) * 0.8; // width of bar
+  var barMargin = (h / singleData.length) * 0.2; // margin between two bars
+  
+  createCanvas(width, height);
+  
+  textSize(14);
+  
+  push();
+  translate(margin, margin); // ignore margin area
+  
+  for(var b=0; b<singleData.length; b++) {
+    push();
+    fill('green');
     noStroke();
-    fill(77,77,77);
-    //fill(0);
-    text(i, x, y+5);
-    stroke(77,77,77);
-    strokeWeight(1);
-    // stroke(0);
-    line(x+10,y,x+20,y);
-    // line(x+5,y,x+20,y);
+    // rotate(radians(90));
+    translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar
+    rect(0, 0, singleData[b], barWidth); // draw rect
+    fill('#FFF');
+    text(singleData[b], 5, barWidth/2 + 5); // write data
+
+    pop();
   }
-  textStyle(BOLD);
-  noStroke();
-  text("Artworks", margin-60,margin);
-
-//   // 3. Let's add the overall title
-  textStyle(BOLD);
-  noStroke();
-  textAlign(LEFT);
-  textSize(15);
-  fill(160,42,85);
-  text("Gender of Artists Represented in the Met Modern & Contemporary Art Collection", margin,margin-30);
-  textSize(12);
-  textStyle(NORMAL);
-  text("1850 - 2017", margin,margin-15);
+  
+  pop();
 }
+
+
+// // ////WORKS TO DRAW Horizontal BAR CHART for totals 
+// function displaySingleBar(){
+//   noStroke();
+//   fill(255,0,0);
+
+// var x,y,w,h;
+
+// var singleData = [2021, 10817, 128, 1314, 41];
+
+// // x = 0;
+// // y = (height*(j/gender[i]));
+// // w = width/max(gender)*gender[i];
+// // h = (height/gender.length)-5;
+
+// // push();                    // <- push a drawing context
+// //     translate(x,y);            // <- move to position
+// //     rect(0,0,w,h);             // <- draw a rectangle
+// //     fill(255);                 // <- change colors
+// //     // text(gender[i],10,h/2);      // <- draw the label 
+// //     pop();                     // <- reset the drawing context
+
+//   var width = 1000, // canvas width and height
+//       height = 350,
+//       margin = 20,
+//       w = width - 2 * margin, // chart area width and height
+//       h = height - 2 * margin;
+  
+//   var barWidth =  (h / singleData.length) * 0.8; // width of bar
+//   var barMargin = (h / singleData.length) * 0.2; // margin between two bars
+  
+//   createCanvas(width, height);
+  
+//   textSize(14);
+  
+//   push();
+//   translate(margin, margin); // ignore margin area
+  
+//   for(var b=0; b<singleData.length; b++) {
+//     push();
+//     fill('green');
+//     noStroke();
+//     translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar
+//     rect(0, 0, singleData[b], barWidth); // draw rect
+
+//     fill('#FFF');
+//     text(singleData[b], 5, barWidth/2 + 5); // write data
+
+//     pop();
+//   }
+  
+//   pop();
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ////WORKS TO DRAW LABELS on BAR CHART BY YEAR
+// function drawLabels(){
+
+// 	//x axis
+// 	stroke(77,77,77);
+// 	//just the lines
+//  	line(margin,height-margin,width-margin,height-margin);
+//   	noStroke();
+//   	textAlign(CENTER);
+
+//   // draw the sections and add text for each section
+// 	//go throught the years from 1800-2017
+//   for(var i=1850; i<=2017; i+=10){
+//    var y = height-margin+30;
+//     x = map(i,1850,2017, margin, width-margin);
+//     // x = map(i,0, allYears.length,margin, width-margin);
+//     noStroke();
+//     fill(77,77,77);
+//     // fill(0);
+//     text(i, x, y);
+//     stroke(77,77,77);
+//     strokeWeight(1);
+//     // stroke(0);
+//     line(x,y-22,x, y-30);
+//     //line(x,y-12,x, y-30);
+// }
+
+//   // label the whole axis
+//   textAlign(RIGHT);
+//   noStroke();
+//   textStyle(BOLD);
+//   text("Year", width-margin,height-margin+70);
+
+// //   // 2. Let's draw the y Axis
+//   stroke(77,77,77);
+//   line(margin,height-margin ,margin,margin);
+//   noStroke();
+//   textAlign(RIGHT);
+//   textStyle(NORMAL);
+
+//   for(var i=0; i<maxObjects; i+=50){
+//     var x = margin-20;
+//     y = map(i,0, maxObjects,height-margin, margin);
+//     noStroke();
+//     fill(77,77,77);
+//     //fill(0);
+//     text(i, x, y+5);
+//     stroke(77,77,77);
+//     strokeWeight(1);
+//     // stroke(0);
+//     line(x+10,y,x+20,y);
+//     // line(x+5,y,x+20,y);
+//   }
+//   textStyle(BOLD);
+//   noStroke();
+//   text("Artworks", margin-60,margin);
+
+// //   // 3. Let's add the overall title
+//   textStyle(BOLD);
+//   noStroke();
+//   textAlign(LEFT);
+//   textSize(15);
+//   fill(160,42,85);
+//   text("Gender of Artists Represented in the Met Modern & Contemporary Art Collection", margin,margin-30);
+//   textSize(12);
+//   textStyle(NORMAL);
+//   text("1850 - 2017", margin,margin-15);
+// }
 
 /////============================================
 
