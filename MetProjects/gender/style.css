@@ -35,7 +35,7 @@ html, body {
 
 canvas{
   width: 100%;  /*overide canvas width - increase to full page */
-  /*height: 2000;  */
+  height: auto;  
 }
 
 #singleBars{
