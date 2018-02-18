@@ -191,56 +191,6 @@ function analyzeGender(){
 }
 ///========
 
-
-// ///=========max number of items by one artist 
-/// using display name column 10 
-	
-//   var rows = table.getRowCount();
-
-//   var displayName = {};
-//   displayName.artist = table.getString(0,9);
-//   displayName.items = table.findRows(String(displayName.artist),9);
-// 	append(ArtistColl, displayName);
- 
-//   maxArtistColl = 0;
-//   maxArtist = null;
-    
-
-
-// for (var n=0; n<rows; n++) {
-//       //var artist = int(table.getString(i,11));
-
-//       var artist = (String(table.getString(n,9)));
-//       if(artist!=displayName.artist){
-//         var displayName = {};
-//         displayName.artist = artist;
-//         displayName.items =[];
-//         displayName.items = table.findRows(String(displayName.artist),10);
-//         append(ArtistColl, displayName);
-//         // console.log(ArtistColl);
-//         // console.log(ArtistColl)
-//         if(displayName.items.length>maxArtistColl){
-//           maxArtistColl = displayName.items.length;
-//           maxArtist = ArtistColl.length-1;
-//           console.log(maxArtist);
-//           console.log(ArtistColl[maxArtist].items.length)
-//           //maxArtistName = ArtistColl.length.ArtistColl;
-//         }
-//      }
-// //      // console.log("thisis maxArtist" + maxArtist);
-// //      // console.log("thisis ArtistColl length" + ArtistColl.length);
-// //       // console.log("The artist" + ArtistColl[maxArtistColl].artist + " that has the most objects has " + ArtistColl[maxArtistColl].items.length + " items by " + (String(maxArtistColl.displayName)));
-//   }
-// console.log("The maximum number of artworks by one artist " + ArtistColl[maxArtist].artist + "by" + ArtistColl[maxArtist].items.length);
-
-// // //   console.log("The artist" + ArtistColl[maxArtistColl].artist + " that has the most objects has " + ArtistColl[maxArtistColl].items.length + " items by " + (String(maxArtistColl.displayName)));
-// // // };
-// }
-
-//============================
-
-
-
 ////WORKS TO DISPLAY PER YEAR by GENDER
 
 function displayData(){
@@ -368,64 +318,6 @@ var singleData = [41, 1314, 128, 10817, 2021];
   } 
 }
 
-/////========================================
-// // ////WORKS TO DRAW Horizontal BAR CHART for totals 
-// function displaySingleBar(){
-//   noStroke();
-//   fill(255,0,0);
-
-// var x,y,w,h;
-
-// var singleData = [2021, 10817, 128, 1314, 41];
-
-// // x = 0;
-// // y = (height*(j/gender[i]));
-// // w = width/max(gender)*gender[i];
-// // h = (height/gender.length)-5;
-
-// // push();                    // <- push a drawing context
-// //     translate(x,y);            // <- move to position
-// //     rect(0,0,w,h);             // <- draw a rectangle
-// //     fill(255);                 // <- change colors
-// //     // text(gender[i],10,h/2);      // <- draw the label 
-// //     pop();                     // <- reset the drawing context
-
-//   var width = 1000, // canvas width and height
-//       height = 350,
-//       margin = 20,
-//       w = width - 2 * margin, // chart area width and height
-//       h = height - 2 * margin;
-  
-//   var barWidth =  (h / singleData.length) * 0.8; // width of bar
-//   var barMargin = (h / singleData.length) * 0.2; // margin between two bars
-  
-//   createCanvas(width, height);
-  
-//   textSize(14);
-  
-//   push();
-//   translate(margin, margin); // ignore margin area
-  
-//   for(var b=0; b<singleData.length; b++) {
-//     push();
-//     fill('green');
-//     noStroke();
-//     translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar
-//     rect(0, 0, singleData[b], barWidth); // draw rect
-
-//     fill('#FFF');
-//     text(singleData[b], 5, barWidth/2 + 5); // write data
-
-//     pop();
-//   }
-  
-//   pop();
-// }
-
-/////==============================
-
-
-
 
 
 // ////WORKS TO DRAW LABELS on BAR CHART BY YEAR
@@ -498,6 +390,109 @@ function drawLabels(){
 }
 
 /////============================================
+
+/////========================================
+// // ////WORKS TO DRAW Horizontal BAR CHART for totals 
+// function displaySingleBar(){
+//   noStroke();
+//   fill(255,0,0);
+
+// var x,y,w,h;
+
+// var singleData = [2021, 10817, 128, 1314, 41];
+
+// // x = 0;
+// // y = (height*(j/gender[i]));
+// // w = width/max(gender)*gender[i];
+// // h = (height/gender.length)-5;
+
+// // push();                    // <- push a drawing context
+// //     translate(x,y);            // <- move to position
+// //     rect(0,0,w,h);             // <- draw a rectangle
+// //     fill(255);                 // <- change colors
+// //     // text(gender[i],10,h/2);      // <- draw the label 
+// //     pop();                     // <- reset the drawing context
+
+//   var width = 1000, // canvas width and height
+//       height = 350,
+//       margin = 20,
+//       w = width - 2 * margin, // chart area width and height
+//       h = height - 2 * margin;
+  
+//   var barWidth =  (h / singleData.length) * 0.8; // width of bar
+//   var barMargin = (h / singleData.length) * 0.2; // margin between two bars
+  
+//   createCanvas(width, height);
+  
+//   textSize(14);
+  
+//   push();
+//   translate(margin, margin); // ignore margin area
+  
+//   for(var b=0; b<singleData.length; b++) {
+//     push();
+//     fill('green');
+//     noStroke();
+//     translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar
+//     rect(0, 0, singleData[b], barWidth); // draw rect
+
+//     fill('#FFF');
+//     text(singleData[b], 5, barWidth/2 + 5); // write data
+
+//     pop();
+//   }
+  
+//   pop();
+// }
+
+/////==============================
+
+// ///=========max number of items by one artist 
+/// using display name column 10 
+  
+//   var rows = table.getRowCount();
+
+//   var displayName = {};
+//   displayName.artist = table.getString(0,9);
+//   displayName.items = table.findRows(String(displayName.artist),9);
+//  append(ArtistColl, displayName);
+ 
+//   maxArtistColl = 0;
+//   maxArtist = null;
+    
+
+
+// for (var n=0; n<rows; n++) {
+//       //var artist = int(table.getString(i,11));
+
+//       var artist = (String(table.getString(n,9)));
+//       if(artist!=displayName.artist){
+//         var displayName = {};
+//         displayName.artist = artist;
+//         displayName.items =[];
+//         displayName.items = table.findRows(String(displayName.artist),10);
+//         append(ArtistColl, displayName);
+//         // console.log(ArtistColl);
+//         // console.log(ArtistColl)
+//         if(displayName.items.length>maxArtistColl){
+//           maxArtistColl = displayName.items.length;
+//           maxArtist = ArtistColl.length-1;
+//           console.log(maxArtist);
+//           console.log(ArtistColl[maxArtist].items.length)
+//           //maxArtistName = ArtistColl.length.ArtistColl;
+//         }
+//      }
+// //      // console.log("thisis maxArtist" + maxArtist);
+// //      // console.log("thisis ArtistColl length" + ArtistColl.length);
+// //       // console.log("The artist" + ArtistColl[maxArtistColl].artist + " that has the most objects has " + ArtistColl[maxArtistColl].items.length + " items by " + (String(maxArtistColl.displayName)));
+//   }
+// console.log("The maximum number of artworks by one artist " + ArtistColl[maxArtist].artist + "by" + ArtistColl[maxArtist].items.length);
+
+// // //   console.log("The artist" + ArtistColl[maxArtistColl].artist + " that has the most objects has " + ArtistColl[maxArtistColl].items.length + " items by " + (String(maxArtistColl.displayName)));
+// // // };
+// }
+
+//============================
 
 
 
