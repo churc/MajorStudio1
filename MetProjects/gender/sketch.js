@@ -32,12 +32,20 @@ function preload(){
 }
 
 function setup(){
-	 createCanvas(windowWidth,windowHeight);
+	 var singleBars = createCanvas(1500,11000);
+   // var yearsBars = createGraphics(1500, 2000);
 	 analyzeData();
 	 displayData();
    displaySingleBar();
 	 // drawLabels();
    analyzeGender();
+
+   // canvas.parent("singleBars");
+   singleBars.position(CENTER);
+}
+
+function windowResized() {
+  resizeCanvas(12100, 11000);
 }
 
 function analyzeData(){
@@ -311,7 +319,7 @@ function displaySingleBar(){
 
 var x,y,w,h;
 
-var singleData = [2021, 10817, 128, 1314, 41];
+var singleData = [41, 1314, 128, 2021, 10817];
 
 // x = 0;
 // y = (height*(j/gender[i]));
@@ -325,16 +333,21 @@ var singleData = [2021, 10817, 128, 1314, 41];
 //     // text(gender[i],10,h/2);      // <- draw the label 
 //     pop();                     // <- reset the drawing context
 
-  var width = windowWidth, // canvas width and height
+  // var width = windowWidth, // canvas width and height
+   var width = 11000,
       height = windowHeight,
-      margin = 20,
+      // margin = 260,
+      // w = width - 2 * margin, // chart area width and height
+      // h = height - 2 * margin;
+
+      margin = 15,
       w = width - 2 * margin, // chart area width and height
       h = height - 2 * margin;
   
-  var barWidth =  (h / singleData.length) * 0.8; // width of bar
+  var barWidth =  (h / singleData.length) * 0.1; // width of bar
   var barMargin = (h / singleData.length) * 0.2; // margin between two bars
   
-  createCanvas(width, height);
+  // createCanvas(1200,11000);
   
   textSize(14);
   
@@ -345,10 +358,10 @@ var singleData = [2021, 10817, 128, 1314, 41];
     push();
     fill('green');
     noStroke();
-    // rotate(radians(90));
+    rotate(radians(90));
     translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar
-    rect(0, 0, singleData[b], barWidth); // draw rect
-    fill('#FFF');
+    rect(20, -windowWidth/1.5, singleData[b], barWidth); // draw rect
+    fill(0,0,0);
     text(singleData[b], 5, barWidth/2 + 5); // write data
 
     pop();

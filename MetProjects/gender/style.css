@@ -7,18 +7,48 @@
     format('opentype');
   } */
 html, body {
-  height: 100%;
+  /*height: 100%;*/
+  /*width: 100%;*/
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
  /*   font-family: 'Plain-Thin', 'sans-serif';*/
   font-kerning:normal;
   font-weight: lighter;
   background-color: lightGrey;  
- overflow:hidden;
+  overflow:hidden;
 }
 
+#wrapper{
+  position:relative;  /* top left */
+  /*margin-left: auto;
+  margin-right: auto;*/
+  /*height: 100%;*/
+  /*width: 100%;*/
+  margin: 0;
+  padding: 0;
+  /*flex-direction: column;   wrapper container needs flex-direction*/
+  /*perspective: 100px;   wrapper container needs perspective */
+}
 
-#gmap {
+canvas{
+  width: 100%;  /*overide canvas width - increase to full page */
+  /*height: 2000;  */
+}
+
+#singleBars{
+  width: 100%;  /*overide canvas width - increase to full page */
+  /*height: 2000; */
+}
+
+/*#yearsBars{
+  width: 100%;  overide canvas width - increase to full page 
+}*/
+/* */
+
+/*#gmap {
   height: 100%;
   mix-blend-mode: screen;
   z-index: 4;
@@ -26,9 +56,9 @@ html, body {
   overflow:hidden;
   opacity: 0.7;
   /*display: none;*/
-  }
+/*  } */
 
-#modal {
+/*#modal {
   position:absolute;
   left:0;
   top:0;
@@ -38,17 +68,17 @@ html, body {
   font-size: 3.5vmax;
   line-height: 5vmax;
   /*font-weight: bold;*/
-  z-index: 2;
-    overflow:hidden; 
+  /*z-index: 2;*/
+ /*   overflow:hidden; 
       background-color: lightgrey;
   display: none;
 }
 
 #wrap{
   height: 100%;
-  overflow-y:auto; 
+  overflow-y:auto; */
   /*overflow-x:hidden; */
-  background-color: white;
+ /* background-color: white;
   color:black;
   margin:3vmax;
 }
@@ -66,7 +96,7 @@ html, body {
   width:9vmax;
   height:4vmax;
   /*margin-left:3vmax;*/
-}
+/*}
 .w01{
   float:right;
   width:24vmax;
@@ -155,9 +185,9 @@ html, body {
 #logos{
     width:100%;
     margin-left:3vmax;
-    margin-bottom:3vmax;
+    margin-bottom:3vmax;*/
     /*padding: 3vmax;*/
-    height:4vmax;
+/*    height:4vmax;
 }
 
 .logo{
@@ -190,10 +220,10 @@ a:hover{
   .w00{
   float:left;  
   width:9vmax;
-  height:4vmax;
+  height:4vmax;*/
   /*visibility: "none"*/
-  display: none;
-  }
+  /*display: none;*/
+ /* }
   .w02{
   float:right;
    width:24vmax;
@@ -235,4 +265,4 @@ a:hover{
     margin-right:2vmax;
   }
 
-}
+}*/
