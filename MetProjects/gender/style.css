@@ -1,11 +1,6 @@
  @font-face {
-/*font-family: 'Plain-Thin';
-  src: 
-    local('Plain-Thin'),
-    local('Plain-Thin'),
-    url('fonts/Plain-Thin.otf') 
-    format('opentype');
-  } */
+   font-family: 'Khand';
+  } 
 html, body {
   /*height: 100%;*/
   /*width: 100%;*/
@@ -16,8 +11,7 @@ html, body {
   align-items: center;
  /*   font-family: 'Plain-Thin', 'sans-serif';*/
   font-kerning:normal;
-  font-weight: lighter;
-  background-color: lightGrey;  
+  font-weight: lighter; 
   overflow:hidden;
 }
 
