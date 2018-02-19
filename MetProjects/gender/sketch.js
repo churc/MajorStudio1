@@ -32,28 +32,52 @@ function preload(){
 
 }
 
+let graphics;
+
 function setup(){
-	 var singleBars = createCanvas(1500,11500);
+   createCanvas(1500,6600);
+   graphics = createGraphics(1500,5490);
+   graphics.background(100,20);
 
    // singleBars = createGraphics(windowWidth, 11000)
    // yrData = createGraphics(1350, 7000);
-	 
+   
    // windowResized();
    analyzeData();
-	 displayData();
+   displayData();
    displaySingleBars();
    // displayYearsBars();
    analyzeGender();
-	 drawLabels();
+   drawLabels();
    
 
    // canvas.parent("singleBars");
-   singleBars.position(CENTER);
+   // singleBars.position(CENTER);
 }
+// function setup(){
+// 	 var singleBars = createCanvas(1500,11500);
+
+//    // singleBars = createGraphics(windowWidth, 11000)
+//    // yrData = createGraphics(1350, 7000);
+	 
+//    // windowResized();
+//    analyzeData();
+// 	 displayData();
+//    displaySingleBars();
+//    // displayYearsBars();
+//    analyzeGender();
+// 	 drawLabels();
+   
+
+//    // canvas.parent("singleBars");
+//    singleBars.position(CENTER);
+// }
 
 function windowResized() {
-  resizeCanvas(1500, 11500);
+  // resizeCanvas(1500, 11500);
 }
+
+
 
 function analyzeData(){
 	var count = table.getRowCount();
@@ -195,6 +219,12 @@ function analyzeGender(){
 
 function displayData(){
 
+image(graphics, 0, 50);
+  push();
+   translate(0,5490)
+   graphics.background(255,255,51,25);
+   image(graphics,0,50);   
+  pop();
   // displaySingleBars();
   // displayData();
   // image(singleBars, 20,0);
@@ -287,7 +317,7 @@ function displaySingleBars(){
 var x,y,w,h;
 
 var singleData = [41, 1314, 128, 10817, 2021];
-// var fillBars = ([186,85,211],[154,205,50],[204,147,34],[169,169,169],[0,0,0]);
+//var fillBars = [(fill("#ededed"),("#5c5c5c"),("#e5e5o5"),("#f0f0f0"),("#000"))];
 
 
    var width = 11000,
@@ -303,10 +333,12 @@ var singleData = [41, 1314, 128, 10817, 2021];
   textSize(14);
   
   for(var b=0; b<singleData.length; b++) {
-    push();
-      // fill("green");
-      fill(186,85,211, 80);
+    push();  //save 
+      //fill(fillBars);
+      // fill("#ededed");
+       fill(186,85,211, 80);
       noStroke();
+
       rotate(radians(90));   // rotate to vertical
       translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar
       // rect(20, -windowWidth/1.5, singleData[b], barWidth);
@@ -314,7 +346,7 @@ var singleData = [41, 1314, 128, 10817, 2021];
       fill(0,0,0);
       text(singleData[b], 21, barWidth/2 + -windowWidth/1.527); // write data label
 
-    pop();   // reset
+    pop();   // reset, restore
   } 
 }
 
@@ -324,9 +356,9 @@ var singleData = [41, 1314, 128, 10817, 2021];
 function drawLabels(){
 // function displayYearsBars(){
 	//x axis
-	stroke(77,77,77);
+	graphics.stroke(77,77,77);
 	//just the lines
- 	line(margin,height-margin,width-margin,height-margin);
+ 	graphics.line(margin,height-margin,width-margin,height-margin);
   	noStroke();
   	textAlign(CENTER);
 
@@ -337,13 +369,13 @@ function drawLabels(){
     x = map(i,1850,2017, margin, width-margin);
     // x = map(i,0, allYears.length,margin, width-margin);
     noStroke();
-    fill(77,77,77);
+    graphics.fill(77,77,77);
     // fill(0);
-    text(i, x, y);
-    stroke(77,77,77);
-    strokeWeight(1);
+    graphics.text(i, x, y);
+    graphics.stroke(77,77,77);
+    graphics.strokeWeight(1);
     // stroke(0);
-    line(x,y-22,x, y-30);
+    graphics.line(x,y-22,x, y-30);
     //line(x,y-12,x, y-30);
 }
 
