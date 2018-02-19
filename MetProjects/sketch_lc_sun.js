@@ -216,34 +216,34 @@ function displayData(){
    var gender = allYears[i].items[j].obj.Gender;
     if (gender === 'm') {
       fill(154,205,50);
-      rect(x,y,2,1);
+      rect(x-1,y-1,3,2);
        // console.log('m');
        totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
 
     } else if (gender === 'f') {
       fill(186,85,211);
-       rect(x,y,2,1);
+       rect(x-1,y-1,3,2);
        // console.log('f');
      totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
      // console.log(totalFemaleArtistsPerBar);
     } else if (gender === 't') {
       fill(204,147,34);
-       rect(x,y,2,1);
+       rect(x-1,y-1,3,2);
       // console.log('t');
       
     } else if (gender === 'u') {
       fill(169,169,169);
-       rect(x,y,2,1);
+       rect(x-1,y-1,3,2);
        // console.log('u');
 
     } else if (gender === 'a') {
       fill(0,0,0);
-       rect(x,y,2,1);
+       rect(x-1,y-1,3,2);
        // console.log('a');
 
     } else {
       fill(169,169,169);
-       rect(x,y,2,1);
+       rect(x-1,y-1,3,2);
       // console.log('u');
     }
 
@@ -290,8 +290,7 @@ var singleData = [41, 1314, 128, 10817, 2021];
   for(var b=0; b<singleData.length; b++) {
     push();  //save 
       //fill(fillBars);
-      // fill("#ededed");
-       fill(186,85,211, 80);
+      fill(186,85,211, 80);
       noStroke();
 
       rotate(radians(90));   // rotate to vertical
@@ -334,7 +333,7 @@ for(var i=1850; i<=2017; i+=10){
     line(x,y-22,x, y-30);
 }
 
-		// for(var i=0; i<allYears.length; i+=10){
+	// for(var i=0; i<allYears.length; i+=10){
   //   var y = height-margin+30;
   // x = map(allYears[i].year,1800,allYears[allYears.length-1].year, margin, width-margin);
   //   // x = map(i,0, allYears.length,margin, width-margin);
