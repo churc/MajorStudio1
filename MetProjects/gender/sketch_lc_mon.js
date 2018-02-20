@@ -19,7 +19,7 @@ var ArtistColl = [];
 
 var allYears = [];
 
-var minYear, maxYear, minObjects, maxObjects, maxArtist, maxArtistColl;
+var minYear, maxYear, mxYear, midYears, minObjects, maxObjects, maxArtist, maxArtistColl;
 
 var overBars;
 
@@ -196,6 +196,33 @@ for (var i=0; i<count; i++) {
  console.log("The Year " + allYears[maxYear].year + " has the most objects with " + allYears[maxYear].items.length + " items.");
  console.log("The Year " + allYears[minYear].year + " has the least objects with " + allYears[minYear].items.length + " item.");
 }
+
+///// number of artworks 1850 - 2017
+
+
+//   mxYear = null;
+
+// for (var s=0; s<=count; s++) {
+//       var year = int(table.getString(s,17));
+//       if(year!=yearNow.year){
+//         var yearNow = {};
+//         yearNow.year = year;
+//         yearNow.items =[];
+//         yearNow.items = table.findRows(String(yearNow.year),17);
+//         append(allYears, yearNow);
+        
+//         if(yearNow.items.length>maxObjects){
+//           maxObjects = yearNow.items.length;
+//           mxYear = midYears.length-1;
+//         }
+
+//      }
+// console.log("Number of artworks since 1850 is " + midYears.length + " the year with the most artworks 1850 -2017 is " + mxYear);
+
+//   }
+
+// // console.log("Number of artworks since 1850 is " + midYears + " the year with the most artworks 1850 -2017 is " + mxYear);
+// }
 
 //////====================
 
@@ -508,19 +535,19 @@ for(var i=1850; i<=2017; i+=10){
   textStyle(BOLD);
   noStroke();
   textAlign(LEFT);
-  textSize(15);
+  textSize(16);
   fill(160,42,85);
-  text("The Met: Modern & Contemporary Art Collection, Artworks by Gender", margin,margin-30);
-  textSize(12);
+  text("The Met: Modern & Contemporary Art Collection, Artworks by Gender", margin,30);
+  textSize(13);
   textStyle(NORMAL);
-  text("1850 - 2017", margin,margin-15);
-  text("14,350 Artworks, unknown dates - 2017", margin,margin);
+  text("1850 - 2017", margin,45);
+  text("14,350 Artworks, unknown dates - 2017", margin,60);
 
 ////4. Add legend
   textFont('Khand');
-  fill(92,242,145,120); //m
-  rect(90,100,25,25);
   fill(179,118,244,120);  //f
+  rect(90,100,25,25);
+  fill(92,242,145,120); //m
   rect(90,130,25,25);
   fill(168,71,5,120);  //t
   rect(90,160,25,25);
@@ -534,8 +561,8 @@ for(var i=1850; i<=2017; i+=10){
   fill (77,77,77);
   text("Artwork by:", 120,95);
   textSize(12);
-  text("male artist", 120,117);
-  text("female artist", 120,147);
+  text("female artist", 120,117);
+  text("male artist", 120,147);
   text("couple / collaborative with both genders",120,177);
   text("unknown artist",120,207);
   text("named artist, gender not yet identified",120,237)
