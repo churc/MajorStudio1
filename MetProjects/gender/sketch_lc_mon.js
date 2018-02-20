@@ -3,6 +3,7 @@ var table;
 var yrFemTotals = [];
 var barTotals =[];
 var yrMaleTotals = [];
+var barTotals2 =[];
 
 
 var FemaleTotal = [];
@@ -20,16 +21,26 @@ var allYears = [];
 
 var minYear, maxYear, minObjects, maxObjects, maxArtist, maxArtistColl;
 
+var overBars;
+
+var KhandFont, fontReady = false;
+
 var margin = 80;
+
+
+function fontRead(){
+    fontReady = true; 
+  }
 
 function preload(){
 //mytable is comma separated value "csv"
 //and has a header specifying the columns labels
  table = loadTable('assets/ModContG3final4sort.csv','csv','header');
 
+KhandFont = loadFont('libraries/Khand-Regular.ttf', fontRead);
 }
 
-// let graphics;
+
 
 function setup(){
 	 createCanvas(windowWidth,9000);
@@ -40,9 +51,10 @@ function setup(){
 	 drawLabelsCh();
    drawLabelsTot();
    drawLabelsBar();
+   showInfo();
 
    push();
-    stroke(92,242,145,100);
+    stroke(92,242,145,120);
     strokeWeight(5);
     noFill();
     beginShape(); 
@@ -61,7 +73,7 @@ function setup(){
     pop();
 
     push();
-    stroke(205,116,247,90);
+    stroke(179,118,244,120);
     // stroke(153,50,204,80); //total f/2 = 2027/2 = 1013.5
     strokeWeight(5);
     noFill();
@@ -75,7 +87,7 @@ function setup(){
 
     push();
 
-    stroke(206,75,23,80); //total t couple/collab 128/2 = 64
+    stroke(168,71,5,110); //total t couple/collab 128/2 = 64
     strokeWeight(5);
     noFill();
     beginShape();
@@ -86,7 +98,7 @@ function setup(){
 
 
     push();
-    stroke(100,100);  //total u unknown 1318/2 = 659
+    stroke(165,160,152,110);  //total u unknown 1318/2 = 659
     strokeWeight(5);
     noFill();
     beginShape();
@@ -97,7 +109,7 @@ function setup(){
     pop();
 
     push();
-    stroke(204,186,25,120);  //total a to find out 52/2 = 26
+    stroke(224,199,50,130);  //total a to find out 52/2 = 26
     strokeWeight(5);
     noFill();
     beginShape();
@@ -249,8 +261,6 @@ function analyzeGender(){
 ///========
 
 
-
-
 ///WORKS TO DISPLAY PER YEAR by GENDER
 function displayData(){
   /////move chart down 
@@ -289,23 +299,23 @@ function displayData(){
        totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
 
     } else if (gender === 'f') {
-       fill(205,116,247,60);
+       fill(179,118,244,60);
        rect(x-1,y-1,3,2);
        // console.log('f');
       totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
      // console.log(totalFemaleArtistsPerBar);
     } else if (gender === 't') {
-       fill(206,75,23,50);
+       fill(168,71,5,50);
        rect(x-1,y-1,3,2);
       // console.log('t');
       
     } else if (gender === 'u') {
-       fill(100,50);
+       fill(165,160,152,50);
        rect(x-1,y-1,3,2);
        // console.log('u');
 
     } else if (gender === 'a') {
-      fill(204,186,25,70);
+      fill(224,199,50,70);
        rect(x-1,y-1,3,2);
        // console.log('a');
 
@@ -323,7 +333,7 @@ function displayData(){
   yrFemTotals.push({year: allYears[i].year, total: totalFemaleArtistsPerBar});
 
 //THIS gets number of MALE artworks per BAR with total bar height
-  barTotals.push({barTotal: allYears[i].items, maleTotal: totalMaleArtistsPerBar});
+  barTotals2.push({barTotal: allYears[i].items, maleTotal: totalMaleArtistsPerBar});
 //THIS gets number of MALE artworks 
   yrMaleTotals.push({year: allYears[i].year, total: totalMaleArtistsPerBar});
   }
@@ -358,7 +368,8 @@ var singleData = [52, 1318, 128, 10825, 2027];
   for(var b=0; b<singleData.length; b++) {
     push();  //save 
       //fill(fillBars);
-      fill(186,85,211, 80);
+     // fill(50,198,255, 80);
+      fill(160,42,85, 160);
       noStroke();
 
       rotate(radians(90));   // rotate to vertical
@@ -371,6 +382,30 @@ var singleData = [52, 1318, 128, 10825, 2027];
       text((singleData%singleData[b]), 52, barWidth/2 + -windowWidth/1.527); // write data label
     pop();   // reset, restore
   } 
+}
+///////////
+
+///try to show year # on hover
+function showInfo() {
+  // Check if mouse is inside the circle
+   if(dist(mouseX, mouseY, 1060, 200)<50) {
+      overBars = true;  
+    } 
+  else
+   {
+     overBars = false;
+    }
+    if(overBars == true){
+      show(barTotals, barTotals2);
+    } 
+    else {
+  }
+}
+
+function mouseOver(){
+  if(overBars == true){
+    show(barTotals, barTotals2);
+  }
 }
 
 ////////////////\\\\\\\\\\\\\\\\\
@@ -419,7 +454,7 @@ for(var i=1850; i<=2017; i+=10){
   textSize(16);
   // text("Year", width-margin,height-margin+70);
   // text("Year", 1341-margin,747-margin+70);
-  text("Year: Object Begin Date", 1341-margin-135,747-margin+50);
+  text("Year: Object Begin Date", 1341-margin-147,747-margin+50);
 
 //source
   textAlign(LEFT);
@@ -462,7 +497,7 @@ for(var i=1850; i<=2017; i+=10){
   textSize(16);
   translate(1000,700);
   rotate(radians(270)); 
-  text("Artworks", margin+300,margin-1057);
+  text("Number of Artworks", margin+300,margin-1057);
   pop();
 //   // 3. Let's add the overall title
   textStyle(BOLD);
@@ -477,15 +512,15 @@ for(var i=1850; i<=2017; i+=10){
   text("14,350 Artworks, unknown dates - 2017", margin,margin);
 
 ////4. Add legend
-  fill(92,242,145,100); //m
+  fill(92,242,145,120); //m
   rect(90,100,25,25);
-  fill(205,116,247,90);  //f
+  fill(179,118,244,120);  //f
   rect(90,130,25,25);
-  fill(206,75,23,80);  //t
+  fill(168,71,5,120);  //t
   rect(90,160,25,25);
-  fill(100,100);   //u
+  fill(165,160,152,120);   //u
   rect(90,190,25,25);
-  fill(204,186,25,120);   //a
+  fill(224,199,50,130);   //a
   rect(90,220,25,25);
   textStyle();
   textAlign(LEFT);
