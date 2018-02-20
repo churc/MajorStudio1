@@ -41,7 +41,6 @@ KhandFont = loadFont('libraries/Khand-Regular.ttf', fontRead);
 }
 
 
-
 function setup(){
 	 createCanvas(windowWidth,9000);
 	 analyzeData();
