@@ -1,0 +1,54 @@
+ @font-face {
+   font-family:  'Khand', sans-serif;
+  } 
+html, body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:  'Khand', sans-serif;
+  font-kerning:normal;
+  overflow:hidden;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:  'Khand', sans-serif;
+}
+#wrapper{
+  position:relative;  /* top left */
+  /*margin-left: auto;
+  margin-right: auto;*/
+  /*width: 100%;*/
+  margin: 0;
+  padding: 0;
+ }
+
+canvas{
+  width: 100%;  /*overide canvas width - increase to full page */
+  height: auto;  
+  padding-left: 0;
+  padding-right: 0;
+  font-family: 'Khand', sans-serif;
+}
+
+#singleBars{
+  width: 100%;  /*overide canvas width - increase to full page */
+  height: auto;
+}
+
+#yearsBars{
+  width: 100%; 
+  height: auto; 
+}
+
+#showInfo{
+  font-size: 12px;
+  font-family: 'Khand', sans-serif;
+}
+
