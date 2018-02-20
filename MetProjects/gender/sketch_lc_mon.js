@@ -363,6 +363,7 @@ var singleData = [52, 1318, 128, 10825, 2027];
   var barWidth =  (h / singleData.length) * 0.15; // width of bar
   var barMargin = (h / singleData.length) * 0.2; // margin between two bars
   
+  textFont('Khand');
   textSize(14);
   
   for(var b=0; b<singleData.length; b++) {
@@ -413,6 +414,7 @@ function mouseOver(){
 function drawLabelsCh(){
 
 	//x axis
+  textFont('Khand');
 	stroke(77,77,77);
 	//just the lines
  	// line(margin,height-margin,width-margin,height-margin);
@@ -449,6 +451,7 @@ for(var i=1850; i<=2017; i+=10){
   // }
 
 // label the whole axis
+  textFont('Khand');
   textAlign(RIGHT);
   noStroke();
   textSize(16);
@@ -493,6 +496,7 @@ for(var i=1850; i<=2017; i+=10){
   // pop();
   push();
   // textStyle(BOLD);
+  textFont('Khand');
   noStroke();
   textSize(16);
   translate(1000,700);
@@ -500,6 +504,7 @@ for(var i=1850; i<=2017; i+=10){
   text("Number of Artworks", margin+300,margin-1057);
   pop();
 //   // 3. Let's add the overall title
+  textFont('Khand');
   textStyle(BOLD);
   noStroke();
   textAlign(LEFT);
@@ -512,6 +517,7 @@ for(var i=1850; i<=2017; i+=10){
   text("14,350 Artworks, unknown dates - 2017", margin,margin);
 
 ////4. Add legend
+  textFont('Khand');
   fill(92,242,145,120); //m
   rect(90,100,25,25);
   fill(179,118,244,120);  //f
@@ -538,6 +544,7 @@ for(var i=1850; i<=2017; i+=10){
 
 function drawLabelsTot(){
   //label wrapped total bars
+  textFont('Khand');
   textAlign(RIGHT);
   noStroke();
   fill(77,77,77);
@@ -558,6 +565,7 @@ function drawLabelsTot(){
 
 function drawLabelsBar(){
  //label long bars
+  textFont('Khand');
   textAlign(RIGHT);
   noStroke();
   fill(77,77,77);
