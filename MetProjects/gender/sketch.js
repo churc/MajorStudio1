@@ -344,8 +344,7 @@ for(var i=1850; i<=2017; i+=10){
   p.noStroke();
   p.textSize(19);
   // text("Year", width-margin,height-margin+70);
-  // text("Year", 1341-margin,747-margin+70);
-  p.text("Year: Object Begin Date", 1341-margin-147,747-margin+55);
+  p.text("Year: Object Begin Date", 990,720);
 
 //source
   p.textAlign(p.LEFT);
@@ -375,13 +374,7 @@ for(var i=1850; i<=2017; i+=10){
     p.strokeWeight(1);
     p.line(x+10,y,x+20,y);
   }
-  // push();
-  // // textStyle(BOLD);
-  // noStroke();
-  // textSize(16);
-  // rotate(radians(90)); 
-  // text("Artworks", margin+100,margin-89);
-  // pop();
+
   p.push();
   // textStyle(BOLD);
   p.textFont('Khand');
@@ -396,11 +389,12 @@ for(var i=1850; i<=2017; i+=10){
   p.textStyle(p.BOLD);
   p.noStroke();
   p.textAlign(p.LEFT);
-  p.textSize(35);
+  p.textSize(38);
   p.fill(77,77,77);
-  p.text("The Met: ", 520,110);
+  p.text("The Met: ", 520,100);
+  p.textSize(28);
   p.textStyle(p.NORMAL);
-  p.text("Where are the artworks by ", 632,110);
+  p.text("Where are the artworks by ", 639,100);
   p.textSize(50);
   p.fill(77,77,77);
   p.text("women?",640,170);
@@ -410,10 +404,10 @@ for(var i=1850; i<=2017; i+=10){
   p.fill(77,77,77);
   // p.text("The Met's", 520,170);
   p.textSize(26);
-  p.text("Modern & Contemporary Art Collection", 520,240);
+  p.text("Modern & Contemporary Art Collection", 640,225);
   p.textSize(38);
   p.textStyle(p.BOLD);
-  p.text("By year", 520,275);
+  p.text("By year", 640,275);
 
 ////4. Add legend
     p.textFont('Khand');
@@ -431,14 +425,14 @@ for(var i=1850; i<=2017; i+=10){
     p.textAlign(p.LEFT);
     p.textSize(17);
     p.fill (77,77,77);
-    p.text("Artwork by a:", 132,90);
+    p.text("Artwork", 132,90);
     p.textStyle(p.NORMAL);
-    p.textSize(15.5);
-    p.text("female artist", 132,117);
-    p.text("male artist", 132,147);
+    p.textSize(18);
+    p.text("female", 132,117);
+    p.text("male", 132,147);
     p.text("couple / collaborative with both genders",132,177);
-    p.text("unknown artist",132,207);
-    p.text("named artist, gender not yet identified",132,237);
+    p.text("unknown",132,207);
+    p.text("named, gender not yet identified",132,237);
   }
 }
 
@@ -559,7 +553,7 @@ var s = function(p){
   p.push();
   p.translate(0,50)
   p.textAlign(p.LEFT);
-  p.textSize(18);
+  p.textSize(16);
   p.text("Scale: 1 pixel = 2 artworks", 205,280);
   p.textAlign(p.RIGHT);
   p.textSize(26);
@@ -677,17 +671,20 @@ var t = function(p) {
   p.drawLabelsBar = function(){
  //label long bars
     p.textFont('Khand');
-    p.textAlign(p.RIGHT);
+    p.textAlign(p.LEFT);
     p.noStroke();
     p.fill(77,77,77);
     p.textSize(32);
+    p.textStyle(p.BOLD);
     // text("Year", width-margin,height-margin+70);
     // text("Year", 1341-margin,747-margin+70);
-    p.text("Total Number of Artworks by Gender", 580-margin,147-margin-10);
+    p.text("Another View of All Artworks by Gender", 100,147-margin-10);
     p.textSize(26);
-    p.text("Met Modern & Contemporary Collection", 580-margin,165-margin+30);
-    p.textSize(20);
-    p.text("Scale: 1 pixel = 2 artworks", 580-margin,186-margin+30);
+    p.textStyle(p.NORMAL);
+    p.text("The Met Modern & Contemporary Collection", 100,165-margin+30);
+    p.textStyle(p.BOLD);
+    p.textSize(16);
+    p.text("Scale: 1 pixel = 2 artworks", 100,186-margin+30);
   }
 
 }
