@@ -249,29 +249,29 @@ p.analyzeGender = function(){
 ///====WORKS TO FILL BY GENDER
    var gender = allYears[i].items[j].obj.Gender;
     if (gender === 'm') {
-       p.fill(92,242,145,60);
+       p.fill(92,242,145,90);
        p.rect(x-1,y-1,3,2);
        // console.log('m');
        totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
 
     } else if (gender === 'f') {
-       p.fill(179,118,244,60);
+       p.fill(179,118,244,90);
        p.rect(x-1,y-1,3,2);
        // console.log('f');
       totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
      // console.log(totalFemaleArtistsPerBar);
     } else if (gender === 't') {
-       p.fill(168,71,5,50);
+       p.fill(168,71,5,80);
        p.rect(x-1,y-1,3,2);
       // console.log('t');
       
     } else if (gender === 'u') {
-       p.fill(165,160,152,50);
+       p.fill(165,160,152,80);
        p.rect(x-1,y-1,3,2);
        // console.log('u');
 
     } else if (gender === 'a') {
-       p.fill(224,199,50,70);
+       p.fill(224,199,50,90);
        p.rect(x-1,y-1,3,2);
        // console.log('a');
 
@@ -377,6 +377,7 @@ for(var i=1850; i<=2017; i+=10){
 
   p.push();
   // textStyle(BOLD);
+  p.translate(65,0);
   p.textFont('Khand');
   p.noStroke();
   p.textSize(19);
@@ -385,6 +386,8 @@ for(var i=1850; i<=2017; i+=10){
   p.text("Number of Artworks", margin+300,margin-1057);
   p.pop();
 //   // 3. Let's add the overall title
+  p.push();
+  p.translate(65,0);
   p.textFont('Khand');
   p.textStyle(p.BOLD);
   p.noStroke();
@@ -408,9 +411,11 @@ for(var i=1850; i<=2017; i+=10){
   p.textSize(38);
   p.textStyle(p.BOLD);
   p.text("By year", 640,275);
+  p.pop();
 
 ////4. Add legend
     p.textFont('Khand');
+    p.noStroke();
     p.fill(179,118,244,140);  //f
     p.rect(100,100,25,25);
     p.fill(92,242,145,140); //m
@@ -670,6 +675,10 @@ var t = function(p) {
 
   p.drawLabelsBar = function(){
  //label long bars
+
+ p.push();
+ p.translate(600,-75);
+   p.rotate(p.radians(90)); 
     p.textFont('Khand');
     p.textAlign(p.LEFT);
     p.noStroke();
@@ -685,6 +694,7 @@ var t = function(p) {
     p.textStyle(p.BOLD);
     p.textSize(16);
     p.text("Scale: 1 pixel = 2 artworks", 100,186-margin+30);
+    p.pop();
   }
 
 }
