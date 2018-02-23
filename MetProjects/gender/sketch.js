@@ -602,6 +602,111 @@ var myp5 = new p5(s, 'c2');
 
 ///////////////////////
 
+// ////this works leave 
+///VERTICAL WORKS 
+
+// var t = function(p) {
+
+//   p.fontRead = function(){
+//       fontReady = true; 
+//     }
+
+//   p.preload = function(){
+//   //mytable is comma separated value "csv"
+//   //and has a header specifying the columns labels
+//    p.table = p.loadTable('assets/ModContG3final4sort.csv','csv','header');
+
+//    KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
+//   }
+
+//   p.setup = function(){
+//     p.createCanvas(p.windowWidth, 5650);
+//     p.displaySingleBars();
+//     p.drawLabelsBar();
+//   }
+
+//   p.windowResized = function() {
+//    p.resizeCanvas(p.windowWidth, p.windowHeight);
+//   }
+
+//   p.displaySingleBars = function(){
+//     p.noStroke();
+//     p.fill(255,0,0);
+
+//   var x,y,w,h;
+
+//   var singleData = [52, 1318, 128, 10825, 2027];
+// //var fillBars = [(fill("#ededed"),("#5c5c5c"),("#e5e5o5"),("#f0f0f0"),("#000"))];
+
+//   var width = 5800,
+//    // var width = 11000,
+//        height = p.windowHeight,
+
+//         margin = 15,
+//         w = width - 2 * margin, // chart area width and height
+//         h = height - 2 * margin;
+    
+//     var barWidth =  (h / singleData.length) * 0.15; // width of bar
+//     var barMargin = (h / singleData.length) * 0.2; // margin between two bars
+    
+//     p.textFont('Khand');
+//     p.textSize(15);
+  
+//   for(var b=0; b<singleData.length; b++) {
+//     p.push();  //save 
+//       //fill(fillBars);
+//      // fill(50,198,255, 80);
+//       p.fill(160,42,85, 160);
+//       p.noStroke();
+
+//       p.rotate(p.radians(90));   // rotate to vertical
+//       p.translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar
+//       // rect(20, -windowWidth/1.5, singleData[b], barWidth);
+//       p.rect(20, -p.windowWidth/1.5, singleData[b]/2, barWidth/2); // draw rect
+//       p.fill(0,0,0);
+//       p.text(singleData[b], 21, barWidth/2 + -p.windowWidth/1.527); // write data label
+
+// /////////PERCENTAGES ARE NOT CORRECT
+//       p.textSize(13);
+//       // p.text((((singleData[b]/singleData.length)*100).toFixed(0)+'%'), 55, barWidth/2 + -p.windowWidth/1.525); // write data label
+//     p.pop();   // reset, restore
+//   } 
+//   }
+
+
+//   p.drawLabelsBar = function(){
+//  //label long bars
+
+//     p.push();
+//     p.translate(600,-75);
+//     p.rotate(p.radians(90)); 
+//     p.textFont('Khand');
+//     p.textAlign(p.LEFT);
+//     p.noStroke();
+//     p.fill(77,77,77);
+//     p.textSize(32);
+//     p.textStyle(p.BOLD);
+//     // text("Year", width-margin,height-margin+70);
+//     // text("Year", 1341-margin,747-margin+70);
+//     p.text("Another View of All Artworks by Gender", 100,147-margin-10);
+//     p.textSize(26);
+//     p.textStyle(p.NORMAL);
+//     p.text("The Met Modern & Contemporary Collection", 100,165-margin+30);
+//     p.textStyle(p.BOLD);
+//     p.textSize(16);
+//     p.text("Scale: 1 pixel = 2 artworks", 100,186-margin+30);
+//     p.pop();
+//   }
+// }
+
+// var myp5 = new p5(t, 'c3');
+
+
+///////\\\\\\\\\\\\
+
+
+/////TRYING C3 CODE
+
 // ////VERTICAL BARS TOTALS 
 
 var t = function(p) {
@@ -622,6 +727,7 @@ var t = function(p) {
     p.createCanvas(p.windowWidth, 5650);
     p.displaySingleBars();
     p.drawLabelsBar();
+    p.drawmeasureline();
   }
 
   p.windowResized = function() {
@@ -652,12 +758,34 @@ var t = function(p) {
     p.textSize(15);
   
   for(var b=0; b<singleData.length; b++) {
-    p.push();  //save 
-      //fill(fillBars);
-     // fill(50,198,255, 80);
-      p.fill(160,42,85, 160);
-      p.noStroke();
 
+
+var genFill = singleData[b];
+    if (genFill == '10825') {
+       p.fill(92,242,145,120);
+       
+    } else if (genFill == '2027') {
+       p.fill(179,118,244,120);
+       
+    } else if (genFill == '128') {
+       p.fill(168,71,5,120);
+      
+    } else if (genFill == '1318') {
+       p.fill(165,160,152,120);
+
+    } else if (genFill == '52') {
+       p.fill(224,199,50,120);
+
+    } else {
+       p.fill(100,100);
+ 
+    }
+
+    p.push();  //save 
+
+      
+      p.noStroke();
+      p.textSize(17);
       p.rotate(p.radians(90));   // rotate to vertical
       p.translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar
       // rect(20, -windowWidth/1.5, singleData[b], barWidth);
@@ -666,7 +794,7 @@ var t = function(p) {
       p.text(singleData[b], 21, barWidth/2 + -p.windowWidth/1.527); // write data label
 
 /////////PERCENTAGES ARE NOT CORRECT
-      p.textSize(13);
+  
       // p.text((((singleData[b]/singleData.length)*100).toFixed(0)+'%'), 55, barWidth/2 + -p.windowWidth/1.525); // write data label
     p.pop();   // reset, restore
   } 
@@ -677,7 +805,7 @@ var t = function(p) {
  //label long bars
 
  p.push();
- p.translate(600,-75);
+ p.translate(300,-75);
    p.rotate(p.radians(90)); 
     p.textFont('Khand');
     p.textAlign(p.LEFT);
@@ -690,21 +818,127 @@ var t = function(p) {
     p.text("Another View of All Artworks by Gender", 100,147-margin-10);
     p.textSize(26);
     p.textStyle(p.NORMAL);
-    p.text("The Met Modern & Contemporary Collection", 100,165-margin+30);
+    p.text("The Met Modern & Contemporary Art Collection", 100,165-margin+30);
     p.textStyle(p.BOLD);
     p.textSize(16);
     p.text("Scale: 1 pixel = 2 artworks", 100,186-margin+30);
     p.pop();
   }
 
+p.drawmeasureline = function(){
+    p.push();
+    
+
+    var x,y,w,h;
+
+  var singleData = [52, 1318, 128, 10825, 2027];
+   //x axis
+  p.textFont('Khand');
+  p.textSize(20);
+  p.stroke(77,77,77);
+ //just the lines
+   
+  // p.line(margin,height-margin,width-margin,height-margin);
+  p.line(600,23,600,10848/2);
+  p.noStroke();
+  p.textAlign(p.CENTER);
+  // p.translate(970,50);
+  p.translate(1265,50);
+   p.rotate(p.radians(90));
+  // draw the sections and add text for each section
+   //go throught the years
+   for(var b=0; b<=10825; b+=200){
+// for(var i=1850; i<=2017; i+=10){
+   // var y = height-margin+30;
+ // p.translate(600,-75);
+ // p.translate(600,-25);
+ //  // p.translate(800,-50);
+ //   p.rotate(p.radians(90));
+
+   // var y = 747-margin+30;
+    var y = 747-margin+30;
+
+  var x = p.map(b,0,10825, 0, 10825/2);
+    // x = map(i,0, allYears.length,margin, width-margin);
+    // p.rotate(p.radians(90));   // rotate to vertical
+    // p.translate(200, 20);
+      p.noStroke();
+      p.fill(77,77,77);
+
+   //    p.translate(600,-75);
+   // p.rotate(p.radians(90));
+      p.text(b, x,y);
+      
+      p.stroke(77,77,77);
+      p.strokeWeight(1);
+
+      // p.line(x,y-22,x, y-45);
+       // p.line(x,y-22,x, y-30);
+  p.line(x,y-22,x, y-45);
+  }
+p.pop();
+
+}
 }
 
 var myp5 = new p5(t, 'c3');
 
 
+
+//   var x,y,w,h;
+
+//   var singleData = [52, 1318, 128, 10825, 2027];
+
+// // var width = 5800,
+// //    // var width = 11000,
+// //        height = p.windowHeight,
+
+// //         margin = 15,
+// //   w = width - 2 * margin, // chart area width and height
+// //         h = height - 2 * margin;
+    
+// //     var barWidth =  (h / singleData.length) * 0.15; // width of bar
+// //     var barMargin = (h / singleData.length) * 0.2; // margin between two
+
+//   // // //   // 2. Let's draw the y Axis
+//   // p.stroke(77,77,77);
+//   // // line(margin,height-margin ,margin,margin);
+//   // p.line(margin,747-margin,margin,margin);
+//   // p.noStroke();
+//   // p.textAlign(p.RIGHT);
+//   // p.textStyle(p.NORMAL);
+
+//   for(var b=0; b<singleData.length; b++){
+//     p.push();
+//     p.stroke(77,77,77);
+//     p.strokeWeight(1);
+//     // p.rotate(p.radians(90));   // rotate to vertical
+//     // p.translate(200, 20);
+
+
+//     var x = margin-20;
+//     // y = map(i,0, maxObjects,height-margin, margin);
+//      var y = p.map(b,0, singleData.length,747-margin, margin);
+    
+    
+//     // p.noStroke()
+//     // p.text(b, x, y+5);
+
+//     p.line(x+10,y,x+20,y);
+//     p.pop();
+
+// }
+
+
+////////////\\\\\\\\\\\\\\\\\\\\//////////END OF TEST
+
+
+
+
 ///////////
 
 ////try to show year # on hover
+//BETTER TO USE HTML FOR THIS
 // function showInfo() {
 //   // Check if mouse is inside the circle
 //    if(dist(mouseX, mouseY, 1060, 200)<50) {
