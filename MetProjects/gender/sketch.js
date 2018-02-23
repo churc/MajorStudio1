@@ -474,6 +474,7 @@ var s = function(p){
    p.push();
     p.stroke(92,242,145,160);
     p.strokeWeight(8);
+    p.strokeCap(SQUARE);
     p.noFill();
     p.beginShape(); 
     p.vertex(830, 20);   // total m/2 = 10825/2 = 5412.5
@@ -494,6 +495,7 @@ var s = function(p){
     p.stroke(179,118,244,160);
     // stroke(153,50,204,80); //total f/2 = 2027/2 = 1013.5
     p.strokeWeight(8);
+    p.strokeCap(SQUARE);
     p.noFill();
     p.beginShape();
     p.vertex(838, 20);   //  
@@ -506,6 +508,7 @@ var s = function(p){
     p.push();
     p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
     p.strokeWeight(8);
+    p.strokeCap(SQUARE);
     p.noFill();
     p.beginShape();
     p.vertex(845, 20);   //  
@@ -516,6 +519,7 @@ var s = function(p){
     p.push();
     p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
     p.strokeWeight(8);
+    p.strokeCap(SQUARE);
     p.noFill();
     p.beginShape();
     p.vertex(852, 20);   //  
@@ -526,6 +530,7 @@ var s = function(p){
     p.push();
     p.stroke(224,199,50,160);  //total a to find out 52/2 = 26
     p.strokeWeight(8);
+    p.strokeCap(SQUARE);
     p.noFill();
     p.beginShape();
     p.vertex(858, 20);   //  
@@ -791,7 +796,9 @@ var genFill = singleData[b];
       // rect(20, -windowWidth/1.5, singleData[b], barWidth);
       p.rect(20, -p.windowWidth/1.5, singleData[b]/2, barWidth/2); // draw rect
       p.fill(0,0,0);
-      p.text(singleData[b], 21, barWidth/2 + -p.windowWidth/1.527); // write data label
+      // p.text(singleData[b], 21, barWidth/2 + -p.windowWidth/1.527); // write data label
+      p.text(singleData[b], 25, barWidth/2 + -p.windowWidth/1.527); // write data label
+
 
 /////////PERCENTAGES ARE NOT CORRECT
   
@@ -839,11 +846,11 @@ p.drawmeasureline = function(){
  //just the lines
    
   // p.line(margin,height-margin,width-margin,height-margin);
-  p.line(600,23,600,10848/2);
+  p.line(600,20,600,10900/2);
   p.noStroke();
   p.textAlign(p.CENTER);
   // p.translate(970,50);
-  p.translate(1265,50);
+  p.translate(1265,20);
    p.rotate(p.radians(90));
   // draw the sections and add text for each section
    //go throught the years
