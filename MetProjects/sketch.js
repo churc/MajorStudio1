@@ -874,7 +874,7 @@ p.drawmeasureline = function(){
 
       // p.line(x,y-22,x, y-45);
        // p.line(x,y-22,x, y-30);
-  p.line(x,y-22,y, y-45);
+  p.line(x,y-22,x, y-45);
   }
 p.pop();
 
