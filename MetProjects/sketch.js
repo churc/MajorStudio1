@@ -805,7 +805,7 @@ var genFill = singleData[b];
  //label long bars
 
  p.push();
- p.translate(600,-75);
+ p.translate(300,-75);
    p.rotate(p.radians(90)); 
     p.textFont('Khand');
     p.textAlign(p.LEFT);
@@ -827,53 +827,63 @@ var genFill = singleData[b];
 
 p.drawmeasureline = function(){
     p.push();
+    
+
     var x,y,w,h;
 
   var singleData = [52, 1318, 128, 10825, 2027];
    //x axis
   p.textFont('Khand');
-  p.textSize(15);
+  p.textSize(20);
   p.stroke(77,77,77);
  //just the lines
-   // line(margin,height-margin,width-margin,height-margin);
-  p.line(300,20,300,10845/2);
-  // p.noStroke();
+   
+  // p.line(margin,height-margin,width-margin,height-margin);
+  p.line(500,20,450,10845/2);
+  p.noStroke();
   p.textAlign(p.CENTER);
-
+  p.translate(970,50);
+  // p.translate(800,-50);
+   p.rotate(p.radians(90));
   // draw the sections and add text for each section
    //go throught the years
-   for(var b=0; b<singleData.length; b++){
+   for(var b=0; b<=10825; b+=200){
 // for(var i=1850; i<=2017; i+=10){
    // var y = height-margin+30;
-   var y = 747-margin+30;
-   // x = map(i,1850,2017, margin, width-margin);
-    var x = p.map(b,0,10825, margin, 1341-margin);
+ // p.translate(600,-75);
+ // p.translate(600,-25);
+ //  // p.translate(800,-50);
+ //   p.rotate(p.radians(90));
 
+   // var y = 747-margin+30;
+    var y = 747-margin+30;
+
+  var x = p.map(b,0,10825, 0, 10825/2);
     // x = map(i,0, allYears.length,margin, width-margin);
     // p.rotate(p.radians(90));   // rotate to vertical
     // p.translate(200, 20);
       p.noStroke();
       p.fill(77,77,77);
-      p.text(b, x, y);
+
+   //    p.translate(600,-75);
+   // p.rotate(p.radians(90));
+      p.text(b, x,y);
+      
       p.stroke(77,77,77);
       p.strokeWeight(1);
-      p.line(x,y-22,x, y-30);
-    // p.rotate(p.radians(90));   // rotate to vertical
-    // p.translate(0, 0);
 
+      // p.line(x,y-22,x, y-45);
+       // p.line(x,y-22,x, y-30);
+  p.line(x,y-22,y, y-45);
   }
 p.pop();
 
 }
-
-
-
 }
 
 var myp5 = new p5(t, 'c3');
 
 
-//    p.fill(255,0,0);
 
 //   var x,y,w,h;
 
