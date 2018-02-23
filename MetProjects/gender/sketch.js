@@ -327,24 +327,15 @@ for(var i=1850; i<=2017; i+=10){
       p.line(x,y-22,x, y-30);
   }
 
- // for(var i=0; i<allYears.length; i+=10){
-  //   var y = height-margin+30;
-  // x = map(allYears[i].year,1800,allYears[allYears.length-1].year, margin, width-margin);
-  //   // x = map(i,0, allYears.length,margin, width-margin);
-  //   noStroke();
-  //   fill(0);
-  //   text(allYears[i].year, x, y);
-  //   stroke(0);
-  //   line(x,y-12,x, y-30);
-  // }
-
 // label the whole axis
   p.textFont('Khand');
   p.textAlign(p.RIGHT);
   p.noStroke();
   p.textSize(19);
-  // text("Year", width-margin,height-margin+70);
+
   p.text("Year: Object Begin Date", 990,720);
+    // p.text("Year: Object Begin Date", width-margin,height-margin+70);
+
 
 //source
   p.textAlign(p.LEFT);
@@ -383,7 +374,9 @@ for(var i=1850; i<=2017; i+=10){
   p.textSize(19);
   p.translate(1000,700);
   p.rotate(p.radians(270)); 
-  p.text("Number of Artworks", margin+300,margin-1057);
+  // p.text("Number of Artworks", margin+300,margin-1057);
+  p.text("Number of Artworks", margin+300,margin-1120);
+
   p.pop();
 //   // 3. Let's add the overall title
   p.push();
@@ -474,7 +467,7 @@ var s = function(p){
    p.push();
     p.stroke(92,242,145,160);
     p.strokeWeight(8);
-    p.strokeCap(SQUARE);
+    p.strokeCap(p.SQUARE);
     p.noFill();
     p.beginShape(); 
     p.vertex(830, 20);   // total m/2 = 10825/2 = 5412.5
@@ -495,20 +488,20 @@ var s = function(p){
     p.stroke(179,118,244,160);
     // stroke(153,50,204,80); //total f/2 = 2027/2 = 1013.5
     p.strokeWeight(8);
-    p.strokeCap(SQUARE);
+    p.strokeCap(p.SQUARE);
     p.noFill();
     p.beginShape();
     p.vertex(838, 20);   //  
     p.vertex(838,  754);   //734
-    p.vertex(934,  754);   //98
-    p.vertex(934, 572.5);  //181.5      //1013.5
+    p.vertex(934,  754);   //96
+    p.vertex(934, 570.5);  //183.5      //1013.5
     p.endShape();
     p.pop();
 
     p.push();
     p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
     p.strokeWeight(8);
-    p.strokeCap(SQUARE);
+    p.strokeCap(p.SQUARE);
     p.noFill();
     p.beginShape();
     p.vertex(845, 20);   //  
@@ -519,7 +512,7 @@ var s = function(p){
     p.push();
     p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
     p.strokeWeight(8);
-    p.strokeCap(SQUARE);
+    p.strokeCap(p.SQUARE);
     p.noFill();
     p.beginShape();
     p.vertex(852, 20);   //  
@@ -530,7 +523,7 @@ var s = function(p){
     p.push();
     p.stroke(224,199,50,160);  //total a to find out 52/2 = 26
     p.strokeWeight(8);
-    p.strokeCap(SQUARE);
+    p.strokeCap(p.SQUARE);
     p.noFill();
     p.beginShape();
     p.vertex(858, 20);   //  
