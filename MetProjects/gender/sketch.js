@@ -390,10 +390,10 @@ for(var i=1850; i<=2017; i+=10){
   p.text("The Met: ", 520,100);
   p.textSize(28);
   p.textStyle(p.NORMAL);
-  p.text("Where are the artworks by ", 639,100);
+  p.text("What year are the artworks made by ", 639,100);
   p.textSize(50);
   p.fill(77,77,77);
-  p.text("women?",640,170);
+  p.text("women, by men?",640,170);
   // p.text("How do the numbers stack up by gender?", 520,210);
   p.textSize(38);
   p.textStyle(p.NORMAL);
@@ -403,7 +403,7 @@ for(var i=1850; i<=2017; i+=10){
   p.text("Modern & Contemporary Art Collection", 640,225);
   p.textSize(38);
   p.textStyle(p.BOLD);
-  p.text("By year", 640,275);
+  // p.text("By year", 640,275);
   p.pop();
 
 ////4. Add legend
@@ -455,11 +455,11 @@ var s = function(p){
   }
 
    p.setup = function(){
-   p.createCanvas(p.windowWidth,850);
+   p.createCanvas(p.windowWidth,890);
    p.drawLabelsTot();
    // p.legend();
 
-   p.background(100,10);
+   p.background(100,05);
     
    p.push();
    p.scale(0.83); 
@@ -493,8 +493,8 @@ var s = function(p){
     p.beginShape();
     p.vertex(838, 20);   //  
     p.vertex(838,  754);   //734
-    p.vertex(934,  754);   //96
-    p.vertex(934, 570.5);  //183.5      //1013.5
+    p.vertex(932,  754);   //94
+    p.vertex(932, 568.5);  //185.5      //1013.5
     p.endShape();
     p.pop();
 
@@ -551,13 +551,17 @@ var s = function(p){
   // p.text("Modern & Contemporary Art Collection", 720,90);
   p.textSize(38);
   p.textStyle(p.BOLD);
-  p.text("All 14,350 artworks", 450,90);
+  p.textAlign(p.LEFT);
+  p.text("The Met: 14,350 artworks by gender", 205,90);
   // p.text("Met Modern & Contemporary Collection", 850-margin,165-margin+30);
   p.push();
   p.translate(0,50)
   p.textAlign(p.LEFT);
   p.textSize(16);
-  p.text("Scale: 1 pixel = 2 artworks", 205,280);
+  p.text("1 pixel: 2 artworks, scale 0.83", 205,280);
+  p.textAlign(p.LEFT);
+  p.textSize(28);
+  p.text("Modern & Contemporary Art Collection", 205,380);
   p.textAlign(p.RIGHT);
   p.textSize(26);
   p.text("14.13%", 190,120);
@@ -600,111 +604,6 @@ var myp5 = new p5(s, 'c2');
 
 ///////////////////////
 
-// ////this works leave 
-///VERTICAL WORKS 
-
-// var t = function(p) {
-
-//   p.fontRead = function(){
-//       fontReady = true; 
-//     }
-
-//   p.preload = function(){
-//   //mytable is comma separated value "csv"
-//   //and has a header specifying the columns labels
-//    p.table = p.loadTable('assets/ModContG3final4sort.csv','csv','header');
-
-//    KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
-//   }
-
-//   p.setup = function(){
-//     p.createCanvas(p.windowWidth, 5650);
-//     p.displaySingleBars();
-//     p.drawLabelsBar();
-//   }
-
-//   p.windowResized = function() {
-//    p.resizeCanvas(p.windowWidth, p.windowHeight);
-//   }
-
-//   p.displaySingleBars = function(){
-//     p.noStroke();
-//     p.fill(255,0,0);
-
-//   var x,y,w,h;
-
-//   var singleData = [52, 1318, 128, 10825, 2027];
-// //var fillBars = [(fill("#ededed"),("#5c5c5c"),("#e5e5o5"),("#f0f0f0"),("#000"))];
-
-//   var width = 5800,
-//    // var width = 11000,
-//        height = p.windowHeight,
-
-//         margin = 15,
-//         w = width - 2 * margin, // chart area width and height
-//         h = height - 2 * margin;
-    
-//     var barWidth =  (h / singleData.length) * 0.15; // width of bar
-//     var barMargin = (h / singleData.length) * 0.2; // margin between two bars
-    
-//     p.textFont('Khand');
-//     p.textSize(15);
-  
-//   for(var b=0; b<singleData.length; b++) {
-//     p.push();  //save 
-//       //fill(fillBars);
-//      // fill(50,198,255, 80);
-//       p.fill(160,42,85, 160);
-//       p.noStroke();
-
-//       p.rotate(p.radians(90));   // rotate to vertical
-//       p.translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar
-//       // rect(20, -windowWidth/1.5, singleData[b], barWidth);
-//       p.rect(20, -p.windowWidth/1.5, singleData[b]/2, barWidth/2); // draw rect
-//       p.fill(0,0,0);
-//       p.text(singleData[b], 21, barWidth/2 + -p.windowWidth/1.527); // write data label
-
-// /////////PERCENTAGES ARE NOT CORRECT
-//       p.textSize(13);
-//       // p.text((((singleData[b]/singleData.length)*100).toFixed(0)+'%'), 55, barWidth/2 + -p.windowWidth/1.525); // write data label
-//     p.pop();   // reset, restore
-//   } 
-//   }
-
-
-//   p.drawLabelsBar = function(){
-//  //label long bars
-
-//     p.push();
-//     p.translate(600,-75);
-//     p.rotate(p.radians(90)); 
-//     p.textFont('Khand');
-//     p.textAlign(p.LEFT);
-//     p.noStroke();
-//     p.fill(77,77,77);
-//     p.textSize(32);
-//     p.textStyle(p.BOLD);
-//     // text("Year", width-margin,height-margin+70);
-//     // text("Year", 1341-margin,747-margin+70);
-//     p.text("Another View of All Artworks by Gender", 100,147-margin-10);
-//     p.textSize(26);
-//     p.textStyle(p.NORMAL);
-//     p.text("The Met Modern & Contemporary Collection", 100,165-margin+30);
-//     p.textStyle(p.BOLD);
-//     p.textSize(16);
-//     p.text("Scale: 1 pixel = 2 artworks", 100,186-margin+30);
-//     p.pop();
-//   }
-// }
-
-// var myp5 = new p5(t, 'c3');
-
-
-///////\\\\\\\\\\\\
-
-
-/////TRYING C3 CODE
-
 // ////VERTICAL BARS TOTALS 
 
 var t = function(p) {
@@ -722,7 +621,7 @@ var t = function(p) {
   }
 
   p.setup = function(){
-    p.createCanvas(p.windowWidth, 5650);
+    p.createCanvas(p.windowWidth, 5665);
     p.displaySingleBars();
     p.drawLabelsBar();
     p.drawmeasureline();
@@ -745,7 +644,8 @@ var t = function(p) {
    // var width = 11000,
        height = p.windowHeight,
 
-        margin = 15,
+        margin = 40,
+        // margin = 15,
         w = width - 2 * margin, // chart area width and height
         h = height - 2 * margin;
     
@@ -783,14 +683,13 @@ var genFill = singleData[b];
 
       
       p.noStroke();
-      p.textSize(17);
+      p.textSize(20);
       p.rotate(p.radians(90));   // rotate to vertical
-      p.translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar
-      // rect(20, -windowWidth/1.5, singleData[b], barWidth);
-      p.rect(20, -p.windowWidth/1.5, singleData[b]/2, barWidth/2); // draw rect
+      p.translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar 
+      p.rect(100, -p.windowWidth/1.5, singleData[b]/2, barWidth/2);
+      // p.rect(20, -p.windowWidth/1.5, singleData[b]/2, barWidth/2); // draw rect
       p.fill(0,0,0);
-      // p.text(singleData[b], 21, barWidth/2 + -p.windowWidth/1.527); // write data label
-      p.text(singleData[b], 25, barWidth/2 + -p.windowWidth/1.527); // write data label
+      p.text(singleData[b], 100, barWidth/2 + -p.windowWidth/1.53); // write data label
 
 
 /////////PERCENTAGES ARE NOT CORRECT
@@ -805,7 +704,8 @@ var genFill = singleData[b];
  //label long bars
 
  p.push();
- p.translate(300,-75);
+ p.translate(300,0);
+ // p.translate(300,-75);
    p.rotate(p.radians(90)); 
     p.textFont('Khand');
     p.textAlign(p.LEFT);
@@ -815,14 +715,25 @@ var genFill = singleData[b];
     p.textStyle(p.BOLD);
     // text("Year", width-margin,height-margin+70);
     // text("Year", 1341-margin,747-margin+70);
-    p.text("Another View of All Artworks by Gender", 100,147-margin-10);
+    // p.text("Another View of All Artworks by Gender", 100,147-margin-10);
     p.textSize(26);
     p.textStyle(p.NORMAL);
-    p.text("The Met Modern & Contemporary Art Collection", 100,165-margin+30);
+    // p.textAlign(p.RIGHT);
+    p.text("The Met Modern & Contemporary Art Collection", 100,margin-140);
     p.textStyle(p.BOLD);
     p.textSize(16);
-    p.text("Scale: 1 pixel = 2 artworks", 100,186-margin+30);
+    p.text("Scale: 1 pixel = 2 artworks", 100,margin-115);
     p.pop();
+
+    p.textFont('Khand');
+    p.textAlign(p.LEFT);
+    p.noStroke();
+    p.fill(77,77,77);
+    p.textSize(38);
+    p.textStyle(p.BOLD);
+    // text("Year", width-margin,height-margin+70);
+    // text("Year", 1341-margin,747-margin+70);
+    p.text("Another View of All Artworks by Gender", 378,30);
   }
 
 p.drawmeasureline = function(){
@@ -834,47 +745,62 @@ p.drawmeasureline = function(){
   var singleData = [52, 1318, 128, 10825, 2027];
    //x axis
   p.textFont('Khand');
-  p.textSize(20);
+  p.textStyle(p.NORMAL);
+  p.textSize(22);
+  p.fill(77,77,77); 
   p.stroke(77,77,77);
- //just the lines
+  p.strokeWeight(1)
+ // //just the lines
    
-  // p.line(margin,height-margin,width-margin,height-margin);
-  p.line(600,20,600,10900/2);
+ //  // p.line(margin,height-margin,width-margin,height-margin);
+  p.text("unidentified", 600,52/2+95);
+  p.line(600,52/2+100,700,52/2+100);
+  p.text("couple", 600,128/2+95);
+  p.line(600,128/2+100,700,128/2+100);
+  p.text("unknown", 600,1318/2+95);
+  p.line(600,1318/2+100,700,1318/2+100);
+  p.text("female", 600,2027/2+95);
+  p.line(600,2027/2+100,700,2027/2+100);
+  p.text("male", 600,10825/2+95);
+  p.line(600,10825/2+100,700,10825/2+100);
+  // p.strokeWeight(1);
+ //  p.line(590,10925/2,690,10925/2);
   p.noStroke();
+  p.textSize(20);
   p.textAlign(p.CENTER);
-  // p.translate(970,50);
-  p.translate(1265,20);
+  p.translate(1265,100);
+  // p.translate(1265,20);
    p.rotate(p.radians(90));
   // draw the sections and add text for each section
    //go throught the years
    for(var b=0; b<=10825; b+=200){
-// for(var i=1850; i<=2017; i+=10){
-   // var y = height-margin+30;
- // p.translate(600,-75);
- // p.translate(600,-25);
- //  // p.translate(800,-50);
- //   p.rotate(p.radians(90));
 
    // var y = 747-margin+30;
-    var y = 747-margin+30;
+    var y = 0;
 
   var x = p.map(b,0,10825, 0, 10825/2);
+
     // x = map(i,0, allYears.length,margin, width-margin);
     // p.rotate(p.radians(90));   // rotate to vertical
     // p.translate(200, 20);
       p.noStroke();
       p.fill(77,77,77);
 
-   //    p.translate(600,-75);
-   // p.rotate(p.radians(90));
-      p.text(b, x,y);
+      // p.text(b, x,y);
       
       p.stroke(77,77,77);
       p.strokeWeight(1);
 
       // p.line(x,y-22,x, y-45);
        // p.line(x,y-22,x, y-30);
-  p.line(x,y-22,x, y-45);
+      p.line(x,y-22,x, y-45);
+
+      // p.rotate(p.radians(-90));
+      p.noStroke();
+      p.fill(77,77,77);
+
+      p.text(b, x,y);
+
   }
 p.pop();
 
