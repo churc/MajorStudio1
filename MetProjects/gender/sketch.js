@@ -44,7 +44,7 @@ var s = function(p){
   }
 
     p.setup = function(){
-    p.createCanvas(p.windowWidth,890);
+    p.createCanvas(p.windowWidth,870);
     p.drawLabelsTot();
     // p.legend();
 
@@ -52,7 +52,7 @@ var s = function(p){
       
     p.push();
     p.scale(0.83); 
-    p.translate(120,60);
+    p.translate(230,60);
     p.push();
     p.stroke(92,242,145,160);
     p.strokeWeight(8);
@@ -128,6 +128,9 @@ var s = function(p){
 }
 
   p.drawLabelsTot = function(){
+
+   p.push();
+   p.translate(-80,0); 
   //label wrapped total bars
   p.textFont('Khand');
   p.textAlign(p.RIGHT);
@@ -136,20 +139,20 @@ var s = function(p){
   // text("Year", width-margin,height-margin+70);
   // text("Year", 1341-margin,747-margin+70);
   p.fill(77,77,77);
-  p.textSize(26);
+  // p.textSize(26);
   // p.text("Modern & Contemporary Art Collection", 720,90);
-  p.textSize(35);
-  p.textStyle(p.BOLD);
+  p.textSize(38);
+  p.textStyle(p.NORMAL);
   p.textAlign(p.LEFT);
-  p.text("What % of The Met's 14,350 artworks are by women", 130,90);
+  p.text("What % of The Met's 14,350 artworks are by women?", 130,90);
   // p.text("Met Modern & Contemporary Collection", 850-margin,165-margin+30);
-  p.textSize(30);
-  p.text("in the Modern & Contemporary Art Collection Department?", 130,130);
+  p.textSize(26);
+  p.text("Looking at the Modern & Contemporary Art Collection", 130,130);
   p.push();
   p.translate(0,80)
   p.textAlign(p.LEFT);
   p.textSize(18);
-  p.text("1 pixel: 2 artworks, scaled to 0.83", 205,280);
+  p.text("1 pixel: 2 artworks, scaled to 0.83", 237,285);
   p.textAlign(p.LEFT);
   p.textSize(28);
   // p.text("Modern & Contemporary Art Collection", 205,97);
@@ -187,6 +190,7 @@ var s = function(p){
     p.text("couple / collaborative with both genders",237,177);
     p.text("unknown",237,207);
     p.text("named, gender not yet identified",237,237);
+    p.pop();
     p.pop();
 }
 }
@@ -320,7 +324,7 @@ var genFill = singleData[b];
     p.noStroke();
     p.fill(77,77,77);
     p.textSize(38);
-    p.textStyle(p.BOLD);
+    p.textStyle(p.NORMAL);
     // text("Year", width-margin,height-margin+70);
     // text("Year", 1341-margin,747-margin+70);
     p.text("Another View of All Artworks by Gender", 378,30);
@@ -416,6 +420,7 @@ var w = function(p) {
 
    p.setup = function(){
      p.createCanvas(p.windowWidth,850);
+     p.background(100,10);
      p.analyzeData();
      p.analyzeGender();
      p.displayData();
@@ -757,22 +762,21 @@ for(var i=1850; i<=2017; i+=10){
   p.textStyle(p.BOLD);
   p.noStroke();
   p.textAlign(p.LEFT);
-  p.textSize(38);
+  // p.textSize(38);
   p.fill(77,77,77);
   // p.text("The Met: ", 520,100);
-  p.textSize(30);
-  p.textStyle(p.NORMAL);
-  p.text("What year were the artworks made ", 639,100);
-  p.textSize(36);
-  p.fill(77,77,77);
-  p.text("by women, by men?",640,160);
-  // p.text("How do the numbers stack up by gender?", 520,210);
   p.textSize(38);
+  p.textStyle(p.NORMAL);
+  p.text("What year were these artworks made?",500,75);
+  // p.textSize(36);
+  // p.fill(77,77,77);
+  // p.text("by women, by men?",640,160);
+  // p.textSize(38);
   p.textStyle(p.NORMAL);
   p.fill(77,77,77);
   // p.text("The Met's", 520,170);
   p.textSize(26);
-  p.text("The Met Modern & Contemporary Art Collection", 640,225);
+  p.text("The Met Modern & Contemporary Art Collection", 500,125);
   p.textSize(38);
   p.textStyle(p.BOLD);
   // p.text("By year", 640,275);
