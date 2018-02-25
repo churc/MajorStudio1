@@ -28,427 +28,7 @@ var KhandFont, fontReady = false;
 var margin = 80;
 
 
-////////chart
-var w = function(p) {
-
-  p.fontRead = function(){
-      fontReady = true; 
-    }
-
-  p.preload = function(){
-  //mytable is comma separated value "csv"
-  //and has a header specifying the columns labels
-   p.table = p.loadTable('assets/ModContG3final4sort.csv','csv','header');
-
-   KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
-  }
-
-   p.setup = function(){
-     p.createCanvas(p.windowWidth,850);
-     p.analyzeData();
-     p.analyzeGender();
-     p.displayData();
-     p.drawLabelsCh();
-     // p.legend();
-
-  }
-
-  p.windowResized = function() {
-   p.resizeCanvas(p.windowWidth, p.windowHeight);
-  }
-
-  p.analyzeData = function(){
-	var count = p.table.getRowCount();
-  var countC = p.table.getColumnCount();
-	console.log(count + " rows");
-  console.log(countC + " columns");
-
-// ///THIS shows row with FIRST female artist gender column 10
-  var female = p.table.findRow('f', 10);
-  console.log(female);
-//============
-
-// =======THIS console logs all rows with a FEMALE artist
-    var female = p.table.findRows('f', 10);
-    console.log(female);
-
-//=======THIS console logs all rows with a MALE artist
-    var male = p.table.findRows('m', 10);
-    console.log(male);
-
-//=======THIS console logs all rows where BOTH male and female named as artists 
-    var couple = p.table.findRows('t', 10);
-    console.log(couple);
-
-//=======THIS console logs all rows where the artist is UNKNOWN
-    var unknown = p.table.findRows('u', 10);
-    console.log(unknown);
-
-//=======THIS console logs all rows where there is an artist but I haven't found their gender
-   var todo = p.table.findRows('a', 10);
-   console.log(todo);
-
-// // //===================================
-
-// ///=========WORKS to give the YEARS w/ the MAX & MIN NUMBER OF OBJECTS 
-////object begin date column 17
-  var yearNow = {};
-  yearNow.year = (p.int(p.table.getString(0,17)));
-
-  yearNow.items = p.table.findRows(String(yearNow.year),17);
-  p.append(allYears, yearNow);
-
-  minObjects = 150000;
-  maxObjects = 0;
-  minYear = null;
-  maxYear = null;
-
-
-for (var i=0; i<count; i++) {
-      var year = p.int(p.table.getString(i,17));
-      if(year!=yearNow.year){
-        var yearNow = {};
-        yearNow.year = year;
-        yearNow.items =[];
-        yearNow.items = p.table.findRows(String(yearNow.year),17);
-        p.append(allYears, yearNow);
-        
-        if(yearNow.items.length>maxObjects){
-          maxObjects = yearNow.items.length;
-          maxYear = allYears.length-1;
-        }
-
-        if(yearNow.items.length<minObjects){
-          minObjects = yearNow.items.length;
-          // minYear = allYears.length-1;
-           minYear = allYears.length;
-        }
-     }
-  }
- // console.log("The Year " + allYears[maxYear].year + " has the most objects with " + allYears[maxYear].items.length + " items.");
- // console.log("The Year " + allYears[minYear].year + " has the least objects with " + allYears[minYear].items.length + " item.");
-}
-
-/// number of artworks 1850 - 2017
-
-
-  mxYear = null;
-
-for (var s=0; s<=p.count; s++) {
-      var year = p.int(p.table.getString(s,17));
-      if(year!=yearNow.year){
-        var yearNow = {};
-        yearNow.year = year;
-        yearNow.items =[];
-        yearNow.items = p.table.findRows(String(yearNow.year),17);
-        p.append(allYears, yearNow);
-        
-        if(yearNow.items.length>maxObjects){
-          maxObjects = yearNow.items.length;
-          mxYear = midYears.length-1;
-        }
-
-     }
-console.log("Number of artworks since 1850 is " + midYears.length + " the year with the most artworks 1850 -2017 is " + mxYear);
-
-  }
-
-////====================
-
-
-// /======THIS WORKS FOR TOTAL NUMBER of FEMALE, MALE, TWO, UNKNOWN artists
-//shown on bar chart  
-
-p.analyzeGender = function(){
-  var cnt = p.table.getRowCount();
-  var gender = {};
-
-  var MaleArtists = 0;
-  var FemaleArtists = 0;
-  var TwoArtists = 0;
-  var UnknownArtists = 0;
-  var ToFindOutArtists = 0;
-  var Other = 0;
-
-  gender.gen = (String(p.table.getString(0,10)));
-
-  for(var g=0; g<cnt; g++){
-    var gender = p.table.getString(g,10);
-
-    gender.items = p.table.findRows(String(gender.gen),10);
-  if (gender === 'm') {
-      MaleArtists = MaleArtists + 1;
-
-    } else if (gender === 'f') {
-     FemaleArtists = FemaleArtists + 1;
-
-     } else if (gender === 't') {
-     TwoArtists = TwoArtists + 1;
-
-    } else if (gender === 'u') {
-     UnknownArtists = UnknownArtists + 1;
-
-   } else if (gender === 'a') {
-     ToFindOutArtists = ToFindOutArtists + 1;
-
-   } else {
-     Other = Other + 1;
-     }
-
-  }
-
-    TotalFemale.push({femaleTotal: FemaleArtists});
-    console.log(TotalFemale);
-
-    TotalMale.push({maleTotal: MaleArtists});
-    console.log(TotalMale);
-
-    TotalTwo.push({twoTotal: TwoArtists});
-    console.log(TotalTwo);
-
-    TotalUnknown.push({unknownTotal: UnknownArtists});
-    console.log(TotalUnknown);
-
-    TotalToFindOut.push({tofindoutTotal: ToFindOutArtists});
-    console.log(TotalToFindOut);
-       
-
-}
-///========
-
-
-///WORKS TO DISPLAY PER YEAR by GENDER
-  p.displayData = function(){
-  /////move chart over
-
-  p.push();
-  p.translate(50,0);
-
-	p.noStroke();
-	p.fill(255,0,0);
-
-  for(var i=0; i<allYears.length; i++){
-//// years use map incoming value and range
-    // console.log('thisisallYrs' + allYears[allYears.length-1].year);
-////map function 
-    // var x = map(allYears[i].year,1850,allYears[allYears.length-1].year, margin, width-margin);
-    var x = p.map(allYears[i].year,1850,allYears[allYears.length-1].year, margin, 1341-margin);
-
-    var totalFemaleArtistsPerBar = 0;
-    var totalMaleArtistsPerBar = 0;
-
-////THIS logs where it is mapping that is relatively corresponding to:
-   // console.log("mapping: " + allYears[i].year + "to: " + x);
-
-    // var x = map(i,0,allYears.length, margin, width-margin);
-    //rect(x,height/2,5,5);
-
-  ///then do same for y height
-  for(var j=0; j<allYears[i].items.length; j++){
-      // var y= map(j,0,maxObjects,height-margin, margin);
-      var y= p.map(j,0,maxObjects,747-margin, margin);
-
-//table.findRows(String(yearNow.year),17)
-
-///====WORKS TO FILL BY GENDER
-   var gender = allYears[i].items[j].obj.Gender;
-    if (gender === 'm') {
-       p.fill(92,242,145,90);
-       p.rect(x-1,y-1,3,2);
-       // console.log('m');
-       totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
-
-    } else if (gender === 'f') {
-       p.fill(179,118,244,90);
-       p.rect(x-1,y-1,3,2);
-       // console.log('f');
-      totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
-     // console.log(totalFemaleArtistsPerBar);
-    } else if (gender === 't') {
-       p.fill(168,71,5,80);
-       p.rect(x-1,y-1,3,2);
-      // console.log('t');
-      
-    } else if (gender === 'u') {
-       p.fill(165,160,152,80);
-       p.rect(x-1,y-1,3,2);
-       // console.log('u');
-
-    } else if (gender === 'a') {
-       p.fill(224,199,50,90);
-       p.rect(x-1,y-1,3,2);
-       // console.log('a');
-
-    } else {
-       p.fill(100,100);
-       p.rect(x-1,y-1,3,2);
-      // console.log('u');
-    }
-
-  }
-
-//THIS gets number of FEMALE artworks per BAR with total bar height
-  barTotals.push({barTotal: allYears[i].items, femaleTotal: totalFemaleArtistsPerBar});
-//THIS gets number of FEMALE artworks 
-  yrFemTotals.push({year: allYears[i].year, total: totalFemaleArtistsPerBar});
-
-//THIS gets number of MALE artworks per BAR with total bar height
-  barTotals2.push({barTotal: allYears[i].items, maleTotal: totalMaleArtistsPerBar});
-//THIS gets number of MALE artworks 
-  yrMaleTotals.push({year: allYears[i].year, total: totalMaleArtistsPerBar});
-  }
-  console.log(yrFemTotals);
-  console.log(yrMaleTotals);
-  p.pop();
-}
-
-
-    p.drawLabelsCh = function(){
-  p.push();
-  p.translate(50,0);
- //x axis
-  p.textFont('Khand');
-  p.textSize(15);
-  p.stroke(77,77,77);
- //just the lines
-   // line(margin,height-margin,width-margin,height-margin);
-  p.line(margin,747-margin,1341-margin,747-margin);
-  p.noStroke();
-  p.textAlign(p.CENTER);
-
-  // draw the sections and add text for each section
-   //go throught the years
-for(var i=1850; i<=2017; i+=10){
-   // var y = height-margin+30;
-   var y = 747-margin+30;
-   // x = map(i,1850,2017, margin, width-margin);
-    var x = p.map(i,1850,2017, margin, 1341-margin);
-
-    // x = map(i,0, allYears.length,margin, width-margin);
-      p.noStroke();
-      p.fill(77,77,77);
-      p.text(i, x, y);
-      p.stroke(77,77,77);
-      p.strokeWeight(1);
-      p.line(x,y-22,x, y-30);
-  }
-
-// label the whole axis
-  p.textFont('Khand');
-  p.textAlign(p.RIGHT);
-  p.noStroke();
-  p.textSize(19);
-
-  p.text("Year: Object Begin Date", 990,720);
-    // p.text("Year: Object Begin Date", width-margin,height-margin+70);
-
-
-//source
-  p.textAlign(p.LEFT);
-  p.noStroke();
-  p.textSize(15);
-  // text("Year", width-margin,height-margin+70);
-  // text("Year", 1341-margin,747-margin+70);
-  p.text("Source: MetObjects.csv, January 2018, spreadsheet shared with The New School.", margin-15,747-margin+80);
-  p.text("Modern & Contemporary Art Collection Department, 14,350 artworks. Object Begin Date, Gender identified by Artist Display Name, 1850-2017 (14,284 artworks.)", margin-15,747-margin+102);
-
-//   // 2. Let's draw the y Axis
-  p.stroke(77,77,77);
-  // line(margin,height-margin ,margin,margin);
-  p.line(margin,747-margin,margin,margin);
-  p.noStroke();
-  p.textAlign(p.RIGHT);
-  p.textStyle(p.NORMAL);
-
-  for(var i=0; i<maxObjects; i+=50){
-    var x = margin-20;
-    // y = map(i,0, maxObjects,height-margin, margin);
-     var y = p.map(i,0, maxObjects,747-margin, margin);
-    p.noStroke();
-    p.fill(77,77,77);
-    p.text(i, x, y+5);
-    p.stroke(77,77,77);
-    p.strokeWeight(1);
-    p.line(x+10,y,x+20,y);
-  }
-
-  p.push();
-  // textStyle(BOLD);
-  p.translate(65,0);
-  p.textFont('Khand');
-  p.noStroke();
-  p.textSize(19);
-  p.translate(1000,700);
-  p.rotate(p.radians(270)); 
-  // p.text("Number of Artworks", margin+300,margin-1057);
-  p.text("Number of Artworks", margin+300,margin-1120);
-
-  p.pop();
-//   // 3. Let's add the overall title
-  p.push();
-  p.translate(65,0);
-  p.textFont('Khand');
-  p.textStyle(p.BOLD);
-  p.noStroke();
-  p.textAlign(p.LEFT);
-  p.textSize(38);
-  p.fill(77,77,77);
-  // p.text("The Met: ", 520,100);
-  p.textSize(30);
-  p.textStyle(p.NORMAL);
-  p.text("What year are the artworks made by ", 639,100);
-  p.textSize(40);
-  p.fill(77,77,77);
-  p.text("women, by men?",640,170);
-  // p.text("How do the numbers stack up by gender?", 520,210);
-  p.textSize(38);
-  p.textStyle(p.NORMAL);
-  p.fill(77,77,77);
-  // p.text("The Met's", 520,170);
-  p.textSize(26);
-  p.text("The Met Modern & Contemporary Art Collection", 640,225);
-  p.textSize(38);
-  p.textStyle(p.BOLD);
-  // p.text("By year", 640,275);
-  p.pop();
-
-////4. Add legend
-    p.textFont('Khand');
-    p.noStroke();
-    p.fill(179,118,244,140);  //f
-    p.rect(100,100,25,25);
-    p.fill(92,242,145,140); //m
-    p.rect(100,130,25,25);
-    p.fill(168,71,5,140);  //t
-    p.rect(100,160,25,25);
-    p.fill(165,160,152,140);   //u
-    p.rect(100,190,25,25);
-    p.fill(224,199,50,140);   //a
-    p.rect(100,220,25,25);
-    p.textStyle();
-    p.textAlign(p.LEFT);
-    p.textSize(19);
-    p.fill (77,77,77);
-    p.text("Artwork", 132,90);
-    p.textStyle(p.NORMAL);
-    p.textSize(18);
-    p.text("female", 132,117);
-    p.text("male", 132,147);
-    p.text("couple / collaborative with both genders",132,177);
-    p.text("unknown",132,207);
-    p.text("named, gender not yet identified",132,237);
-
-    p.pop();
-  }
-  
-}
-
-var myp5 = new p5(w, 'c1');
-
-
-////////////////\\\\\\\\\\\\\\\\
-
-///wrapped bars
+///////wrapped bars
 var s = function(p){
 
   p.fontRead = function(){
@@ -558,17 +138,17 @@ var s = function(p){
   p.fill(77,77,77);
   p.textSize(26);
   // p.text("Modern & Contemporary Art Collection", 720,90);
-  p.textSize(36);
+  p.textSize(35);
   p.textStyle(p.BOLD);
   p.textAlign(p.LEFT);
-  p.text("The Met: 14,350 artworks by gender", 205,90);
+  p.text("What % of The Met's 14,350 artworks are by women", 130,90);
   // p.text("Met Modern & Contemporary Collection", 850-margin,165-margin+30);
-  p.textSize(32);
-  p.text("Modern & Contemporary Art Collection", 205,135);
+  p.textSize(30);
+  p.text("in the Modern & Contemporary Art Collection Department?", 130,130);
   p.push();
   p.translate(0,80)
   p.textAlign(p.LEFT);
-  p.textSize(16);
+  p.textSize(18);
   p.text("1 pixel: 2 artworks, scaled to 0.83", 205,280);
   p.textAlign(p.LEFT);
   p.textSize(28);
@@ -611,9 +191,8 @@ var s = function(p){
 }
 }
 
-var myp5 = new p5(s, 'c2');
-
-///////////////////////
+var myp5 = new p5(s, 'c1');
+//////////\\\\\\\\\\\\\\
 
 // ////VERTICAL BARS TOTALS 
 
@@ -732,7 +311,7 @@ var genFill = singleData[b];
     // p.textAlign(p.RIGHT);
     p.text("The Met Modern & Contemporary Art Collection", 100,margin-140);
     p.textStyle(p.BOLD);
-    p.textSize(16);
+    p.textSize(20);
     p.text("Scale: 1 pixel = 2 artworks", 100,margin-115);
     p.pop();
 
@@ -817,94 +396,428 @@ p.pop();
    }
 }
 
-var myp5 = new p5(t, 'c3');
+var myp5 = new p5(t, 'c2');
+///////////\\\\\\\\\\\
+
+////////chart by year
+var w = function(p) {
+
+  p.fontRead = function(){
+      fontReady = true; 
+    }
+
+  p.preload = function(){
+  //mytable is comma separated value "csv"
+  //and has a header specifying the columns labels
+   p.table = p.loadTable('assets/ModContG3final4sort.csv','csv','header');
+
+   KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
+  }
+
+   p.setup = function(){
+     p.createCanvas(p.windowWidth,850);
+     p.analyzeData();
+     p.analyzeGender();
+     p.displayData();
+     p.drawLabelsCh();
+     // p.legend();
+
+  }
+
+  p.windowResized = function() {
+   p.resizeCanvas(p.windowWidth, p.windowHeight);
+  }
+
+  p.analyzeData = function(){
+	var count = p.table.getRowCount();
+  var countC = p.table.getColumnCount();
+	console.log(count + " rows");
+  console.log(countC + " columns");
+
+// ///THIS shows row with FIRST female artist gender column 10
+  var female = p.table.findRow('f', 10);
+  console.log(female);
+//============
+
+// =======THIS console logs all rows with a FEMALE artist
+    var female = p.table.findRows('f', 10);
+    console.log(female);
+
+//=======THIS console logs all rows with a MALE artist
+    var male = p.table.findRows('m', 10);
+    console.log(male);
+
+//=======THIS console logs all rows where BOTH male and female named as artists 
+    var couple = p.table.findRows('t', 10);
+    console.log(couple);
+
+//=======THIS console logs all rows where the artist is UNKNOWN
+    var unknown = p.table.findRows('u', 10);
+    console.log(unknown);
+
+//=======THIS console logs all rows where there is an artist but I haven't found their gender
+   var todo = p.table.findRows('a', 10);
+   console.log(todo);
+
+// // //===================================
+
+// ///=========WORKS to give the YEARS w/ the MAX & MIN NUMBER OF OBJECTS 
+////object begin date column 17
+  var yearNow = {};
+  yearNow.year = (p.int(p.table.getString(0,17)));
+
+  yearNow.items = p.table.findRows(String(yearNow.year),17);
+  p.append(allYears, yearNow);
+
+  minObjects = 150000;
+  maxObjects = 0;
+  minYear = null;
+  maxYear = null;
 
 
+for (var i=0; i<count; i++) {
+      var year = p.int(p.table.getString(i,17));
+      if(year!=yearNow.year){
+        var yearNow = {};
+        yearNow.year = year;
+        yearNow.items =[];
+        yearNow.items = p.table.findRows(String(yearNow.year),17);
+        p.append(allYears, yearNow);
+        
+        if(yearNow.items.length>maxObjects){
+          maxObjects = yearNow.items.length;
+          maxYear = allYears.length-1;
+        }
 
-//   var x,y,w,h;
+        if(yearNow.items.length<minObjects){
+          minObjects = yearNow.items.length;
+          // minYear = allYears.length-1;
+           minYear = allYears.length;
+        }
+     }
+  }
+ // console.log("The Year " + allYears[maxYear].year + " has the most objects with " + allYears[maxYear].items.length + " items.");
+ // console.log("The Year " + allYears[minYear].year + " has the least objects with " + allYears[minYear].items.length + " item.");
+}
 
-//   var singleData = [52, 1318, 128, 10825, 2027];
+  mxYear = null;
 
-// // var width = 5800,
-// //    // var width = 11000,
-// //        height = p.windowHeight,
+for (var s=0; s<=p.count; s++) {
+      var year = p.int(p.table.getString(s,17));
+      if(year!=yearNow.year){
+        var yearNow = {};
+        yearNow.year = year;
+        yearNow.items =[];
+        yearNow.items = p.table.findRows(String(yearNow.year),17);
+        p.append(allYears, yearNow);
+        
+        if(yearNow.items.length>maxObjects){
+          maxObjects = yearNow.items.length;
+          mxYear = midYears.length-1;
+        }
 
-// //         margin = 15,
-// //   w = width - 2 * margin, // chart area width and height
-// //         h = height - 2 * margin;
-    
-// //     var barWidth =  (h / singleData.length) * 0.15; // width of bar
-// //     var barMargin = (h / singleData.length) * 0.2; // margin between two
+     }
+console.log("Number of artworks since 1850 is " + midYears.length + " the year with the most artworks 1850 -2017 is " + mxYear);
 
-//   // // //   // 2. Let's draw the y Axis
-//   // p.stroke(77,77,77);
-//   // // line(margin,height-margin ,margin,margin);
-//   // p.line(margin,747-margin,margin,margin);
-//   // p.noStroke();
-//   // p.textAlign(p.RIGHT);
-//   // p.textStyle(p.NORMAL);
+  }
 
-//   for(var b=0; b<singleData.length; b++){
-//     p.push();
-//     p.stroke(77,77,77);
-//     p.strokeWeight(1);
-//     // p.rotate(p.radians(90));   // rotate to vertical
-//     // p.translate(200, 20);
-
-
-//     var x = margin-20;
-//     // y = map(i,0, maxObjects,height-margin, margin);
-//      var y = p.map(b,0, singleData.length,747-margin, margin);
-    
-    
-//     // p.noStroke()
-//     // p.text(b, x, y+5);
-
-//     p.line(x+10,y,x+20,y);
-//     p.pop();
-
-// }
-
-
-////////////\\\\\\\\\\\\\\\\\\\\//////////END OF TEST
-
-
+////====================
 
 
-///////////
+// /======TOTAL NUMBER of FEMALE, MALE, TWO, UNKNOWN artists
+//shown on bar chart  
 
-////try to show year # on hover
-//BETTER TO USE HTML FOR THIS
-// function showInfo() {
-//   // Check if mouse is inside the circle
-//    if(dist(mouseX, mouseY, 1060, 200)<50) {
-//       overBars = true;  
-//     } 
-//   else
-//    {
-//      overBars = false;
-//     }
-//     if(overBars == true){
-//       show(barTotals, barTotals2);
-//     } 
-//     else {
-//   }
-// }
+p.analyzeGender = function(){
+  var cnt = p.table.getRowCount();
+  var gender = {};
 
-// function mouseOver(){
-//   if(overBars == true){
-//     show(barTotals, barTotals2);
-//   }
-// }
+  var MaleArtists = 0;
+  var FemaleArtists = 0;
+  var TwoArtists = 0;
+  var UnknownArtists = 0;
+  var ToFindOutArtists = 0;
+  var Other = 0;
 
-////////////////\\\\\\\\\\\\\\\\\
+  gender.gen = (String(p.table.getString(0,10)));
 
+  for(var g=0; g<cnt; g++){
+    var gender = p.table.getString(g,10);
+
+    gender.items = p.table.findRows(String(gender.gen),10);
+  if (gender === 'm') {
+      MaleArtists = MaleArtists + 1;
+
+    } else if (gender === 'f') {
+     FemaleArtists = FemaleArtists + 1;
+
+     } else if (gender === 't') {
+     TwoArtists = TwoArtists + 1;
+
+    } else if (gender === 'u') {
+     UnknownArtists = UnknownArtists + 1;
+
+   } else if (gender === 'a') {
+     ToFindOutArtists = ToFindOutArtists + 1;
+
+   } else {
+     Other = Other + 1;
+     }
+
+  }
+
+    TotalFemale.push({femaleTotal: FemaleArtists});
+    console.log(TotalFemale);
+
+    TotalMale.push({maleTotal: MaleArtists});
+    console.log(TotalMale);
+
+    TotalTwo.push({twoTotal: TwoArtists});
+    console.log(TotalTwo);
+
+    TotalUnknown.push({unknownTotal: UnknownArtists});
+    console.log(TotalUnknown);
+
+    TotalToFindOut.push({tofindoutTotal: ToFindOutArtists});
+    console.log(TotalToFindOut);
+       
+
+}
+///========
+
+///WORKS TO DISPLAY PER YEAR by GENDER
+  p.displayData = function(){
+  /////move chart over
+
+  p.push();
+  p.translate(50,0);
+
+	p.noStroke();
+	p.fill(255,0,0);
+
+  for(var i=0; i<allYears.length; i++){
+//// years use map incoming value and range
+    // console.log('thisisallYrs' + allYears[allYears.length-1].year);
+////map function 
+    // var x = map(allYears[i].year,1850,allYears[allYears.length-1].year, margin, width-margin);
+    var x = p.map(allYears[i].year,1850,allYears[allYears.length-1].year, margin, 1341-margin);
+
+    var totalFemaleArtistsPerBar = 0;
+    var totalMaleArtistsPerBar = 0;
+
+////THIS logs where it is mapping that is relatively corresponding to:
+   // console.log("mapping: " + allYears[i].year + "to: " + x);
+
+    // var x = map(i,0,allYears.length, margin, width-margin);
+    //rect(x,height/2,5,5);
+
+  ///then do same for y height
+  for(var j=0; j<allYears[i].items.length; j++){
+      // var y= map(j,0,maxObjects,height-margin, margin);
+      var y= p.map(j,0,maxObjects,747-margin, margin);
+
+//table.findRows(String(yearNow.year),17)
+
+///====WORKS TO FILL BY GENDER
+   var gender = allYears[i].items[j].obj.Gender;
+    if (gender === 'm') {
+       p.fill(92,242,145,90);
+       p.rect(x-1,y-1,3,2);
+       // console.log('m');
+       totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
+
+    } else if (gender === 'f') {
+       p.fill(179,118,244,90);
+       p.rect(x-1,y-1,3,2);
+       // console.log('f');
+      totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
+     // console.log(totalFemaleArtistsPerBar);
+    } else if (gender === 't') {
+       p.fill(168,71,5,80);
+       p.rect(x-1,y-1,3,2);
+      // console.log('t');
+      
+    } else if (gender === 'u') {
+       p.fill(165,160,152,80);
+       p.rect(x-1,y-1,3,2);
+       // console.log('u');
+
+    } else if (gender === 'a') {
+       p.fill(224,199,50,90);
+       p.rect(x-1,y-1,3,2);
+       // console.log('a');
+
+    } else {
+       p.fill(100,100);
+       p.rect(x-1,y-1,3,2);
+      // console.log('u');
+    }
+
+  }
+
+//THIS gets number of FEMALE artworks per BAR with total bar height
+  barTotals.push({barTotal: allYears[i].items, femaleTotal: totalFemaleArtistsPerBar});
+//THIS gets number of FEMALE artworks 
+  yrFemTotals.push({year: allYears[i].year, total: totalFemaleArtistsPerBar});
+
+//THIS gets number of MALE artworks per BAR with total bar height
+  barTotals2.push({barTotal: allYears[i].items, maleTotal: totalMaleArtistsPerBar});
+//THIS gets number of MALE artworks 
+  yrMaleTotals.push({year: allYears[i].year, total: totalMaleArtistsPerBar});
+  }
+  console.log(yrFemTotals);
+  console.log(yrMaleTotals);
+  p.pop();
+}
+
+
+    p.drawLabelsCh = function(){
+  p.push();
+  p.translate(50,0);
+ //x axis
+  p.textFont('Khand');
+  p.textSize(17);
+  p.stroke(77,77,77);
+ //just the lines
+   // line(margin,height-margin,width-margin,height-margin);
+  p.line(margin,747-margin,1341-margin,747-margin);
+  p.noStroke();
+  p.textAlign(p.CENTER);
+
+  // draw the sections and add text for each section
+   //go throught the years
+for(var i=1850; i<=2017; i+=10){
+   // var y = height-margin+30;
+   var y = 747-margin+30;
+   // x = map(i,1850,2017, margin, width-margin);
+    var x = p.map(i,1850,2017, margin, 1341-margin);
+
+    // x = map(i,0, allYears.length,margin, width-margin);
+      p.noStroke();
+      p.fill(77,77,77);
+      p.text(i, x, y);
+      p.stroke(77,77,77);
+      p.strokeWeight(1);
+      p.line(x,y-22,x, y-30);
+  }
+
+// label the whole axis
+  p.textFont('Khand');
+  p.textAlign(p.RIGHT);
+  p.noStroke();
+  p.textSize(20);
+
+  p.text("Year: Object Begin Date", 990,730);
+    // p.text("Year: Object Begin Date", width-margin,height-margin+70);
+
+//source
+  p.textAlign(p.LEFT);
+  p.noStroke();
+  p.textSize(18);
+  // text("Year", width-margin,height-margin+70);
+  // text("Year", 1341-margin,747-margin+70);
+  p.text("Source: MetObjects.csv, January 2018, spreadsheet shared with The New School.", margin-15,747-margin+105);
+  p.text("Modern & Contemporary Art Collection Department, 14,350 artworks. Object Begin Date, Gender identified by Artist Display Name, 1850-2017 (14,284 artworks.)", margin-15,747-margin+135);
+
+//   // 2. Let's draw the y Axis
+  p.stroke(77,77,77);
+  // line(margin,height-margin ,margin,margin);
+  p.line(margin,747-margin,margin,margin);
+  p.noStroke();
+  p.textAlign(p.RIGHT);
+  p.textStyle(p.NORMAL);
+
+  for(var i=0; i<maxObjects; i+=50){
+    var x = margin-20;
+    // y = map(i,0, maxObjects,height-margin, margin);
+     var y = p.map(i,0, maxObjects,747-margin, margin);
+    p.noStroke();
+    p.fill(77,77,77);
+    p.text(i, x, y+5);
+    p.stroke(77,77,77);
+    p.strokeWeight(1);
+    p.line(x+10,y,x+20,y);
+  }
+
+  p.push();
+  // textStyle(BOLD);
+  p.translate(65,0);
+  p.textFont('Khand');
+  p.noStroke();
+  p.textSize(20);
+  p.translate(1000,700);
+  p.rotate(p.radians(270)); 
+  p.text("Number of Artworks", margin+300,margin-1135);
+  // p.text("Number of Artworks", margin+300,margin-1120);
+
+  p.pop();
+//   // 3. Let's add the overall title
+  p.push();
+  p.translate(65,0);
+  p.textFont('Khand');
+  p.textStyle(p.BOLD);
+  p.noStroke();
+  p.textAlign(p.LEFT);
+  p.textSize(38);
+  p.fill(77,77,77);
+  // p.text("The Met: ", 520,100);
+  p.textSize(30);
+  p.textStyle(p.NORMAL);
+  p.text("What year were the artworks made ", 639,100);
+  p.textSize(36);
+  p.fill(77,77,77);
+  p.text("by women, by men?",640,160);
+  // p.text("How do the numbers stack up by gender?", 520,210);
+  p.textSize(38);
+  p.textStyle(p.NORMAL);
+  p.fill(77,77,77);
+  // p.text("The Met's", 520,170);
+  p.textSize(26);
+  p.text("The Met Modern & Contemporary Art Collection", 640,225);
+  p.textSize(38);
+  p.textStyle(p.BOLD);
+  // p.text("By year", 640,275);
+  p.pop();
+
+////4. Add legend
+    p.textFont('Khand');
+    p.noStroke();
+    p.fill(179,118,244,140);  //f
+    p.rect(100,100,25,25);
+    p.fill(92,242,145,140); //m
+    p.rect(100,130,25,25);
+    p.fill(168,71,5,140);  //t
+    p.rect(100,160,25,25);
+    p.fill(165,160,152,140);   //u
+    p.rect(100,190,25,25);
+    p.fill(224,199,50,140);   //a
+    p.rect(100,220,25,25);
+    p.textStyle();
+    p.textAlign(p.LEFT);
+    p.textSize(20);
+    p.fill (77,77,77);
+    p.text("Artwork", 132,90);
+    p.textStyle(p.NORMAL);
+    p.textSize(18);
+    p.text("female", 132,117);
+    p.text("male", 132,147);
+    p.text("couple / collaborative with both genders",132,177);
+    p.text("unknown",132,207);
+    p.text("named, gender not yet identified",132,237);
+
+    p.pop();
+  }
+  
+}
+
+var myp5 = new p5(w, 'c3');
+
+////////////////\\\\\\\\\\\\\\\\
 
 
 ////////\\\\\\\\\\\==========================
 
 /////========================================
-// // ////WORKS TO DRAW Horizontal BAR CHART for totals 
+// // ////Horizontal BAR CHART for totals 
 // function displaySingleBar(){
 //   noStroke();
 //   fill(255,0,0);
@@ -972,8 +885,6 @@ var myp5 = new p5(t, 'c3');
 //   maxArtistColl = 0;
 //   maxArtist = null;
     
-
-
 // for (var n=0; n<rows; n++) {
 //       //var artist = int(table.getString(i,11));
 
@@ -1045,7 +956,6 @@ var myp5 = new p5(t, 'c3');
 // }
 //================
 
-
 //=================
 // //to get all the columns in a specific row: table.get.Row(1)
 // 	for(var i=0; i<row; i++){
@@ -1064,5 +974,4 @@ var myp5 = new p5(t, 'c3');
 //shows total number of rows
 		// console.log(table.get(i,1));
     	
-	
 // }
