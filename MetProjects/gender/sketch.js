@@ -764,16 +764,16 @@ p.drawmeasureline = function(){
  // //just the lines
    
  //  // p.line(margin,height-margin,width-margin,height-margin);
-  p.text("unidentified", 580,52/2+95);
-  p.line(580,52/2+100,670,52/2+100);
-  p.text("couple", 580,128/2+95);
-  p.line(580,128/2+100,670,128/2+100);
-  p.text("unknown", 580,1318/2+95);
-  p.line(580,1318/2+100,670,1318/2+100);
-  p.text("female", 580,2027/2+95);
-  p.line(580,2027/2+100,670,2027/2+100);
-  p.text("male", 580,10825/2+95);
-  p.line(580,10825/2+100,670,10825/2+100);
+  p.text("unidentified: 52", 576,52/2+95);
+  p.line(575,52/2+100,700,52/2+100);
+  p.text("couple: 128", 575,128/2+95);
+  p.line(575,128/2+100,700,128/2+100);
+  p.text("unknown: 1318", 574,1318/2+95);
+  p.line(575,1318/2+100,700,1318/2+100);
+  p.text("female: 2027", 574,2027/2+95);
+  p.line(575,2027/2+100,700,2027/2+100);
+  p.text("male: 10825", 573,10825/2+95);
+  p.line(574,10825/2+100,700,10825/2+100);
   // p.strokeWeight(1);
  //  p.line(590,10925/2,690,10925/2);
   p.noStroke();
@@ -803,7 +803,6 @@ p.drawmeasureline = function(){
       p.strokeWeight(1);
 
       // p.line(x,y-22,x, y-45);
-       // p.line(x,y-22,x, y-30);
       p.line(x,y-22,x, y-45);
 
       // p.rotate(p.radians(-90));
@@ -812,10 +811,10 @@ p.drawmeasureline = function(){
 
       p.text(b, x,y);
 
-  }
+    }
 p.pop();
 
-}
+   }
 }
 
 var myp5 = new p5(t, 'c3');
