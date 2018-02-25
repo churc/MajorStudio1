@@ -43,10 +43,9 @@ var s = function(p){
    KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
   }
 
-    p.setup = function(){
+  p.setup = function(){
     p.createCanvas(p.windowWidth,870);
     p.drawLabelsTot();
-    // p.legend();
 
     p.background(100,05);
       
@@ -124,46 +123,39 @@ var s = function(p){
 
 
   p.windowResized = function() {
-   p.resizeCanvas(p.windowWidth, p.windowHeight);
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
 }
 
   p.drawLabelsTot = function(){
 
-   p.push();
-   p.translate(-80,0); 
+    p.push();
+    p.translate(-80,0); 
   //label wrapped total bars
-  p.textFont('Khand');
-  p.textAlign(p.RIGHT);
-  p.noStroke();
-  p.textSize(18);
-  // text("Year", width-margin,height-margin+70);
-  // text("Year", 1341-margin,747-margin+70);
-  p.fill(77,77,77);
-  // p.textSize(26);
-  // p.text("Modern & Contemporary Art Collection", 720,90);
-  p.textSize(38);
-  p.textStyle(p.NORMAL);
-  p.textAlign(p.LEFT);
-  p.text("What % of The Met's 14,350 artworks are by women?", 130,90);
-  // p.text("Met Modern & Contemporary Collection", 850-margin,165-margin+30);
-  p.textSize(26);
-  p.text("Looking at the Modern & Contemporary Art Collection", 130,130);
-  p.push();
-  p.translate(0,80)
-  p.textAlign(p.LEFT);
-  p.textSize(18);
-  p.text("1 pixel: 2 artworks, scaled to 0.83", 237,285);
-  p.textAlign(p.LEFT);
-  p.textSize(28);
-  // p.text("Modern & Contemporary Art Collection", 205,97);
-  p.textAlign(p.RIGHT);
-  p.textSize(26);
-  p.text("14.13%", 190,120);
-  p.text("75.44%", 190,150);
-  p.text("0.89%", 190,180);
-  p.text("9.18%", 190,210);
-  p.text("0.36%", 190,240);
-
+    p.textFont('Khand');
+    p.textAlign(p.RIGHT);
+    p.noStroke();
+    p.textSize(18);
+    p.fill(77,77,77);
+    p.textSize(38);
+    p.textStyle(p.NORMAL);
+    p.textAlign(p.LEFT);
+    p.text("What % of The Met's 14,350 artworks are by women?", 130,90);
+    p.textSize(26);
+    p.text("Looking at the Modern & Contemporary Art Collection", 130,130);
+    p.push();
+    p.translate(0,80)
+    p.textAlign(p.LEFT);
+    p.textSize(18);
+    p.text("1 pixel: 2 artworks, scaled to 0.83", 237,285);
+    p.textAlign(p.LEFT);
+    p.textSize(28);
+    p.textAlign(p.RIGHT);
+    p.textSize(26);
+    p.text("14.13%", 190,120);
+    p.text("75.44%", 190,150);
+    p.text("0.89%", 190,180);
+    p.text("9.18%", 190,210);
+    p.text("0.36%", 190,240);
 
 //// Add legend
 
@@ -180,9 +172,7 @@ var s = function(p){
     p.rect(205,220,25,25);
     p.textStyle();
     p.textAlign(p.LEFT);
-    // p.textSize(16);
     p.fill (77,77,77);
-    // p.text("Artwork by a :", 132,90);
     p.textStyle(p.NORMAL);
     p.textSize(20);
     p.text("female", 237,117);
@@ -229,15 +219,13 @@ var t = function(p) {
     p.noStroke();
     p.fill(255,0,0);
 
-  var x,y,w,h;
+    var x,y,w,h;
 
-  var singleData = [52, 1318, 128, 10825, 2027];
+    var singleData = [52, 1318, 128, 10825, 2027];
 //var fillBars = [(fill("#ededed"),("#5c5c5c"),("#e5e5o5"),("#f0f0f0"),("#000"))];
 
-  var width = 5800,
-   // var width = 11000,
-       height = p.windowHeight,
-
+    var width = 5800,
+        height = p.windowHeight,
         margin = 40,
         // margin = 15,
         w = width - 2 * margin, // chart area width and height
@@ -274,45 +262,34 @@ var genFill = singleData[b];
     }
 
     p.push();  //save 
-
-      
+    
       p.noStroke();
       p.textSize(20);
       p.rotate(p.radians(90));   // rotate to vertical
       p.translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar 
       p.rect(100, -p.windowWidth/1.5, singleData[b]/2, barWidth/2);
-      // p.rect(20, -p.windowWidth/1.5, singleData[b]/2, barWidth/2); // draw rect
       p.fill(0,0,0);
       p.text(singleData[b], 100, barWidth/2 + -p.windowWidth/1.53); // write data label
-
-
-/////////PERCENTAGES ARE NOT CORRECT
-  
       // p.text((((singleData[b]/singleData.length)*100).toFixed(0)+'%'), 55, barWidth/2 + -p.windowWidth/1.525); // write data label
     p.pop();   // reset, restore
   } 
-  }
+}
 
 
   p.drawLabelsBar = function(){
  //label long bars
 
- p.push();
- p.translate(300,0);
- // p.translate(300,-75);
-   p.rotate(p.radians(90)); 
+    p.push();
+    p.translate(300,0);
+    p.rotate(p.radians(90)); 
     p.textFont('Khand');
     p.textAlign(p.LEFT);
     p.noStroke();
     p.fill(77,77,77);
     p.textSize(32);
     p.textStyle(p.BOLD);
-    // text("Year", width-margin,height-margin+70);
-    // text("Year", 1341-margin,747-margin+70);
-    // p.text("Another View of All Artworks by Gender", 100,147-margin-10);
     p.textSize(26);
     p.textStyle(p.NORMAL);
-    // p.textAlign(p.RIGHT);
     p.text("The Met Modern & Contemporary Art Collection", 100,margin-140);
     p.textStyle(p.BOLD);
     p.textSize(20);
@@ -325,18 +302,16 @@ var genFill = singleData[b];
     p.fill(77,77,77);
     p.textSize(38);
     p.textStyle(p.NORMAL);
-    // text("Year", width-margin,height-margin+70);
-    // text("Year", 1341-margin,747-margin+70);
     p.text("Another View of All Artworks by Gender", 378,30);
   }
 
 p.drawmeasureline = function(){
     p.push();
     
-
     var x,y,w,h;
 
   var singleData = [52, 1318, 128, 10825, 2027];
+   
    //x axis
   p.textFont('Khand');
   p.textStyle(p.NORMAL);
@@ -363,8 +338,7 @@ p.drawmeasureline = function(){
   p.textSize(20);
   p.textAlign(p.CENTER);
   p.translate(1265,100);
-  // p.translate(1265,20);
-   p.rotate(p.radians(90));
+  p.rotate(p.radians(90));
   // draw the sections and add text for each section
    //go throught the years
    for(var b=0; b<=10825; b+=200){
@@ -372,29 +346,21 @@ p.drawmeasureline = function(){
    // var y = 747-margin+30;
     var y = 0;
 
-  var x = p.map(b,0,10825, 0, 10825/2);
+    var x = p.map(b,0,10825, 0, 10825/2);
 
     // x = map(i,0, allYears.length,margin, width-margin);
     // p.rotate(p.radians(90));   // rotate to vertical
     // p.translate(200, 20);
       p.noStroke();
       p.fill(77,77,77);
-
-      // p.text(b, x,y);
-      
       p.stroke(77,77,77);
       p.strokeWeight(1);
-
-      // p.line(x,y-22,x, y-45);
       p.line(x,y-22,x, y-45);
-
-      // p.rotate(p.radians(-90));
       p.noStroke();
       p.fill(77,77,77);
-
       p.text(b, x,y);
 
-    }
+     }
 p.pop();
 
    }
@@ -425,19 +391,18 @@ var w = function(p) {
      p.analyzeGender();
      p.displayData();
      p.drawLabelsCh();
-     // p.legend();
 
   }
 
   p.windowResized = function() {
-   p.resizeCanvas(p.windowWidth, p.windowHeight);
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
   }
 
   p.analyzeData = function(){
-	var count = p.table.getRowCount();
-  var countC = p.table.getColumnCount();
-	console.log(count + " rows");
-  console.log(countC + " columns");
+  	var count = p.table.getRowCount();
+    var countC = p.table.getColumnCount();
+  	console.log(count + " rows");
+    console.log(countC + " columns");
 
 // ///THIS shows row with FIRST female artist gender column 10
   var female = p.table.findRow('f', 10);
@@ -466,18 +431,18 @@ var w = function(p) {
 
 // // //===================================
 
-// ///=========WORKS to give the YEARS w/ the MAX & MIN NUMBER OF OBJECTS 
+// ///=======gives the YEARS w/ the MAX & MIN NUMBER OF OBJECTS 
 ////object begin date column 17
   var yearNow = {};
-  yearNow.year = (p.int(p.table.getString(0,17)));
+    yearNow.year = (p.int(p.table.getString(0,17)));
 
-  yearNow.items = p.table.findRows(String(yearNow.year),17);
-  p.append(allYears, yearNow);
+    yearNow.items = p.table.findRows(String(yearNow.year),17);
+    p.append(allYears, yearNow);
 
-  minObjects = 150000;
-  maxObjects = 0;
-  minYear = null;
-  maxYear = null;
+    minObjects = 150000;
+    maxObjects = 0;
+    minYear = null;
+    maxYear = null;
 
 
 for (var i=0; i<count; i++) {
@@ -525,9 +490,7 @@ for (var s=0; s<=p.count; s++) {
 console.log("Number of artworks since 1850 is " + midYears.length + " the year with the most artworks 1850 -2017 is " + mxYear);
 
   }
-
 ////====================
-
 
 // /======TOTAL NUMBER of FEMALE, MALE, TWO, UNKNOWN artists
 //shown on bar chart  
@@ -548,7 +511,7 @@ p.analyzeGender = function(){
   for(var g=0; g<cnt; g++){
     var gender = p.table.getString(g,10);
 
-    gender.items = p.table.findRows(String(gender.gen),10);
+  gender.items = p.table.findRows(String(gender.gen),10);
   if (gender === 'm') {
       MaleArtists = MaleArtists + 1;
 
@@ -585,11 +548,10 @@ p.analyzeGender = function(){
     TotalToFindOut.push({tofindoutTotal: ToFindOutArtists});
     console.log(TotalToFindOut);
        
-
 }
 ///========
 
-///WORKS TO DISPLAY PER YEAR by GENDER
+///DISPLAY PER YEAR by GENDER
   p.displayData = function(){
   /////move chart over
 
@@ -613,7 +575,6 @@ p.analyzeGender = function(){
    // console.log("mapping: " + allYears[i].year + "to: " + x);
 
     // var x = map(i,0,allYears.length, margin, width-margin);
-    //rect(x,height/2,5,5);
 
   ///then do same for y height
   for(var j=0; j<allYears[i].items.length; j++){
@@ -622,7 +583,7 @@ p.analyzeGender = function(){
 
 //table.findRows(String(yearNow.year),17)
 
-///====WORKS TO FILL BY GENDER
+///====FILL BY GENDER
    var gender = allYears[i].items[j].obj.Gender;
     if (gender === 'm') {
        p.fill(92,242,145,90);
@@ -675,18 +636,20 @@ p.analyzeGender = function(){
 }
 
 
-    p.drawLabelsCh = function(){
-  p.push();
-  p.translate(50,0);
- //x axis
-  p.textFont('Khand');
-  p.textSize(17);
-  p.stroke(77,77,77);
- //just the lines
+  p.drawLabelsCh = function(){
+    p.push();
+    p.translate(50,0);
+
+   //x axis
+    p.textFont('Khand');
+    p.textSize(17);
+    p.stroke(77,77,77);
+
+   //just the lines
    // line(margin,height-margin,width-margin,height-margin);
-  p.line(margin,747-margin,1341-margin,747-margin);
-  p.noStroke();
-  p.textAlign(p.CENTER);
+    p.line(margin,747-margin,1341-margin,747-margin);
+    p.noStroke();
+    p.textAlign(p.CENTER);
 
   // draw the sections and add text for each section
    //go throught the years
@@ -694,15 +657,15 @@ for(var i=1850; i<=2017; i+=10){
    // var y = height-margin+30;
    var y = 747-margin+30;
    // x = map(i,1850,2017, margin, width-margin);
-    var x = p.map(i,1850,2017, margin, 1341-margin);
+   var x = p.map(i,1850,2017, margin, 1341-margin);
 
-    // x = map(i,0, allYears.length,margin, width-margin);
-      p.noStroke();
-      p.fill(77,77,77);
-      p.text(i, x, y);
-      p.stroke(77,77,77);
-      p.strokeWeight(1);
-      p.line(x,y-22,x, y-30);
+   // x = map(i,0, allYears.length,margin, width-margin);
+    p.noStroke();
+    p.fill(77,77,77);
+    p.text(i, x, y);
+    p.stroke(77,77,77);
+    p.strokeWeight(1);
+    p.line(x,y-22,x, y-30);
   }
 
 // label the whole axis
@@ -712,18 +675,16 @@ for(var i=1850; i<=2017; i+=10){
   p.textSize(20);
 
   p.text("Year: Object Begin Date", 990,730);
-    // p.text("Year: Object Begin Date", width-margin,height-margin+70);
+// p.text("Year: Object Begin Date", width-margin,height-margin+70);
 
 //source
   p.textAlign(p.LEFT);
   p.noStroke();
   p.textSize(18);
-  // text("Year", width-margin,height-margin+70);
-  // text("Year", 1341-margin,747-margin+70);
   p.text("Source: MetObjects.csv, January 2018, spreadsheet shared with The New School.", margin-15,747-margin+105);
   p.text("Modern & Contemporary Art Collection Department, 14,350 artworks. Object Begin Date, Gender identified by Artist Display Name, 1850-2017 (14,284 artworks.)", margin-15,747-margin+135);
 
-//   // 2. Let's draw the y Axis
+////draw the y Axis
   p.stroke(77,77,77);
   // line(margin,height-margin ,margin,margin);
   p.line(margin,747-margin,margin,margin);
@@ -734,17 +695,16 @@ for(var i=1850; i<=2017; i+=10){
   for(var i=0; i<maxObjects; i+=50){
     var x = margin-20;
     // y = map(i,0, maxObjects,height-margin, margin);
-     var y = p.map(i,0, maxObjects,747-margin, margin);
-    p.noStroke();
-    p.fill(77,77,77);
-    p.text(i, x, y+5);
-    p.stroke(77,77,77);
-    p.strokeWeight(1);
-    p.line(x+10,y,x+20,y);
+    var y = p.map(i,0, maxObjects,747-margin, margin);
+      p.noStroke();
+      p.fill(77,77,77);
+      p.text(i, x, y+5);
+      p.stroke(77,77,77);
+      p.strokeWeight(1);
+      p.line(x+10,y,x+20,y);
   }
 
   p.push();
-  // textStyle(BOLD);
   p.translate(65,0);
   p.textFont('Khand');
   p.noStroke();
@@ -752,37 +712,28 @@ for(var i=1850; i<=2017; i+=10){
   p.translate(1000,700);
   p.rotate(p.radians(270)); 
   p.text("Number of Artworks", margin+300,margin-1135);
-  // p.text("Number of Artworks", margin+300,margin-1120);
-
   p.pop();
-//   // 3. Let's add the overall title
+
+////the overall title
   p.push();
   p.translate(65,0);
   p.textFont('Khand');
   p.textStyle(p.BOLD);
   p.noStroke();
   p.textAlign(p.LEFT);
-  // p.textSize(38);
   p.fill(77,77,77);
-  // p.text("The Met: ", 520,100);
   p.textSize(38);
   p.textStyle(p.NORMAL);
   p.text("What year were these artworks made?",500,75);
-  // p.textSize(36);
-  // p.fill(77,77,77);
-  // p.text("by women, by men?",640,160);
-  // p.textSize(38);
   p.textStyle(p.NORMAL);
   p.fill(77,77,77);
-  // p.text("The Met's", 520,170);
   p.textSize(26);
   p.text("The Met Modern & Contemporary Art Collection", 500,125);
   p.textSize(38);
   p.textStyle(p.BOLD);
-  // p.text("By year", 640,275);
   p.pop();
 
-////4. Add legend
+////legend
     p.textFont('Khand');
     p.noStroke();
     p.fill(179,118,244,140);  //f
