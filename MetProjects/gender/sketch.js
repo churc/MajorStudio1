@@ -52,6 +52,7 @@ var s = function(p){
     p.push();
     p.scale(0.83); 
     p.translate(230,60);
+
     p.push();
     p.stroke(92,242,145,160);
     p.strokeWeight(8);
@@ -61,11 +62,11 @@ var s = function(p){
     p.vertex(830, 20);   // total m/2 = 10825/2 = 5412.5
     p.vertex(830, 760);   //  740
     p.vertex(940, 760);   //  110
-    p.vertex(940,  20);   //740
-    p.vertex(1280,  20);   //340
+    p.vertex(940, 22);   //740
+    p.vertex(1280, 22);   //340
     p.vertex(1280, 840);   //820
     p.vertex(1250, 840);   //30
-    p.vertex(1250,  40);   //800
+    p.vertex(1250, 40);   //800
     p.vertex(1110, 40);    //140
     p.vertex(1110, 840);   //800
     p.vertex(217.5, 840);  //892.5     ///5412.5
@@ -221,7 +222,7 @@ var t = function(p) {
 
     var x,y,w,h;
 
-    var singleData = [52, 1318, 128, 10825, 2027];
+    var singleData = [52, 1318, 128, 2027, 10825];
 //var fillBars = [(fill("#ededed"),("#5c5c5c"),("#e5e5o5"),("#f0f0f0"),("#000"))];
 
     var width = 5800,
@@ -294,6 +295,7 @@ var genFill = singleData[b];
     p.textStyle(p.BOLD);
     p.textSize(20);
     p.text("Scale: 1 pixel = 2 artworks", 100,margin-115);
+
     p.pop();
 
     p.textFont('Khand');
@@ -310,7 +312,7 @@ p.drawmeasureline = function(){
     
     var x,y,w,h;
 
-  var singleData = [52, 1318, 128, 10825, 2027];
+  var singleData = [52, 1318, 128, 2027, 10825];
    
    //x axis
   p.textFont('Khand');
@@ -323,15 +325,15 @@ p.drawmeasureline = function(){
    
  //  // p.line(margin,height-margin,width-margin,height-margin);
   p.text("unidentified: 52", 576,52/2+95);
-  p.line(575,52/2+100,700,52/2+100);
+  p.line(575,52/2+100,692,52/2+100);
   p.text("couple: 128", 575,128/2+95);
-  p.line(575,128/2+100,700,128/2+100);
+  p.line(575,128/2+100,692,128/2+100);
   p.text("unknown: 1318", 574,1318/2+95);
-  p.line(575,1318/2+100,700,1318/2+100);
+  p.line(575,1318/2+100,692,1318/2+100);
   p.text("female: 2027", 574,2027/2+95);
-  p.line(575,2027/2+100,700,2027/2+100);
+  p.line(575,2027/2+100,692,2027/2+100);
   p.text("male: 10825", 573,10825/2+95);
-  p.line(574,10825/2+100,700,10825/2+100);
+  p.line(574,10825/2+100,692,10825/2+100);
   // p.strokeWeight(1);
  //  p.line(590,10925/2,690,10925/2);
   p.noStroke();
@@ -339,6 +341,8 @@ p.drawmeasureline = function(){
   p.textAlign(p.CENTER);
   p.translate(1265,100);
   p.rotate(p.radians(90));
+  p.textStyle(p.NORMAL);
+  p.text("Number of Artworks", 69, -55);
   // draw the sections and add text for each section
    //go throught the years
    for(var b=0; b<=10825; b+=200){
@@ -355,7 +359,7 @@ p.drawmeasureline = function(){
       p.fill(77,77,77);
       p.stroke(77,77,77);
       p.strokeWeight(1);
-      p.line(x,y-22,x, y-45);
+      p.line(x,y-22,x, y-40);
       p.noStroke();
       p.fill(77,77,77);
       p.text(b, x,y);
