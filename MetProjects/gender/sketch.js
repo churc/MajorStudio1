@@ -378,10 +378,9 @@ var myp5 = new p5(t, 'c2');
 ///////////\\\\\\\\\\\
 
 ////////chart by year
-var v = 'a';
+
 var w = function(p) {
-var v = ('a');
-var v = 'a';
+
 
   p.fontRead = function(){
       fontReady = true; 
@@ -536,8 +535,8 @@ p.analyzeGender = function(){
      UnknownArtists = UnknownArtists + 1;
 
    } else if (gender === 'a') {
-    gender = 'w';
-    console.log('w');
+    gender = 'z';
+    console.log('z');
      ToFindOutArtists = ToFindOutArtists + 1;
 
    } else {
@@ -625,8 +624,8 @@ p.analyzeGender = function(){
        // console.log('u');
 
     } else if (gender === 'a') {
-      gender === 'w';
-      console.log('w');
+      gender = 'z';
+      console.log('z');
        p.fill(224,199,50,90);
        p.rect(x-1,y-1,3,2);
        // console.log('a');
