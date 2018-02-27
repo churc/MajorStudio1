@@ -152,8 +152,9 @@ var s = function(p){
     p.textSize(28);
     p.textAlign(p.RIGHT);
     p.textSize(26);
-    p.text("14.13%", 190,120);
-    p.text("75.44%", 190,150);
+    // p.text("14.13%", 190,120);
+    p.text("75.44%", 190,120);
+    p.text("14.13%", 190,150);
     p.text("0.89%", 190,180);
     p.text("9.18%", 190,210);
     p.text("0.36%", 190,240);
@@ -161,9 +162,11 @@ var s = function(p){
 //// Add legend
 
     p.textFont('Khand');
-    p.fill(179,118,244,140);  //f
-    p.rect(205,100,25,25);
+    // p.fill(179,118,244,140);  //f
+    // p.rect(205,100,25,25);
     p.fill(92,242,145,140); //m
+    p.rect(205,100,25,25);
+    p.fill(179,118,244,140);  //f
     p.rect(205,130,25,25);
     p.fill(168,71,5,140);  //t
     p.rect(205,160,25,25);
@@ -176,8 +179,9 @@ var s = function(p){
     p.fill (77,77,77);
     p.textStyle(p.NORMAL);
     p.textSize(20);
-    p.text("female", 237,117);
-    p.text("male", 237,147);
+    // p.text("female", 237,117);
+    p.text("male", 237,117);
+    p.text("female", 237,147);
     p.text("couple / collaborative with both genders",237,177);
     p.text("unknown",237,207);
     p.text("named, gender not yet identified",237,237);
@@ -374,7 +378,10 @@ var myp5 = new p5(t, 'c2');
 ///////////\\\\\\\\\\\
 
 ////////chart by year
+var v = 'a';
 var w = function(p) {
+var v = ('a');
+var v = 'a';
 
   p.fontRead = function(){
       fontReady = true; 
@@ -529,6 +536,8 @@ p.analyzeGender = function(){
      UnknownArtists = UnknownArtists + 1;
 
    } else if (gender === 'a') {
+    gender = 'w';
+    console.log('w');
      ToFindOutArtists = ToFindOutArtists + 1;
 
    } else {
@@ -590,28 +599,34 @@ p.analyzeGender = function(){
 ///====FILL BY GENDER
    var gender = allYears[i].items[j].obj.Gender;
     if (gender === 'm') {
+       // gender = 'm';
        p.fill(92,242,145,90);
        p.rect(x-1,y-1,3,2);
        // console.log('m');
        totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
 
     } else if (gender === 'f') {
+      // gender = 'f';
        p.fill(179,118,244,90);
        p.rect(x-1,y-1,3,2);
        // console.log('f');
       totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
      // console.log(totalFemaleArtistsPerBar);
     } else if (gender === 't') {
+      // gender = 't';
        p.fill(168,71,5,80);
        p.rect(x-1,y-1,3,2);
       // console.log('t');
       
     } else if (gender === 'u') {
+      // gender = 'u';
        p.fill(165,160,152,80);
        p.rect(x-1,y-1,3,2);
        // console.log('u');
 
     } else if (gender === 'a') {
+      gender === 'w';
+      console.log('w');
        p.fill(224,199,50,90);
        p.rect(x-1,y-1,3,2);
        // console.log('a');
