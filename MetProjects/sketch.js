@@ -332,27 +332,28 @@ var s = function(p){
 //// Add legend
 
     p.textFont('Khand');
-    p.fill(92,242,145,140); //m
-    p.rect(205,100,25,25);
-    p.fill(179,118,244,140);  //f
-    p.rect(205,130,25,25);
-    p.fill(168,71,5,140);  //t
-    p.rect(205,160,25,25);
-    p.fill(165,160,152,140);   //u
-    p.rect(205,190,25,25);
-    p.fill(224,199,50,140);   //z
-    p.rect(205,220,25,25);
+    // p.fill(92,242,145,140); //m
+    // p.rect(205,100,25,25);
+    // p.fill(179,118,244,140);  //f
+    // p.rect(205,130,25,25);
+    // p.fill(168,71,5,140);  //t
+    // p.rect(205,160,25,25);
+    // p.fill(165,160,152,140);   //u
+    // p.rect(205,190,25,25);
+    // p.fill(224,199,50,140);   //z
+    // p.rect(205,220,25,25);
     p.textStyle();
-    p.textAlign(p.LEFT);
+    p.textAlign(p.RIGHT);
     p.fill (77,77,77);
     p.textStyle(p.NORMAL);
     p.textSize(20);
     // p.text("female", 237,117);
-    p.text("male", 237,117);
-    p.text("female", 237,147);
-    p.text("couple / collaborative with both genders",237,177);
-    p.text("unknown",237,207);
-    p.text("named, gender not yet identified",237,237);
+    // p.text("male", 237,117);
+    p.text("female", 590,290);
+    p.text("male", 590,270);
+    p.text("couple / collaborative with both genders",590,250);
+    p.text("unknown",590,230);
+    p.text("named, gender not yet identified",590,210);
     p.pop();
     p.pop();
 }
