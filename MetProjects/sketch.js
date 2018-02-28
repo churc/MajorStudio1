@@ -225,68 +225,68 @@ var s = function(p){
     p.strokeCap(p.SQUARE);
     p.noFill();
     p.beginShape(); 
-    p.vertex(430, 390);   // total m/2 = 10825/2 = 5412.5
-    p.vertex(840, 390);   //  740
-    p.vertex(840, 760);   //  110
-    p.vertex(940,760);
+    p.vertex(410, 340);   // total m/2 = 10825/2 = 5412.5
+    p.vertex(780, 340);   //  740
+    p.vertex(780, 730);   //  110
+    p.vertex(940,730);
     p.vertex(940, 22);   //740
     p.vertex(1280, 22);   //340
-    p.vertex(1280, 840);   //820
-    p.vertex(1250, 840);   //30
-    p.vertex(1250, 40);   //800
-    p.vertex(1110, 40);    //140
-    p.vertex(1110, 840);   //800
-    p.vertex(217.5, 840);  //892.5     ///5412.5
+    p.vertex(1280, 820);   //820
+    p.vertex(1220, 820);   //30
+    p.vertex(1220, 60);   //800
+    p.vertex(1130, 60);    //140
+    p.vertex(1130, 820);   //800
+    p.vertex(217.5, 820);  //892.5     ///5412.5
     p.endShape();  
     p.pop();
 
-    p.push();
-    p.stroke(179,118,244,160);
-    // stroke(153,50,204,80); //total f/2 = 2027/2 = 1013.5
-    p.strokeWeight(8);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(838, 20);   //  
-    p.vertex(838,  754);   //734
-    p.vertex(932,  754);   //94
-    p.vertex(932, 568.5);  //185.5      //1013.5
-    p.endShape();
-    p.pop();
+    // p.push();
+    // p.stroke(179,118,244,160);
+    // // stroke(153,50,204,80); //total f/2 = 2027/2 = 1013.5
+    // p.strokeWeight(8);
+    // p.strokeCap(p.SQUARE);
+    // p.noFill();
+    // p.beginShape();
+    // p.vertex(838, 20);   //  
+    // p.vertex(838,  754);   //734
+    // p.vertex(932,  754);   //94
+    // p.vertex(932, 568.5);  //185.5      //1013.5
+    // p.endShape();
+    // p.pop();
 
-    p.push();
-    p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
-    p.strokeWeight(8);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(845, 20);   //  
-    p.vertex(845,  84);   //64 = 64
-    p.endShape();
-    p.pop();
+    // p.push();
+    // p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
+    // p.strokeWeight(8);
+    // p.strokeCap(p.SQUARE);
+    // p.noFill();
+    // p.beginShape();
+    // p.vertex(845, 20);   //  
+    // p.vertex(845,  84);   //64 = 64
+    // p.endShape();
+    // p.pop();
 
-    p.push();
-    p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
-    p.strokeWeight(8);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(852, 20);   //  
-    p.vertex(852,  679);   // 659
-    p.endShape();
-    p.pop();
+    // p.push();
+    // p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
+    // p.strokeWeight(8);
+    // p.strokeCap(p.SQUARE);
+    // p.noFill();
+    // p.beginShape();
+    // p.vertex(852, 20);   //  
+    // p.vertex(852,  679);   // 659
+    // p.endShape();
+    // p.pop();
 
-    p.push();
-    p.stroke(224,199,50,160);  //total a to find out 52/2 = 26
-    p.strokeWeight(8);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(858, 20);   //  
-    p.vertex(858,  46);   // 26
-    p.endShape();
-    p.pop();
-  p.pop();
+    // p.push();
+    // p.stroke(224,199,50,160);  //total a to find out 52/2 = 26
+    // p.strokeWeight(8);
+    // p.strokeCap(p.SQUARE);
+    // p.noFill();
+    // p.beginShape();
+    // p.vertex(858, 20);   //  
+    // p.vertex(858,  46);   // 26
+    // p.endShape();
+    // p.pop();
+  // p.pop();
 }
 
 
