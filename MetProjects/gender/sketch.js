@@ -38,7 +38,7 @@ var s = function(p){
   p.preload = function(){
   //mytable is comma separated value "csv"
   //and has a header specifying the columns labels
-   p.table = p.loadTable('assets/ModContG3final4sort.csv','csv','header');
+   p.table = p.loadTable('assets/ModContGenderfinalazsort.csv','csv','header');
 
    KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
   }
@@ -162,8 +162,6 @@ var s = function(p){
 //// Add legend
 
     p.textFont('Khand');
-    // p.fill(179,118,244,140);  //f
-    // p.rect(205,100,25,25);
     p.fill(92,242,145,140); //m
     p.rect(205,100,25,25);
     p.fill(179,118,244,140);  //f
@@ -172,7 +170,7 @@ var s = function(p){
     p.rect(205,160,25,25);
     p.fill(165,160,152,140);   //u
     p.rect(205,190,25,25);
-    p.fill(224,199,50,140);   //a
+    p.fill(224,199,50,140);   //z
     p.rect(205,220,25,25);
     p.textStyle();
     p.textAlign(p.LEFT);
@@ -204,7 +202,7 @@ var t = function(p) {
   p.preload = function(){
   //mytable is comma separated value "csv"
   //and has a header specifying the columns labels
-   p.table = p.loadTable('assets/ModContG3final4sort.csv','csv','header');
+   p.table = p.loadTable('assets/ModContGenderfinalazsort.csv','csv','header');
 
    KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
   }
@@ -226,7 +224,7 @@ var t = function(p) {
 
     var x,y,w,h;
 
-    var singleData = [52, 1318, 128, 2027, 10825];
+    var singleData = [48, 1318, 128, 2027, 10829];
 //var fillBars = [(fill("#ededed"),("#5c5c5c"),("#e5e5o5"),("#f0f0f0"),("#000"))];
 
     var width = 5800,
@@ -246,7 +244,7 @@ var t = function(p) {
 
 
 var genFill = singleData[b];
-    if (genFill == '10825') {
+    if (genFill == '10829') {
        p.fill(92,242,145,120);
        
     } else if (genFill == '2027') {
@@ -258,7 +256,7 @@ var genFill = singleData[b];
     } else if (genFill == '1318') {
        p.fill(165,160,152,120);
 
-    } else if (genFill == '52') {
+    } else if (genFill == '48') {
        p.fill(224,199,50,120);
 
     } else {
@@ -275,7 +273,6 @@ var genFill = singleData[b];
       p.rect(100, -p.windowWidth/1.5, singleData[b]/2, barWidth/2);
       p.fill(0,0,0);
       p.text(singleData[b], 100, barWidth/2 + -p.windowWidth/1.53); // write data label
-      // p.text((((singleData[b]/singleData.length)*100).toFixed(0)+'%'), 55, barWidth/2 + -p.windowWidth/1.525); // write data label
     p.pop();   // reset, restore
   } 
 }
@@ -289,14 +286,12 @@ var genFill = singleData[b];
     p.rotate(p.radians(90)); 
     p.textFont('Khand');
     p.textAlign(p.LEFT);
+    p.textStyle(p.NORMAL);
     p.noStroke();
     p.fill(77,77,77);
     p.textSize(32);
-    p.textStyle(p.BOLD);
     p.textSize(26);
-    p.textStyle(p.NORMAL);
     p.text("The Met Modern & Contemporary Art Collection", 100,margin-140);
-    p.textStyle(p.BOLD);
     p.textSize(20);
     p.text("Scale: 1 pixel = 2 artworks", 100,margin-115);
 
@@ -316,7 +311,7 @@ p.drawmeasureline = function(){
     
     var x,y,w,h;
 
-  var singleData = [52, 1318, 128, 2027, 10825];
+  var singleData = [48, 1318, 128, 2027, 10829];
    
    //x axis
   p.textFont('Khand');
@@ -326,20 +321,20 @@ p.drawmeasureline = function(){
   p.stroke(77,77,77);
   p.strokeWeight(1)
  // //just the lines
-   
- //  // p.line(margin,height-margin,width-margin,height-margin);
-  p.text("unidentified: 52", 576,52/2+95);
-  p.line(575,52/2+100,692,52/2+100);
-  p.text("couple: 128", 575,128/2+95);
+  p.line(575,48/2+100,692,48/2+100);
   p.line(575,128/2+100,692,128/2+100);
-  p.text("unknown: 1318", 574,1318/2+95);
   p.line(575,1318/2+100,692,1318/2+100);
-  p.text("female: 2027", 574,2027/2+95);
   p.line(575,2027/2+100,692,2027/2+100);
-  p.text("male: 10825", 573,10825/2+95);
-  p.line(574,10825/2+100,692,10825/2+100);
-  // p.strokeWeight(1);
- //  p.line(590,10925/2,690,10925/2);
+  p.line(574,10829/2+100,692,10829/2+100);  
+
+ //  // p.line(margin,height-margin,width-margin,height-margin);
+ //text
+  p.noStroke();
+  p.text("unidentified: 48", 576,48/2+95);
+  p.text("couple: 128", 575,128/2+95);
+  p.text("unknown: 1318", 574,1318/2+95);
+  p.text("female: 2027", 574,2027/2+95);
+  p.text("male: 10829", 573,10829/2+95);
   p.noStroke();
   p.textSize(20);
   p.textAlign(p.CENTER);
@@ -349,12 +344,12 @@ p.drawmeasureline = function(){
   p.text("Number of Artworks", 69, -55);
   // draw the sections and add text for each section
    //go throught the years
-   for(var b=0; b<=10825; b+=200){
+   for(var b=0; b<=10829; b+=200){
 
    // var y = 747-margin+30;
     var y = 0;
 
-    var x = p.map(b,0,10825, 0, 10825/2);
+    var x = p.map(b,0,10829, 0, 10829/2);
 
     // x = map(i,0, allYears.length,margin, width-margin);
     // p.rotate(p.radians(90));   // rotate to vertical
@@ -389,7 +384,7 @@ var w = function(p) {
   p.preload = function(){
   //mytable is comma separated value "csv"
   //and has a header specifying the columns labels
-   p.table = p.loadTable('assets/ModContG3final4sort.csv','csv','header');
+   p.table = p.loadTable('assets/ModContGenderfinalazsort.csv','csv','header');
 
    KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
   }
@@ -436,8 +431,8 @@ var w = function(p) {
     console.log(unknown);
 
 //=======THIS console logs all rows where there is an artist but I haven't found their gender
-   var todo = p.table.findRows('a', 10);
-   console.log(todo);
+    var todo = p.table.findRows('z', 10);
+    console.log(todo);
 
 // // //===================================
 
@@ -534,9 +529,8 @@ p.analyzeGender = function(){
     } else if (gender === 'u') {
      UnknownArtists = UnknownArtists + 1;
 
-   } else if (gender === 'a') {
-    gender = 'z';
-    console.log('z');
+   } else if (gender === 'z') {
+    // console.log('z');
      ToFindOutArtists = ToFindOutArtists + 1;
 
    } else {
@@ -615,6 +609,7 @@ p.analyzeGender = function(){
       // gender = 't';
        p.fill(168,71,5,80);
        p.rect(x-1,y-1,3,2);
+
       // console.log('t');
       
     } else if (gender === 'u') {
@@ -623,12 +618,11 @@ p.analyzeGender = function(){
        p.rect(x-1,y-1,3,2);
        // console.log('u');
 
-    } else if (gender === 'a') {
-      gender = 'z';
-      console.log('z');
+    } else if (gender === 'z') {
+      // gender = 'z';
        p.fill(224,199,50,90);
        p.rect(x-1,y-1,3,2);
-       // console.log('a');
+       //console.log('z');
 
     } else {
        p.fill(100,100);
@@ -691,7 +685,6 @@ for(var i=1850; i<=2017; i+=10){
   p.textAlign(p.RIGHT);
   p.noStroke();
   p.textSize(20);
-
   p.text("Year: Object Begin Date", 990,730);
 // p.text("Year: Object Begin Date", width-margin,height-margin+70);
 
@@ -736,19 +729,16 @@ for(var i=1850; i<=2017; i+=10){
   p.push();
   p.translate(65,0);
   p.textFont('Khand');
-  p.textStyle(p.BOLD);
+  p.textStyle(p.NORMAL);
   p.noStroke();
   p.textAlign(p.LEFT);
   p.fill(77,77,77);
   p.textSize(42);
-  p.textStyle(p.NORMAL);
   p.text("What year were these artworks made?",500,75);
-  p.textStyle(p.NORMAL);
   p.fill(77,77,77);
   p.textSize(26);
   p.text("The Met Modern & Contemporary Art Collection", 500,120);
   p.textSize(38);
-  p.textStyle(p.BOLD);
   p.pop();
 
 ////legend
@@ -762,7 +752,7 @@ for(var i=1850; i<=2017; i+=10){
     p.rect(100,160,25,25);
     p.fill(165,160,152,140);   //u
     p.rect(100,190,25,25);
-    p.fill(224,199,50,140);   //a
+    p.fill(224,199,50,140);   //a //z
     p.rect(100,220,25,25);
     p.textStyle();
     p.textAlign(p.LEFT);
