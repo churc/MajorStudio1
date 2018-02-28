@@ -27,8 +27,349 @@ var KhandFont, fontReady = false;
 
 var margin = 80;
 
-
 ///////wrapped bars
+var s = function(p){
+
+  p.fontRead = function(){
+      fontReady = true; 
+    }
+
+  p.preload = function(){
+  //mytable is comma separated value "csv"
+  //and has a header specifying the columns labels
+   p.table = p.loadTable('assets/ModContGenderfinalazsort.csv','csv','header');
+
+   KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
+  }
+
+  p.setup = function(){
+    p.createCanvas(p.windowWidth,870);
+    p.drawLabelsTot();
+
+    p.background(100,05);
+      
+    p.push();
+    p.scale(0.83); 
+    p.translate(230,60);
+
+    p.push();
+    p.stroke(92,242,145,160);
+    p.strokeWeight(20);
+    p.strokeCap(p.SQUARE);
+    p.noFill();
+    p.beginShape(); 
+    p.vertex(20,172);   // total m/2 = 10829/2 = 5414.5
+    p.vertex(900,172);   //  880
+    p.vertex(900, 442);   //  270
+    p.vertex(400, 442);   //500
+    p.vertex(400, 512);   //70
+    p.vertex(1100, 512);   //700
+    p.vertex(1100, 632);   //120
+    p.vertex(220, 632);   //880
+    p.vertex(220, 698);    //66
+    p.vertex(1200, 698);   //980
+    p.vertex(1200, 790);   //92
+    p.vertex(343.5, 790);   //856.5
+
+    // p.vertex(110, 790);  //50
+    // p.vertex(1400, 790);  //
+    // // p.vertex(980, 852);
+    // p.vertex(869.5, 782);  //380.5    ///5414.5
+    p.endShape();  
+    p.pop();
+
+    p.push();
+    p.stroke(179,118,244,160);
+    // stroke(153,50,204,80); //total f/2 = 2027/2 = 1013.5
+    p.strokeWeight(20);
+    p.strokeCap(p.SQUARE);
+    p.noFill();
+    p.beginShape();
+    p.vertex(20, 208);   //  
+    p.vertex(864,  208);   //844
+    p.vertex(864,  377.5);   //169.5  //1013.5
+    p.endShape();
+    p.pop();
+
+    p.push();
+    p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
+    p.strokeWeight(20);
+    p.strokeCap(p.SQUARE);
+    p.noFill();
+    p.beginShape();
+    p.vertex(20, 244);   //  
+    p.vertex(84, 244);   //64 = 64
+    p.endShape();
+    p.pop();
+
+    p.push();
+    p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
+    p.strokeWeight(20);
+    p.strokeCap(p.SQUARE);
+    p.noFill();
+    p.beginShape();
+    p.vertex(20,280);   //  
+    p.vertex(679,280);   // 659
+    p.endShape();
+    p.pop();
+
+    p.push();
+    p.stroke(224,199,50,160);  //total z to find out 48/2 = 24
+    p.strokeWeight(20);
+    p.strokeCap(p.SQUARE);
+    p.noFill();
+    p.beginShape();
+    p.vertex(20, 316);   //  
+    p.vertex(46, 316);   // 26
+    p.endShape();
+    p.pop();
+  p.pop();
+}
+
+
+  p.windowResized = function() {
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
+}
+
+  p.drawLabelsTot = function(){
+
+    p.push();
+    // p.translate(-80,0); 
+  //label wrapped total bars
+    p.textFont('Khand');
+    p.textAlign(p.RIGHT);
+    p.noStroke();
+    p.textSize(18);
+    p.fill(77,77,77);
+    p.textSize(40);
+    p.textStyle(p.NORMAL);
+    p.textAlign(p.LEFT);
+    p.text("What % of The Met's 14,350 artworks are by women?", 130,95);
+    p.textSize(26);
+    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 130,140);
+    // p.textSize(22);
+    // p.text("1 pixel: 2 artworks", 620,140);
+
+    p.push();
+    p.translate(0,80)
+    // p.textAlign(p.LEFT);
+    // p.textSize(18);
+    // p.text("1 pixel: 2 artworks", 700,140);
+    // p.textAlign(p.LEFT);
+    // p.textSize(28);
+    p.textAlign(p.RIGHT);
+    p.textSize(26);
+    // p.text("14.13%", 190,120);
+    p.text("75.44%", 190,120);
+    p.text("14.13%", 190,150);
+    p.text("0.89%", 190,180);
+    p.text("9.18%", 190,210);
+    p.text("0.36%", 190,240);
+
+//// Add legend
+
+    p.textFont('Khand');
+    // p.fill(92,242,145,140); //m
+    // p.rect(205,100,25,25);
+    // p.fill(179,118,244,140);  //f
+    // p.rect(205,130,25,25);
+    // p.fill(168,71,5,140);  //t
+    // p.rect(205,160,25,25);
+    // p.fill(165,160,152,140);   //u
+    // p.rect(205,190,25,25);
+    // p.fill(224,199,50,140);   //z
+    // p.rect(205,220,25,25);
+    p.textStyle();
+    p.textAlign(p.LEFT);
+    p.fill (77,77,77);
+    p.textStyle(p.NORMAL);
+    p.textSize(20);
+    //////need to add 
+    // p.text("male", 257,117);
+    // p.text("female", 257,147);
+    // p.text("couple / collaborative with both genders",257,177);
+    // p.text("unknown",257,207);
+    // p.text("named, gender not yet identified",257,237);
+    p.pop();
+    p.pop();
+}
+}
+
+var myp5 = new p5(s, 'c1');
+
+/////works oldwrapped bars WRKING ON THIS ONE
+///NUMBERS ON BAR ARE CORRECT
+var s = function(p){
+
+  p.fontRead = function(){
+      fontReady = true; 
+    }
+
+  p.preload = function(){
+  //mytable is comma separated value "csv"
+  //and has a header specifying the columns labels
+   p.table = p.loadTable('assets/ModContGenderfinalazsort.csv','csv','header');
+
+   KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
+  }
+
+  p.setup = function(){
+    p.createCanvas(p.windowWidth,870);
+    p.drawLabelsTot();
+
+    p.background(100,05);
+      
+    p.push();
+    p.scale(0.83); 
+    p.translate(230,60);
+
+    p.push();
+    p.stroke(92,242,145,160);
+    p.strokeWeight(20);
+    p.strokeCap(p.SQUARE);
+    p.noFill();
+    p.beginShape(); 
+    p.vertex(410, 340);   // total m/2 = 10829/2 = 5414.5
+    p.vertex(780, 340);   //  370
+    p.vertex(780, 730);   //  390
+    p.vertex(940,730);   // 160
+    p.vertex(940, 22);   //708
+    p.vertex(1280, 22);   //340
+    p.vertex(1280, 820);   //798
+    p.vertex(1220, 820);   //60
+    p.vertex(1220, 60);   //760
+    p.vertex(1130, 60);    //90
+    p.vertex(1130, 820);   //760    //4436
+    p.vertex(151.5, 820);  //978.5     ///5414.5
+    p.endShape();  
+    p.pop();
+
+    p.push();
+    p.stroke(179,118,244,160);
+    // stroke(153,50,204,80); //total f/2 = 2027/2 = 1013.5
+    p.strokeWeight(20);
+    p.strokeCap(p.SQUARE);
+    p.noFill();
+    p.beginShape();
+    p.vertex(410, 360);   //  
+    p.vertex(760,  360);   //350
+    p.vertex(760,  750);   //390
+    p.vertex(960, 750);  //200   
+    p.vertex(960, 676.5);   //1013.5
+    p.endShape();
+    p.pop();
+
+    p.push();
+    p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
+    p.strokeWeight(20);
+    p.strokeCap(p.SQUARE);
+    p.noFill();
+    p.beginShape();
+    p.vertex(410, 320);   //  
+    p.vertex(474,  320);   //64 = 64
+    p.endShape();
+    p.pop();
+
+    p.push();
+    p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
+    p.strokeWeight(20);
+    p.strokeCap(p.SQUARE);
+    p.noFill();
+    p.beginShape();
+    p.vertex(410, 300);   //  
+    p.vertex(800,  300);   // 390
+    p.vertex(800,  569);    //659
+    p.endShape();
+    p.pop();
+
+    p.push();
+    p.stroke(224,199,50,160);  //total z to find out 48/2 = 24
+    p.strokeWeight(20);
+    p.strokeCap(p.SQUARE);
+    p.noFill();
+    p.beginShape();
+    p.vertex(410, 280);   //  
+    p.vertex(434, 280);   // 24
+    p.endShape();
+    p.pop();
+  p.pop();
+}
+
+
+  p.windowResized = function() {
+    p.resizeCanvas(p.windowWidth, p.windowHeight);
+}
+
+  p.drawLabelsTot = function(){
+
+    p.push();
+    p.translate(-80,0); 
+  //label wrapped total bars
+    p.textFont('Khand');
+    p.textAlign(p.RIGHT);
+    p.noStroke();
+    p.textSize(18);
+    p.fill(77,77,77);
+    p.textSize(40);
+    p.textStyle(p.NORMAL);
+    p.textAlign(p.LEFT);
+    p.text("What % of The Met's 14,350 artworks are by women?", 130,95);
+    p.textSize(26);
+    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 130,140);
+    // p.textAlign(p.LEFT);
+    // p.textSize(18);
+    // p.text("1 pixel: 2 artworks", 130,170);
+    p.push();
+    // p.translate(0,80)
+    // p.textAlign(p.LEFT);
+    // p.textSize(18);
+    // p.text("1 pixel: 2 artworks, scaled to 0.83", 130,170);
+    // p.textAlign(p.LEFT);
+    // p.textSize(28);
+    p.textAlign(p.RIGHT);
+    p.textSize(18);
+    // p.text("14.13%", 190,120);
+    // p.text("75.44%", 600,120);
+    p.text("14.13%", 600,356);
+    p.text("75.44%", 600,339);
+    p.text("0.89%", 600,322);
+    p.text("9.18%", 600,305);
+    p.text("0.36%", 600,288);
+
+//// Add legend
+
+    p.textFont('Khand');
+    // p.fill(92,242,145,140); //m
+    // p.rect(205,100,25,25);
+    // p.fill(179,118,244,140);  //f
+    // p.rect(205,130,25,25);
+    // p.fill(168,71,5,140);  //t
+    // p.rect(205,160,25,25);
+    // p.fill(165,160,152,140);   //u
+    // p.rect(205,190,25,25);
+    // p.fill(224,199,50,140);   //z
+    // p.rect(205,220,25,25);
+    p.textStyle();
+    p.textAlign(p.RIGHT);
+    p.fill (77,77,77);
+    p.textStyle(p.NORMAL);
+    p.textSize(17.5);
+    // p.text("female", 237,117);
+    // p.text("male", 237,117);
+    p.text("female", 550,356);
+    p.text("male", 550,339);
+    p.text("couple / collaborative with both genders",550,322);
+    p.text("unknown",550,305);
+    p.text("named, gender not yet identified",550,288);
+    p.pop();
+    p.pop();
+}
+}
+
+var myp5 = new p5(s, 'c1');
+// //////////\\\\\\\\\\\\\\
+
+/////works oldwrapped bars
 var s = function(p){
 
   p.fontRead = function(){
@@ -189,7 +530,7 @@ var s = function(p){
 }
 
 var myp5 = new p5(s, 'c1');
-//////////\\\\\\\\\\\\\\
+// //////////\\\\\\\\\\\\\\
 
 // ////VERTICAL BARS TOTALS 
 
