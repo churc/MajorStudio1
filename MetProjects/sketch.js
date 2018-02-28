@@ -221,12 +221,12 @@ var s = function(p){
 
     p.push();
     p.stroke(92,242,145,160);
-    p.strokeWeight(8);
+    p.strokeWeight(18);
     p.strokeCap(p.SQUARE);
     p.noFill();
     p.beginShape(); 
-    p.vertex(430, 340);   // total m/2 = 10825/2 = 5412.5
-    p.vertex(840, 340);   //  740
+    p.vertex(430, 390);   // total m/2 = 10825/2 = 5412.5
+    p.vertex(840, 390);   //  740
     p.vertex(840, 760);   //  110
     p.vertex(940,760);
     p.vertex(940, 22);   //740
