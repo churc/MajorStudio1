@@ -27,7 +27,7 @@ var KhandFont, fontReady = false;
 
 var margin = 80;
 
-///////wrapped bars NEW VWESION CLOSE WRAPS
+///////wrapped bars NEW VESION CLOSE WRAPS
 var s = function(p){
 
   p.fontRead = function(){
@@ -49,8 +49,8 @@ var s = function(p){
     p.background(100,05);
       
     p.push();
-    p.scale(0.83); 
-    p.translate(230,60);
+    // p.scale(0.83); 
+    p.translate(320,80);
 
     p.push();
     p.stroke(92,242,145,160);
@@ -79,6 +79,8 @@ var s = function(p){
     p.vertex(750, 320);  //590
     p.vertex(750, 280);  //40
     p.vertex(795, 280);  //45
+
+
     p.vertex(795, 390);  //110
     p.vertex(160, 390);  //635
     p.vertex(160, 430);  //40
@@ -171,8 +173,7 @@ var s = function(p){
 
   p.drawLabelsTot = function(){
 
-    p.push();
-    // p.translate(-80,0); 
+    p.push(); 
   //label wrapped total bars
     p.textFont('Khand');
     p.textAlign(p.RIGHT);
@@ -182,53 +183,43 @@ var s = function(p){
     p.textSize(40);
     p.textStyle(p.NORMAL);
     p.textAlign(p.LEFT);
-    p.text("What % of The Met's 14,350 artworks are by women?", 130,95);
+    p.text("What % of The Met's 14,350 artworks are by women?", 318,95);
     p.textSize(26);
-    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 130,140);
-    // p.textSize(22);
-    // p.text("1 pixel: 2 artworks", 620,140);
+    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 318,140);
+
+    p.pop();
 
     p.push();
-    p.translate(0,80)
-    // p.textAlign(p.LEFT);
-    // p.textSize(18);
-    // p.text("1 pixel: 2 artworks", 700,140);
-    // p.textAlign(p.LEFT);
-    // p.textSize(28);
+    p.translate(120,140)
+    p.textFont('Khand');
     p.textAlign(p.RIGHT);
-    p.textSize(26);
+    p.noStroke();
+    p.fill(77,77,77);
+    p.textSize(23);
     // p.text("14.13%", 190,120);
-    p.text("75.44%", 190,120);
-    p.text("14.13%", 190,150);
-    p.text("0.89%", 190,180);
-    p.text("9.18%", 190,210);
-    p.text("0.36%", 190,240);
+    p.text("75.44%", 210,120);
+    p.text("14.13%", 210,156.25);
+    p.text("0.89%", 210,192.5);
+    p.text("9.18%", 210,228.75);
+    p.text("0.36%", 210,265);
 
 //// Add legend
 
     p.textFont('Khand');
-    // p.fill(92,242,145,140); //m
-    // p.rect(205,100,25,25);
-    // p.fill(179,118,244,140);  //f
-    // p.rect(205,130,25,25);
-    // p.fill(168,71,5,140);  //t
-    // p.rect(205,160,25,25);
-    // p.fill(165,160,152,140);   //u
-    // p.rect(205,190,25,25);
-    // p.fill(224,199,50,140);   //z
-    // p.rect(205,220,25,25);
     p.textStyle();
-    p.textAlign(p.LEFT);
+    p.textAlign(p.RIGHT);
+    p.noStroke();
     p.fill (77,77,77);
     p.textStyle(p.NORMAL);
-    p.textSize(20);
+    p.textSize(19);
     //////need to add 
-    // p.text("male", 257,117);
-    // p.text("female", 257,147);
-    // p.text("couple / collaborative with both genders",257,177);
-    // p.text("unknown",257,207);
-    // p.text("named, gender not yet identified",257,237);
-    p.pop();
+    p.text("male", 150,120);
+    p.text("female", 150,156.25);
+    p.text("couple/collaborative, both genders",150,192.5);
+    p.text("unknown",150,228.75);
+    p.text("named, gender not yet identified",150,265);
+
+
     p.pop();
 }
 }
@@ -236,327 +227,320 @@ var s = function(p){
 var myp5 = new p5(s, 'c1');
 
 /////SECOND FORMAT, WRAPPED THICKER BARS USING LEGEND 
-///NUMBERS ON BAR ARE CORRECT
-var s = function(p){
 
-  p.fontRead = function(){
-      fontReady = true; 
-    }
+// var s = function(p){
 
-  p.preload = function(){
-  //mytable is comma separated value "csv"
-  //and has a header specifying the columns labels
-   p.table = p.loadTable('assets/ModContGenderfinalazsort.csv','csv','header');
+//   p.fontRead = function(){
+//       fontReady = true; 
+//     }
 
-   KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
-  }
+//   p.preload = function(){
+//   //mytable is comma separated value "csv"
+//   //and has a header specifying the columns labels
+//    p.table = p.loadTable('assets/ModContGenderfinalazsort.csv','csv','header');
 
-  p.setup = function(){
-    p.createCanvas(p.windowWidth,870);
-    p.drawLabelsTot();
+//    KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
+//   }
 
-    p.background(100,05);
+//   p.setup = function(){
+//     p.createCanvas(p.windowWidth,870);
+//     p.drawLabelsTot();
+
+//     p.background(100,05);
       
-    p.push();
-    p.scale(0.83); 
-    p.translate(230,60);
+//     p.push();
+//     p.scale(0.83); 
+//     p.translate(230,60);
 
-    p.push();
-    p.stroke(92,242,145,160);
-    p.strokeWeight(20);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape(); 
-    p.vertex(410, 340);   // total m/2 = 10829/2 = 5414.5
-    p.vertex(780, 340);   //  370
-    p.vertex(780, 730);   //  390
-    p.vertex(940,730);   // 160
-    p.vertex(940, 22);   //708
-    p.vertex(1280, 22);   //340
-    p.vertex(1280, 820);   //798
-    p.vertex(1220, 820);   //60
-    p.vertex(1220, 60);   //760
-    p.vertex(1130, 60);    //90
-    p.vertex(1130, 820);   //760    //4436
-    p.vertex(151.5, 820);  //978.5     ///5414.5
-    p.endShape();  
-    p.pop();
+//     p.push();
+//     p.stroke(92,242,145,160);
+//     p.strokeWeight(20);
+//     p.strokeCap(p.SQUARE);
+//     p.noFill();
+//     p.beginShape(); 
+//     p.vertex(410, 340);   // total m/2 = 10829/2 = 5414.5
+//     p.vertex(780, 340);   //  370
+//     p.vertex(780, 730);   //  390
+//     p.vertex(940,730);   // 160
+//     p.vertex(940, 22);   //708
+//     p.vertex(1280, 22);   //340
+//     p.vertex(1280, 820);   //798
+//     p.vertex(1220, 820);   //60
+//     p.vertex(1220, 60);   //760
+//     p.vertex(1130, 60);    //90
+//     p.vertex(1130, 820);   //760    //4436
+//     p.vertex(151.5, 820);  //978.5     ///5414.5
+//     p.endShape();  
+//     p.pop();
 
-    p.push();
-    p.stroke(179,118,244,160); //total f/2 = 2027/2 = 1013.5
-    p.strokeWeight(20);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(410, 360);   //  
-    p.vertex(760,  360);   //350
-    p.vertex(760,  750);   //390
-    p.vertex(960, 750);  //200   
-    p.vertex(960, 676.5);   //1013.5
-    p.endShape();
-    p.pop();
+//     p.push();
+//     p.stroke(179,118,244,160); //total f/2 = 2027/2 = 1013.5
+//     p.strokeWeight(20);
+//     p.strokeCap(p.SQUARE);
+//     p.noFill();
+//     p.beginShape();
+//     p.vertex(410, 360);   //  
+//     p.vertex(760,  360);   //350
+//     p.vertex(760,  750);   //390
+//     p.vertex(960, 750);  //200   
+//     p.vertex(960, 676.5);   //1013.5
+//     p.endShape();
+//     p.pop();
 
-    p.push();
-    p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
-    p.strokeWeight(20);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(410, 320);   //  
-    p.vertex(474,  320);   //64 = 64
-    p.endShape();
-    p.pop();
+//     p.push();
+//     p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
+//     p.strokeWeight(20);
+//     p.strokeCap(p.SQUARE);
+//     p.noFill();
+//     p.beginShape();
+//     p.vertex(410, 320);   //  
+//     p.vertex(474,  320);   //64 = 64
+//     p.endShape();
+//     p.pop();
 
-    p.push();
-    p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
-    p.strokeWeight(20);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(410, 300);   //  
-    p.vertex(800,  300);   // 390
-    p.vertex(800,  569);    //659
-    p.endShape();
-    p.pop();
+//     p.push();
+//     p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
+//     p.strokeWeight(20);
+//     p.strokeCap(p.SQUARE);
+//     p.noFill();
+//     p.beginShape();
+//     p.vertex(410, 300);   //  
+//     p.vertex(800,  300);   // 390
+//     p.vertex(800,  569);    //659
+//     p.endShape();
+//     p.pop();
 
-    p.push();
-    p.stroke(224,199,50,160);  //total z to find out 48/2 = 24
-    p.strokeWeight(20);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(410, 280);   //  
-    p.vertex(434, 280);   // 24
-    p.endShape();
-    p.pop();
-  p.pop();
-}
+//     p.push();
+//     p.stroke(224,199,50,160);  //total z to find out 48/2 = 24
+//     p.strokeWeight(20);
+//     p.strokeCap(p.SQUARE);
+//     p.noFill();
+//     p.beginShape();
+//     p.vertex(410, 280);   //  
+//     p.vertex(434, 280);   // 24
+//     p.endShape();
+//     p.pop();
+//   p.pop();
+// }
 
 
-  p.windowResized = function() {
-    p.resizeCanvas(p.windowWidth, p.windowHeight);
-}
+//   p.windowResized = function() {
+//     p.resizeCanvas(p.windowWidth, p.windowHeight);
+// }
 
-  p.drawLabelsTot = function(){
+//   p.drawLabelsTot = function(){
 
-    p.push();
-    p.translate(-80,0); 
-  //label wrapped total bars
-    p.textFont('Khand');
-    p.textAlign(p.RIGHT);
-    p.noStroke();
-    p.textSize(18);
-    p.fill(77,77,77);
-    p.textSize(33);
-    p.textStyle(p.NORMAL);
-    p.textAlign(p.LEFT);
-    p.text("Q: What % of The Met's 14,350 artworks are by women?", 130,85);
-    p.textSize(37);
-    p.text("A:", 130,130);
-    p.text("14.13%", 163,130);
-    p.textSize(23);
-    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 130,165);
-    // p.textAlign(p.LEFT);
-    // p.textSize(18);
-    // p.text("1 pixel: 2 artworks", 130,170);
-    p.push();
-    // p.translate(0,80)
-    // p.textAlign(p.LEFT);
-    // p.textSize(18);
-    // p.text("1 pixel: 2 artworks, scaled to 0.83", 130,170);
-    // p.textAlign(p.LEFT);
-    // p.textSize(28);
-    p.textAlign(p.RIGHT);
-    p.textSize(18);
-    p.text("14.13%", 600,359);
-    p.text("75.44%", 600,340.5);
-    p.text("0.89%", 600,322);
-    p.text("9.18%", 600,303.5);
-    p.text("0.36%", 600,285);
+//     p.push();
+//     p.translate(-80,0); 
+//   //label wrapped total bars
+//     p.textFont('Khand');
+//     p.textAlign(p.RIGHT);
+//     p.noStroke();
+//     p.textSize(18);
+//     p.fill(77,77,77);
+//     p.textSize(33);
+//     p.textStyle(p.NORMAL);
+//     p.textAlign(p.LEFT);
+//     p.text("Q: What % of The Met's 14,350 artworks are by women?", 130,85);
+//     p.textSize(37);
+//     p.text("A:", 130,130);
+//     p.text("14.13%", 163,130);
+//     p.textSize(23);
+//     p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 130,165);
+    
+//     p.push();
+    
+//     p.textAlign(p.RIGHT);
+//     p.textSize(18);
+//     p.text("14.13%", 600,359);
+//     p.text("75.44%", 600,340.5);
+//     p.text("0.89%", 600,322);
+//     p.text("9.18%", 600,303.5);
+//     p.text("0.36%", 600,285);
 
-//// Add legend
+// //// Add legend
 
-    p.textFont('Khand');
-    p.textStyle();
-    p.textAlign(p.RIGHT);
-    p.fill (77,77,77);
-    p.textStyle(p.NORMAL);
-    p.textSize(17.5);
-    p.text("FEMALE", 550,359);
-    p.text("MALE", 550,340.5);
-    p.text("couple / collaborative with both genders",550,322);
-    p.text("unknown",550,303.5);
-    p.text("named, gender not yet identified",550,285);
-    p.pop();
-    p.pop();
-}
-}
+//     p.textFont('Khand');
+//     p.textStyle();
+//     p.textAlign(p.RIGHT);
+//     p.fill (77,77,77);
+//     p.textStyle(p.NORMAL);
+//     p.textSize(17.5);
+//     p.text("FEMALE", 550,359);
+//     p.text("MALE", 550,340.5);
+//     p.text("couple / collaborative with both genders",550,322);
+//     p.text("unknown",550,303.5);
+//     p.text("named, gender not yet identified",550,285);
+//     p.pop();
+//     p.pop();
+// }
+// }
 
-var myp5 = new p5(s, 'c1');
+// var myp5 = new p5(s, 'c1');
 // //////////\\\\\\\\\\\\\\
 
 /////FIRST VERSION WRAPPED bars
 ///scaled down to 0.83%
-var s = function(p){
+// var s = function(p){
 
-  p.fontRead = function(){
-      fontReady = true; 
-    }
+//   p.fontRead = function(){
+//       fontReady = true; 
+//     }
 
-  p.preload = function(){
-  //mytable is comma separated value "csv"
-  //and has a header specifying the columns labels
-   p.table = p.loadTable('assets/ModContGenderfinalazsort.csv','csv','header');
+//   p.preload = function(){
+//   //mytable is comma separated value "csv"
+//   //and has a header specifying the columns labels
+//    p.table = p.loadTable('assets/ModContGenderfinalazsort.csv','csv','header');
 
-   KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
-  }
+//    KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
+//   }
 
-  p.setup = function(){
-    p.createCanvas(p.windowWidth,870);
-    p.drawLabelsTot();
+//   p.setup = function(){
+//     p.createCanvas(p.windowWidth,870);
+//     p.drawLabelsTot();
 
-    p.background(100,05);
+//     p.background(100,05);
       
-    p.push();
-    p.scale(0.83); 
-    p.translate(230,60);
+//     p.push();
+//     p.scale(0.83); 
+//     p.translate(230,60);
 
-    p.push();
-    p.stroke(92,242,145,160);
-    p.strokeWeight(8);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape(); 
-    p.vertex(830, 20);   // total m/2 = 10825/2 = 5412.5
-    p.vertex(830, 760);   //  740
-    p.vertex(940, 760);   //  110
-    p.vertex(940, 22);   //740
-    p.vertex(1280, 22);   //340
-    p.vertex(1280, 840);   //820
-    p.vertex(1250, 840);   //30
-    p.vertex(1250, 40);   //800
-    p.vertex(1110, 40);    //140
-    p.vertex(1110, 840);   //800
-    p.vertex(217.5, 840);  //892.5     ///5412.5
-    p.endShape();  
-    p.pop();
+//     p.push();
+//     p.stroke(92,242,145,160);
+//     p.strokeWeight(8);
+//     p.strokeCap(p.SQUARE);
+//     p.noFill();
+//     p.beginShape(); 
+//     p.vertex(830, 20);   // total m/2 = 10825/2 = 5412.5
+//     p.vertex(830, 760);   //  740
+//     p.vertex(940, 760);   //  110
+//     p.vertex(940, 22);   //740
+//     p.vertex(1280, 22);   //340
+//     p.vertex(1280, 840);   //820
+//     p.vertex(1250, 840);   //30
+//     p.vertex(1250, 40);   //800
+//     p.vertex(1110, 40);    //140
+//     p.vertex(1110, 840);   //800
+//     p.vertex(217.5, 840);  //892.5     ///5412.5
+//     p.endShape();  
+//     p.pop();
 
-    p.push();
-    p.stroke(179,118,244,160);
-    // stroke(153,50,204,80); //total f/2 = 2027/2 = 1013.5
-    p.strokeWeight(8);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(838, 20);   //  
-    p.vertex(838,  754);   //734
-    p.vertex(932,  754);   //94
-    p.vertex(932, 568.5);  //185.5      //1013.5
-    p.endShape();
-    p.pop();
+//     p.push();
+//     p.stroke(179,118,244,160);
+//     // stroke(153,50,204,80); //total f/2 = 2027/2 = 1013.5
+//     p.strokeWeight(8);
+//     p.strokeCap(p.SQUARE);
+//     p.noFill();
+//     p.beginShape();
+//     p.vertex(838, 20);   //  
+//     p.vertex(838,  754);   //734
+//     p.vertex(932,  754);   //94
+//     p.vertex(932, 568.5);  //185.5      //1013.5
+//     p.endShape();
+//     p.pop();
 
-    p.push();
-    p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
-    p.strokeWeight(8);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(845, 20);   //  
-    p.vertex(845,  84);   //64 = 64
-    p.endShape();
-    p.pop();
+//     p.push();
+//     p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
+//     p.strokeWeight(8);
+//     p.strokeCap(p.SQUARE);
+//     p.noFill();
+//     p.beginShape();
+//     p.vertex(845, 20);   //  
+//     p.vertex(845,  84);   //64 = 64
+//     p.endShape();
+//     p.pop();
 
-    p.push();
-    p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
-    p.strokeWeight(8);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(852, 20);   //  
-    p.vertex(852,  679);   // 659
-    p.endShape();
-    p.pop();
+//     p.push();
+//     p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
+//     p.strokeWeight(8);
+//     p.strokeCap(p.SQUARE);
+//     p.noFill();
+//     p.beginShape();
+//     p.vertex(852, 20);   //  
+//     p.vertex(852,  679);   // 659
+//     p.endShape();
+//     p.pop();
 
-    p.push();
-    p.stroke(224,199,50,160);  //total a to find out 52/2 = 26
-    p.strokeWeight(8);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(858, 20);   //  
-    p.vertex(858,  46);   // 26
-    p.endShape();
-    p.pop();
-  p.pop();
-}
+//     p.push();
+//     p.stroke(224,199,50,160);  //total a to find out 52/2 = 26
+//     p.strokeWeight(8);
+//     p.strokeCap(p.SQUARE);
+//     p.noFill();
+//     p.beginShape();
+//     p.vertex(858, 20);   //  
+//     p.vertex(858,  46);   // 26
+//     p.endShape();
+//     p.pop();
+//   p.pop();
+// }
 
 
-  p.windowResized = function() {
-    p.resizeCanvas(p.windowWidth, p.windowHeight);
-}
+//   p.windowResized = function() {
+//     p.resizeCanvas(p.windowWidth, p.windowHeight);
+// }
 
-  p.drawLabelsTot = function(){
+//   p.drawLabelsTot = function(){
 
-    p.push();
-    p.translate(-80,0); 
-  //label wrapped total bars
-    p.textFont('Khand');
-    p.textAlign(p.RIGHT);
-    p.noStroke();
-    p.textSize(18);
-    p.fill(77,77,77);
-    p.textSize(40);
-    p.textStyle(p.NORMAL);
-    p.textAlign(p.LEFT);
-    p.text("What % of The Met's 14,350 artworks are by women?", 130,95);
-    p.textSize(26);
-    p.text("Looking at the Modern & Contemporary Art Collection", 130,140);
-    p.push();
-    p.translate(0,80)
-    p.textAlign(p.LEFT);
-    p.textSize(18);
-    p.text("1 pixel: 2 artworks, scaled to 0.83", 237,285);
-    p.textAlign(p.LEFT);
-    p.textSize(28);
-    p.textAlign(p.RIGHT);
-    p.textSize(26);
-    // p.text("14.13%", 190,120);
-    p.text("75.44%", 190,120);
-    p.text("14.13%", 190,150);
-    p.text("0.89%", 190,180);
-    p.text("9.18%", 190,210);
-    p.text("0.36%", 190,240);
+//     p.push();
+//     p.translate(-80,0); 
+//   //label wrapped total bars
+//     p.textFont('Khand');
+//     p.textAlign(p.RIGHT);
+//     p.noStroke();
+//     p.textSize(18);
+//     p.fill(77,77,77);
+//     p.textSize(40);
+//     p.textStyle(p.NORMAL);
+//     p.textAlign(p.LEFT);
+//     p.text("What % of The Met's 14,350 artworks are by women?", 130,95);
+//     p.textSize(26);
+//     p.text("Looking at the Modern & Contemporary Art Collection", 130,140);
+//     p.push();
+//     p.translate(0,80)
+//     p.textAlign(p.LEFT);
+//     p.textSize(18);
+//     p.text("1 pixel: 2 artworks, scaled to 0.83", 237,285);
+//     p.textAlign(p.LEFT);
+//     p.textSize(28);
+//     p.textAlign(p.RIGHT);
+//     p.textSize(26);
+//     // p.text("14.13%", 190,120);
+//     p.text("75.44%", 190,120);
+//     p.text("14.13%", 190,150);
+//     p.text("0.89%", 190,180);
+//     p.text("9.18%", 190,210);
+//     p.text("0.36%", 190,240);
 
-//// Add legend
+// //// Add legend
 
-    p.textFont('Khand');
-    p.fill(92,242,145,140); //m
-    p.rect(205,100,25,25);
-    p.fill(179,118,244,140);  //f
-    p.rect(205,130,25,25);
-    p.fill(168,71,5,140);  //t
-    p.rect(205,160,25,25);
-    p.fill(165,160,152,140);   //u
-    p.rect(205,190,25,25);
-    p.fill(224,199,50,140);   //z
-    p.rect(205,220,25,25);
-    p.textStyle();
-    p.textAlign(p.LEFT);
-    p.fill (77,77,77);
-    p.textStyle(p.NORMAL);
-    p.textSize(20);
-    // p.text("female", 237,117);
-    p.text("male", 237,117);
-    p.text("female", 237,147);
-    p.text("couple / collaborative with both genders",237,177);
-    p.text("unknown",237,207);
-    p.text("named, gender not yet identified",237,237);
-    p.pop();
-    p.pop();
-}
-}
+//     p.textFont('Khand');
+//     p.fill(92,242,145,140); //m
+//     p.rect(205,100,25,25);
+//     p.fill(179,118,244,140);  //f
+//     p.rect(205,130,25,25);
+//     p.fill(168,71,5,140);  //t
+//     p.rect(205,160,25,25);
+//     p.fill(165,160,152,140);   //u
+//     p.rect(205,190,25,25);
+//     p.fill(224,199,50,140);   //z
+//     p.rect(205,220,25,25);
+//     p.textStyle();
+//     p.textAlign(p.LEFT);
+//     p.fill (77,77,77);
+//     p.textStyle(p.NORMAL);
+//     p.textSize(20);
+//     // p.text("female", 237,117);
+//     p.text("male", 237,117);
+//     p.text("female", 237,147);
+//     p.text("couple / collaborative with both genders",237,177);
+//     p.text("unknown",237,207);
+//     p.text("named, gender not yet identified",237,237);
+//     p.pop();
+//     p.pop();
+// }
+// }
 
-var myp5 = new p5(s, 'c1');
+// var myp5 = new p5(s, 'c1');
 // //////////\\\\\\\\\\\\\\
 
 // ////VERTICAL BARS TOTALS 
