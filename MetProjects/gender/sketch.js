@@ -50,7 +50,7 @@ var s = function(p){
       
     p.push();
     // p.scale(0.83); 
-    p.translate(320,80);
+    p.translate(320,90);
 
     p.push();
     p.stroke(92,242,145,145);
@@ -85,7 +85,7 @@ var s = function(p){
     p.vertex(200, 360);  //595
     p.vertex(200, 385);  //25
     p.vertex(160, 385);  //40  
-    p.vertex(160, 425);  //40
+    p.vertex(160, 425);  //40  //3943
     p.vertex(30, 425); // 130
     p.vertex(30, 470);  //45
     p.vertex(200, 470);  //170  //4288
@@ -186,14 +186,14 @@ var s = function(p){
     p.textSize(40);
     p.textStyle(p.NORMAL);
     p.textAlign(p.LEFT);
-    p.text("What % of The Met's 14,350 artworks are by women?", 338,95);
+    p.text("What % of The Met's 14,350 artworks are by women?", 345,95);
     p.textSize(26);
-    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 338,140);
+    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 345,140);
 
     p.pop();
 
     p.push();
-    p.translate(120,140)
+    p.translate(120,150)
     p.textFont('Khand');
     p.textAlign(p.RIGHT);
     p.noStroke();
@@ -657,9 +657,9 @@ var genFill = singleData[b];
     p.textAlign(p.LEFT);
     p.noStroke();
     p.fill(77,77,77);
-    p.textSize(45);
+    p.textSize(43);
     p.textStyle(p.NORMAL);
-    p.text("Another View of All Artworks by Gender", 335,35);
+    p.text("Another View of All Artworks by Gender", 335,32);
   }
 
 p.drawmeasureline = function(){
