@@ -27,7 +27,7 @@ var KhandFont, fontReady = false;
 
 var margin = 80;
 
-///////wrapped bars
+///////wrapped bars NEW VWESION CLOSE WRAPS
 var s = function(p){
 
   p.fontRead = function(){
@@ -58,18 +58,56 @@ var s = function(p){
     p.strokeCap(p.SQUARE);
     p.noFill();
     p.beginShape(); 
+
     p.vertex(20,172);   // total m/2 = 10829/2 = 5414.5
     p.vertex(900,172);   //  880
-    p.vertex(900, 442);   //  270
-    p.vertex(400, 442);   //500
-    p.vertex(400, 512);   //70
-    p.vertex(1100, 512);   //700
-    p.vertex(1100, 632);   //120
-    p.vertex(220, 632);   //880
-    p.vertex(220, 698);    //66
-    p.vertex(1200, 698);   //980
-    p.vertex(1200, 790);   //92
-    p.vertex(343.5, 790);   //856.5
+    p.vertex(900, 400);   //  228
+    p.vertex(830, 400);   //70
+    p.vertex(830, 240);   //160
+    p.vertex(705, 240);   //125
+    p.vertex(705, 280);   //40
+    p.vertex(110, 280);   //595
+    p.vertex(110, 316);    //36
+    p.vertex(75, 316);   //35
+    p.vertex(75, 346);   //30
+    p.vertex(30, 346);   //45
+    p.vertex(30, 390);   //44
+    p.vertex(120, 390);  //90
+    p.vertex(120, 350);  //40
+    p.vertex(160, 350);  //40
+    p.vertex(160, 320);  //30
+    p.vertex(750, 320);  //590
+    p.vertex(750, 280);  //40
+    p.vertex(795, 280);  //45
+    p.vertex(795, 390);  //110
+    p.vertex(160, 390);  //635
+    p.vertex(160, 430);  //40
+    p.vertex(30, 430);  //130  ////4078
+    p.vertex(30, 475);  //45
+    p.vertex(200, 475); // 170
+    p.vertex(200, 430);  //45
+    p.vertex(790, 430);  //590  //4918
+    p.vertex(790, 455);  //25
+    p.vertex(900, 455); //110
+    p.vertex(900, 500); //45   //5108
+    p.vertex(750, 500); //150
+    p.vertex(750, 475);  ///25
+    p.vertex(618.5, 475);  //131.5   ////5414.5
+    
+
+
+    // p.vertex(20,172);   // total m/2 = 10829/2 = 5414.5
+    // p.vertex(900,172);   //  880
+    // p.vertex(900, 422);   //  270
+    // p.vertex(50, 422);   //500
+    // p.vertex(50, 492);   //70
+    // p.vertex(679, 492);   //700
+    // p.vertex(679, 572);   //120
+    // p.vertex(84, 572);   //880
+    // p.vertex(84, 628);    //66
+    // p.vertex(864, 628);   //980
+    // p.vertex(864, 750);   //92
+    // p.vertex(84, 750);   //856.5
 
     // p.vertex(110, 790);  //50
     // p.vertex(1400, 790);  //
@@ -92,24 +130,24 @@ var s = function(p){
     p.pop();
 
     p.push();
-    p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
-    p.strokeWeight(20);
-    p.strokeCap(p.SQUARE);
-    p.noFill();
-    p.beginShape();
-    p.vertex(20, 244);   //  
-    p.vertex(84, 244);   //64 = 64
-    p.endShape();
-    p.pop();
-
-    p.push();
     p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
     p.strokeWeight(20);
     p.strokeCap(p.SQUARE);
     p.noFill();
     p.beginShape();
-    p.vertex(20,280);   //  
-    p.vertex(679,280);   // 659
+    p.vertex(20,244);   //  
+    p.vertex(679,244);   // 659
+    p.endShape();
+    p.pop();
+
+    p.push();
+    p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
+    p.strokeWeight(20);
+    p.strokeCap(p.SQUARE);
+    p.noFill();
+    p.beginShape();
+    p.vertex(20, 280);   //  
+    p.vertex(84, 280);   //64 = 64
     p.endShape();
     p.pop();
 
@@ -197,7 +235,7 @@ var s = function(p){
 
 var myp5 = new p5(s, 'c1');
 
-/////works oldwrapped bars WRKING ON THIS ONE
+/////SECOND FORMAT, WRAPPED THICKER BARS USING LEGEND 
 ///NUMBERS ON BAR ARE CORRECT
 var s = function(p){
 
@@ -245,8 +283,7 @@ var s = function(p){
     p.pop();
 
     p.push();
-    p.stroke(179,118,244,160);
-    // stroke(153,50,204,80); //total f/2 = 2027/2 = 1013.5
+    p.stroke(179,118,244,160); //total f/2 = 2027/2 = 1013.5
     p.strokeWeight(20);
     p.strokeCap(p.SQUARE);
     p.noFill();
@@ -310,12 +347,15 @@ var s = function(p){
     p.noStroke();
     p.textSize(18);
     p.fill(77,77,77);
-    p.textSize(40);
+    p.textSize(33);
     p.textStyle(p.NORMAL);
     p.textAlign(p.LEFT);
-    p.text("What % of The Met's 14,350 artworks are by women?", 130,95);
-    p.textSize(26);
-    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 130,140);
+    p.text("Q: What % of The Met's 14,350 artworks are by women?", 130,85);
+    p.textSize(37);
+    p.text("A:", 130,130);
+    p.text("14.13%", 163,130);
+    p.textSize(23);
+    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 130,165);
     // p.textAlign(p.LEFT);
     // p.textSize(18);
     // p.text("1 pixel: 2 artworks", 130,170);
@@ -328,39 +368,25 @@ var s = function(p){
     // p.textSize(28);
     p.textAlign(p.RIGHT);
     p.textSize(18);
-    // p.text("14.13%", 190,120);
-    // p.text("75.44%", 600,120);
-    p.text("14.13%", 600,356);
-    p.text("75.44%", 600,339);
+    p.text("14.13%", 600,359);
+    p.text("75.44%", 600,340.5);
     p.text("0.89%", 600,322);
-    p.text("9.18%", 600,305);
-    p.text("0.36%", 600,288);
+    p.text("9.18%", 600,303.5);
+    p.text("0.36%", 600,285);
 
 //// Add legend
 
     p.textFont('Khand');
-    // p.fill(92,242,145,140); //m
-    // p.rect(205,100,25,25);
-    // p.fill(179,118,244,140);  //f
-    // p.rect(205,130,25,25);
-    // p.fill(168,71,5,140);  //t
-    // p.rect(205,160,25,25);
-    // p.fill(165,160,152,140);   //u
-    // p.rect(205,190,25,25);
-    // p.fill(224,199,50,140);   //z
-    // p.rect(205,220,25,25);
     p.textStyle();
     p.textAlign(p.RIGHT);
     p.fill (77,77,77);
     p.textStyle(p.NORMAL);
     p.textSize(17.5);
-    // p.text("female", 237,117);
-    // p.text("male", 237,117);
-    p.text("female", 550,356);
-    p.text("male", 550,339);
+    p.text("FEMALE", 550,359);
+    p.text("MALE", 550,340.5);
     p.text("couple / collaborative with both genders",550,322);
-    p.text("unknown",550,305);
-    p.text("named, gender not yet identified",550,288);
+    p.text("unknown",550,303.5);
+    p.text("named, gender not yet identified",550,285);
     p.pop();
     p.pop();
 }
@@ -369,7 +395,8 @@ var s = function(p){
 var myp5 = new p5(s, 'c1');
 // //////////\\\\\\\\\\\\\\
 
-/////works oldwrapped bars
+/////FIRST VERSION WRAPPED bars
+///scaled down to 0.83%
 var s = function(p){
 
   p.fontRead = function(){
@@ -565,7 +592,8 @@ var t = function(p) {
 
     var x,y,w,h;
 
-    var singleData = [48, 1318, 128, 2027, 10829];
+        var singleData = [48,128, 1318, 2027,10829];
+    // var singleData = [10829, 2027, 1318, 128, 48];
 //var fillBars = [(fill("#ededed"),("#5c5c5c"),("#e5e5o5"),("#f0f0f0"),("#000"))];
 
     var width = 5800,
@@ -652,7 +680,7 @@ p.drawmeasureline = function(){
     
     var x,y,w,h;
 
-  var singleData = [48, 1318, 128, 2027, 10829];
+  var singleData = [48, 128, 1318, 2027,10829];
    
    //x axis
   p.textFont('Khand');
