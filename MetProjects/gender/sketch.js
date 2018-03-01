@@ -53,7 +53,7 @@ var s = function(p){
     p.translate(320,80);
 
     p.push();
-    p.stroke(92,242,145,160);
+    p.stroke(92,242,145,145);
     p.strokeWeight(20);
     p.strokeCap(p.SQUARE);
     p.noFill();
@@ -70,7 +70,7 @@ var s = function(p){
     p.vertex(110, 316);    //36
     p.vertex(75, 316);   //35
     p.vertex(75, 346);   //30
-    p.vertex(30, 346);   //45
+    p.vertex(30, 346);   //45  ///2244
     p.vertex(30, 390);   //44
     p.vertex(120, 390);  //90
     p.vertex(120, 350);  //40
@@ -78,48 +78,51 @@ var s = function(p){
     p.vertex(160, 320);  //30
     p.vertex(750, 320);  //590
     p.vertex(750, 280);  //40
-    p.vertex(795, 280);  //45
+    p.vertex(795, 280);  //45  ///3163
 
 
-    p.vertex(795, 390);  //110
-    p.vertex(160, 390);  //635
-    p.vertex(160, 430);  //40
-    p.vertex(30, 430);  //130  ////4078
-    p.vertex(30, 475);  //45
-    p.vertex(200, 475); // 170
-    p.vertex(200, 430);  //45
-    p.vertex(790, 430);  //590  //4918
-    p.vertex(790, 455);  //25
-    p.vertex(900, 455); //110
-    p.vertex(900, 500); //45   //5108
-    p.vertex(750, 500); //150
-    p.vertex(750, 475);  ///25
-    p.vertex(618.5, 475);  //131.5   ////5414.5
+    p.vertex(795, 360);  //80
+    p.vertex(200, 360);  //595
+    p.vertex(200, 385);  //25
+    p.vertex(160, 385);  //40  
+    p.vertex(160, 425);  //40
+    p.vertex(30, 425); // 130
+    p.vertex(30, 470);  //45
+    p.vertex(200, 470);  //170  //4288
+    p.vertex(200, 425);  //45
+    p.vertex(240, 425); //40
+    p.vertex(240, 395); //30   
+    p.vertex(795, 395); //555  //4958
+    p.vertex(795, 435);  //40  //4998
+    p.vertex(900, 435); //105
+    p.vertex(900, 475);  //40
+    p.vertex(755, 475);  //145  //5288
+    p.vertex(755, 435);  //40   //5328
+    p.vertex(668.5, 435);  //86.5    ////5414.5
+
     
 
+    // p.vertex(795, 390);  //110
+    // p.vertex(160, 390);  //635
+    // p.vertex(160, 430);  //40
+    // p.vertex(30, 430);  //130  ////4078
+    // p.vertex(30, 475);  //45
+    // p.vertex(200, 475); // 170
+    // p.vertex(200, 430);  //45
+    // p.vertex(790, 430);  //590  //4918
+    // p.vertex(790, 455);  //25
+    // p.vertex(900, 455); //110
+    // p.vertex(900, 500); //45   //5108
+    // p.vertex(750, 500); //150
+    // p.vertex(750, 475);  ///25
+    // p.vertex(618.5, 475);  //131.5   ////5414.5
 
-    // p.vertex(20,172);   // total m/2 = 10829/2 = 5414.5
-    // p.vertex(900,172);   //  880
-    // p.vertex(900, 422);   //  270
-    // p.vertex(50, 422);   //500
-    // p.vertex(50, 492);   //70
-    // p.vertex(679, 492);   //700
-    // p.vertex(679, 572);   //120
-    // p.vertex(84, 572);   //880
-    // p.vertex(84, 628);    //66
-    // p.vertex(864, 628);   //980
-    // p.vertex(864, 750);   //92
-    // p.vertex(84, 750);   //856.5
-
-    // p.vertex(110, 790);  //50
-    // p.vertex(1400, 790);  //
-    // // p.vertex(980, 852);
-    // p.vertex(869.5, 782);  //380.5    ///5414.5
+    
     p.endShape();  
     p.pop();
 
     p.push();
-    p.stroke(179,118,244,160);
+    p.stroke(179,118,244,145);
     // stroke(153,50,204,80); //total f/2 = 2027/2 = 1013.5
     p.strokeWeight(20);
     p.strokeCap(p.SQUARE);
@@ -132,7 +135,7 @@ var s = function(p){
     p.pop();
 
     p.push();
-    p.stroke(165,160,152,160);  //total u unknown 1318/2 = 659
+    p.stroke(165,160,152,145);  //total u unknown 1318/2 = 659
     p.strokeWeight(20);
     p.strokeCap(p.SQUARE);
     p.noFill();
@@ -143,7 +146,7 @@ var s = function(p){
     p.pop();
 
     p.push();
-    p.stroke(168,71,5,160); //total t couple/collab 128/2 = 64
+    p.stroke(168,71,5,145); //total t couple/collab 128/2 = 64
     p.strokeWeight(20);
     p.strokeCap(p.SQUARE);
     p.noFill();
@@ -154,7 +157,7 @@ var s = function(p){
     p.pop();
 
     p.push();
-    p.stroke(224,199,50,160);  //total z to find out 48/2 = 24
+    p.stroke(224,199,50,145);  //total z to find out 48/2 = 24
     p.strokeWeight(20);
     p.strokeCap(p.SQUARE);
     p.noFill();
@@ -183,9 +186,9 @@ var s = function(p){
     p.textSize(40);
     p.textStyle(p.NORMAL);
     p.textAlign(p.LEFT);
-    p.text("What % of The Met's 14,350 artworks are by women?", 318,95);
+    p.text("What % of The Met's 14,350 artworks are by women?", 338,95);
     p.textSize(26);
-    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 318,140);
+    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 338,140);
 
     p.pop();
 
