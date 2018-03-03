@@ -16,22 +16,16 @@ function setup() {
 }
 
 function rita () {
-  
-   
-  	
+      	
 //   //We get a random number between 0 and 4000, by passing 4000 as an argument
 //   //You could also use min to define a specific range, if you want to.
 
-  
-  //We concatenate the Met API url with our random number
+///We concatenate the Met API url with our random number
     var api = 'https://collectionapi.metmuseum.org/api/collection/v1/object/';
     var units = (1,400000);
 
-
     var url = api + units;
   // var url = 'https://collectionapi.metmuseum.org/api/collection/v1/object/' + rangeObjects;
-
-  // var metData;
 
   console.log(url);
 
@@ -42,66 +36,75 @@ function rita () {
 	  httpGet(url, 'json', function(response) {
 	    
 	    metData = response;
-	    console.log("getting MetData"+ metData);
-    
+	    console.log("getting MetData");
+   
+ ///HOW TO RUN THROUGH WHOLE API 
     // for (var i=0; i<=url.length; i++) {
 
+
+//// IS this correct_create a new object
+///or should this be an array?
+////and how do Iget the id,title etc as objects	within an array
+
+
+ 		var uncertainty = {};
+
+  		var uncertaintyRita = {};
+
+ //works to gets specific data in each object:
+		 uncertainty.id = metData.objectID;
+		 uncertainty.title = metData.titles.primaryTitle;
+		 uncertainty.description = metData.metadata.metaDescription;
+		 uncertainty.keywords = metData.metadata.metaKeywords;
+		 uncertainty.imageUrl = metData.media.images.primaryImage.imageUrl;
+		 
+		 console.log(uncertainty);
+		 console.log("item description:  "+uncertainty.description);
+
+//////RiTa
 //     //Here we pick our response from the HTTP request, 
 //     //and turn it into a RiTa object!
 //     //The response is a JSON object, 
 //     //with properties that we can pass 
 //     //also to be specific in what we want
 
- 	
-//     // create a new object
-    	// var uncertaintyLibrary = [];
+//works to convert data to a RiTa string of separate words
+		var uncertaintyRita = RiString(metData.titles.primaryTitle);
+////works to return RiTa data object
+		 uncertaintyRita.id = RiString(metData.objectID);
+		 uncertaintyRita.title = RiString(metData.titles.primaryTitle);
+		 uncertaintyRita.description = RiString(metData.metadata.metaDescription);
+		 uncertaintyRita.keywords = RiString(metData.metadata.metaKeywords);
+		 uncertaintyRita.imageUrl = RiString(metData.media.images.primaryImage.imageUrl);
 
+		console.log(uncertaintyRita);
 
-		// var uncertainty = new Object();
+//works to return rita object for a specific item within an object &
+///split all the title into separate words 
+		var uncertaintyRtitle = uncertaintyRita.words();
+		console.log("rita title:  "+uncertaintyRtitle);
+		 
 
-		var uncertainty = {};
+// for (var i=0; i<count; i++) {
+//       var year = p.int(p.table.getString(i,17));
+//       if(year!=yearNow.year){
+//         var yearNow = {};
+//         yearNow.year = year;
+//         yearNow.items =[];
+//         yearNow.items = p.table.findRows(String(yearNow.year),17);
+//         p.append(allYears, yearNow);
+        
+//         if(yearNow.items.length>maxObjects){
+//           maxObjects = yearNow.items.length;
+//           maxYear = allYears.length-1;
+//         }
+
+	/////Doesn't work-only returns object object
+		 // append(uncertaintyRita,uncertainty);
+
+		 // console.log("ritaUnc" +uncertaintyRita); 
 			
-  		var uncertaintyRita = [];
-
-  	//to get specific data in each object:
-		 // uncertainty.id = metData.objectID;
-		 // uncertainty.title = metData.titles.primaryTitle;
-		 // uncertainty.description = metData.metadata.metaDescription;
-		 // uncertainty.keywords = metData.metadata.metaKeywords;
-		 // uncertainty.imageUrl = metData.media.images.primaryImage.imageUrl;
-
-	//to convert data to a RiTa string
-		 uncertainty.id = RiString(metData.objectID);
-		 uncertainty.title = RiString(metData.titles.primaryTitle);
-		 uncertainty.description = RiString(metData.metadata.metaDescription);
-		 uncertainty.keywords = RiString(metData.metadata.metaKeywords);
-		 uncertainty.imageUrl = RiString(metData.media.images.primaryImage.imageUrl);
-
-	//returns object 
-		 console.log(uncertainty);
-		 console.log(uncertainty.description);
-
-// var yearNow = {};
-//     yearNow.year = (p.int(p.table.getString(0,17)));
-
-//     yearNow.items = p.table.findRows(String(yearNow.year),17);
-//     p.append(allYears, yearNow);
-
-	/////GETS error
-		 append(uncertaintyRita,uncertainty.words);
-
-		 console.log("ritaUnc" +uncertaintyRita); 
-      
-      	// uncertaintyLibrary.push(uncertainty);
-      // return uncertainty +"this is";
-		// myRiString = new RiString("apple"); 
-		// myRiString.indexOf("a"); 
-	
-			// uncertainty.push(uncertaintyLibrary)
-		 	// uncertainty.append(uncertaintyLibrary)
-		 // });			
-
-
+////then select those which have uncertainty in their description
 ////seems to work to select objects with uncertainty
    //       for (var j=0; j< uncertainty.length; j++) {
 		 // if(uncertainty[j]==="uncertainty") {
@@ -110,33 +113,32 @@ function rita () {
 		 // 	}
 		 // };
 		 
-///try uncertainty selection with while
-			var n = 0
-   			while (n==="uncertainty") {
-		      console.log("this has UC "+n);
-		      n++;
-		 	}
+///or do this with if
+		// 	var n = "uncertainty";
+  //  			while (n==="uncertainty" || n==="uncertain"){
+		//       console.log("this has UC "+n);
+		//       append(uncertaintyRita,uncertainty[n]);
+		//  	}
 
+		// 	var uncert = new RiString(uncertainty);
 
-			var uncert = new RiString(uncertainty);
-
-			var uncertain = uncert.words();
+		// 	var uncertain = uncert.words();
     
-    		// console.log("words  " +uncertain);
+  //   		// console.log("words  " +uncertain);
 
-			// if (uncert.containsWord("Antoino"))
-			for (var j = 0; j < uncertain.length; j++) {
-      			if (uncertain[j] === 'Antoino') {
+		// 	// if (uncert.containsWord("Antoino"))
+		// 	for (var j = 0; j < uncertain.length; j++) {
+  //     			if (uncertain[j] === 'Antoino') {
  
-				// uncert.match("uncertainty").length==TRUE; 
-				return uncertain[j];
-			}
+		// 		// uncert.match("uncertainty").length==TRUE; 
+		// 		return uncertain[j];
+		// 	}
 
-			console.log("words  " +uncertain);
+		// 	console.log("words  " +uncertain);
 		
 
 
-		};
+		// };
   });
 
 };
