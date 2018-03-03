@@ -68,8 +68,7 @@ function rita () {
 //     //with properties that we can pass 
 //     //also to be specific in what we want
 
-//works to convert data to a RiTa string of separate words
-		var uncertaintyRita = RiString(metData.titles.primaryTitle);
+
 ////works to return RiTa data object
 		 uncertaintyRita.id = RiString(metData.objectID);
 		 uncertaintyRita.title = RiString(metData.titles.primaryTitle);
@@ -77,13 +76,10 @@ function rita () {
 		 uncertaintyRita.keywords = RiString(metData.metadata.metaKeywords);
 		 uncertaintyRita.imageUrl = RiString(metData.media.images.primaryImage.imageUrl);
 
-		console.log(uncertaintyRita);
+		 console.log(uncertaintyRita);
+//can select individual items
+		 console.log(uncertaintyRita.title);
 
-//works to return rita object for a specific item within an object &
-///split all the title into separate words 
-		var uncertaintyRtitle = uncertaintyRita.words();
-		console.log("rita title:  "+uncertaintyRtitle);
-		 
 
 // for (var i=0; i<count; i++) {
 //       var year = p.int(p.table.getString(i,17));
@@ -98,11 +94,7 @@ function rita () {
 //           maxObjects = yearNow.items.length;
 //           maxYear = allYears.length-1;
 //         }
-
-	/////Doesn't work-only returns object object
-		 // append(uncertaintyRita,uncertainty);
-
-		 // console.log("ritaUnc" +uncertaintyRita); 
+ 
 			
 ////then select those which have uncertainty in their description
 ////seems to work to select objects with uncertainty
