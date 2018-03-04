@@ -1,5 +1,7 @@
 ////get api, select objects, select those that contain uncertainty 
 ///show their image urls on screen
+var json = {}; // new  JSON Object
+json.name = 'MetUncItems';
 
 var metData = [];
 var items = [];
@@ -15,7 +17,8 @@ function rita () {
 ///Met API url
     var api = 'https://collectionapi.metmuseum.org/api/collection/v1/object/';
 
-  	for (var i = 265000; i < 266000; i++) {
+  	// for (var i = 264000; i <270000; i++) {
+  	for (var i = 265000; i <270000; i++) {
   		url = api+i;
 
   		httpGet(url, 'json', function(response) {	    
@@ -26,7 +29,10 @@ function rita () {
 ////titles
 	setTimeout(function() {
 		// console.log(metData);
+
+	// if(metData){
 		console.log(metData.length);
+
 		for (var j = 0; j < metData.length; j++) {
 			console.log(metData[j].titles.primaryTitle);
 			if (metData[j].titles.primaryTitle.includes("precarious")) {
@@ -35,50 +41,81 @@ function rita () {
 					var uncertainty_itemT = metData[j];
 					items.push(uncertainty_itemT);
 			}
-			if (metData[j].titles.primaryTitle.includes("unsettling")) {
+			if (metData[j].titles.primaryTitle.includes("hesitant")) {
 				console.log(metData[j].titles.primaryTitle);
 					
 					var uncertainty_itemT = metData[j];
 					items.push(uncertainty_itemT);
 			}
-			if (metData[j].titles.primaryTitle.includes("uncertainty")) {
+			if (metData[j].titles.primaryTitle.includes("uncertain")) {
+				console.log(metData[j].titles.primaryTitle);
+					
+					var uncertainty_itemT = metData[j];
+					items.push(uncertainty_itemT);
+			}
+			if (metData[j].titles.primaryTitle.includes("fragile")) {
+				console.log(metData[j].titles.primaryTitle);
+					
+					var uncertainty_itemT = metData[j];
+					items.push(uncertainty_itemT);
+			}
+			if (metData[j].titles.primaryTitle.includes("incomplete")) {
+				console.log(metData[j].titles.primaryTitle);
+					
+					var uncertainty_itemT = metData[j];
+					items.push(uncertainty_itemT);
+			}
+			if (metData[j].titles.primaryTitle.includes("falling")) {
+				console.log(metData[j].titles.primaryTitle);
+					
+					var uncertainty_itemT = metData[j];
+					items.push(uncertainty_itemT);
+			}
+			if (metData[j].titles.primaryTitle.includes("doubt")) {
 				console.log(metData[j].titles.primaryTitle);
 					
 					var uncertainty_itemT = metData[j];
 					items.push(uncertainty_itemT);
 			}
 		}
-	}, 3000);
+	// }
+	}, 9000);
 
 ////descriptions
-setTimeout(function() {
-		console.log(metData.length);
-		for (var j = 0; j < metData.length; j++) {
-			console.log(metData[j].metadata.metaDescription);
-			if (metData[j].metadata.metaDescription.includes("precarious")) {
-				console.log(metData[j].metadata.metaDescription);
+// // setTimeout(function() {
+// 		console.log(metData.length);
+
+// 	if(metData){
+		// console.log(metData.length);	
+// 		for (var j = 0; j < metData.length; j++) {
+// 			console.log(metData[j].metadata.metaDescription);
+// 			if (metData[j].metadata.metaDescription.includes("precarious")) {
+// 				console.log(metData[j].metadata.metaDescription);
 					
-					var uncertainty_itemD = metData[j];
-					items.push(uncertainty_itemD);
-			}
-			if (metData[j].metadata.metaDescription.includes("unsettling")) {
-				console.log(metData[j].metadata.metaDescription);
+// 					var uncertainty_itemD = metData[j];
+// 					items.push(uncertainty_itemD);
+// 			}
+// 			if (metData[j].metadata.metaDescription.includes("unsettling")) {
+// 				console.log(metData[j].metadata.metaDescription);
 					
-					var uncertainty_itemD = metData[j];
-					items.push(uncertainty_itemD);
-			}
-			if (metData[j].metadata.metaDescription.includes("uncertainty")) {
-				console.log(metData[j].metadata.metaDescription);
+// 					var uncertainty_itemD = metData[j];
+// 					items.push(uncertainty_itemD);
+// 			}
+// 			if (metData[j].metadata.metaDescription.includes("uncertainty")) {
+// 				console.log(metData[j].metadata.metaDescription);
 					
-					var uncertainty_itemD = metData[j];
-					items.push(uncertainty_itemD);
-			}
-		}
-	}, 3000);
+// 					var uncertainty_itemD = metData[j];
+// 					items.push(uncertainty_itemD);
+// 			}
+// 		}
+// 	}
+// 	// }, 9000);
 
 ////webLabel text
 	setTimeout(function() {
 		// console.log(metData);
+
+	// if(metData){
 		console.log(metData.length);
 		for (var j = 0; j < metData.length; j++) {
 			console.log(metData[j].webLabel.text);
@@ -88,24 +125,50 @@ setTimeout(function() {
 					var uncertainty_itemW = metData[j];
 					items.push(uncertainty_itemW);
 			}
-				if (metData[j].webLabel.text.includes("unsettling")){
+				if (metData[j].webLabel.text.includes("hesitant")){
 				console.log(metData[j].webLabel.text);
 				
 					var uncertainty_itemW = metData[j];
 					items.push(uncertainty_itemW);
 			}
-			if (metData[j].webLabel.text.includes("uncertainty")){
+			if (metData[j].webLabel.text.includes("uncertain")){
+				console.log(metData[j].webLabel.text);
+				
+					var uncertainty_itemW = metData[j];
+					items.push(uncertainty_itemW);
+			}
+			if (metData[j].webLabel.text.includes("fragile")){
+				console.log(metData[j].webLabel.text);
+				
+					var uncertainty_itemW = metData[j];
+					items.push(uncertainty_itemW);
+			}
+			if (metData[j].webLabel.text.includes("incomplete")){
+				console.log(metData[j].webLabel.text);
+				
+					var uncertainty_itemW = metData[j];
+					items.push(uncertainty_itemW);
+			}
+			if (metData[j].webLabel.text.includes("falling")){
+				console.log(metData[j].webLabel.text);
+				
+					var uncertainty_itemW = metData[j];
+					items.push(uncertainty_itemW);
+			}
+			if (metData[j].webLabel.text.includes("doubt")){
 				console.log(metData[j].webLabel.text);
 				
 					var uncertainty_itemW = metData[j];
 					items.push(uncertainty_itemW);
 			}
 		}
-	}, 3000);
+	// }
+	}, 9000);
 
 ////get url and show on browser
 	setTimeout(function(){
 
+	if(items){
 		console.log(items);
 
 		for(var n=0; n <items.length; n++){
@@ -115,13 +178,19 @@ setTimeout(function() {
  			imag.id = 'unc' + n;
 
  			document.body.appendChild(imag);
+		
+		// (items[n]).saveJSON(json, 'MetUncItems.json');	
 
 		}
-	// }, 5000);
-	}, 8000);
-
+	}
+		// items.saveJSON(json, 'MetUncItems.json');	
+		// saveJSON(json, '../Documents/ccinflux/Documents/DV 2016/Major Studio 1/Qualitative/QualHomework/assets/MetUncItems.json');	
 	
+	}, 30000);
+
 };
+
+
 
 
 ///////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
