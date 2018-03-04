@@ -1,5 +1,7 @@
-////get api, select objects, select those that contain uncertainty 
+////get api, go through each object, select those that 
+////contain uncertain & related words 
 ///show their image urls on screen
+
 var json = {}; // new  JSON Object
 json.name = 'MetUncItems';
 
@@ -8,17 +10,17 @@ var items = [];
 
 function setup() {
   noCanvas();
-  rita();
+  findUnc();
   console.log("hi"); 
 }
 
-function rita () {
+function findUnc () {
 
 ///Met API url
     var api = 'https://collectionapi.metmuseum.org/api/collection/v1/object/';
 
-  	// for (var i = 264000; i <270000; i++) {
-  	for (var i = 265000; i <270000; i++) {
+  	// for (var i = 265000; i <265500; i++) {
+	for (var i = 448000; i <449000; i++) {
   		url = api+i;
 
   		httpGet(url, 'json', function(response) {	    
@@ -79,37 +81,8 @@ function rita () {
 			}
 		}
 	// }
-	}, 9000);
+	}, 90000);
 
-////descriptions
-// // setTimeout(function() {
-// 		console.log(metData.length);
-
-// 	if(metData){
-		// console.log(metData.length);	
-// 		for (var j = 0; j < metData.length; j++) {
-// 			console.log(metData[j].metadata.metaDescription);
-// 			if (metData[j].metadata.metaDescription.includes("precarious")) {
-// 				console.log(metData[j].metadata.metaDescription);
-					
-// 					var uncertainty_itemD = metData[j];
-// 					items.push(uncertainty_itemD);
-// 			}
-// 			if (metData[j].metadata.metaDescription.includes("unsettling")) {
-// 				console.log(metData[j].metadata.metaDescription);
-					
-// 					var uncertainty_itemD = metData[j];
-// 					items.push(uncertainty_itemD);
-// 			}
-// 			if (metData[j].metadata.metaDescription.includes("uncertainty")) {
-// 				console.log(metData[j].metadata.metaDescription);
-					
-// 					var uncertainty_itemD = metData[j];
-// 					items.push(uncertainty_itemD);
-// 			}
-// 		}
-// 	}
-// 	// }, 9000);
 
 ////webLabel text
 	setTimeout(function() {
@@ -161,9 +134,16 @@ function rita () {
 					var uncertainty_itemW = metData[j];
 					items.push(uncertainty_itemW);
 			}
+
+			if (metData[j].webLabel.text.includes("swirling")){
+				console.log(metData[j].webLabel.text);
+				
+					var uncertainty_itemW = metData[j];
+					items.push(uncertainty_itemW);
+			}
 		}
 	// }
-	}, 9000);
+	}, 90000);
 
 ////get url and show on browser
 	setTimeout(function(){
@@ -177,16 +157,14 @@ function rita () {
  			imag.src = items[n].media.images.primaryImage.imageUrl;
  			imag.id = 'unc' + n;
 
- 			document.body.appendChild(imag);
-		
-		// (items[n]).saveJSON(json, 'MetUncItems.json');	
+ 			document.body.appendChild(imag);	
 
 		}
+
+		saveJSON(items, 'MetUncItems.json');
 	}
-		// items.saveJSON(json, 'MetUncItems.json');	
-		// saveJSON(json, '../Documents/ccinflux/Documents/DV 2016/Major Studio 1/Qualitative/QualHomework/assets/MetUncItems.json');	
 	
-	}, 30000);
+	}, 250000);
 
 };
 
