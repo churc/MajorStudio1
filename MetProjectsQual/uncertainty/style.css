@@ -1,0 +1,66 @@
+ /*@font-face {
+   font-family:  'Khand', sans-serif;
+  } */
+html, body {
+  /*width: 100%;*/
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  padding: 100;
+/*  display: flex;*/
+  /*font-family:  'Khand', sans-serif;
+  font-kerning:normal;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family:  'Khand', sans-serif;
+}
+
+/*#wrapper{*/
+  /*position:relative;*/  /* top left */
+  /*margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+ }*/
+
+ div{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  display: block;
+/*  position: relative;
+  justify-content: center;
+  align-items: center; */
+ }
+
+/*canvas{
+  width: 100%;  /*overide canvas width - increase to full page */
+ /* height: auto;  
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  font-family: 'Khand', sans-serif;
+}*/
+
+#img{
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/*@media screen and (max-width:720px){
+  .selectorSide{
+    width: 100%;
+    height:50vh;
+  }
+}*/
