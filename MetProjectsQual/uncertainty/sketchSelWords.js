@@ -10,7 +10,7 @@
 function preload() {
   //my table is comma separated value "csv"
   //and has a header specifying the columns labels
-  metData = loadTable("assets/test.JSON", data);
+  metData = loadTable("assets/apiFINAL.JSON", data);
 }
 
 
@@ -94,7 +94,7 @@ function findUnc () {
 			}
 		}
 	// }
-	}, 90000);
+	}, 5000);
 
 
 ////webLabel text
@@ -162,7 +162,7 @@ function findUnc () {
 			}
 		}
 	// }
-	}, 90000);
+	}, 5000);
 saveJSON(items, 'MetUncItems.json');
 
 };
