@@ -1,59 +1,65 @@
 ////get url and show on browser
+var items = [];
+
 
 function preload() {
   //my table is comma separated value "csv"
   //and has a header specifying the columns labels
-  items = loadTable("assets/MetUncItems.JSON", data);
+  // items = loadTable("assets/testapi.JSON", data);
+    items = loadJSON("assets/testapi.JSON", JSON);
+
 }
 
 
 function setup() {
-  noCanvas();
+  createCanvas(400,400);
   showImg();
-  randomPlace();
-  transparent();
+  // randomPlace();
+  // transparent();
   console.log("hi"); 
 }
 
-function showImg {
-	setTimeout(function(){
+function showImg() {
+	// setTimeout(function(){
 
-	if(items){
-		console.log(items);
+	if(items)
 
-		for(var n=0; n <items.length; n++){
+		for(var n=0; n<items.length; n++){
  			
- 			var imag = document.createElement("img");
- 			imag.src = items[n].media.images.primaryImage.imageUrl;
+ 			  var imag = document.createElement("img");
+
+ 				// imag.src = items[n].media.images.primaryImage.imageUrl;
+ 				imag.src.push(items[n].media.images.primaryImage.imageUrl);
+ 		
+ 			
  			imag.id = 'unc' + n;
+ 			
 
  			document.body.appendChild(imag);	
+ 			
 
-		}
-
+		}		
+ 			
+		console.log(items[7].media.images.primaryImage.webImageUrl);
+		console.log(items);
 		
-
-	}
+		
+	};
 	
-	}, 5000);
+	// }, 1000);
 
-});
+// };
 
 
-////random placement of images on browser, changes on reload
-function randomPlace(){
-       var r = Math.floor( Math.random() * imag.length );
-                return imag[r];
-                console.log(r);
-          };
-	}
+////TESTING THIS IN SEP js random placement of images on browser, changes on reload
+// function randomPlace(){
+//        var r = Math.floor( Math.random() * imag.length );
+//                 return imag[r];
+//                 console.log(r);
+//           };
+// 	}
 
-////imagemagick 
-function transparent(){	
-	$cmd = "dim.jpg -alpha on -channel a -evaluate set 50% results.jpg";			
-	exec("convert $cmd unc0" );
 
-};
 
 
 
