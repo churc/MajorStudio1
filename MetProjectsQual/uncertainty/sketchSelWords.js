@@ -1,27 +1,171 @@
 //////sketch to select objects which contain specific words
 //////loadJSON
 
-// var json = {}; // new  JSON Object
-// json.name = 'MetUncItems';
+var json = {}; // new  JSON Object
+ json.name = 'MetUncItems';
 
-// var metData = [];
-// var items = [];
+var items = [];
+var uncWords
 
 function preload() {
-  //my table is comma separated value "csv"
-  //and has a header specifying the columns labels
-  metData = loadTable("assets/apiFINAL.JSON", data);
+
+  items = loadJSON("assets/testapi.JSON", JSON);
+  
 }
 
 
 function setup() {
-  noCanvas();
+  createCanvas(20,20);
   findUnc();
-  randomPlace();
+  // randomPlace();
   console.log("hi"); 
 }
 
 function findUnc () {
+ var length = Object.keys(items).length-1;
+///titles
+	console.log(length);
+	for (var j = 0; j <length; j++) {
+
+		// if(!items[j].message){
+
+		if(!items[j].message && items[j].titles.primaryTitle.includes("Coin")){
+			// var sel = items[j].titles.primaryTitle.includes("the");
+			// var sel1 = text(items[j].titles.primaryTitle.includes("Coin"));
+			// console.log(items[j].titles.primaryTitle);
+			// if (items[j].titles.primaryTitle.includes("the")) {
+				var sel = items[j];
+				var lengthSel = Object.keys(sel).length-1;
+				
+				console.log(sel);
+				console.log(lengthSel);
+				// console.log(items[j].titles.primaryTitle);
+					
+				// 	var uncertainty_itemT = items[j];
+				// 	uncWords.push(uncertainty_itemT);
+			}
+		}
+		saveJSON(sel, 'MetUncItems.json');
+
+
+	};
+			// if (metData[j].titles.primaryTitle.includes("hesitant")) {
+			// 	console.log(metData[j].titles.primaryTitle);
+					
+			// 		var uncertainty_itemT = metData[j];
+			// 		items.push(uncertainty_itemT);
+			// }
+			// if (metData[j].titles.primaryTitle.includes("uncertain")) {
+			// 	console.log(metData[j].titles.primaryTitle);
+					
+			// 		var uncertainty_itemT = metData[j];
+			// 		items.push(uncertainty_itemT);
+			// }
+			// if (metData[j].titles.primaryTitle.includes("?")) {
+			// 	console.log(metData[j].titles.primaryTitle);
+					
+			// 		var uncertainty_itemT = metData[j];
+			// 		items.push(uncertainty_itemT);
+			// }
+			// if (metData[j].titles.primaryTitle.includes("fragile")) {
+			// 	console.log(metData[j].titles.primaryTitle);
+					
+			// 		var uncertainty_itemT = metData[j];
+			// 		items.push(uncertainty_itemT);
+			// }
+			// if (metData[j].titles.primaryTitle.includes("incomplete")) {
+			// 	console.log(metData[j].titles.primaryTitle);
+					
+			// 		var uncertainty_itemT = metData[j];
+			// 		items.push(uncertainty_itemT);
+			// }
+			// if (metData[j].titles.primaryTitle.includes("falling")) {
+			// 	console.log(metData[j].titles.primaryTitle);
+					
+			// 		var uncertainty_itemT = metData[j];
+			// 		items.push(uncertainty_itemT);
+			// }
+			// if (metData[j].titles.primaryTitle.includes("doubt")) {
+			// 	console.log(metData[j].titles.primaryTitle);
+					
+			// 		var uncertainty_itemT = metData[j];
+			// 		items.push(uncertainty_itemT);
+			// }
+		// }
+	// }
+	// }, 800);
+
+
+////webLabel text
+	// setTimeout(function() {
+	// 	// console.log(metData);
+
+	// if(metData){
+	// 	console.log(metData.length);
+	// 	for (var j = 0; j < metData.length; j++) {
+	// 		console.log(metData[j].webLabel.text);
+	// 		if (metData[j].webLabel.text.includes("precarious")){
+	// 			console.log(metData[j].webLabel.text);
+				
+	// 				var uncertainty_itemW = metData[j];
+	// 				items.push(uncertainty_itemW);
+	// 		}
+	// 			if (metData[j].webLabel.text.includes("hesitant")){
+	// 			console.log(metData[j].webLabel.text);
+				
+	// 				var uncertainty_itemW = metData[j];
+	// 				items.push(uncertainty_itemW);
+	// 		}
+	// 		if (metData[j].webLabel.text.includes("bejeweled")){
+	// 			console.log(metData[j].webLabel.text);
+				
+	// 				var uncertainty_itemW = metData[j];
+	// 				items.push(uncertainty_itemW);
+	// 		}
+	// 		if (metData[j].webLabel.text.includes("?")){
+	// 			console.log(metData[j].webLabel.text);
+				
+	// 				var uncertainty_itemW = metData[j];
+	// 				items.push(uncertainty_itemW);
+	// 		}
+	// 		if (metData[j].webLabel.text.includes("fragile")){
+	// 			console.log(metData[j].webLabel.text);
+				
+	// 				var uncertainty_itemW = metData[j];
+	// 				items.push(uncertainty_itemW);
+	// 		}
+	// 		if (metData[j].webLabel.text.includes("incomplete")){
+	// 			console.log(metData[j].webLabel.text);
+				
+	// 				var uncertainty_itemW = metData[j];
+	// 				items.push(uncertainty_itemW);
+	// 		}
+	// 		if (metData[j].webLabel.text.includes("falling")){
+	// 			console.log(metData[j].webLabel.text);
+				
+	// 				var uncertainty_itemW = metData[j];
+	// 				items.push(uncertainty_itemW);
+	// 		}
+	// 		if (metData[j].webLabel.text.includes("doubt")){
+	// 			console.log(metData[j].webLabel.text);
+				
+	// 				var uncertainty_itemW = metData[j];
+	// 				items.push(uncertainty_itemW);
+	// 		}
+
+	// 		if (metData[j].webLabel.text.includes("swirling")){
+	// 			console.log(metData[j].webLabel.text);
+				
+	// 				var uncertainty_itemW = metData[j];
+	// 				items.push(uncertainty_itemW);
+	// 		}
+	// 	}
+	// }
+	// }, 800);
+// saveJSON(uncWords, 'MetUncItems.json');
+
+// };
+///////put on separate sketch
 
 // ///Met API url
 //     var api = 'https://collectionapi.metmuseum.org/api/collection/v1/object/';
@@ -34,168 +178,6 @@ function findUnc () {
 // 		    metData.push(response);
 // 		});
 //   	}
-
-////titles
-	setTimeout(function() {
-		// console.log(metData);
-
-	// if(metData){
-		console.log(metData.length);
-
-		for (var j = 0; j < metData.length; j++) {
-			console.log(metData[j].titles.primaryTitle);
-			if (metData[j].titles.primaryTitle.includes("precarious")) {
-				console.log(metData[j].titles.primaryTitle);
-					
-					var uncertainty_itemT = metData[j];
-					items.push(uncertainty_itemT);
-			}
-			if (metData[j].titles.primaryTitle.includes("hesitant")) {
-				console.log(metData[j].titles.primaryTitle);
-					
-					var uncertainty_itemT = metData[j];
-					items.push(uncertainty_itemT);
-			}
-			if (metData[j].titles.primaryTitle.includes("uncertain")) {
-				console.log(metData[j].titles.primaryTitle);
-					
-					var uncertainty_itemT = metData[j];
-					items.push(uncertainty_itemT);
-			}
-			if (metData[j].titles.primaryTitle.includes("?")) {
-				console.log(metData[j].titles.primaryTitle);
-					
-					var uncertainty_itemT = metData[j];
-					items.push(uncertainty_itemT);
-			}
-			if (metData[j].titles.primaryTitle.includes("fragile")) {
-				console.log(metData[j].titles.primaryTitle);
-					
-					var uncertainty_itemT = metData[j];
-					items.push(uncertainty_itemT);
-			}
-			if (metData[j].titles.primaryTitle.includes("incomplete")) {
-				console.log(metData[j].titles.primaryTitle);
-					
-					var uncertainty_itemT = metData[j];
-					items.push(uncertainty_itemT);
-			}
-			if (metData[j].titles.primaryTitle.includes("falling")) {
-				console.log(metData[j].titles.primaryTitle);
-					
-					var uncertainty_itemT = metData[j];
-					items.push(uncertainty_itemT);
-			}
-			if (metData[j].titles.primaryTitle.includes("doubt")) {
-				console.log(metData[j].titles.primaryTitle);
-					
-					var uncertainty_itemT = metData[j];
-					items.push(uncertainty_itemT);
-			}
-		}
-	// }
-	}, 5000);
-
-
-////webLabel text
-	setTimeout(function() {
-		// console.log(metData);
-
-	// if(metData){
-		console.log(metData.length);
-		for (var j = 0; j < metData.length; j++) {
-			console.log(metData[j].webLabel.text);
-			if (metData[j].webLabel.text.includes("precarious")){
-				console.log(metData[j].webLabel.text);
-				
-					var uncertainty_itemW = metData[j];
-					items.push(uncertainty_itemW);
-			}
-				if (metData[j].webLabel.text.includes("hesitant")){
-				console.log(metData[j].webLabel.text);
-				
-					var uncertainty_itemW = metData[j];
-					items.push(uncertainty_itemW);
-			}
-			if (metData[j].webLabel.text.includes("uncertain")){
-				console.log(metData[j].webLabel.text);
-				
-					var uncertainty_itemW = metData[j];
-					items.push(uncertainty_itemW);
-			}
-			if (metData[j].webLabel.text.includes("?")){
-				console.log(metData[j].webLabel.text);
-				
-					var uncertainty_itemW = metData[j];
-					items.push(uncertainty_itemW);
-			}
-			if (metData[j].webLabel.text.includes("fragile")){
-				console.log(metData[j].webLabel.text);
-				
-					var uncertainty_itemW = metData[j];
-					items.push(uncertainty_itemW);
-			}
-			if (metData[j].webLabel.text.includes("incomplete")){
-				console.log(metData[j].webLabel.text);
-				
-					var uncertainty_itemW = metData[j];
-					items.push(uncertainty_itemW);
-			}
-			if (metData[j].webLabel.text.includes("falling")){
-				console.log(metData[j].webLabel.text);
-				
-					var uncertainty_itemW = metData[j];
-					items.push(uncertainty_itemW);
-			}
-			if (metData[j].webLabel.text.includes("doubt")){
-				console.log(metData[j].webLabel.text);
-				
-					var uncertainty_itemW = metData[j];
-					items.push(uncertainty_itemW);
-			}
-
-			if (metData[j].webLabel.text.includes("swirling")){
-				console.log(metData[j].webLabel.text);
-				
-					var uncertainty_itemW = metData[j];
-					items.push(uncertainty_itemW);
-			}
-		}
-	// }
-	}, 5000);
-saveJSON(items, 'MetUncItems.json');
-
-};
-
-///////put on separate sketch
-////get url and show on browser
-	// setTimeout(function(){
-
-	// if(items){
-	// 	console.log(items);
-
-	// 	for(var n=0; n <items.length; n++){
- 			
- // 			var imag = document.createElement("img");
- // 			imag.src = items[n].media.images.primaryImage.imageUrl;
- // 			imag.id = 'unc' + n;
-
- // 			document.body.appendChild(imag);	
-
-	// 	}
-
-		
-
-	// }
-	
-	// }, 250000);
-
-
-
-
-
-
-
 
 
 
