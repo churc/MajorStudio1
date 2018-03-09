@@ -1,20 +1,26 @@
-////get url and show on browser
+////WORKS TO load & show JSON images on browser
 var items = [];
 var imag
+var KhandFont, fontReady = false;
+
+
+function fontRead(){
+      fontReady = true; 
+    }
 
 function preload() {
   //my table is comma separated value "csv"
   //and has a header specifying the columns labels
   // items = loadTable("assets/testapi.JSON", data);
     items = loadJSON("assets/testapi.JSON", JSON);
-
+    KhandFont = loadFont('libraries/Khand-Regular.ttf', fontRead);
 }
 
 
 function setup() {
   createCanvas(20,20);
   showImg();
-
+  textFont('Khand');
 	// var imag = document.createElement("img");
 	// createImg('https://images.metmuseum.org/CRDImages/ad/web-large/194082.jpg');
 	// createImg(items[7].media.images.primaryImage.webImageUrl);
@@ -58,9 +64,73 @@ function showImg() {
 		
 	};
 	
-	// }, 1000);
+/////WORKS image on browser
 
-// };
+// ////WORKS TO load & show JSON images on browser
+// var items = [];
+// var imag
+// var KhandFont, fontReady = false;
+
+
+// function fontRead(){
+//       fontReady = true; 
+//     }
+
+// function preload() {
+//   //my table is comma separated value "csv"
+//   //and has a header specifying the columns labels
+//   // items = loadTable("assets/testapi.JSON", data);
+//     items = loadJSON("assets/testapi.JSON", JSON);
+//     KhandFont = loadFont('libraries/Khand-Regular.ttf', fontRead);
+// }
+
+
+// function setup() {
+//   createCanvas(20,20);
+//   showImg();
+//   textFont('Khand');
+// 	// var imag = document.createElement("img");
+// 	// createImg('https://images.metmuseum.org/CRDImages/ad/web-large/194082.jpg');
+// 	// createImg(items[7].media.images.primaryImage.webImageUrl);
+// 	// items[7].media.images.primaryImage.webImageUrl
+
+//   // randomPlace();
+//   // transparent();
+//   console.log("hi"); 
+// }
+
+// function showImg() {
+	
+// 	var length = Object.keys(items).length-1;
+
+// 		for(var n=0; n<length; n++){
+ 			
+//  			  // var imag = document.createElement("img");
+
+//  			  	if(!items[n].message){
+//  				// imag.src = items[n].media.images.primaryImage.imageUrl;
+//  				var img = createImg(items[n].media.images.primaryImage.imageUrl);
+//  				img.addClass("designed-image");
+//  				// imag.src.push(items[n].media.images.primaryImage.imageUrl);
+ 		
+ 			
+//  			// imag.id = 'unc' + n;
+ 			
+
+//  			// document.body.appendChild(imag);	
+//  			// console.log(items[n].media.images.primaryImage.webImageUrl);
+//  			console.log(n);
+//  			}
+//  			// console.log(items[n]);
+
+// 	}		
+ 			
+// 		console.log(items[7].media.images.primaryImage.webImageUrl);
+// 		// console.log(items[n].media.images.primaryImage.webImageUrl);
+// 		// console.log(items[n]);
+		
+		
+// 	};
 
 
 ////TESTING THIS IN SEP js random placement of images on browser, changes on reload
