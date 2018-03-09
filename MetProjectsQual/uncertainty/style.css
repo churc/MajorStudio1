@@ -33,30 +33,30 @@ h1,h2,h3,h4,h5,h6{
  div{
   width: 100%;
   height: auto;
-  margin: 0;
-  padding: 0;
-  display: block;
-/*  position: relative;
-  justify-content: center;
-  align-items: center; */
+  margin: 20;
+  padding: 10;
+  /*display: block;*/
+  /*position: relative;
+  justify-content: center;*/
+  align-items: center; 
  }
 
-/*canvas{
-  width: 100%;  /*overide canvas width - increase to full page */
- /* height: auto;  
-  display: block;
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0;
-  font-family: 'Khand', sans-serif;
-}*/
+#unc0,#unc1,#unc2,#unc3,#unc4,#unc5,#unc6,#unc7,#unc8,#unc9{
+  width: 100%;  
+  height: auto;  
+  /*display: block;*/
+  padding-left: 10;
+  padding-right: 10;
+  margin: 20;
+  /*font-family: 'Khand', sans-serif;*/
+}
 
-#img{
+/*#img{
   width: 100%;
   height: auto;
   margin: 0;
   padding: 0;
-}
+}*/
 
 /*@media screen and (max-width:720px){
   .selectorSide{
