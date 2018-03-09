@@ -1,7 +1,8 @@
 ////WORKS TO load & show JSON images on browser
 var items = [];
 var imag
-var KhandFont, fontReady = false;
+// var KhandFont, fontReady = false;
+var CaveatFont, fontReady = false;
 
 
 function fontRead(){
@@ -13,19 +14,20 @@ function preload() {
   //and has a header specifying the columns labels
   // items = loadTable("assets/testapi.JSON", data);
     items = loadJSON("assets/UncertainPub.JSON", JSON);
-    KhandFont = loadFont('libraries/Khand-Regular.ttf', fontRead);
+    CaveatFont = loadFont('libraries/Khand-Regular.ttf', fontRead);
 }
 
 
 function setup() {
-  createCanvas(20,20);
+  createCanvas(0.2,0.2);
   showImg();
-  textFont('Khand'); 
+  textFont('Caveat'); 
+  shuffle(items,true);
 }
 
 function showImg() {
 	// console.log(items);
-	
+	textFont('Caveat'); 
 	var length = Object.keys(items).length-1;
 
 		for(var n=0; n<length; n++){
@@ -45,11 +47,12 @@ function showImg() {
 				var selTitle = items[n];
 				var lengthSel = Object.keys(selTitle).length-1;		
 				//console.log(lengthSel);
-
-				var text = selTitle.titles.primaryTitle;
+				
+				textFont('Caveat'); 
+				var text = "Title: " + selTitle.titles.primaryTitle;
 				var p = createP(text)
 				p.addClass("uncertain-title");
-
+				
 				p.id('title'+n);
 				p.parent(wrapper);
 				
@@ -59,9 +62,9 @@ function showImg() {
 				var selDes = items[n];
 				var lengthSelD = Object.keys(selDes).length-1;		
 				// console.log(lengthSelD);
-				console.log(selDes);
-
-				var textD = "weblabel:" + selDes.webLabel.text;
+				// console.log(selDes);
+				textFont('Caveat'); 
+				var textD = "Label: " + selDes.webLabel.text;
 				var p = createP(textD)
 				p.addClass("uncertain-des");
 

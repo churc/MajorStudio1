@@ -1,24 +1,25 @@
- /*@font-face {
-   font-family:  'Khand', sans-serif;
-  } */
+ @font-face {
+   /*font-family:  'Khand', sans-serif;*/
+   font-family: 'Caveat', cursive;
+  } 
 html, body {
   /*width: 100%;*/
   height: 100%;
 }
 
 body{
-  margin: 0;
-  padding: 00;
+  margin: 20;
+  padding: 20;
 /*  display: flex;*/
-  /*font-family:  'Khand', sans-serif;
-  font-kerning:normal;*/
+  font-family: 'Caveat', cursive;
+  font-kerning:normal;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
 }
 
 h1,h2,h3,h4,h5,h6{
-  font-family:  'Khand', sans-serif;
+  font-family: 'Caveat', cursive;
 }
 
 /*#wrapper{*/
@@ -33,8 +34,9 @@ h1,h2,h3,h4,h5,h6{
  div{
   /*width: 100%;
   height: auto;*/
-  margin: 20;
+ /* margin: 20;
   padding: 20;
+  padding-left: 20;*/
   display: inline-block;
   /*max-width:50px;*/
   max-width:300px;
@@ -56,16 +58,41 @@ h1,h2,h3,h4,h5,h6{
 
 .designed-image{
   width: auto;
+  /*height:100%;*/
+  opacity: 80%;
   /*height: auto;
   margin: 0;*/
   transition:1s;
 }
+
 .designed-image:hover{
-  opacity: 0.5;
+  opacity: 0.3;
 }
-div:nth-child(4){
-  transform: translateY(-100px);
+
+div:nth-child(4n-7){
+ /*div:nth-child(5n-2){*/
+  transform: translateY(10px);
 }
+div:nth-child(5n-2){
+ /*div:nth-child(5n-2){*/
+  transform: translateY(15px);
+}
+
+.uncertain-title{
+  transition:.5s;
+}
+.uncertain-title:hover{
+  opacity: 0.2;
+}
+
+.uncertain-des{
+  transition:.5s;
+}
+
+.uncertain-des:hover{
+  opacity: 0.2;
+}
+
 /*@media screen and (max-width:720px){
   .selectorSide{
     width: 100%;
