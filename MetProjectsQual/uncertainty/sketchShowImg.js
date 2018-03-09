@@ -1,6 +1,6 @@
 ////get url and show on browser
 var items = [];
-
+var imag
 
 function preload() {
   //my table is comma separated value "csv"
@@ -14,6 +14,12 @@ function preload() {
 function setup() {
   createCanvas(400,400);
   showImg();
+
+	// var imag = document.createElement("img");
+	// createImg('https://images.metmuseum.org/CRDImages/ad/web-large/194082.jpg');
+	// createImg(items[7].media.images.primaryImage.webImageUrl);
+	// items[7].media.images.primaryImage.webImageUrl
+
   // randomPlace();
   // transparent();
   console.log("hi"); 
@@ -22,26 +28,34 @@ function setup() {
 function showImg() {
 	// setTimeout(function(){
 
-	if(items)
+	// if(items)
+	var length = Object.keys(items).length-1;
 
-		for(var n=0; n<items.length; n++){
+		for(var n=0; n<length; n++){
  			
- 			  var imag = document.createElement("img");
+ 			  // var imag = document.createElement("img");
 
+ 			  	if(!items[n].message){
  				// imag.src = items[n].media.images.primaryImage.imageUrl;
- 				imag.src.push(items[n].media.images.primaryImage.imageUrl);
+ 				var img = createImg(items[n].media.images.primaryImage.imageUrl);
+ 				img.addClass("designed-image");
+ 				// imag.src.push(items[n].media.images.primaryImage.imageUrl);
  		
  			
- 			imag.id = 'unc' + n;
+ 			// imag.id = 'unc' + n;
  			
 
- 			document.body.appendChild(imag);	
- 			
+ 			// document.body.appendChild(imag);	
+ 			// console.log(items[n].media.images.primaryImage.webImageUrl);
+ 			console.log(n);
+ 			}
+ 			// console.log(items[n]);
 
-		}		
+	}		
  			
 		console.log(items[7].media.images.primaryImage.webImageUrl);
-		console.log(items);
+		// console.log(items[n].media.images.primaryImage.webImageUrl);
+		// console.log(items[n]);
 		
 		
 	};
