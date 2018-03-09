@@ -12,7 +12,7 @@ function preload() {
 
 
 function setup() {
-  createCanvas(400,400);
+  createCanvas(20,20);
   showImg();
 
 	// var imag = document.createElement("img");
@@ -26,9 +26,7 @@ function setup() {
 }
 
 function showImg() {
-	// setTimeout(function(){
-
-	// if(items)
+	
 	var length = Object.keys(items).length-1;
 
 		for(var n=0; n<length; n++){
