@@ -1,6 +1,7 @@
 ////WORKS TO load & show JSON images on browser
 var items = [];
 var imag
+
 // var KhandFont, fontReady = false;
 // var CaveatFont, fontReady = false;
 
@@ -19,11 +20,11 @@ function preload() {
 
 
 function setup() {
-  createCanvas(0.2,0.2);
+  noCanvas();
   showImg(); 
   // shuffle(items,true);
-  // canvas.mouseOver(iShow);
-  // canvas.mouseOut(giveiTint);
+  // mouseOver(iShow);
+  // mouseOut(giveiTint);
 }
 
 function showImg() {
@@ -34,19 +35,33 @@ function showImg() {
 		for (var n = 0; n < length; n++) {
  			
  			var met_object = document.createElement('div');
- 			met_object.id = "met_object-" + n;
+ 			met_object.id = "met_object"+n;
 
- 			console.log(met_object);
+ 			met_object.addClass="designed-image";
+
+ 			// console.log(met_object);
+
+
+ 			if (!items[n].message) {
+
+	 				var unc = document.createElement('img');
+
+	 				unc.src = items[n].media.images.primaryImage.webImageUrl;
+
+	 				unc.addClass="designed-image";
+	 				
+	 				unc.id='unc'+n;
+	 			
+	 				met_object.appendChild(unc);
+	 
+	 		};
 
 			if (!items[n].message && items[n].titles.primaryTitle.includes("uncertain")) {
 				
 					var title = document.createElement('p');
 
-					console.log(title);
-
 					var selTitle = items[n];
 					var lengthSel = Object.keys(selTitle).length-1;	
-
 					// console.log(lengthSel);
 					
 					var text = "Title: " + selTitle.titles.primaryTitle;
@@ -61,49 +76,40 @@ function showImg() {
 
 					met_object.appendChild(title);
 
-			}
+			};
 
-	 		if (!items[n].message) {
-	 			
-	 			var imgTD = document.createElement('img');
+				
+			if(!items[n].message && items[n].webLabel.text.includes("uncertain")){
+			
+					var desc = document.createElement('p');
 
-	 			imgTD.src = items[n].media.images.primaryImage.imageUrl;
+					var selDesc = items[n];
+					var lengthSelD = Object.keys(selDesc).length-1;		
+					console.log(lengthSelD);
+					 
+					var textD = "Label: " + selDesc.webLabel.text;
 
-	 			// var img = createImg(items[n].media.images.primaryImage.imageUrl);
+					desc.innerText += textD;
+					
 
-	 			imgTD.addClass="designed-image";
-	 				
-	 			imgTD.id='unc'+n;
-	 			
-	 			met_object.appendChild(imgTD);
-	 
-	 		}
+					desc.addClass = "uncertain-des";
+
+					desc.id = 'des'+n;
+					
+					met_object.appendChild(desc);
+
+			};
 
 	 		document.body.appendChild(met_object);
- 	
-
-
- 		////////putting back in
-
- 		// 	if(!items[n].message && items[n].webLabel.text.includes("uncertain")){
-			
-			// 	var selDes = items[n];
-			// 	var lengthSelD = Object.keys(selDes).length-1;		
-			// 	// console.log(lengthSelD);
-			// 	// console.log(selDes); 
-			// 	var textD = "Label: " + selDes.webLabel.text;
-			// 	var p = createP(textD)
-			// 	p.addClass("uncertain-des");
-
-			// 	p.id('des'+n);
-			// 	p.parent(wrapper);
-
-			// }
+ 
 		};
 
  	};
 
-	
+// mouseOver function(p){
+//   color: transparent;
+//   display: none;
+// }	
 
 
 			/////not working
@@ -143,22 +149,6 @@ function showImg() {
 
 
 
-/////////////works for description
-
-// 	if(!items[n].message && items[n].webLabel.text.includes("uncertain")){
-			
-				// var selDes = items[n];
-				// var lengthSelD = Object.keys(selDes).length-1;		
-				// // console.log(lengthSelD);
-				// // console.log(selDes); 
-				// var textD = "Label: " + selDes.webLabel.text;
-				// var p = createP(textD)
-				// p.addClass("uncertain-des");
-
-				// p.id('des'+n);
-				// p.parent(wrapper);
-
-///////////////				
 
 
 
