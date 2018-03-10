@@ -40,9 +40,9 @@ function showImg() {
 
 			if (!items[n].message && items[n].titles.primaryTitle.includes("uncertain")) {
 				
-					var description = document.createElement('p');
+					var title = document.createElement('p');
 
-					console.log(description);
+					console.log(title);
 
 					var selTitle = items[n];
 					var lengthSel = Object.keys(selTitle).length-1;	
@@ -51,15 +51,15 @@ function showImg() {
 					
 					var text = "Title: " + selTitle.titles.primaryTitle;
 
-					description.innerText += text;
-					// description.innerText += more stuff if you want;
+					title.innerText += text;
+					// title.innerText += more stuff if you want;
 
-					// p.addClass("uncertain-title");
+					title.addClass="uncertain-title";
 					
-					description.id = 'title'+n;
+					title.id = 'title'+n;
 
 
-					met_object.appendChild(description);
+					met_object.appendChild(title);
 
 			}
 
@@ -71,7 +71,7 @@ function showImg() {
 
 	 			// var img = createImg(items[n].media.images.primaryImage.imageUrl);
 
-	 			// img.addClass("designed-image");
+	 			imgTD.addClass="designed-image";
 	 				
 	 			imgTD.id='unc'+n;
 	 			

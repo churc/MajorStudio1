@@ -1,6 +1,7 @@
  @font-face {
    /*font-family:  'Khand', sans-serif;*/
-   font-family: 'Caveat', cursive;
+   /*font-family: 'Caveat', cursive;*/
+   font-family: "Helvetica Neue";
   } 
 html, body {
   /*width: 100%;*/
@@ -9,9 +10,11 @@ html, body {
 
 body{
   margin: 20;
+  margin-left:20px;
+  margin-top:15px;
   padding: 20;
 /*  display: flex;*/
-  font-family: 'Caveat', cursive;
+  /*font-family: 'Caveat', cursive;*/
   font-kerning:normal;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -19,32 +22,38 @@ body{
 }
 
 h1,h2,h3,h4,h5,h6{
-  font-family: 'Caveat', cursive;
+  position: absolute;
+  font-size: 11px;
 }
 
-/*#wrapper{*/
-  /*position:relative;*/  /* top left */
-  /*margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  margin: 0;
-  padding: 0;
- }*/
+img{
+  background-size: cover;
+}
 
+p{
+  position: absolute;
+  /*top: 5px;*/
+  left: 5px;
+
+}
  div{
-  /*width: 100%;
-  height: auto;*/
- /* margin: 20;
-  padding: 20;
-  padding-left: 20;*/
   display: inline-block;
-  /*max-width:50px;*/
-  max-width:400px;
+  max-width:auto;
   vertical-align: top;
-  /*position: relative;
-  justify-content: center;*/
-  align-items: center; 
+  position: relative;
+  justify-content: center;
  }
+
+#met_object{
+  max-width: auto;
+  float: left;
+  background: src("unc");
+  background-size: cover;
+  position: relative;
+
+}
+
+
 
 /*#unc0,#unc1,#unc2,#unc3,#unc4,#unc5,#unc6,#unc7,#unc8,#unc9{
   /*width: 100%;  
@@ -57,36 +66,49 @@ h1,h2,h3,h4,h5,h6{
 /*}*/
 
 .designed-image{
-  width: auto;
-  /*height:100%;*/
+  max-width: 350px;
+  /*width: auto;*/
   opacity: 50%;
-  /*height: auto;
-  margin: 0;*/
   transition:1s;
 }
 
-.designed-image:hover{
-  opacity: .3;
+.designed-image:nth-child(4n-5){
+  transform: scale(1.5);
 }
+
+/*div:nth-child(4n-5){
+  transform: scale(1.5);
+}*/
+
+/*.designed-image:hover{
+  opacity: .3;
+}*/
 
 div:nth-child(4n-7){
   transform: translateY(20px);
 }
-/*div:nth-child(5n-2){
-  transform: translateY(15px);
-}*/
 div:nth-child(5n-2){
-  transform: translateX(50px);
+  transform: translateY(15px);
 }
-div:nth-child(4n-5){
-  transform: scale(1.8);
+div:nth-child(5n-4){
+  transform: translateX(20px);
 }
 
+
 .uncertain-title{
-  transition:.5s;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transition:.1s;
 }
 .uncertain-title:hover{
-  opacity: 0.2;
+  color: transparent;
+  display: none;
+}
+
+#unc:hover .unc+n{
+  color: transparent;
+  display: none;
 }
 
 .uncertain-des{
