@@ -98,26 +98,7 @@ var s = function(p){
     p.vertex(900, 475);  //40
     p.vertex(755, 475);  //145  //5288
     p.vertex(755, 435);  //40   //5328
-    p.vertex(668.5, 435);  //86.5    ////5414.5
-
-    
-
-    // p.vertex(795, 390);  //110
-    // p.vertex(160, 390);  //635
-    // p.vertex(160, 430);  //40
-    // p.vertex(30, 430);  //130  ////4078
-    // p.vertex(30, 475);  //45
-    // p.vertex(200, 475); // 170
-    // p.vertex(200, 430);  //45
-    // p.vertex(790, 430);  //590  //4918
-    // p.vertex(790, 455);  //25
-    // p.vertex(900, 455); //110
-    // p.vertex(900, 500); //45   //5108
-    // p.vertex(750, 500); //150
-    // p.vertex(750, 475);  ///25
-    // p.vertex(618.5, 475);  //131.5   ////5414.5
-
-    
+    p.vertex(668.5, 435);  //86.5    ////5414.5    
     p.endShape();  
     p.pop();
 
@@ -199,8 +180,7 @@ var s = function(p){
     p.noStroke();
     p.fill(77,77,77);
     p.textSize(23);
-    // p.text("14.13%", 190,120);
-    p.text("75.46%", 210,120);
+    p.text("75.46%", 211,120);
     p.text("14.13%", 210,156.25);
     p.text("0.89%", 210,192.5);
     p.text("9.18%", 210,228.75);
@@ -579,9 +559,7 @@ var t = function(p) {
 
     var x,y,w,h;
 
-        var singleData = [48,128, 1318, 2027,10829];
-    // var singleData = [10829, 2027, 1318, 128, 48];
-//var fillBars = [(fill("#ededed"),("#5c5c5c"),("#e5e5o5"),("#f0f0f0"),("#000"))];
+    var singleData = [48,128, 1318, 2027,10829];
 
     var width = 5800,
         height = p.windowHeight,
@@ -702,14 +680,12 @@ p.drawmeasureline = function(){
    //go throught the years
    for(var b=0; b<=10829; b+=200){
 
-   // var y = 747-margin+30;
     var y = 0;
 
     var x = p.map(b,0,10829, 0, 10829/2);
 
     // x = map(i,0, allYears.length,margin, width-margin);
-    // p.rotate(p.radians(90));   // rotate to vertical
-    // p.translate(200, 20);
+   
       p.noStroke();
       p.fill(77,77,77);
       p.stroke(77,77,77);
@@ -936,46 +912,36 @@ p.analyzeGender = function(){
 ////THIS logs where it is mapping that is relatively corresponding to:
    // console.log("mapping: " + allYears[i].year + "to: " + x);
 
-    // var x = map(i,0,allYears.length, margin, width-margin);
-
   ///then do same for y height
   for(var j=0; j<allYears[i].items.length; j++){
-      // var y= map(j,0,maxObjects,height-margin, margin);
       var y= p.map(j,0,maxObjects,747-margin, margin);
-
-//table.findRows(String(yearNow.year),17)
 
 ///====FILL BY GENDER
    var gender = allYears[i].items[j].obj.Gender;
     if (gender === 'm') {
-       // gender = 'm';
        p.fill(92,242,145,90);
        p.rect(x-1,y-1,3,2);
        // console.log('m');
        totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
 
     } else if (gender === 'f') {
-      // gender = 'f';
        p.fill(179,118,244,90);
        p.rect(x-1,y-1,3,2);
        // console.log('f');
       totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
      // console.log(totalFemaleArtistsPerBar);
     } else if (gender === 't') {
-      // gender = 't';
        p.fill(168,71,5,80);
        p.rect(x-1,y-1,3,2);
 
       // console.log('t');
       
     } else if (gender === 'u') {
-      // gender = 'u';
        p.fill(165,160,152,80);
        p.rect(x-1,y-1,3,2);
        // console.log('u');
 
     } else if (gender === 'z') {
-      // gender = 'z';
        p.fill(224,199,50,90);
        p.rect(x-1,y-1,3,2);
        //console.log('z');
@@ -1042,7 +1008,6 @@ for(var i=1850; i<=2017; i+=10){
   p.noStroke();
   p.textSize(20);
   p.text("Year: Object Begin Date", 990,730);
-// p.text("Year: Object Begin Date", width-margin,height-margin+70);
 
 //source
   p.textAlign(p.LEFT);
@@ -1053,7 +1018,6 @@ for(var i=1850; i<=2017; i+=10){
 
 ////draw the y Axis
   p.stroke(77,77,77);
-  // line(margin,height-margin ,margin,margin);
   p.line(margin,747-margin,margin,margin);
   p.noStroke();
   p.textAlign(p.RIGHT);
@@ -1061,7 +1025,6 @@ for(var i=1850; i<=2017; i+=10){
 
   for(var i=0; i<maxObjects; i+=50){
     var x = margin-20;
-    // y = map(i,0, maxObjects,height-margin, margin);
     var y = p.map(i,0, maxObjects,747-margin, margin);
       p.noStroke();
       p.fill(77,77,77);
@@ -1261,7 +1224,7 @@ var myp5 = new p5(w, 'c3');
 
 
 //=================
-// //this works to get one column: table.get.String
+// // to get one column: table.get.String
 //  for(var i=0; i<row; i++){
     
 //  var objectName = table.getString(i,"Artist Display Name");
