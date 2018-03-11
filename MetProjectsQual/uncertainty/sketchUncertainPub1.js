@@ -1,8 +1,8 @@
 ////WORKS TO load & show JSON images on browser
 var items = [];
 var imag
+var img
 
-// var KhandFont, fontReady = false;
 // var CaveatFont, fontReady = false;
 
 
@@ -13,7 +13,6 @@ function fontRead(){
 function preload() {
   //my table is comma separated value "csv"
   //and has a header specifying the columns labels
-  // items = loadTable("assets/testapi.JSON", data);
     items = loadJSON("assets/UncertainPub.JSON", showImg);
     // CaveatFont = loadFont('libraries/Caveat-Regular.ttf', fontRead);
 }
@@ -21,16 +20,17 @@ function preload() {
 
 function setup() {
   noCanvas();
-  showImg(); 
-  // shuffle(items,true);
-  // mouseOver(iShow);
-  // mouseOut(giveiTint);
+  showImg();
+  noLoop(); 
+  var img = items.media.images.primaryImage.webImageUrl;
+  img.mousePressed(mousePr);
 }
 
 function showImg() {
 	// console.log(items);
 	
 	var length = Object.keys(items).length-1;
+	console.log(length);
 
 		for (var n = 0; n < length; n++) {
  			
@@ -53,6 +53,8 @@ function showImg() {
 	 				unc.id='unc'+n;
 	 			
 	 				met_object.appendChild(unc);
+
+	 			
 	 
 	 		};
 
@@ -60,8 +62,10 @@ function showImg() {
 				
 					var title = document.createElement('p');
 
+					
 					var selTitle = items[n];
-					var lengthSel = Object.keys(selTitle).length-1;	
+					////to get the length
+					// var lengthSel = Object.keys(selTitle).length-1;	
 					// console.log(lengthSel);
 					
 					var text = "Title: " + selTitle.titles.primaryTitle;
@@ -76,6 +80,8 @@ function showImg() {
 
 					met_object.appendChild(title);
 
+					// console.log(title);
+
 			};
 
 				
@@ -84,8 +90,8 @@ function showImg() {
 					var desc = document.createElement('p');
 
 					var selDesc = items[n];
-					var lengthSelD = Object.keys(selDesc).length-1;		
-					console.log(lengthSelD);
+					// var lengthSelD = Object.keys(selDesc).length-1;		
+					// console.log(lengthSelD);
 					 
 					var textD = "Label: " + selDesc.webLabel.text;
 
@@ -98,6 +104,9 @@ function showImg() {
 					
 					met_object.appendChild(desc);
 
+					// console.log(desc);
+
+
 			};
 
 	 		document.body.appendChild(met_object);
@@ -106,10 +115,16 @@ function showImg() {
 
  	};
 
-// mouseOver function(p){
-//   color: transparent;
-//   display: none;
-// }	
+		
+	function mousePr(){
+			if (img.mousePressed == TRUE) {
+		    var lk = this.Object.media.images.ObjectUrL;
+		    append("https://www.metmuseum.org"+ lk);
+			  } else { 
+			  }
+	};
+
+
 
 
 			/////not working
@@ -137,16 +152,6 @@ function showImg() {
 				// p.id('des'+n);
 				// p.parent(wrapper);	
 						// console.log(selDes); 
-	
-////not working
- 		// function giveiTint() {
-  	// 		 img.tint(255, 255);
-			// }
-
-			// function iShow() {
-  	// 		 img.show();
-			// }		
-
 
 
 
