@@ -3,18 +3,12 @@ var items = [];
 var imag
 var img
 
-// var CaveatFont, fontReady = false;
-
-
-function fontRead(){
-      fontReady = true; 
-    }
 
 function preload() {
   //my table is comma separated value "csv"
   //and has a header specifying the columns labels
     items = loadJSON("assets/UncertainPub.JSON", showImg);
-    // CaveatFont = loadFont('libraries/Caveat-Regular.ttf', fontRead);
+    
 }
 
 
@@ -22,12 +16,12 @@ function setup() {
   noCanvas();
   showImg();
   noLoop(); 
-  var img = items.media.images.primaryImage.webImageUrl;
-  img.mousePressed(mousePr);
+  // img = createImg();
+  // img.mouseClicked(mouseCl);
 }
 
 function showImg() {
-	// console.log(items);
+	console.log(items);
 	
 	var length = Object.keys(items).length-1;
 	console.log(length);
@@ -116,13 +110,14 @@ function showImg() {
  	};
 
 		
-	function mousePr(){
-			if (img.mousePressed == TRUE) {
-		    var lk = this.Object.media.images.ObjectUrL;
-		    append("https://www.metmuseum.org"+ lk);
-			  } else { 
-			  }
-	};
+	// function mouseCl(){
+	// 	// var windowObjectReference;
+	// 		if (mouseClicked == TRUE) {
+	// 	    var lk = this.Object.media.images.primaryImage.objectUrl;
+	// 	    window.location.href = ("https://www.metmuseum.org", lk);
+	// 		  } else { 
+	// 		  }
+	// };
 
 
 
