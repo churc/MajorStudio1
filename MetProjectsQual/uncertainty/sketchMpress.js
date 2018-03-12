@@ -21,6 +21,7 @@ function setup() {
   noCanvas();
   showImg();
   noLoop(); 
+  mouseCl();
   img = createImg();
   img.mouseClicked(mouseCl);
 }
