@@ -7,17 +7,18 @@ var img
 function preload() {
   //my table is comma separated value "csv"
   //and has a header specifying the columns labels
-    items = loadJSON("assets/UncertainPub.JSON", showImg);
+    items = loadJSON("assets/UncertainPub.json", showImg);
     
 }
 
 
 function setup() {
-  noCanvas();
   showImg();
+  noCanvas();
   noLoop(); 
+  mouseCl()
   // img = createImg();
-  // img.mouseClicked(mouseCl);
+  // img.mouseClicked();
 }
 
 function showImg() {
@@ -46,11 +47,9 @@ function showImg() {
 	 				
 	 				unc.id='unc'+n;
 	 			
-	 				met_object.appendChild(unc);
-
-	 			
+	 				met_object.appendChild(unc);	
 	 
-	 		};
+	 		}
 
 			if (!items[n].message && items[n].titles.primaryTitle.includes("uncertain")) {
 				
@@ -109,8 +108,23 @@ function showImg() {
 
  	};
 
-		
+	function mouseCl(){
+		   // console.log(this.met_object.id);
+		   var lk = this.met_object.id
+
+		   console.log(lk);
+		   // window.location.href = ("https://www.metmuseum.org", lk);
+		}
+
+	 function mouseClicked(){
+	 	 console.log(true);
+		    mouseCl();
+		}
+
+
+
 	// function mouseCl(){
+	// 	console.log(this);
 	// 	// var windowObjectReference;
 	// 		if (mouseClicked == TRUE) {
 	// 	    var lk = this.Object.media.images.primaryImage.objectUrl;
