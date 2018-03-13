@@ -2,17 +2,12 @@ var items = [];
 var imag
 var img
 
-// var CaveatFont, fontReady = false;
 
-
-// function fontRead(){
-//       fontReady = true; 
-//     }
 
 function preload() {
   //my table is comma separated value "csv"
   //and has a header specifying the columns labels
-    items = loadJSON("assets/UncertainPub.JSON", showImg);
+    items = loadJSON("assets/UncertainPub.json", showImg);
     // CaveatFont = loadFont('libraries/Caveat-Regular.ttf', fontRead);
 }
 
@@ -69,20 +64,30 @@ function showImg() {
  
 		};
 
+		RiTa.splitSentences(desc);
+ 		console.log(desc);
+
+
  	};
 
-$(document).ready(function(){
-	$('desc').each(function() {
-	    $(this).html($(this).text().split(/([\.\?!])(?= )/).map(
-	      function(v){return '<span class=sentence>'+v+'</span>'}));
-	});
- });      
 
-	   $('.sentence').includes("uncertain")){
-	var sent = return subString($(this).text());
-		console.log(subString);
+ 		
 
-});
+
+
+
+// $(document).ready(function(){
+// 	$('desc').each(function() {
+// 	    $(this).html($(this).text().split(/([\.\?!])(?= )/).map(
+// 	      function(v){return '<span class=sentence>'+v+'</span>'}));
+// 	});
+//  });      
+
+// 	   $('.sentence').includes("uncertain"){
+// 	var sent = return subString($(this).text());
+// 		console.log(subString);
+
+// });
 
 
 
@@ -111,4 +116,4 @@ $(document).ready(function(){
 // 				p.id('des'+n);
 // 				p.parent(wrapper);	
 // 						console.log(selDes); 
-	
+// 	
