@@ -18,7 +18,7 @@ function setup() {
   noLoop(); 
   mouseCl()
   // img = createImg();
-  // img.mouseClicked();
+
 }
 
 function showImg() {
@@ -47,7 +47,17 @@ function showImg() {
 	 				
 	 				unc.id='unc'+n;
 	 			
-	 				met_object.appendChild(unc);	
+					var obj_url = document.createElement('a');
+
+					obj_url.target = "blank";
+
+	 				obj_url.href = "https://www.metmuseum.org" + items[n].media.images.primaryImage.objectUrl;
+
+	 				obj_url.appendChild(unc);
+
+	 				met_object.appendChild(obj_url);
+
+
 	 
 	 		}
 
@@ -110,14 +120,17 @@ function showImg() {
 
 	function mouseCl(){
 		   // console.log(this.met_object.id);
+
+		   // media.images.primaryImage.objectUrl;
 		   var lk = this.met_object.id
 
-		   console.log(lk);
+		   // console.log(lk);
+		   // console.log()
 		   // window.location.href = ("https://www.metmuseum.org", lk);
 		}
 
 	 function mouseClicked(){
-	 	 console.log(true);
+	 	 // console.log(true);
 		    mouseCl();
 		}
 
