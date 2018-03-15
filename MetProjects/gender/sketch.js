@@ -164,13 +164,14 @@ var s = function(p){
     p.noStroke();
     p.textSize(18);
     p.fill(77,77,77);
-    p.textSize(40);
+    p.textSize(44);
     p.textStyle(p.NORMAL);
     p.textAlign(p.LEFT);
-    p.text("What % of The Met's 14,350 artworks are by women?", 345,95);
-    p.textSize(26);
-    p.text("Looking at the Modern & Contemporary Art Collection, 1 pixel = 2 artworks", 345,140);
-
+    p.text("Gender at The Met", 345,95);
+    p.textSize(32);
+    p.text("What % of the Modern & Contemporary Art Collection's 14,350 works are by women?", 345,132);
+    p.textSize(21);
+    p.text("1 pixel = 2 artworks", 345,160);
     p.pop();
 
     p.push();
