@@ -2,7 +2,7 @@
 Clare Churchouse
 
 ## Quantitative Project
-                https://churc.github.io/MajorStudio1/MetProjects/gender
+                https://churc.github.io/MajorStudio1/MetProjects/gender/
 
 ## Qualitative Project
 
