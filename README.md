@@ -1,4 +1,4 @@
-# Major Studio 1
+### Major Studio 1
 Clare Churchouse
 
 ## Quantitative Project
