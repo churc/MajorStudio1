@@ -610,27 +610,56 @@ var genFill = singleData[b];
       p.text(singleData[b], 100, barWidth/2 + -p.windowWidth/1.53); // write data label
     p.pop();   // reset, restore
   } 
+
+//label long bars
+    p.push();
+        p.rotate(p.radians(90));   // rotate to vertical
+        p.translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar 
+        p.textStyle(p.NORMAL);
+        p.noStroke();
+        p.fill(77,77,77);
+        p.textSize(26);
+        p.text("The Met Modern & Contemporary Art Collection", 100, barWidth/20 + -p.windowWidth/2);
+        p.textSize(18);
+        p.text("Scale: 1 pixel = 2 artworks", 100, barWidth/20 + -p.windowWidth/2.13);
+    p.pop();
+
+///text by end of each bar
+
+p.push();   
+  var x,y,w,h;
+
+  var singleData = [48, 128, 1318, 2027,10829];
+   
+   //x axis
+  p.textFont('Khand');
+  p.textStyle(p.NORMAL);
+  p.textSize(20);
+  p.fill(77,77,77); 
+  p.stroke(77,77,77);
+  p.strokeWeight(1);
+
+  p.line(p.windowWidth/2.46,48/2+100,p.windowWidth/2.065,48/2+100);
+  p.line(p.windowWidth/2.46,128/2+100,p.windowWidth/2.065,128/2+100);
+  p.line(p.windowWidth/2.46,1318/2+100,p.windowWidth/2.065,1318/2+100);
+  p.line(p.windowWidth/2.46,2027/2+100,p.windowWidth/2.065,2027/2+100);
+  p.line(p.windowWidth/2.46,10829/2+100,p.windowWidth/2.065,10829/2+100);
+ 
+ //text
+  p.noStroke();
+  p.textSize(18.5);
+  p.text("unidentified: 48", p.windowWidth/2.46,48/2+95);
+  p.text("couple: 128", p.windowWidth/2.46,128/2+95);
+  p.text("unknown: 1318", p.windowWidth/2.46,1318/2+95);
+  p.text("female: 2027", p.windowWidth/2.46,2027/2+95);
+  p.text("male: 10829", p.windowWidth/2.46,10829/2+95);
+p.pop();
+
 }
 
 
   p.drawLabelsBar = function(){
- //label long bars
-
-    p.push();
-    p.translate(300,0);
-    p.rotate(p.radians(90)); 
-    p.textFont('Khand');
-    p.textAlign(p.LEFT);
-    p.textStyle(p.NORMAL);
-    p.noStroke();
-    p.fill(77,77,77);
-    p.textSize(32);
-    p.textSize(26);
-    p.text("The Met Modern & Contemporary Art Collection", 100,margin-140);
-    p.textSize(20);
-    p.text("Scale: 1 pixel = 2 artworks", 100,margin-115);
-
-    p.pop();
+ //title bars
 
     p.textFont('Khand');
     p.textAlign(p.LEFT);
@@ -655,21 +684,7 @@ p.drawmeasureline = function(){
   p.fill(77,77,77); 
   p.stroke(77,77,77);
   p.strokeWeight(1)
- // //just the lines
-  p.line(575,48/2+100,692,48/2+100);
-  p.line(575,128/2+100,692,128/2+100);
-  p.line(575,1318/2+100,692,1318/2+100);
-  p.line(575,2027/2+100,692,2027/2+100);
-  p.line(574,10829/2+100,692,10829/2+100);  
-
- //  // p.line(margin,height-margin,width-margin,height-margin);
- //text
-  p.noStroke();
-  p.text("unidentified: 48", 576,48/2+95);
-  p.text("couple: 128", 575,128/2+95);
-  p.text("unknown: 1318", 574,1318/2+95);
-  p.text("female: 2027", 574,2027/2+95);
-  p.text("male: 10829", 573,10829/2+95);
+ 
   p.noStroke();
   p.textSize(20);
   p.textAlign(p.CENTER);
