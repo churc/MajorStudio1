@@ -43,14 +43,14 @@ var s = function(p){
   }
 
   p.setup = function(){
-    p.createCanvas(p.windowWidth,870);
+    p.createCanvas(p.windowWidth,860);
     p.drawLabelsTot();
 
     p.background(100,05);
       
-    p.push();
-    // p.scale(0.83); 
-    p.translate(320,90);
+    p.push(); 
+    // p.translate(320,90);
+    p.translate(350,100);
 
     p.push();
     p.stroke(92,242,145,145);
