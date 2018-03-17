@@ -1,6 +1,6 @@
 
-### Major Studio 1
-Clare Churchouse
+### Major Studio 1, Parsons
+Spring 2018
 
 
 ## Quantitative Project
@@ -22,7 +22,7 @@ Categories:
 - unknown
 - artist name but not yet identified
 
-
+![by Year](MetProjects/gender/assets/image_timeline.png)
 
 
 ## Qualitative Project
