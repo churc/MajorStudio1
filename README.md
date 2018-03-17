@@ -4,7 +4,7 @@ Clare Churchouse
 ## Quantitative Project
                 Gender at The Met, What % of the Modern & Contemporary Art Collection's 14,350 works are by women?
                 
-                [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender/) 
+                https://churc.github.io/MajorStudio1/MetProjects/gender 
 
 
 ## Qualitative Project
