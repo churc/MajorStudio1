@@ -199,8 +199,8 @@ var s = function(p){
     //////need to add 
     p.text("male", 150,120);
     p.text("female", 150,156.25);
-    p.text("couple/collaborative, both genders",150,228.5);
-    p.text("unknown",150,192.75);
+    p.text("unknown",150,192.5);
+    p.text("couple/collaborative, both genders",150,228.75);
     p.text("named, gender not yet identified",150,265);
 
 
