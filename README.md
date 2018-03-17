@@ -23,7 +23,7 @@ Categories:
 - artist name but not yet identified
 
 
-![by Year](MetProjects/gender/assets/imageTimeline.png)
+![by Year](MetProjects/gender/assets/image_timeline.png)
 
 
 ## Qualitative Project
