@@ -11,7 +11,8 @@ The Met's Modern and Contemporary Art department collection by gender: visualizi
 
 The displays are by number of artworks, visualizations show total numbers, and a timeline shows number of artworks collected each year by object begin date.
 Source: MetObjects.csv, January 2018.
-14,350 Artworks, ranging from undated, 1437 – 2017, most 'Object Begin Date' entries fall after 1850.
+
+14,350 artworks, ranging from undated, 1437 – 2017, most 'Object Begin Date' entries fall after 1850.
 Gender identification using ‘Artist Display Name’ column to identify artists by gender.
 
 Categories:
