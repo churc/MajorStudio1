@@ -1,4 +1,10 @@
-## Welcome to GitHub Pages
+# Major Studio 1
+Clare Churchouse
+
+## Quantitative Project
+
+
+## Qualitative Project
 
 You can use the [editor on GitHub](https://github.com/churc/MajorStudio1/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
 
