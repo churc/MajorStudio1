@@ -44,7 +44,7 @@ var s = function(p){
 
   p.setup = function(){
     p.createCanvas(p.windowWidth,870);
-    p.drawLabelsTot();=
+    p.drawLabelsTot();
 
     p.background(100,05);
       
