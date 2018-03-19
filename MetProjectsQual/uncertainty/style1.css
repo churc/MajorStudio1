@@ -5,7 +5,7 @@ html, body {
   width:auto;
   height: 100%;
   /*color: transparent;*/
-  color: "#5e5e5e";
+  /*color: "#5e5e5e";*/
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
@@ -19,7 +19,7 @@ body{
 /*  display: flex;*/
   font-family: "Helvetica Neue";
   font-kerning:normal;
-  font-size: 20px;
+  font-size: 15px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -102,42 +102,23 @@ img{
 img:active {
   background: yellow;   
 }
-.uncertain-title{
+
+
+/*.uncertain-title{
   position: absolute;
   bottom:20px;
   transition:.1s;
   /*z-index:1;*/
-}
+/*
 
 .designed-image{ 
   transition:1s;
 }
 
-/*p:hover{
+.uncertain-title:hover{
   color: #fc3406;
-
-}*/
-
-.uncertain-des{
-  /*vertical-align: text-top;*/
-  position: absolute;
-  bottom:20px;
-  /*color: transparent;*/
-  color: "#5e5e5e";
-  transition:.5s;
-  /*z-index: 10;*/
 }
 
-/*p {
-  /*transform: scale(.65);*/
- /* position: absolute;
-  top: -40px;
-  left: 5px;
-  vertical-align: text-top;
-  font-size: 40px;
-  max-width: 320px;
-  z-index: 10;
-}*/
 
 p {
   margin-top: 0px;
@@ -146,12 +127,47 @@ p {
   font-size: 15px;
   
   z-index: 100;
+
+
+  color:transparent;
 }
 
 
-p #des{
-  color: white;
+
+
+.uncertain-des{
+  /*vertical-align: text-top;*/
+  position: absolute;
+  bottom:20px;
+  color: transparent;
+  transition:.5s;
+  /*z-index: 10;*/
 }
+
+
+
+p #title:hover{
+  color: #fc3406;
+}
+
+p:hover{
+  color: #000000;
+}
+
+/*note text is transparent*/
+p{
+  color: transparent;
+}
+p#des{
+  color: transparent;
+
+}
+
+#des{
+  color: transparent;
+}
+
+
 
 /*highlight uncertain */
 span{
