@@ -17,15 +17,17 @@ function setup() {
   showImg();
   noCanvas();
   noLoop(); 
-  // rita();
+  rita();
 }
 
-// function rita () {
-//   		function splitSentences(desc){
-// 			return RiTa.splitSentences();
-// 			console.log(subString);
-// 			}
-//   };
+function rita () {
+	function loadRandomImage(){
+	var num = met_object.length;
+	
+	array = RiTa.randomOrdering(num);
+	return array;
+	}
+};
 
 
 	
@@ -134,21 +136,7 @@ if (!items[n].message && items[n].tombstone["0"].text.includes("uncertain")) {
 
 			};
 
-////note don't show desc on visualization				
-			// if(!items[n].message && items[n].webLabel.text.includes("uncertain")){
-			
-			// 		var desc = document.createElement('p');
 
-			// 		var selDesc = items[n];
-			// 		// var lengthSelD = Object.keys(selDesc).length-1;		
-			// 		var textD = "Label: " + selDesc.webLabel.text;
-			// 		// console.log(textD);
-			// 		desc.innerText += textD;
-			// 		desc.addClass = "uncertain-des";
-			// 		desc.id = 'des'+n;
-			// 		met_object.appendChild(desc);
-			// 		console.log(desc);
-//////////////
 
 
 			if(!items[n].message && items[n].webLabel.text.includes("uncertain")){
@@ -175,64 +163,35 @@ if (!items[n].message && items[n].tombstone["0"].text.includes("uncertain")) {
 									// console.log(d);
 									}
 								}			
-							}
+							// }
 								desc.innerText += d;
 								desc.addClass = "uncertain-des";
 								desc.id = 'des'+n;
 								met_object.appendChild(desc);
 								// console.log(desc);
 						};
-
+					}
 	 					document.body.appendChild(met_object);
  						console.log(met_object);
 
 		};
+
+		
+				$('p').each(function(){
+    		var uncert = $(this).text().replace(/uncertain/g,"<span>uncertain</span>");
+    		$(this).html(uncert);
+    		// console.log(uncert);
+			});
+
+
+
+
+
+
  };
 
 
-
-						// if (!items[n].message && sent.includes("uncertain")){
-						// 	return subString();
-						// 	// var uncert = subString();
-						// 	console.log(subString);
-						// 	}
-				
-					// RiTa.splitSentences(rs.features);
-					// console.log(sent);
-					// // var sent = require(splitSentences);
-					// // var RiTa = require('rita');
-					// var sent = RiString(desc);
-					// // var myRiString = new RiString();
-					// // var rita = RiString(sent);
-					// var sentence = RiTa.splitSentences(sent);
-				// if (subString.includes("uncertain")){
-				// return subString;
-				// 	var uncert = subString();
-
-				// 	console.log(uncert);
-				// };
-				// $('p').each(function() {
-    // 				var sentences = $(this).text().replace(/([^.!?]*[^.!?\s][.!?]['"]?)(\s|$)/g, 
-    //             		 '<span class="sentence">$1</span>$2');
-    // 				$(this).html(sentences);
-				// console.log(sentences):
-				
-				// $('.sentence').on(function(){ 
-				// 	if(!items[n].message && items[n].webLabel.text.includes("uncertain")){
-					
-				// 	var selDes = items[n];
-				// 	var textD = selDes.webLabel.text;
-				// 	if (textD){
-				// 		///find sentence with uncertain in it
-				// 		console.log(textD($(this).text()));
-						
-				// 	}
-
-
-////////\\\\\\\\
-
- // };
-//////This works
+//////highlight uncertain text
  	// 	if(!items[n].message){
 		// 		$('p').each(function(){
   //   		var uncert = $(this).text().replace(/uncertain/g,"<span>uncertain</span>");
@@ -241,8 +200,29 @@ if (!items[n].message && items[n].tombstone["0"].text.includes("uncertain")) {
 		// 	});
 		// };
 
-	// };
- // };
+
+
+
+
+////note don't show desc on visualization				
+			// if(!items[n].message && items[n].webLabel.text.includes("uncertain")){
+			
+			// 		var desc = document.createElement('p');
+
+			// 		var selDesc = items[n];
+			// 		// var lengthSelD = Object.keys(selDesc).length-1;		
+			// 		var textD = "Label: " + selDesc.webLabel.text;
+			// 		// console.log(textD);
+			// 		desc.innerText += textD;
+			// 		desc.addClass = "uncertain-des";
+			// 		desc.id = 'des'+n;
+			// 		met_object.appendChild(desc);
+			// 		console.log(desc);
+//////////////
+
+
+
+
 
 			/////not working
 				// $('p').each(function() {

@@ -6,11 +6,14 @@ html, body {
   height: 100%;
   /*color: transparent;*/
   color: "#5e5e5e";
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
 }
 
 body{
   margin: 20px;
-  margin-left:20px;
+  margin-left:50px;
   margin-top:15px;
   padding: 20px;
 /*  display: flex;*/
@@ -24,59 +27,17 @@ body{
 
 h1,h2,h3,h4,h5,h6{
   /*position: absolute;*/
-  display: inline-block;
-  font-size: 20px;
+  /*display: inline-block;*/
+  font-size: 15px;
   
 }
 
-img{
-  /*important*/
-  background-size: cover;
-  transform: scale(.4);
-  transform-origin: top left;
-  /*vertical-align:left; */ /*  changes look a lot */
-  vertical-align: top;
-  position:relative;
-  z-index: -1;
+
+div#wrap{
+  position: relative;
+  overflow: hidden;
+
 }
-
-img#unc{
-  vertical-align: top;
-  /*vertical-align: left;*/ /*  changes look a lot */
-  position:relative;
-}
-
-img:active {
-  background: yellow;   
-}
-
-/*p {
-  /*transform: scale(.65);*/
- /* position: absolute;
-  top: -40px;
-  left: 5px;
-  vertical-align: text-top;
-  font-size: 40px;
-  max-width: 320px;
-  z-index: 10;
-}*/
-
-p {
-  /*position:absolute;*/
-  float: left;
-  top: 100px;
-  left: 5px;
-  vertical-align: text-top;
-  font-size: 20px;
-  max-width: 300px;
-  z-index: 10;
-}
-
-
-.designed-image{ 
-  transition:1s;
-}
-
 
 
 /*div:nth-child(4n-7){
@@ -97,53 +58,96 @@ div:nth-child(2n-5){
 }*/
 
 div{
-  /*important*/
-  display: inline-block;
+  float:left;
+  width:18%;
+  margin: 1% 1% 30px 1%;
   /*note removed this to try layout;*/
   /*transform: scale(.65);*/
-
   /*transform-origin: top left;*/
-  resize: both;
-  max-width: 300px;
-  max-height: 280px; 
-  /*position: relative;*/
-  /*text-align:left;*/
-  justify-content: center;
- 
+  resize: both; 
  }
 
 
 body div#met_object{
-  display: inline-block;
+  /*display: inline-block;*/
+  float:left;
+  /*width:5%;*/
+  width:18%;
+  margin: 1% 1% 30px 1%;
   background: src("unc");
-  position: relative;
-  padding: 5px;
-  font-size: 20px;
+  /*position: relative;*/
+  /*padding: 5px;
+  padding-bottom: 10px;*/
+  font-size: 15px;
   text-align:top;
   resize: both;
 
 }
 
+img{
 
-.uncertain-title{
-  vertical-align: text-top;
-  transition:.1s;
-  z-index:1;
+  transform-origin: top left;
+  width:55%;
+
+}
+
+ img #unc{
+  transform-origin: top left;
+  display:block;
+  z-index: 1;
 }
 
 
-p:hover{
+
+img:active {
+  background: yellow;   
+}
+.uncertain-title{
+  position: absolute;
+  bottom:20px;
+  transition:.1s;
+  /*z-index:1;*/
+}
+
+.designed-image{ 
+  transition:1s;
+}
+
+/*p:hover{
   color: #fc3406;
 
-}
+}*/
 
 .uncertain-des{
-  vertical-align: text-top;
+  /*vertical-align: text-top;*/
+  position: absolute;
+  bottom:20px;
   /*color: transparent;*/
   color: "#5e5e5e";
   transition:.5s;
-  z-index: 10;
+  /*z-index: 10;*/
 }
+
+/*p {
+  /*transform: scale(.65);*/
+ /* position: absolute;
+  top: -40px;
+  left: 5px;
+  vertical-align: text-top;
+  font-size: 40px;
+  max-width: 320px;
+  z-index: 10;
+}*/
+
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  vertical-align: text-top;
+  font-size: 15px;
+  
+  z-index: 100;
+}
+
 
 p #des{
   color: white;
@@ -153,8 +157,9 @@ p #des{
 span{
     background-color: #fc3406;
     color: #ffffff;
-    /*font-size: 40px;*/
-    z-index: 1;
+    /*position: absolute;*/
+    /*bottom:0px;*/
+    z-index: 100;
 }
 
 @media screen and (max-width:720px){
