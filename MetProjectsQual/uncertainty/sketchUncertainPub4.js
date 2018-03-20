@@ -16,9 +16,15 @@ function preload() {
 function setup() {
   showImg();
   noCanvas();
+  // var cnv = createCanvas(windowWidth, windowHeight);
+  // cnv.style('display', 'block');
   noLoop(); 
   rita();
 }
+
+// function windowResized() {
+//   resizeCanvas(windowWidth, windowHeight);
+// }
 
 function rita () {
 	function loadRandomImage(){
