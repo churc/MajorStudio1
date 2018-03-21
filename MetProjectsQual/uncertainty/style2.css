@@ -26,11 +26,17 @@ body{
   -o-background-size: cover;
 }
 
-h1,h2,h3,h4,h5,h6{
-  /*position: absolute;*/
-  /*display: inline-block;*/
-  font-size: 15px;
-  
+h3,h4,h5,h6{
+  font-size: 15px; 
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  font-size: 16px;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
 }
 
 
@@ -50,8 +56,10 @@ div.wrap{
 .row {
   clear: both;
   width:100%;
-  height: 5px;
-  margin-bottom: 15px;
+  height: 3px;
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
 }
 
 .row:after {
@@ -62,6 +70,77 @@ div.wrap{
   height: 0;
   line-height: 0;
 }
+
+.nav {
+  list-style: none;
+  text-align: left;
+  padding-left: 8px;
+  font-size: 15px;
+}
+
+.nav li {
+  position: relative;
+  display: inline-block;
+  margin-right: 21px;
+}
+
+nav a {
+  display: block;
+  background-color: red;
+  margin: 0px;
+  width: 50%;
+  height: 5px;
+  position: relative;
+  text-align: left;
+  line-height: 20px;
+  width: 8px;
+  height: 8px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+
+}
+.paintings {
+  background: orange;
+}
+.sculpture {
+  background: red; 
+}
+.textiles {
+  background: #C89AC7;
+}
+.clay {
+  background: #BB5C26;
+}
+.stone {
+  background: #8E8B8E;
+}
+.glass {
+  background: #80A7C1;
+}
+.ink {
+  background: #D8BA4A;
+}
+.paper {
+  background: #97D84A;
+}
+
+
+
+
+.BC {
+  background: #AB8884;
+}
+.bef1800 {
+  background: #AB8884; 
+}
+.bef1900 {
+  background: #AB8884;
+}
+.since1900 {
+  background: #AB8884;
+}
+
 
 /*div:nth-child(4n-7){
   transform: translateY(20px);
