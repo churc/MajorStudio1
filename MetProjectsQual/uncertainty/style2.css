@@ -1,14 +1,12 @@
  @font-face {
-   font-family: "Helvetica Neue";
+   /*font-family: "Helvetica Neue";*/
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   font-weight: 300;
+   -webkit-font-smoothing: antialiased;
   } 
 html, body {
   width:auto;
   height: 100%;
-  /*color: transparent;*/
-  /*color: "#5e5e5e";*/
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
 }
 
 body{
@@ -18,7 +16,12 @@ body{
   padding: 20px;
   /* this makes the whole layout horizontal scroll*/
 /*  display: flex;*/
-  font-family: "Helvetica Neue";
+  /*font-family: "Helvetica Neue";*/
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+
+
   font-kerning:normal;
   font-size: 15px;
   -webkit-background-size: cover;
@@ -30,21 +33,19 @@ h3,h4,h5,h6{
   font-size: 15px; 
 }
 
-h1 {
-  font-size: 20px;
+#h1 {
+  font-size: 45px;
+  margin-bottom: 38px;
 }
 
 h2 {
   font-size: 16px;
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
 }
 
 
 div.wrap{
   position: relative;
   overflow: hidden;
-
-
 }
 
 #wrap:after{
@@ -59,7 +60,6 @@ div.wrap{
   height: 3px;
   margin-bottom: 12px;
   font-size: 16px;
-  font-family: "HelveticaNeue-Medium", "Helvetica Neue Medium";
 }
 
 .row:after {
@@ -221,7 +221,7 @@ img:active {
   bottom:20px;
   transition:.1s;
   /*z-index:1;*/
-/*
+
 
 .designed-image{ 
   transition:1s;
@@ -247,14 +247,14 @@ p {
 
 
 
-.uncertain-des{
-  /*vertical-align: text-top;*/
+/*.uncertain-des{*/
+  /*vertical-align: text-top;
   position: absolute;
   bottom:20px;
   color: transparent;
   transition:.5s;
   /*z-index: 10;*/
-}
+/*}*/
 
 
 
@@ -272,7 +272,6 @@ p{
 }
 p#des{
   color: transparent;
-
 }
 
 #des{
@@ -287,6 +286,7 @@ span{
     color: #ffffff;
     /*position: absolute;*/
     /*bottom:0px;*/
+    font-size: 15px;
     z-index: 100;
 }
 
