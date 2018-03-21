@@ -39,9 +39,9 @@ function rita () {
 	
 
 function showImg() {
-	console.log(items[413]);
-	console.log(items[2]);
-	console.log(items[0]);
+	// console.log(items[413]);
+	// console.log(items[2]);
+	// console.log(items[0]);
 	var length = Object.keys(items).length-1;
 	// console.log(length);
 
@@ -52,13 +52,13 @@ function showImg() {
 
  			met_object.addClass="designed-image";
  			// console.log(met_object);
-
+////image
  			if (!items[n].message) {
-
 	 				var unc = document.createElement('img');
 	 				unc.src = items[n].media.images.primaryImage.webImageUrl;
 	 				unc.addClass="designed-image";
-	 				unc.id='unc'+n;
+	 				unc.id='unc';
+	 				// unc.id='unc'+n;
 	 			
 					var obj_url = document.createElement('a');
 					obj_url.target = "blank";
@@ -68,9 +68,9 @@ function showImg() {
 	 				met_object.appendChild(obj_url);
 
 	 		}
+
 ////title
 			if (!items[n].message && items[n].titles.primaryTitle.includes("uncertain")) {
-				
 					var title = document.createElement('p');
 
 					var selTitle = items[n];
@@ -80,18 +80,15 @@ function showImg() {
 					title.innerText += text;
 					// title.innerText += more;
 					title.addClass="uncertain-title";
-					title.id = 'title'+n;
+					title.id = 'title';
+					// title.id = 'title'+n;
 					met_object.appendChild(title);
 					// console.log(title);
-
 		};
 
- 			
-		
-
+ 	
 ////tombstone date
 	if (!items[n].message && items[n].tombstone["1"].text.includes("uncertain")) {
-				
 					var date = document.createElement('p');
 	
 					var selDate = items[n];
@@ -101,15 +98,16 @@ function showImg() {
 					var dateL = "Date: " + selDate.tombstone["1"].text;
 					date.innerText += dateL;
 					date.addClass="uncertain-date";
-					date.id = 'date'+n;
+					date.id = 'date';
+					// date.id = 'date'+n;
 					met_object.appendChild(date);
 					// console.log(date);
-
 			};
+
 ////tombstone date is in this array for some objects
-if (!items[n].message && items[n].tombstone["0"].text.includes("uncertain")) {
-				
+	if (!items[n].message && items[n].tombstone["0"].text.includes("uncertain")) {
 					var date = document.createElement('p');
+					
 					var selDate = items[n];
 					var lengthDate = Object.keys(selDate).length-1;	
 					// console.log(lengthDate);
@@ -117,13 +115,13 @@ if (!items[n].message && items[n].tombstone["0"].text.includes("uncertain")) {
 					var dateL = "Date: " + selDate.tombstone["0"].text;
 					date.innerText += dateL;
 					date.addClass="uncertain-date";
-					date.id = 'date'+n;
+					date.id = 'date';
+					// date.id = 'date'+n;
 					met_object.appendChild(date);
 					// console.log(date);
-
 			};
 
-
+////credit
 	if (!items[n].message && items[n].tombstone<=["6"]  && items[n].tombstone["6"].label.includes("Uncertain")) {
 				
 					var credit = document.createElement('p');
@@ -132,10 +130,11 @@ if (!items[n].message && items[n].tombstone["0"].text.includes("uncertain")) {
 					var lengthCredit = Object.keys(selCredit).length-1;	
 					// console.log(lengthCredit);
 					
-					var creditL = "Credit Line: " + selCredit.tombstone["6"].label;
+					var creditL = "Credit: " + selCredit.tombstone["6"].label;
 					credit.innerText += creditL;
 					credit.addClass="uncertain-credit";
-					credit.id = 'credit'+n;
+					credit.id = 'credit';
+					// credit.id = 'credit'+n;
 
 					met_object.appendChild(credit);
 					console.log(credit);
@@ -144,15 +143,13 @@ if (!items[n].message && items[n].tombstone["0"].text.includes("uncertain")) {
 
 
 
-
+////description label keep hidden - direct to Met website for web label text
 			if(!items[n].message && items[n].webLabel.text.includes("uncertain")){
-			
 					var desc = document.createElement('p');
 
 					var selDesc = items[n];
 					// var lengthSelD = Object.keys(selDesc).length-1;
 					var textD = selDesc.webLabel.text;
-
 
 							if(!items[n].message){
 								var de = textD;
@@ -172,7 +169,8 @@ if (!items[n].message && items[n].tombstone["0"].text.includes("uncertain")) {
 							// }
 								desc.innerText += d;
 								desc.addClass = "uncertain-des";
-								desc.id = 'des'+n;
+								desc.id = 'des';
+								// desc.id = 'des'+n;
 								met_object.appendChild(desc);
 								// console.log(desc);
 						};
@@ -182,7 +180,7 @@ if (!items[n].message && items[n].tombstone["0"].text.includes("uncertain")) {
 
 		};
 
-		
+////span to isolate word uncertain - for styling	
 				$('p').each(function(){
     		var uncert = $(this).text().replace(/uncertain/g,"<span>uncertain</span>");
     		$(this).html(uncert);
@@ -190,22 +188,7 @@ if (!items[n].message && items[n].tombstone["0"].text.includes("uncertain")) {
 			});
 
 
-
-
-
-
  };
-
-
-//////highlight uncertain text
- 	// 	if(!items[n].message){
-		// 		$('p').each(function(){
-  //   		var uncert = $(this).text().replace(/uncertain/g,"<span>uncertain</span>");
-  //   		$(this).html(uncert);
-  //   		// console.log(uncert);
-		// 	});
-		// };
-
 
 
 

@@ -1,5 +1,4 @@
  @font-face {
-   /*font-family: "Helvetica Neue";*/
    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
    font-weight: 300;
    -webkit-font-smoothing: antialiased;
@@ -16,18 +15,18 @@ body{
   padding: 20px;
   /* this makes the whole layout horizontal scroll*/
 /*  display: flex;*/
-  /*font-family: "Helvetica Neue";*/
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
 
-
+  color: #393636;
   font-kerning:normal;
   font-size: 15px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
 }
+
 
 h3,h4,h5,h6{
   font-size: 15px; 
@@ -98,8 +97,9 @@ nav a {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-
 }
+
+
 .paintings {
   background: orange;
 }
@@ -124,7 +124,6 @@ nav a {
 .paper {
   background: #97D84A;
 }
-
 
 
 
@@ -174,20 +173,15 @@ div{
   width:80%;
   height:100%;
 }
+
 body div#met_object{
-  /*display: inline-block;*/
   float:left;
-  /*might need to put this back in*/
   width:18%;
   margin: 1% 1% 30px 1%;
   background: src("unc");
-  /*position: relative;*/
-  /*padding: 5px;
-  padding-bottom: 10px;*/
   font-size: 15px;
   text-align:top;
   resize: both;
-
 }
 
 #col-left{
@@ -197,87 +191,61 @@ body div#met_object{
 }
 
 img{
-
   transform-origin: top left;
   width:55%;
-
 }
 
- img #unc{
+img #unc{
   transform-origin: top left;
   display:block;
   z-index: 1;
 }
-
-
 
 img:active {
   background: yellow;   
 }
 
 
-/*.uncertain-title{
-  position: absolute;
-  bottom:20px;
-  transition:.1s;
-  /*z-index:1;*/
-
 
 .designed-image{ 
   transition:1s;
 }
-
-.uncertain-title:hover{
-  color: #fc3406;
-}
-
 
 p {
   margin-top: 0px;
   margin-bottom: 0px;
   vertical-align: text-top;
   font-size: 15px;
-  
   z-index: 100;
-
-
   color:transparent;
 }
 
 
+p#title:hover{
+  color: #393636;
+}
 
+p#date:hover{
+  color: #393636;
+}
 
-/*.uncertain-des{*/
-  /*vertical-align: text-top;
+p#credit:hover{
+  color: #393636;
+}
+
+/*note descriptive text is transparent*/
+p#des:hover{
+  color:transparent;
+}
+
+.uncertain-des{
+  vertical-align: text-top;
   position: absolute;
   bottom:20px;
   color: transparent;
   transition:.5s;
-  /*z-index: 10;*/
-/*}*/
-
-
-
-p #title:hover{
-  color: #fc3406;
+  z-index: 10;
 }
-
-p:hover{
-  color: #000000;
-}
-
-/*note text is transparent*/
-p{
-  color: transparent;
-}
-p#des{
-  color: transparent;
-}
-
-#des{
-  color: transparent;
-}
-
 
 
 /*highlight uncertain */
