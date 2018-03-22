@@ -42,16 +42,19 @@ h2 {
 }
 
 
-div.wrap{
-  position: relative;
+#pagewrap{
+  /*position: relative;*/
   overflow: hidden;
+  width: 100%;
+  height: auto;
+  margin: 0px;
 }
 
-#wrap:after{
+/*#wrap:after{
   content: "";
   display: table;
   clear: both;
-}
+}*/
 
 .row {
   clear: both;
@@ -140,6 +143,30 @@ nav a {
   background: #AB8884;
 }
 
+/*div button {
+    float: left;
+}*/
+
+
+
+.button{
+  /*display: block;*/
+  background-color: green;
+  margin: 0px;
+  width: 50%;
+  height: 5px;
+  /*position: relative;*/
+  float:left;
+  /*text-align: left;*/
+  clear: both;
+  line-height: 60px;
+  width: 8px;
+  height: 8px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
 /*5 divs per row*/
 div:nth-child(5n){
     clear:left
@@ -171,10 +198,16 @@ div{
   resize: both; 
  }
 
+
 #col-main{
+  float: right;
+  width: 90%;
+}
+
+  #sidebar{
   float:left;
-  width:80%;
-  height:100%;
+  width:5%;
+  /*height:100%;*/
 }
 
 body div#met_object{
