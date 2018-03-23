@@ -26,9 +26,9 @@ Categories:
 
 For total numbers, wrapped bars [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
 
-For total numbers, vertical bars [Another View of All Artworks by Gender](https://churc.github.io/MajorStudio1/MetProjects/gender/#defaultCanvas1)
+For total numbers, vertical bars [Another View of All Artworks by Gender](https://churc.github.io/MajorStudio1/MetProjects/gender/#c2)
 
-For timeline, 1850-2017 [What Year Were These Artworks Made](https://churc.github.io/MajorStudio1/MetProjects/gender/#defaultCanvas2)
+For timeline, 1850-2017 [What Year Were These Artworks Made](https://churc.github.io/MajorStudio1/MetProjects/gender/#c3)
 
 
 ![by Year](MetProjects/gender/assets/image_timeline.png)
@@ -43,7 +43,7 @@ For timeline, 1850-2017 [What Year Were These Artworks Made](https://churc.githu
 
 The aim of this qualitative project is to consider artworks in The Met in relation to words surrounding their content, and to display groupings of artworks by search word. Linking this to a research project on uncertainty in visual art, this visualization starts with the search word 'uncertain' and brings together artworks that are referred to as 'uncertain' in any part of the textural material surrounding the art object. Visualization focuses on the relation of text and image. 
 
-The display is by artworks across the whole of The Met Collection. A json file was made from all the artworks returned by two searches on The Met Collection, one for "uncertain" and a separate search for "uncertainty," where the objects are in the public domain and where artwork images are available. In March 2018 this resulted in a json file containing 425 artworks.
+The display is by artworks across the whole of The Met Collection. A json file was made from the artworks returned by two searches on The Met Collection, one search for "uncertain" and a separate one for "uncertainty," where the objects are in the public domain and artwork images are available. In March 2018 this resulted in a json file containing 425 artworks.
 
 
 
