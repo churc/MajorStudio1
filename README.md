@@ -23,6 +23,7 @@ Categories:
 - artist name but not yet identified
 
 
+
 For total numbers, wrapped bars [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
 
 For total numbers, vertical bars [Another View of All Artworks by Gender](https://churc.github.io/MajorStudio1/MetProjects/gender/#c2)
@@ -31,6 +32,7 @@ For timeline, 1850-2017 [What Year Were These Artworks Made](https://churc.githu
 
 
 ![by Year](MetProjects/gender/assets/image_timeline.png)
+
 
 
 
