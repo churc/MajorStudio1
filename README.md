@@ -41,7 +41,7 @@ For timeline, 1850-2017 [What Year Were These Artworks Made](https://churc.githu
    [Where uncertainty falls, the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 
 
-The aim of this qualitative project is to approach The Met artworks in relation to the words surrounding their content, bringing together artworks that are referred to as 'uncertain,' and visualize the text and images to highlight the use of 'uncertain' and 'uncertainty.' 
+The aim of this qualitative project is to consider artworks in The Met in relation to words surrounding their content, and to display groupings of artworks by search word. Linking this to a research project on uncertainty in visual art, this visualization starts with the search word 'uncertain' and brings together artworks that are referred to as 'uncertain' in any part of the textural material surrounding the art object. Visualization focuses on the relation of text and image. 
 
 The display is by artworks across the whole of The Met collection. A json file was made from artworks returned by a search on The Met Collection for "uncertain," for "uncertainty," where the objects are in the public domain and where artwork images are available. In March 2018 this returned 425 artworks.
 
