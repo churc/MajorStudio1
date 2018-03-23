@@ -22,6 +22,10 @@ Categories:
 - unknown
 - artist name but not yet identified
 
+[For total numbers, wrapped bars](<a href="https://churc.github.io/MajorStudio1/MetProjects/gender/index.html#target1">Link</a>)
+[For total numbers, vertical bars](<a href="https://churc.github.io/MajorStudio1/MetProjects/gender/index.html#target1">Link</a>)
+[For timeline, 1850-2017](<a href="https://churc.github.io/MajorStudio1/MetProjects/gender/index.html#target2">Link</a>)
+
 
 ![by Year](MetProjects/gender/assets/image_timeline.png)
 
