@@ -181,11 +181,11 @@ var s = function(p){
     p.noStroke();
     p.fill(77,77,77);
     p.textSize(23);
-    p.text("75.46%", 211,120);
-    p.text("14.13%", 210,156.25);
-    p.text("9.18%", 210,192.5);
-    p.text("0.89%", 210,228.75);
-    p.text("0.33%", 210,265);
+    p.text("75.46%", 226,129);
+    p.text("14.13%", 225,165.25);
+    p.text("9.18%", 225,201.5);
+    p.text("0.89%", 225,237.75);
+    p.text("0.33%", 225,274);
 
 //// Add legend
 
@@ -197,11 +197,11 @@ var s = function(p){
     p.textStyle(p.NORMAL);
     p.textSize(19);
     //////need to add 
-    p.text("male", 150,120);
-    p.text("female", 150,156.25);
-    p.text("unknown",150,192.5);
-    p.text("couple/collaborative, both genders",150,228.75);
-    p.text("named, gender not yet identified",150,265);
+    p.text("male", 165,129);
+    p.text("female", 165,165.25);
+    p.text("unknown",165,201.5);
+    p.text("couple/collaborative, both genders",165,237.75);
+    p.text("named, gender not yet identified",165,274);
 
 
     p.pop();
