@@ -43,4 +43,10 @@ For timeline, 1850-2017 [What Year Were These Artworks Made](https://churc.githu
 
 The aim of this qualitative project is to approach The Met artworks in relation to the words surrounding their content, bringing together artworks that are referred to as 'uncertain,' and visualize the text and images to highlight the use of 'uncertain' and 'uncertainty.' 
 
+The display is by artworks across the whole of The Met collection. A json file was made from artworks returned by a search on The Met Collection for "uncertain," for "uncertainty," where the objects are in the public domain and where artwork images are available. In March 2018 this returned 425 artworks.
+
+
+
+
+
 
