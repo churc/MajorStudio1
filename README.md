@@ -25,9 +25,9 @@ Categories:
 
 [For total numbers, wrapped bars](https://churc.github.io/MajorStudio1/MetProjects/gender)
 
-[For total numbers, vertical bars](https://churc.github.io/MajorStudio1/MetProjects/gender#defaultCanvas1)
+For total numbers, vertical bars [Another View of All Artworks by Gender](#another-view-of-all-artworks-by-gender)
 
-[For timeline, 1850-2017](https://churc.github.io/MajorStudio1/MetProjects/gender#defaultCanvas2)
+[For timeline, 1850-2017](https://churc.github.io/MajorStudio1/MetProjects/gender#c3)
 
 
 ![by Year](MetProjects/gender/assets/image_timeline.png)
