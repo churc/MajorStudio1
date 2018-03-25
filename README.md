@@ -9,13 +9,13 @@ Spring 2018
    
 The aim of this quantitative project is to look at the Met's Modern and Contemporary Art department collection by gender and visualize how many artworks by men and how many artworks by women are in the collection. 
 
-The displays are by number of artworks, visualizations show total numbers, and a timeline shows number of artworks collected each year by object begin date.
+The displays are by number of artworks. Two visualizations show total numbers by gender, and a timeline shows the number of artworks collected each year by gender using object begin date.
 Source: MetObjects.csv, January 2018.
 
-14,350 artworks, ranging from undated, 1437 – 2017, most 'Object Begin Date' entries fall after 1850.
-Gender identification using ‘Artist Display Name’ column to identify artists by gender.
+There are 14,350 artworks in the Modern and Contemporary Art Collection. They range from 1437 – 2017, together with a number that are undated, most 'Object Begin Date' entries fall after 1850.
+The ‘Artist Display Name’ column was used to identify artists by gender.
 
-Categories:
+Gender categories:
 - female
 - male
 - couple/collaborative with both genders
