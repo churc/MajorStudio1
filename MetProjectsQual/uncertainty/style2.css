@@ -42,13 +42,15 @@ h2 {
 }
 
 
-#pagewrap{
+/*#pagewrap{
   /*position: relative;*/
-  overflow: hidden;
+  /*overflow: hidden;*/
+/*  overflow:auto;
   width: 100%;
   height: auto;
   margin: 0px;
-}
+  display:block;
+}*/
 
 /*#wrap:after{
   content: "";
@@ -149,7 +151,7 @@ nav a {
 
 
 
-.button{
+#button:nth-child(5n){
   /*display: block;*/
   background-color: green;
   margin: 0px;
@@ -198,17 +200,21 @@ div{
   resize: both; 
  }
 
+/*#sidebar{
+  float:left;
+  width:1%;
+  height:100%;
+  clear:both;
+}
 
 #col-main{
   float: right;
-  width: 90%;
-}
+  width: 80%;
+  overflow: hidden;
+  clear:both;
+}*/
 
-  #sidebar{
-  float:left;
-  width:5%;
-  /*height:100%;*/
-}
+
 
 body div#met_object{
   /*important for grid layout*/
@@ -220,10 +226,14 @@ body div#met_object{
   resize: both;
 }
 
-#col-left{
-  float: left;
-  width: 15%;
-  height:100%;
+body div#empty_object{
+  /*important for grid layout*/
+  float:left;
+  /*important for size*/
+  width:2%;
+  margin: 1% 1% 30px 1%;
+  font-size: 15px;
+  resize: both;
 }
 
 img{
@@ -293,6 +303,14 @@ span{
     font-size: 15px;
     z-index: 100;
 }
+
+a{
+  text-decoration: none;
+}
+
+/*.clear{
+  clear:both;
+}*/
 
 @media screen and (max-width:720px){
   .selectorSide{
