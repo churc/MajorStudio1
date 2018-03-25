@@ -5,7 +5,7 @@
 
 ## Quantitative Project
 
-   [Gender at The Met, What % of the Modern & Contemporary Art Collection's 14,350 works are by women?](https://churc.github.io/MajorStudio1/MetProjects/gender) 
+#####   [Gender at The Met, What % of the Modern & Contemporary Art Collection's 14,350 works are by women?](https://churc.github.io/MajorStudio1/MetProjects/gender) 
    
 ###### The aim of this quantitative project is to look at the Met's Modern and Contemporary Art department collection by gender and visualize how many artworks by men and how many artworks by women are in the collection. The displays are by number of artworks. Two visualizations show total numbers by gender, and a timeline shows the number of artworks collected each year by gender using 'Object Begin Date.' Source: MetObjects.csv, January 2018.
 
@@ -33,10 +33,13 @@
 
 
 
+
+
+
 ## Qualitative Project
 
 
-   [Where uncertainty falls, the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
+#####   [Where uncertainty falls, the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 
 
 ###### The aim of this qualitative project is to consider artworks in The Met in relation to words surrounding their content, and to display groupings of artworks by search word. Linking this to a research project on uncertainty in visual art, this visualization starts with the search word 'uncertain' and brings together artworks that are referred to as 'uncertain' in any part of the textural material surrounding the art object. Visualization focuses on the relation of text and image. 
