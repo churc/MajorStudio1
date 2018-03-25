@@ -37,9 +37,11 @@
 #####   [Where uncertainty falls, the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 
 
-###### The aim of this qualitative project is to look at artworks in The Met in relation to the contextual words surrounding them, and to display groupings of artworks by a particular search word. The reference point is a research project on uncertainty in visual art, this project starts with the search word 'uncertain' and brings together artworks with the word 'uncertain' in any part of the textural material surrounding each of those art objects. The visualization focuses on the relation of text and image, with the concept of bringing a degree of hiding / uncertainty to the interface. 
+###### The aim of this qualitative project is to look at artworks in The Met in relation to the contextual words surrounding them, displaying groupings of artworks connected by a particular search word. Are the images related and do they convey the meaning of the word? Where do the references appear and what similarities or variations can be seen in these references between different objects? 
+###### The starting point is a research project on uncertainty in visual art I have been a part of. This qualitative project thus uses the search word 'uncertain' where that word appears in any part of the textural material surrounding an art object. The visualization focuses on the relation of text and image, and grouping the range of artworks. Part of the concept is to include a degree of hiding / uncertainty in the interface. 
 
-###### The display is by artworks across the whole of The Met Collection. A json file was made from the artworks returned by two searches on The Met Collection for objects that are in the public domain and that have artwork images. One search was the word "uncertain," the other one was "uncertainty." This resulted in a json file containing 425 artworks (March 2018.)
+###### The display is by artworks across the whole of The Met. A json file was made from the artworks returned by two searches on The Met Collection for objects that are in the public domain and that have artwork images. One search was "uncertain," the other was "uncertainty." This resulted in a file containing 425 artworks (March 2018.)
+###### 11 titles have uncertain/ty in them, none are of those are given by the artist. Titles and dates can be seen on hover. 198 artworks have uncertain/ty in their web label descriptions. Since these descriptions are not meant to be used elsewhere, the artworks are linked to their website image to access their descriptions. 
 
 
 
