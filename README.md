@@ -13,9 +13,9 @@
        -    female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified.
 
 
-###### For total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
-###### For total numbers, vertical bar visualization: [Another View of All Artworks by Gender](https://churc.github.io/MajorStudio1/MetProjects/gender#c2)
-###### For timeline, 1850-2017 visualization (14,284 artworks):  [What Year Were These Artworks Made](https://churc.github.io/MajorStudio1/MetProjects/gender/#c3) Note that there is a spike in the number of artworks in 1900: hundreds of artworks have Object Begin Date (and Object End Date) 1900, most of these are manufactoring companies noted as 'unknown designer' in the csv.
+###### Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
+###### Using total numbers, vertical bar visualization: [Another View of All Artworks by Gender](https://churc.github.io/MajorStudio1/MetProjects/gender#c2)
+###### For a timeline, visualization years 1850-2017 (14,284 artworks):  [What Year Were These Artworks Made](https://churc.github.io/MajorStudio1/MetProjects/gender/#c3) Note that there was a spike in the number of artworks in 1900: hundreds of artworks have Object Begin Date (and Object End Date) recorded as 1900, most of these are manufactoring companies noted as 'unknown designer' in the csv.
 
 
 
@@ -37,7 +37,7 @@
 #####   [Where uncertainty falls, the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 
 
-###### The aim of this qualitative project is to consider artworks in The Met in relation to words surrounding their content, and to display groupings of artworks by search word. Linking this to a research project on uncertainty in visual art, this visualization starts with the search word 'uncertain' and brings together artworks that are referred to as 'uncertain' in any part of the textural material surrounding the art object. Visualization focuses on the relation of text and image. 
+###### The aim of this qualitative project is to look at artworks in The Met in relation to the contextual words surrounding them, and to display groupings of artworks by a particular search word. The reference point is a research project on uncertainty in visual art, this project starts with the search word 'uncertain' and brings together artworks with the word 'uncertain' in any part of the textural material surrounding each of those art objects. The visualization focuses on the relation of text and image, with the concept of bringing a degree of hiding / uncertainty to the interface. 
 
 ###### The display is by artworks across the whole of The Met Collection. A json file was made from the artworks returned by two searches on The Met Collection for objects that are in the public domain and that have artwork images. One search was the word "uncertain," the other one was "uncertainty." This resulted in a json file containing 425 artworks (March 2018.)
 
