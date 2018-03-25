@@ -34,7 +34,10 @@
 
 
 
+
+
 ## Qualitative Project
+
 
    [Where uncertainty falls, the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 
