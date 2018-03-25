@@ -42,7 +42,7 @@
 
 ###### The display is by artworks across the whole of The Met. A json file was made from the artworks returned by two searches on The Met Collection for objects that are in the public domain and that have artwork images. One search was "uncertain," the other was "uncertainty." This resulted in a file containing 425 artworks (March 2018.)
 ###### 11 titles have uncertain/ty in them, none of those are titles given by the artist. Titles and dates are hidden and can be seen on hover. 198 artworks have uncertain/ty in their web label descriptions. Since these descriptions are not meant to be used elsewhere, each artwork is linked to its website image to access the web label. In the visualization, the word uncertain/ty is depicted where it occurs within the web label text.
-###### Artworks can be selected by various time periods, and by some material types (paintings, sculpture, textiles, clay, stone, glass, ink, paper) - selecting any of these takes you to The Met Collection, as does uncertainty in the header which returns The Met's 407 uncertain search results (artworks in the public domain with an image.) 
+###### Artworks can be selected by various time periods, and by some material types: paintings, sculpture, textiles, clay, stone, glass, ink, paper - selecting any of these takes you to The Met Collection, as does uncertainty in the header which returns The Met's 407 uncertain search results (artworks in the public domain with an image.) 
 
 
 
