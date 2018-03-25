@@ -1,5 +1,5 @@
 
-### Major Studio 1, Parsons
+##### Major Studio 1, Parsons
 ##### Spring 2018
 
 
@@ -11,12 +11,7 @@
 
 ###### There are 14,350 artworks in the Modern and Contemporary Art Collection. They range from 1437 – 2017, together with a number that are undated, most 'Object Begin Date' entries fall after 1850. The ‘Artist Display Name’ column was used to identify artists by gender. 
 ###### Gender categories:  
-######        -  female    
-######        -  male  
-######        -  couple/collaborative with both genders  
-######        -  unknown  
-######        -  artist name but not yet identified
-
+######        -  female, male, couple/collaborative with both genders, unknown, and artist name but not yet identified.
 
 
 ###### For total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
