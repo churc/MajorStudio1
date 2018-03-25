@@ -24,12 +24,12 @@ Gender categories:
 
 
 
-For total numbers, wrapped bars [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
+For total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
 
-For total numbers, vertical bars [Another View of All Artworks by Gender](https://churc.github.io/MajorStudio1/MetProjects/gender#c2)
+For total numbers, vertical bar visualization: [Another View of All Artworks by Gender](https://churc.github.io/MajorStudio1/MetProjects/gender#c2)
 
-For timeline, 1850-2017 [What Year Were These Artworks Made](https://churc.github.io/MajorStudio1/MetProjects/gender/#c3)
-
+For timeline, 1850-2017 visualization (14,274 artworks):  [What Year Were These Artworks Made](https://churc.github.io/MajorStudio1/MetProjects/gender/#c3)
+Note that there is a spike in the number of artworks in 1900: hundreds of artworks have Object Begin Date (and Object End Date) 1900, many of these are textiles noted as 'unknown designer' in the csv.
 
 ![by Year](MetProjects/gender/assets/image_timeline.png)
 
