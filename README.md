@@ -29,6 +29,8 @@
 ###### For timeline, 1850-2017 visualization (14,284 artworks):  [What Year Were These Artworks Made](https://churc.github.io/MajorStudio1/MetProjects/gender/#c3)
 ###### Note that there is a spike in the number of artworks in 1900: hundreds of artworks have Object Begin Date (and Object End Date) 1900, most of these are manufactoring companies noted as 'unknown designer' in the csv.
 
+
+
 ![by Year](MetProjects/gender/assets/image_timeline.png)
 
 
