@@ -41,7 +41,7 @@
 ###### The starting point is a research project on uncertainty in visual art I have been a part of. This qualitative project thus uses the search word 'uncertain' where that word appears in any part of the textural material surrounding an art object. The visualization focuses on the relation of text and image, and grouping the range of artworks. Part of the concept is to include a degree of hiding / uncertainty in the interface. 
 
 ###### The display is by artworks across the whole of The Met. A json file was made from the artworks returned by two searches on The Met Collection for objects that are in the public domain and that have artwork images. One search was "uncertain," the other was "uncertainty." This resulted in a file containing 425 artworks (March 2018.)
-###### 11 titles have uncertain/ty in them, none are of those are given by the artist. Titles and dates can be seen on hover. 198 artworks have uncertain/ty in their web label descriptions. Since these descriptions are not meant to be used elsewhere, the artworks are linked to their website image to access their descriptions. 
+###### 11 titles have uncertain/ty in them, none of those are titles given by the artist. Titles and dates are hidden and can be seen on hover. 198 artworks have uncertain/ty in their web label descriptions. Since these descriptions are not meant to be used elsewhere, the artworks are linked to their website image to access their descriptions. 
 
 
 
