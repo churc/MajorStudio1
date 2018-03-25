@@ -3,7 +3,7 @@
 ##### Spring 2018
 
 
-## Quantitative Project
+### Quantitative Project
 
 #####   [Gender at The Met, What % of the Modern & Contemporary Art Collection's 14,350 works are by women?](https://churc.github.io/MajorStudio1/MetProjects/gender) 
    
@@ -36,7 +36,7 @@
 
 
 
-## Qualitative Project
+### Qualitative Project
 
 
 #####   [Where uncertainty falls, the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
