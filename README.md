@@ -1,6 +1,6 @@
 
 ### Major Studio 1, Parsons
-Spring 2018
+##### Spring 2018
 
 
 ## Quantitative Project
@@ -10,7 +10,7 @@ Spring 2018
 ###### The aim of this quantitative project is to look at the Met's Modern and Contemporary Art department collection by gender and visualize how many artworks by men and how many artworks by women are in the collection. 
 
 ###### The displays are by number of artworks. Two visualizations show total numbers by gender, and a timeline shows the number of artworks collected each year by gender using 'Object Begin Date'.
-Source: MetObjects.csv, January 2018.
+###### Source: MetObjects.csv, January 2018.
 
 ###### There are 14,350 artworks in the Modern and Contemporary Art Collection. They range from 1437 – 2017, together with a number that are undated, most 'Object Begin Date' entries fall after 1850.
 ###### The ‘Artist Display Name’ column was used to identify artists by gender. Gender categories:
