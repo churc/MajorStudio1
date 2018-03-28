@@ -1,6 +1,6 @@
 
 ##### Major Studio 1, Parsons
-##### Spring 2018
+###### Spring 2018
 
 
 ##### Quantitative Project
