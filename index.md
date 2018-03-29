@@ -4,9 +4,9 @@
 ##### How many artworks by men and how many artworks by women in the collection. The displays are by number of artworks. 
 ###### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/tree/master/MetProjects/gender/assets)
 
-##### There are 14,350 artworks in the Modern and Contemporary Art Collection. They range from 1437 – 2017, together with a number that are undated, most 'Object Begin Date' entries fall after 1850. The ‘Artist Display Name’ column is used to identify artists by gender. Gender categories: 
-female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified
-######Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
+##### There are 14,350 artworks in the Modern and Contemporary Art Collection. They range from 1437 – 2017, together with a number that are undated, most 'Object Begin Date' entries fall after 1850. The ‘Artist Display Name’ column is used to identify artists by gender. Gender categories: female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified 
+
+##### Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
 ##### Using total numbers, vertical bar visualization: [Another View of All Artworks by Gender](https://churc.github.io/MajorStudio1/MetProjects/gender#c2)
 ##### For a timeline, visualization years 1850-2017 (14,284 artworks):  [What Year Were These Artworks Made](https://churc.github.io/MajorStudio1/MetProjects/gender/#c3) Note that there was a spike in the number of artworks in 1900: hundreds of artworks have Object Begin Date (and Object End Date) recorded as 1900, most of these are manufactoring companies noted as 'unknown designer' in the csv.
 
