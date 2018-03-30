@@ -20,7 +20,6 @@ function setup() {
   show();
   mouseClicked('span');
   noLoop(); 
-  // shuffleMyArray();
 }
 
 // function windowResized() {
@@ -39,7 +38,6 @@ function mouseClicked(){
   show = !show;
 }
 	
-
 
 function showImg() {
 
@@ -122,7 +120,6 @@ function showImg() {
 
 ////credit
 			if (!items[n].message && items[n].tombstone<=["6"]  && items[n].tombstone["6"].label.includes("Uncertain")) {
-				
 					var credit = document.createElement('p');
 
 					var selCredit = items[n];
@@ -171,10 +168,8 @@ function showImg() {
 	 				document.body.appendChild(met_object);
  					// console.log(met_object);
  					MetArray.push(met_object);	
-
 		};
-
-		// console.log(MetArray);
+					// console.log(MetArray);
 
 ////span to isolate word uncertain - for styling	
 			$('p').each(function(){
@@ -201,29 +196,11 @@ function shuffleMyArray(){
     		$(this).html(uncert);
 			});
 
-// button.onclick = function() {
-// 		shuffleMyArray();
-// 	};
+button.onclick = function() {
+		shuffleMyArray();
+	};
 };
 
-// 	button.onclick = function() {
-// 		shuffleMyArray();
-// };
-
-
-
-// $('#rSelect').onclick(function() {
-
-
-// 	rSelect.onclick = function() {
-// 		shuffleMyArray();
-// };
-
-// var rSelect = document.getElementById("#rSelect")
-
-// $('#rSelect').click(function(event){
-// 		shuffleMyArray;
-// 		})
 
 
 
