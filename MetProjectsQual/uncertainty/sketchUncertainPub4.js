@@ -8,6 +8,7 @@ var sentence;
 var sent = [];
 var d;
 var MetArray = [];
+var rSelect;
 
 function preload() {
     items = loadJSON("assets/UncertainPub.json", showImg);
@@ -19,7 +20,7 @@ function setup() {
   show();
   mouseClicked('span');
   noLoop(); 
-  // rita();
+  // shuffleMyArray();
 }
 
 // function windowResized() {
@@ -38,6 +39,7 @@ function mouseClicked(){
   show = !show;
 }
 	
+
 
 function showImg() {
 
@@ -182,23 +184,46 @@ function showImg() {
 			});
  };
 
+
+var rSelect = document.createElement("button");
+
 function shuffleMyArray(){
+	  var button = document.getElementById("rSelect");
+
 		$('.designed-image').remove()
 		shuffle(MetArray,true);
 		for (var r=0; r<MetArray.length; r++){
 			document.body.appendChild(MetArray[r]);
-		}
+		};
+
 		$('p').each(function(){
     		var uncert = $(this).text().replace(/uncertain/g,"<span>uncertain</span>");
     		$(this).html(uncert);
 			});
-}
+
+// button.onclick = function() {
+// 		shuffleMyArray();
+// 	};
+};
+
+// 	button.onclick = function() {
+// 		shuffleMyArray();
+// };
 
 
 
+// $('#rSelect').onclick(function() {
 
 
+// 	rSelect.onclick = function() {
+// 		shuffleMyArray();
+// };
 
+// var rSelect = document.getElementById("#rSelect")
+
+// $('#rSelect').click(function(event){
+// 		shuffleMyArray;
+// 		})
 
 
 
