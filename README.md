@@ -3,11 +3,7 @@
 ###### Spring 2018
 
 
-###### Quantitative Project
 
-
-
-###### Qualitative Project
 
 
 
