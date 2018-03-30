@@ -18,6 +18,8 @@ function setup() {
   noCanvas();
   // var cnv = createCanvas(windowWidth, windowHeight);
   // cnv.style('display', 'block');
+  show();
+  mouseClicked('span');
   noLoop(); 
   rita();
 }
@@ -25,6 +27,16 @@ function setup() {
 // function windowResized() {
 //   resizeCanvas(windowWidth, windowHeight);
 // }
+
+function show() {
+    $('span').click(function() {
+    $('p#title').addClass('titleW');
+    $('p#date').addClass('titleW');
+    $('p#credit').addClass('titleW'); 
+    // $('p#title').removeClass('titleW');
+  })
+//     else
+}
 
 function rita () {
 	function loadRandomImage(){
@@ -191,7 +203,17 @@ function showImg() {
  };
 
 
+// $(function () {
+// 		var parent = $("#div");
 
+// 		var div = parent.children();
+// 		// console.log(div);
+// 		// console.log(divs.length);
+// 		while (div.length) {
+// 		        // document.body.appendChild(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
+// 		        parent.append(div.splice(Math.floor(Math.random() * div.length), 1)[0]);
+// 		}
+// 	});
 
 ////note don't show desc on visualization				
 			// if(!items[n].message && items[n].webLabel.text.includes("uncertain")){

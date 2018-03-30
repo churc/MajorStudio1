@@ -206,7 +206,6 @@ div{
   height:100%;
   clear:both;
 }
-
 #col-main{
   float: right;
   width: 80%;
@@ -226,15 +225,15 @@ body div#met_object{
   resize: both;
 }
 
-body div#empty_object{
+/*body div#empty_object{*/
   /*important for grid layout*/
-  float:left;
+  /*float:left;*/
   /*important for size*/
-  width:2%;
+/*  width:2%;
   margin: 1% 1% 30px 1%;
   font-size: 15px;
   resize: both;
-}
+}*/
 
 img{
   transform-origin: top left;
@@ -282,6 +281,10 @@ p#credit:hover{
 /*note descriptive text is transparent*/
 p#des:hover{
   color:transparent;
+}
+
+.titleW{
+  color: #393636;
 }
 
 .uncertain-des{
