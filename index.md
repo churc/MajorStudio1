@@ -1,10 +1,7 @@
-### Quantitative Project
-
-###   [Gender at The Met, What % of the Modern & Contemporary Art Collection's 14,350 works are by women?](https://churc.github.io/MajorStudio1/MetProjects/gender) 
+#### Quantitative Project [Gender at The Met, What % of the Modern & Contemporary Art Collection's 14,350 works are by women?](https://churc.github.io/MajorStudio1/MetProjects/gender) 
    
    
-### How many artworks by men and how many artworks by women in the collection. The displays are by number of artworks. 
-### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/tree/master/MetProjects/gender/assets)
+### How many artworks by men and how many artworks by women in the collection. The displays are by number of artworks. [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/tree/master/MetProjects/gender/assets)
 
 ### There are 14,350 artworks in the Modern and Contemporary Art Collection. They range from 1437 – 2017, together with a number that are undated, most 'Object Begin Date' entries fall after 1850. The ‘Artist Display Name’ column is used to identify artists by gender. 
 ### Gender categories: female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified 
@@ -33,10 +30,7 @@
 
 
 
-### Qualitative Project
-
-
-###   [Where uncertainty falls, the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
+#### Qualitative Project [Where uncertainty falls, the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 
 ### Look at artworks in The Met in relation to the contextual words surrounding them, displaying groupings of artworks connected by a particular search word, using this approach as another way of entering the collection. Are the images related and do they convey the meaning of the word? Where do the references appear and what similarities or variations can be seen in these references between different objects? 
 ### Search word 'uncertain' where that word appears in any part of the textural material surrounding an art object. The visualization focuses on the relation of text and image, and aggregating specific groups of artworks. Part of the concept is to include a degree of hiding / uncertainty in the interface. 
