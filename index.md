@@ -27,7 +27,7 @@
 
 
 
-### Initial quantitative sketch ideas: [1](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project1_gender.jpg); [2](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project2_uncertainty.jpg); [3](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project3_donations.jpg). [sketches](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) for final project; [concept](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
+### Initial quantitative sketch ideas: [1](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project1_gender.jpg); [2](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project2_uncertainty.jpg); [3](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project3_donations.jpg); [sketches](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) for final project; [concept](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
 
 
 
