@@ -1,9 +1,7 @@
 #### Quantitative Project [Gender at The Met, What % of the Modern & Contemporary Art Collection's 14,350 works are by women?](https://churc.github.io/MajorStudio1/MetProjects/gender) 
    
    
-### How many artworks by men and how many artworks by women in the collection. The displays are by number of artworks. [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/tree/master/MetProjects/gender/assets)
-
-### There are 14,350 artworks in the Modern and Contemporary Art Collection. They range from 1437 – 2017, together with a number that are undated, most 'Object Begin Date' entries fall after 1850. The ‘Artist Display Name’ column is used to identify artists by gender. 
+### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/tree/master/MetProjects/gender/assets) There are 14,350 artworks in the Modern and Contemporary Art Collection. They range from 1437 – 2017, together with a number that are undated, most 'Object Begin Date' entries fall after 1850. The ‘Artist Display Name’ column is used to identify artists by gender. 
 ### Gender categories: female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified 
 
 ### Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
@@ -27,6 +25,9 @@
 
 
 
+
+
+### Initial quantative sketch ideas[1](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project1_gender.jpg)[2](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project2_uncertainty.jpg)[3](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project3_donations.jpg)
 
 
 
