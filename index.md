@@ -27,7 +27,7 @@
 
 
 
-### Initial quantitative sketch ideas: [1](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project1_gender.jpg), [2](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project2_uncertainty.jpg), [3](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project3_donations.jpg). [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf), [concept](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
+### Initial quantitative sketch ideas: [1](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project1_gender.jpg); [2](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project2_uncertainty.jpg); [3](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project3_donations.jpg). [sketches](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) for final project; [concept](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
 
 
 
@@ -48,4 +48,4 @@
 
 ![where uncertainty falls](MetProjectsQual/uncertainty/assets/qual_uncertain.png)
 
-### [Initial qualitative sketch ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_churchouse.pdf), [sketches for final project](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_uncertainty_churchouse.pdf), [concept ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQualConcepts2_clarechurchouse.pdf)
+### [Initial](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_churchouse.pdf)qualitative sketch ideas; [sketches](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_uncertainty_churchouse.pdf)for final project; [concept ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQualConcepts2_clarechurchouse.pdf)
