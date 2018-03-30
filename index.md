@@ -36,7 +36,7 @@
 ### Look at artworks in The Met in relation to the contextual words surrounding them, displaying groupings of artworks connected by a particular search word, using this approach as another way of entering the collection. Are the images related and do they convey the meaning of the word? Where do the references appear and what similarities or variations can be seen in these references between different objects? 
 ### Search word 'uncertain' where that word appears in any part of the textural material surrounding an art object. The visualization focuses on the relation of text and image, and aggregating specific groups of artworks. Part of the concept is to include a degree of hiding / uncertainty in the interface. 
 
-### [A json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets) made from the artworks returned by two searches on The Met Collection for objects that are in the public domain and that have artwork images. One search was "uncertain," the other was "uncertainty," 425 artworks (March 2018)
+### A [json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets) made from the artworks returned by two searches on The Met Collection for objects that are in the public domain and that have artwork images. One search was "uncertain," the other was "uncertainty," 425 artworks (March 2018)
 ### Titles and dates are hidden and can be seen on hover. 198 artworks have uncertain/ty in their web label descriptions. Since these descriptions are not meant to be used elsewhere, each artwork is linked to its website image to access the web label. 
 ### The word uncertain/ty is depicted where it occurs within the web label text.
 ### Artworks can be selected by various time periods, and by some material types: paintings, sculpture, textiles, clay, stone, glass, ink, paper.
@@ -48,4 +48,4 @@
 
 ![where uncertainty falls](MetProjectsQual/uncertainty/assets/qual_uncertain.png)
 
-### [Initial](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_churchouse.pdf)qualitative sketch ideas; [sketches](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_uncertainty_churchouse.pdf)for final project; [concept ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQualConcepts2_clarechurchouse.pdf)
+### [Initial](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_churchouse.pdf) qualitative sketch ideas; [sketches](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_uncertainty_churchouse.pdf) for final project; [concept ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQualConcepts2_clarechurchouse.pdf)
