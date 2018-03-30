@@ -38,6 +38,13 @@ function show() {
 //     else
 }
 
+function mouseClicked(){
+  show = !show;
+  // if('p#title' ==="#393636"){
+  //   color="#ffffff";
+  // }
+}
+
 function rita () {
 	function loadRandomImage(){
 	var num = met_object.length;
