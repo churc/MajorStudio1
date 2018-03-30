@@ -48,4 +48,4 @@
 
 ![where uncertainty falls](MetProjectsQual/uncertainty/assets/qual_uncertain.png)
 
-### [Initial](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_churchouse.pdf) qualitative sketch ideas; [sketches](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_uncertainty_churchouse.pdf) for final project; [concept ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQualConcepts2_clarechurchouse.pdf)
+### [Initial](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_churchouse.pdf) qualitative sketch ideas; [sketches](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_uncertainty_churchouse.pdf) for final project; [concepts](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQualConcepts2_clarechurchouse.pdf)
