@@ -31,7 +31,7 @@
 
 
 
-#### Qualitative Project [Where uncertainty falls, the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
+#### Qualitative Project [Where uncertainty falls: the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 
 ### Look at artworks in The Met in relation to the contextual words surrounding them, displaying groupings of artworks connected by a particular search word, using this approach as another way of entering the collection. Are the images related and do they convey the meaning of the word? Where do the references appear and what similarities or variations can be seen in these references between different objects? 
 ### Search word 'uncertain' where that word appears in any part of the textural material surrounding an art object. The visualization focuses on the relation of text and image, and aggregating specific groups of artworks. Part of the concept is to include a degree of hiding / uncertainty in the interface. 
