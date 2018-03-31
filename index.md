@@ -44,11 +44,10 @@
 ### Display groups of artworks connected by a particular search word, as another way of entering the collection. Are the images related, where do the references appear, what reference similarities or variations are there between different objects?  
 
 ### "Uncertain" and "uncertainty" searches returns 426 artworks (March 2018, public domain, with images): [Json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets). The visualization focuses on the relation of text and image. 
-### Titles and dates hidden, each visible on hover. Click on green button for titles, dates. 204 artworks have uncertain/ty in their web label descriptions. Since these descriptions are not meant to be used elsewhere, each artwork is linked to its website image with web label. 
+### Titles and dates hidden, visible on hover. Click on green button to view all titles, dates. 204 artworks have uncertain/ty in their web label descriptions. Since the web labels are not in the public domain, each artwork is linked to The Met web label. 
 ### The word uncertain/ty is depicted where it occurs within the web label text.
 ### Material type selections: paintings, sculpture, textiles, clay, stone, glass, ink, paper; and specific time periods link to The Met website searches.
-### Uncertainty in the header is linked to the title and date text.
-### Click on the green button for random reload.
+### Uncertainty in the header is linked to the title and date text. Click on the green button for random reload.
 
 
 
