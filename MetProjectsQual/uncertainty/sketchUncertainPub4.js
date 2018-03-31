@@ -174,7 +174,7 @@ function showImg() {
 
 ////span to isolate word uncertain - for styling	
 			$('p').each(function(){
-    		var uncert = $(this).text().replace(/uncertain/g,"<span>uncertain</span>");
+    		var uncert = $(this).text().replace(/uncertain/g,"<span> uncertain </span>");
     		$(this).html(uncert);
     		// console.log(uncert);
 			});
