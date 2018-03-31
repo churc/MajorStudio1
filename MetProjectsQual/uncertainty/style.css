@@ -147,7 +147,7 @@ input{
 }
 
 /*5 divs per row*/
-div:nth-child(5n){
+div:nth-child(5n+1){
     clear:left
 }
 
