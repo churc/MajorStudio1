@@ -41,10 +41,9 @@
 
 #### Qualitative Project [Where uncertainty falls: the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 
-### Artworks in The Met in relation to the contextual words surrounding them. Display groups of works connected by a particular search word, as another way of entering the collection. Are the images related, where do the references appear, what reference similarities or variations are there between different objects? 
-### Search word 'uncertain' where that word appears in any part of the textural material surrounding an art object. The visualization focuses on the relation of text and image. Include a degree of hiding / uncertainty in the interface. 
+### Display groups of artworks connected by a particular search word, as another way of entering the collection. Are the images related, where do the references appear, what reference similarities or variations are there between different objects?  
 
-### [Json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets) of the artworks returned by two searches on The Met Collection for objects that are in the public domain and that have artwork images. Searches "uncertain" and "uncertainty" returns 426 artworks (March 2018).
+### [Json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets) of the artworks returned by two searches on The Met Collection for objects that are in the public domain and that have artwork images. "Uncertain" and "uncertainty" searches returns 426 artworks (March 2018). The visualization focuses on the relation of text and image. 
 ### Titles and dates hidden, each visible on hover. Click on green button for titles, dates. 204 artworks have uncertain/ty in their web label descriptions. Since these descriptions are not meant to be used elsewhere, each artwork is linked to its website image with web label. 
 ### The word uncertain/ty is depicted where it occurs within the web label text.
 ### Material type selections: paintings, sculpture, textiles, clay, stone, glass, ink, paper; and specific time periods link to The Met website searches.
