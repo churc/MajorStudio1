@@ -1,3 +1,4 @@
+var table;
 var gender = [];
 var artist = [];
 var ArtistColl = [];
@@ -19,7 +20,7 @@ var minYear, maxYear, mxYear, midYears, minObjects, maxObjects, maxArtist, maxAr
     // analyzeData();
     displayData();
   }
-  
+
 // ///=========max number of items by one artist 
 /// using display name column 10
 
