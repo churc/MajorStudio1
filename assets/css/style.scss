@@ -8,8 +8,8 @@ body {
   line-height: 18px;
   font-weight: normal;
   font-style: normal;
-//   font-family: consolas, monaco, courier, "courier new", fixed-width;
-  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+//   font-family: 'Inconsolata', monospace; , monaco, courier, "courier new", fixed-width;
+  font-family: 'Inconsolata', monospace, "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   color: #0A0A0A;
   padding: 20px;
   padding-left: 10px;
@@ -28,7 +28,7 @@ section{
 }
 
 small{
-    	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    	font-family: 'Inconsolata', monospace, "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 	font-size: 12px;
 	font-style: normal;
 	font-variant: normal;
@@ -36,7 +36,7 @@ small{
 	font-size:13px;	    
 }
 h1 {
-	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-family: 'Inconsolata', monospace, "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 	font-size: 24px;
 	font-style: normal;
 	font-variant: normal;
@@ -44,7 +44,7 @@ h1 {
 	line-height: 26.4px;
 }
 h3 {
-	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-family: 'Inconsolata', monospace, "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 	font-size: 15px;
 	font-style: normal;
 	font-variant: normal;
@@ -52,7 +52,7 @@ h3 {
 	line-height: 18px;
 }
 p {
-	font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	font-family: 'Inconsolata', monospace, "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 	font-size: 13px;
 	font-style: normal;
 	font-variant: normal;
@@ -106,7 +106,7 @@ ol {
 
 code,
 pre {
-  font-family: Consolas, Courier, monospace;
+  font-family: 'Inconsolata', monospace, "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 }
 code {
   color: #0323C0;
