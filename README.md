@@ -3,8 +3,6 @@
 ###### Spring 2018
 
 
-###### [Interactive sketch](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant2_churchouse.pdf)
-
 
 
 
