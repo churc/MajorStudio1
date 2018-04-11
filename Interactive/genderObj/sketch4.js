@@ -3,9 +3,11 @@ var tableA; ////array
 var groupedByType; 
 var groupedByName;
 var sorted = [];
-var sortname = [];
-var map;
+var mapped;
 var typeGrp = [];
+var category;
+var femaleObj;
+var eachType = {};
 
 var yrFemTotals = [];
 var barTotals =[];
@@ -49,6 +51,7 @@ function collate(array, prop){
     canvas.parent("#c2");
     analyzeData();
     displayData();
+    categorize();
     noLoop();
   }
 
@@ -76,27 +79,13 @@ function collate(array, prop){
 /////group same items together using reduce function   
  ///object, artist alpha sort is keys, reduce into arrays same item 
     var tableAkeys = Object.keys(groupedByName);  
-    console.log(tableAkeys.length);  ////3564 names
+    console.log(tableAkeys.length);  ////3564 names, Artist Alpha Sort
 
 ////iterate through object by keys and select artist names 
     for(var j=0; j<tableAkeys.length; j++){
-      sortname[tableAkeys[j]] = collate(groupedByName[tableAkeys[j]], 12)
+      sorted[tableAkeys[j]] = collate(groupedByName[tableAkeys[j]], 12)
     }
-console.log(sortname);
-
-   var map = {};
-    for (var i = 0; i <tableAkeys.length; i++) {
-        var category = tableAkeys[i];
-        // console.log(category);
-
-        if (!map[category]) 
-            map[category] = [];
-        map[category].push(sorted[tableAkeys[j]]);
-        // map[category].push(list[i]);
-    }
-    return map;
-    console.log(map);
-    console.log(map.length);  //// 3564 names Artist Alpha Sort
+    console.log(tableAkeys); //returns array of object keys (glass, sculpture etc)
 
 
 //=================== classification object type
@@ -107,61 +96,48 @@ console.log(sortname);
     var tableAkeys = Object.keys(groupedByType);
 
     console.log(tableAkeys.length);  ////105 types
+    console.log(tableAkeys); //returns array of object keys (glass, sculpture etc)
 
-////iterate through object by keys and group by gender 
-
-    for(var j=0; j<tableAkeys.length; j++){
-      sort[tableAkeys[j]] = collate(groupedByType[tableAkeys[j]], 22)
+////iterate through object by keys and SPLITS object into 105 objects 
+////TRY ordering by largest array to smallest, selecting if gender is female
+    for(var s=0; s<tableAkeys.length; s++){
+      sort[tableAkeys[s]] = collate(groupedByType[tableAkeys[s]], 22)
+      // if(tableAkeys.includes("f")){    ////selecting by gender not working
+      //   femaleObj = sort[tableAkeys[s]];
+      //   console.log(femaleObj);
+      // }
+      console.log(sort[tableAkeys[s]]); ///105 separate objects
     }
-    console.log(sort);
-    
-    // append(typeGrp,sort);
-    console.log(sort.value);
+}
 
-    // console.log(typeGrp.array[]);
-    // var typeGrpKeys = Object.keys(typeGrp);
-    // console.log(typeGrpKeys.length);
-
-
-  // if(yearNow.items.length>maxObjects){
-  //         maxObjects = yearNow.items.length;
-  //         maxYear = allYears.length-1;
-  //       }
-
-
-////list of classifications
-   var map = {};
-    for (var s = 0; s <tableAkeys.length; s++) {
-        var category = tableAkeys[s];
+////NOT working, list of classifications - map object holds key value pairs
+function categorize(){
+    for (var r = 0; r<groupedByType.length; r++) {
+        var category = groupedByType[r];
         if (!map[category]) 
             map[category] = [];
-        map[category].push(sorted.tableAkeys);
-        // map[category].push(list[i]);
+        map[category].push(groupedByType[r]);
     }
     return map;
-    console.log(map);
-    console.log(map.length);  ////list of the 105 classifications/type
+    console.log(categorize);
   }
-  //////NOW select artist with largest array    
+     
 
 function displayData(){
-    // noStroke();
-    // fill(255,255,0);
-  
-
+ 
     var width = windowWidth,
         height = windowHeight,
         margin = 40,
         w = width - 2 * margin, // chart area width and height
         h = height - 2 * margin;
 
-    var barWidth =  (h / sorted.length) * 1; // width of bar
-    var barMargin = (h / sorted.length) * 1; 
+    var barWidth =  (h / groupedByType.length) * 1; // width of bar
+    var barMargin = (h / groupedByType.length) * 1; 
 
-for(var b=0; b<sorted.length; b++) {
-console.log(sorted.length)
+for(var b=0; b<groupedByType.length; b++) {
+console.log(groupedByType.length)
 
-var genFill = sorted[b];
+var genFill = groupedByType[b];
     if (genFill == '10829') {
        fill(92,242,145,120);
        
