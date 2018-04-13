@@ -233,7 +233,7 @@ var myp5 = new p5(s, 'c1');
 
 
 var t = function(p) {
-     p.preload = function(){
+  p.preload = function(){
    // table = loadTable('assets/ModContGenderfinalgosort.csv','csv','header');  /////secondary sort gender, classification
    p.table = p.loadTable('assets/ModContGenderfinalgnoysort.csv','csv','header'); /////four sort gender, Artist Alpha Sort, classification, year
    console.log(p.table);
@@ -245,14 +245,13 @@ var t = function(p) {
     // p.analyzeData();
     // p.categorize();
     p.lineChart();
-    // handleDataLoad();
-    // barChart();
     p.noLoop();
   }
 
- p.lineChart = function(){
+  p.lineChart = function(){
   p.push();
-
+  groupedByYear = collate(tableA,17);  ////name, Artist Alpha Sort with array of artworks by artist
+  console.log(groupedByYear);
   var maxX1;
   var x1,x2,y1,y2;
   
@@ -273,34 +272,61 @@ var t = function(p) {
   p.textSize(10);
 
 // iterate through the data
-  for(var i = 0; i < maxX; i++) {    
+  for(var n = 0; n < maxX; n++) {    
     p.stroke(p.color(179,118,244));
     p.strokeWeight(1);
     p.noFill();
     // console.log(Object.keys(groupedByType)[i]);
-    var individualPiece = maxX1[i];
+    var individualPiece = maxX1[n];
     // console.log(individualPiece);
-
-
 // variables
 ////ERROR getRow
     // x1 = map(i                       ,0 ,maxX, 0        ,width);
     // x2 = map(i+1                     ,0, maxX, 0        ,width);
     // y1 = map(groupedByType.getRow(i).get(0)   ,0, maxY, height-30, 0);
-    // y2 = map(groupedByType.getRow(i+1).get(0) ,0, maxY, height-30, 0);
-
-   
+    // y2 = map(groupedByType.getRow(i+1).get(0) ,0, maxY, height-30, 0); 
 // draw the line
     // line(x1,y1,x2,y2)
-
 // draw the legend
     // noStroke()
     // fill(0)
     // text(i,x1,height)
-
   }
 
+for(var i=0; i<groupedByYear.length; i++){
+//// years use map incoming value and range
+    // console.log('thisisallYrs' + allYears[allYears.length-1].year);
+////map function 
+    // var x = map(allYears[i].year,1850,allYears[allYears.length-1].year, margin, width-margin);
+    var x = p.map(groupedByYear[i].year,1850,groupedByYear[groupedByYear.length-1].year, margin, 1341-margin);
 
+    var totalFemaleArtistsPerBar = 0;
+    var totalMaleArtistsPerBar = 0;
+
+////THIS logs where it is mapping that is relatively corresponding to:
+   // console.log("mapping: " + allYears[i].year + "to: " + x);
+
+  ///then do same for y height
+  for(var j=0; j<groupedByYear[i].items.length; j++){
+      var y= p.map(j,0,maxObjects,747-margin, margin);
+
+///====FILL BY GENDER
+   var gender = groupedByYear[i].items[j].obj.Gender;
+    if (gender === 'm') {
+       p.fill(92,242,145,90);
+       p.rect(x-1,y-1,3,2);
+       // console.log('m');
+       totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
+
+    } else if (gender === 'f') {
+       p.fill(179,118,244,90);
+       p.rect(x-1,y-1,3,2);
+       // console.log('f');
+      totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
+     // console.log(totalFemaleArtistsPerBar);
+    } 
+}
+  }
   p.pop();
 }
 
