@@ -147,49 +147,6 @@ function categorize(){
     console.log(category); 
   }
 
-function lineChart(){
-  var maxX1;
-  var x1,x2,y1,y2;
-  // set up bounds
-  var groupedByType = collate(tableA,22);
-  // console.log(groupedByType);
-
-  var maxX1 = Object.keys(groupedByType);
-  ////NOT WORKING
-  // maxX = maxX1.getRowCount;
-  // console.log(maxX1);
-  for (var i = 0; i < maxX1.length; i++) {
-    maxX2 = maxX1;
-    maxX = maxX2.length;
-      }
-  // console.log(maxX);  ////returns 105
-  // console.log(maxX2);  ////returns 
-  var maxY = 1500000;
-  textSize(10);
-
-// iterate through the data
-  for(var i = 0; i < maxX; i++) {    
-    stroke(color(179,118,244));
-    strokeWeight(1);
-    noFill();
-
-// variables
-////ERROR getRow
-    // x1 = map(i                       ,0 ,maxX, 0        ,width);
-    // x2 = map(i+1                     ,0, maxX, 0        ,width);
-    // y1 = map(Object.keys(groupedByType).getRow(i).get(0)   ,0, maxY, height-30, 0);
-    // y2 = map(Object.keys(groupedByType).getRow(i+1).get(0) ,0, maxY, height-30, 0);
-
-   
-// // draw the line
-//     line(x1,y1,x2,y2)
-
-// // draw the legend
-//     noStroke()
-//     fill(0)
-//     text(i,x1,height)
-  }
-}
 
 // callback for loaded data.
 function handleDataLoad(d) {
@@ -239,16 +196,6 @@ for (var b=0; b< groupedByTypeC.length; b++) {
    var myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered}
    barTotals.push(myObject)
 
-////fill by gender - see further down
-    // fill(179,118,244,120);
-   // rect(20, 20, w, h); // draw rect
-
-   // fill(92,242,145,120);
-   // rect(100 + (b * 10), 100, 10, maletotals);
-
-   // fill(179,118,244,120);
-   // rect(100 + (b * 10), 100, 10, (-1) * femtotals);
-
       }
 ////sort
       console.log(barTotals)
@@ -267,7 +214,63 @@ for (var b=0; b< groupedByTypeC.length; b++) {
       };
 }
 
+function lineChart(){
+  var maxX1;
+  var x1,x2,y1,y2;
+  // set up bounds
+  var groupedByType = collate(tableA,22);
+  // console.log(groupedByType);
+
+  var maxX1 = Object.keys(groupedByType);
+  ////NOT WORKING
+  // maxX = maxX1.getRowCount;
+  // console.log(maxX1);
+  for (var i = 0; i < maxX1.length; i++) {
+    maxX2 = maxX1;
+    maxX = maxX2.length;
+      }
+  // console.log(maxX);  ////returns 105
+  // console.log(maxX2);  ////returns 
+  var maxY = 1500000;
+  textSize(10);
+
+// iterate through the data
+  for(var i = 0; i < maxX; i++) {    
+    stroke(color(179,118,244));
+    strokeWeight(1);
+    noFill();
+
+// variables
+////ERROR getRow
+    // x1 = map(i                       ,0 ,maxX, 0        ,width);
+    // x2 = map(i+1                     ,0, maxX, 0        ,width);
+    // y1 = map(Object.keys(groupedByType).getRow(i).get(0)   ,0, maxY, height-30, 0);
+    // y2 = map(Object.keys(groupedByType).getRow(i+1).get(0) ,0, maxY, height-30, 0);
+
+   
+// // draw the line
+//     line(x1,y1,x2,y2)
+
+// // draw the legend
+//     noStroke()
+//     fill(0)
+//     text(i,x1,height)
+  }
+}
+
 //////////////////////
+
+///COLOR works
+////fill by gender - see further down
+    // fill(179,118,244,120);
+   // rect(20, 20, w, h); // draw rect
+
+   // fill(92,242,145,120);
+   // rect(100 + (b * 10), 100, 10, maletotals);
+
+   // fill(179,118,244,120);
+   // rect(100 + (b * 10), 100, 10, (-1) * femtotals);
+//////////
 
 
   // for(var i=0; i<tableAkeys.length; i++){
