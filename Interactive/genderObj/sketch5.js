@@ -103,14 +103,24 @@ function collate(array, prop){
 
 ////iterate through object by keys and SPLITS object into 105 objects 
 ////TRY ordering by largest array to smallest, selecting if gender is female
+/////This separates each - need slice.sort() to order??
+    var tableAkeys1;
     for(var s=0; s<tableAkeys.length; s++){
       sort[tableAkeys[s]] = collate(groupedByType[tableAkeys[s]], 22)
-      // if(tableAkeys.includes("f")){    ////selecting by gender not working
-      //   femaleObj = sort[tableAkeys[s]];
-      //   console.log(femaleObj);
-      // }
-      // console.log(sort[tableAkeys[s]]); ///105 separate objects
+////DOESN't DO LARGEST TO SMALLEST
+      console.log(sort[tableAkeys[s]]);
+      console.log(tableAkeys[s]);
+      // tableAkeys1.slice().sort()=sort[tableAkeys[s]];
     }
+      // tableAkeys1.slice().sort()=sort[tableAkeys[s]];
+      console.log(tableAkeys1[s]);
+
+      // if(tableAkeys[s].includes("f")){    ////selecting by gender not working
+      //   return femaleObj
+
+      // }
+      // console.log(femaleObj); ///105 separate objects
+    // }
 }
 
 ////NOT working, list of classifications - map object holds key value pairs
@@ -123,12 +133,15 @@ function categorize(){
   console.log(groupedByTypeA);
     for (var r = 0; r<groupedByTypeA.length; r++) {
         var category = groupedByTypeA[r];
+        // console.log(category);  ////each of the 105 objects separate
+////GETTING STUCK HERE
         if (!map[category]) 
             map[category] = [];
         map[category].push(groupedByTypeA[r]);
     }
     return map;
-    console.log(categorize); ////each of the 105 objects separate
+    /////NOT working
+    console.log(category); 
   }
 
 function lineChart(){
