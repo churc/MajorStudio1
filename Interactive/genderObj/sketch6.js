@@ -2,6 +2,7 @@ var table;
 var tableA; ////array
 var groupedByType; ////artwork material object
 var groupedByName;  ////artist name
+var groupedByYear;
 var groupByObjType;
 var sorted = [];
 var mapped;
@@ -54,7 +55,7 @@ function collate(array, prop){
     categorize();
     lineChart();
     handleDataLoad();
-    barChart();
+    // barChart();
     noLoop();
   }
 
@@ -77,7 +78,11 @@ function collate(array, prop){
 
 //=======  group sort by artist by object type
     groupedByName = collate(tableA,12);  ////name, Artist Alpha Sort with array of artworks by artist
-    console.log(groupedByName);
+    // console.log(groupedByName);
+
+    //=======  group sort by objectbegin date
+    groupedByYear = collate(tableA,17);  ////name, Artist Alpha Sort with array of artworks by artist
+    console.log(groupedByYear);
 
 /////group same items together using reduce function   
  ///object, artist alpha sort is keys, reduce into arrays same item 
@@ -192,17 +197,17 @@ for (var b=0; b< groupedByTypeC.length; b++) {
       }
       
     };
-    console.log("totals: "+totalsFiltered + " fem: " + femtotals + " male: "+ maletotals)
+    // console.log("totals: "+totalsFiltered + " fem: " + femtotals + " male: "+ maletotals)
    var myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered}
    barTotals.push(myObject)
 
       }
 ////sort
-      console.log(barTotals)
+      // console.log(barTotals)
       barTotals.sort(function(a,b){
         return a['m'] - b['m']
       })
-      console.log(barTotals)
+      // console.log(barTotals)
       for (var i = barTotals.length - 1; i >= 0; i--) {
 
          fill(92,242,145,120);
@@ -217,9 +222,9 @@ for (var b=0; b< groupedByTypeC.length; b++) {
 function lineChart(){
   var maxX1;
   var x1,x2,y1,y2;
-  // set up bounds
+  
   var groupedByType = collate(tableA,22);
-  // console.log(groupedByType);
+  console.log(groupedByType);
 
   var maxX1 = Object.keys(groupedByType);
   ////NOT WORKING
@@ -229,7 +234,7 @@ function lineChart(){
     maxX2 = maxX1;
     maxX = maxX2.length;
       }
-  // console.log(maxX);  ////returns 105
+  console.log(maxX);  ////returns 105
   // console.log(maxX2);  ////returns 
   var maxY = 1500000;
   textSize(10);
@@ -239,22 +244,26 @@ function lineChart(){
     stroke(color(179,118,244));
     strokeWeight(1);
     noFill();
+    // console.log(Object.keys(groupedByType)[i]);
+    var individualPiece = maxX1[i];
+    console.log(individualPiece);
+
 
 // variables
 ////ERROR getRow
     // x1 = map(i                       ,0 ,maxX, 0        ,width);
     // x2 = map(i+1                     ,0, maxX, 0        ,width);
-    // y1 = map(Object.keys(groupedByType).getRow(i).get(0)   ,0, maxY, height-30, 0);
-    // y2 = map(Object.keys(groupedByType).getRow(i+1).get(0) ,0, maxY, height-30, 0);
+    // y1 = map(groupedByType.getRow(i).get(0)   ,0, maxY, height-30, 0);
+    // y2 = map(groupedByType.getRow(i+1).get(0) ,0, maxY, height-30, 0);
 
    
-// // draw the line
-//     line(x1,y1,x2,y2)
+// draw the line
+    // line(x1,y1,x2,y2)
 
-// // draw the legend
-//     noStroke()
-//     fill(0)
-//     text(i,x1,height)
+// draw the legend
+    // noStroke()
+    // fill(0)
+    // text(i,x1,height)
   }
 }
 
