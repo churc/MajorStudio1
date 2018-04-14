@@ -262,10 +262,10 @@ var t = function(p) {
     // minYear = null;
     // maxYear = null;
 
-    for (var i=0; i<=groupedByTypeLC.length; i++) {
+    for (var i=0; i<groupedByTypeLC.length; i++) {
 
       for(var h=groupedByTypeL[groupedByTypeLC[i]].length-1; h>=0; h++){
-        var typeCount = groupedByTypeL[groupedByTypeLC[i]][h];
+        var typeCount = groupedByTypeL[groupedByTypeLC[i]][h][17];
       }
      // var typeCount = groupedByTypeLC[i];
      // var typeCount = groupedByTypeLC;
