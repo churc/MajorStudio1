@@ -29,7 +29,6 @@ var yrFemTotals = [];
 var barTotals =[];
 var yrMaleTotals = [];
 var barTotals2 =[];
-
 var lineTotals = [];
 
 var female;
@@ -62,7 +61,7 @@ function collate(array, prop){
   }, {})
 }
 
-///////BAR CHART////////////
+///////=====BAR CHART=====////////////
 var s = function(p){
 
    p.fontRead = function(){
@@ -79,7 +78,6 @@ var s = function(p){
     canvas = p.createCanvas(p.windowWidth, p.windowHeight);
     // canvas.parent("#c1");
     p.analyzeData();
-    // p.categorize();
     p.barChart();
     p.noLoop();
   }
@@ -96,16 +94,15 @@ var s = function(p){
       var female = p.table.findRows('f', 10); /////2027 rows with a FEMALE artist 
       var male = p.table.findRows('m', 10);  /////10829 rows with a MALE artist
 
+/////group same items together using collate reduce function
 ////=======  group sort by artist by object type
       groupedByName = collate(tableA,12);  ////name, Artist Alpha Sort with array of artworks by artist
 
-      //=======  group sort by objectbegin date
-      groupedByYear = collate(tableA,17);  ////name, Artist Alpha Sort with array of artworks by artist
-
-  /////group same items together using reduce function   
-  ////object, artist alpha sort is keys, reduce into arrays same item 
-      var tableAkeys = Object.keys(groupedByName);  
-      // console.log(tableAkeys.length);  ////3564 names, Artist Alpha Sort
+////=======  group sort by objectbegin date
+      groupedByYear = collate(tableA,17);  ////year
+  
+////object, artist alpha sort is keys
+      var tableAkeys = Object.keys(groupedByName);  ////3564 names, Artist Alpha Sort
 
 ////iterate through object by keys and select artist names 
       for(var j=0; j<tableAkeys.length; j++){
@@ -117,9 +114,8 @@ var s = function(p){
     //// groupByObjType.push(groupedByType);
 
 ////object, type (classification) each of the keys 
-    var tableAkeys = Object.keys(groupedByType);
+    var tableAkeys = Object.keys(groupedByType); ////returns array of object keys (glass, sculpture etc)
     // console.log(tableAkeys.length);  ////105 types
-    // console.log(tableAkeys); ////returns array of object keys (glass, sculpture etc)
 
 ////iterate through object by keys and SPLIT object into 105 objects 
     for(var s=0; s<tableAkeys.length; s++){
@@ -128,9 +124,9 @@ var s = function(p){
       // console.log(tableAkeys); ///105 separate objects 
 }
   
-
-/////////////////////\\\\\
+///////
   p.barChart = function(){
+
     p.push();
     var groupedByType = collate(tableA,22);
 
@@ -191,7 +187,7 @@ for (var b=0; b<groupedByTypeC.length; b++) {
 var myp5 = new p5(s, 'c1');
 
 
-//////////LINE CHART/////////
+//////////=====LINE CHART=====/////////
 
 var t = function(p) {
 
@@ -208,7 +204,6 @@ var t = function(p) {
   p.setup = function(){
     canvas = p.createCanvas(p.windowWidth, p.windowHeight);
     p.analyzeData();
-    // p.categorize();
     p.lineChart();
     p.drawLabelsCh();
     p.noLoop();
@@ -224,21 +219,19 @@ var t = function(p) {
     tableLA = p.tableL.getArray(); 
 
     var valW = p.tableL.get(300, 17);
-     console.log(typeof valW);   ////object begin date is string
+    // console.log(typeof valW);   ////object begin date is string
 
 /////group same items together using reduce function
      groupedByTypeL = collate(tableLA,22); ////grouped by type of object
      console.log(groupedByTypeL); 
 
      groupedByYearL = collate(tableLA,17);  ///grouped by year
+     console.log(groupedByYearL);
 
      groupedByGenderL = collate(tableLA,10);  ///grouped by gender
      console.log(groupedByGenderL);
 
-    var groupedByTypeLC = Object.keys(groupedByTypeL); ////artwork type object keys 
-
-
-    console.log(groupedByTypeLC);
+    var groupedByTypeLC = Object.keys(groupedByTypeL); ////105 artwork type object keys 
     console.log(groupedByTypeLC.length);
 
 
@@ -286,8 +279,8 @@ p.append(allYears,yearNow);
 
 var count = p.tableL.getRowCount();
 var countC = p.tableL.getColumnCount();
-    console.log(count + " rows");
-    console.log(countC + " columns");
+    console.log(count + " rows");  ////14350 rows
+    console.log(countC + " columns"); ////24 columns
 var row, col, val, min, max;
 
 var yearNow = {};
@@ -321,7 +314,7 @@ for (var i=0; i<count; i++) {
      }
   }
 // console.log("year with most objects "  + allYears[maxYear].year);
-console.log(allYears);
+console.log(allYears); ////array of objects with year and artwork type
 
 // var groupedByTypeL = collate(p.tableL,22);
 // var groupedByTypeLC = Object.keys(groupedByTypeL);
@@ -330,7 +323,9 @@ console.log(allYears);
 //   lineTotals.push(myObject2);
 var typeCount = []
 console.log(groupedByTypeL);  ////objects
- var groupedByTypeLC = Object.keys(groupedByTypeL);
+ // var groupedByTypeLC = Object.keys(groupedByTypeL);
+ var groupedByTypeLC = allYears;
+ console.log(groupedByTypeLC.length)
 
 for (var i=0; i<groupedByTypeL[groupedByTypeLC.length]; i++) {
       // var typeCount = typeL[i];
@@ -806,7 +801,7 @@ var q = function(p) {
 
   p.preload = function(){
      p.tableC = p.loadTable('assets/ModContGenderfinaloygsort.csv','csv','header'); /////classification, year, gender
-     console.log(p.tableL);
+     console.log(p.tableC);
      KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
   }
 
@@ -816,6 +811,7 @@ var q = function(p) {
       // p.categorize();
       // p.displayData();
       // p.drawLabelsCh();
+      p.pieChart(300, angles);
       p.circles();
       p.noLoop();
   }
@@ -834,19 +830,16 @@ var q = function(p) {
      console.log(typeof valW);   ////object begin date is string
 
      groupedByTypeC = collate(tableCA,22);
-     console.log(groupedByTypeC); 
 
      groupedByYearC = collate(tableCA,17);
 
      groupedByGenderC = collate(tableCA,10);
-     console.log(groupedByGenderC);
 
     var groupedByTypeC = Object.keys(groupedByTypeC);
 
     console.log(groupedByTypeC);
     console.log(groupedByTypeC.length);
   }
-
 
 p.circles = function(){
     p.push();
@@ -893,8 +886,17 @@ p.circles = function(){
   }
 }
 
+function pieChart(diameter, data) {
+  var lastAngle = 0;
+  for (var i = 0; i < barTotals.length; i++) {
+    var gray = p.map(i, 0, barTotals.length, 0, 255);
+    p.fill(gray);
+    p.arc(width/2, height/2, diameter, diameter, lastAngle, lastAngle+radians(angles[i]));
+    lastAngle += radians(angles[i]);
+  }
+}
 
-
+var myp5 = new p5(q,'c3');
 
 /////////////////////////////////////////////////
 ////PARK
