@@ -41,7 +41,6 @@ var FemaleTotal = [];
 var TotalFemale = [];
 var TotalMale = [];
 
-
 var allYears = [];
 
 var minDate, maxDate, name, gender, date, type;
@@ -63,65 +62,58 @@ function collate(array, prop){
   }, {})
 }
 
-////BAR CHART
+///////BAR CHART////////////
 var s = function(p){
+
+   p.fontRead = function(){
+      fontReady = true; 
+    }
+
    p.preload = function(){
-   // table = loadTable('assets/ModContGenderfinalgosort.csv','csv','header');  /////secondary sort gender, classification
    p.table = p.loadTable('assets/ModContGenderfinalgnoysort.csv','csv','header'); /////four sort gender, Artist Alpha Sort, classification, year
    console.log(p.table);
+   KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
   }
 
     p.setup = function(){
     canvas = p.createCanvas(p.windowWidth, p.windowHeight);
-    // canvas = p.createCanvas(500, 500);
     // canvas.parent("#c1");
     p.analyzeData();
     // p.categorize();
-    // p.lineChart();
-    // handleDataLoad();
     p.barChart();
     p.noLoop();
   }
 
 ////group by type classification & gender, then by name
-
     p.analyzeData = function(){
-    gender = p.table.getColumn(10); ////gender
-    name = p.table.getColumn(12); ////name, Artist Alpha Sort
-    date = p.table.getColumn(17); ////object begin date
-    type = p.table.getColumn(22); ////classification
-  
-    tableA = p.table.getArray(); 
-   
-    var female = p.table.findRows('f', 10); /////2027 rows with a FEMALE artist 
-    // console.log(female);
+      gender = p.table.getColumn(10); ////gender
+      name = p.table.getColumn(12); ////name, Artist Alpha Sort
+      date = p.table.getColumn(17); ////object begin date
+      type = p.table.getColumn(22); ////classification
+    
+      tableA = p.table.getArray(); 
+     
+      var female = p.table.findRows('f', 10); /////2027 rows with a FEMALE artist 
+      var male = p.table.findRows('m', 10);  /////10829 rows with a MALE artist
 
-    var male = p.table.findRows('m', 10);  /////10829 rows with a MALE artist
-    // console.log(male);
+////=======  group sort by artist by object type
+      groupedByName = collate(tableA,12);  ////name, Artist Alpha Sort with array of artworks by artist
 
-//=======  group sort by artist by object type
-    groupedByName = collate(tableA,12);  ////name, Artist Alpha Sort with array of artworks by artist
-    // console.log(groupedByName);
+      //=======  group sort by objectbegin date
+      groupedByYear = collate(tableA,17);  ////name, Artist Alpha Sort with array of artworks by artist
 
-    //=======  group sort by objectbegin date
-    groupedByYear = collate(tableA,17);  ////name, Artist Alpha Sort with array of artworks by artist
-    // console.log(groupedByYear);
-
-/////group same items together using reduce function   
- ///object, artist alpha sort is keys, reduce into arrays same item 
-    var tableAkeys = Object.keys(groupedByName);  
-    // console.log(tableAkeys.length);  ////3564 names, Artist Alpha Sort
+  /////group same items together using reduce function   
+  ////object, artist alpha sort is keys, reduce into arrays same item 
+      var tableAkeys = Object.keys(groupedByName);  
+      // console.log(tableAkeys.length);  ////3564 names, Artist Alpha Sort
 
 ////iterate through object by keys and select artist names 
-    for(var j=0; j<tableAkeys.length; j++){
-      sorted[tableAkeys[j]] = collate(groupedByName[tableAkeys[j]], 12)
+      for(var j=0; j<tableAkeys.length; j++){
+        sorted[tableAkeys[j]] = collate(groupedByName[tableAkeys[j]], 12)
     }
-    // console.log(tableAkeys); 
 
-
-////=================== classification object type
+////============ classification object type
     groupedByType = collate(tableA,22);  ////classification
-    // console.log(groupedByType);
     //// groupByObjType.push(groupedByType);
 
 ////object, type (classification) each of the keys 
@@ -131,67 +123,58 @@ var s = function(p){
 
 ////iterate through object by keys and SPLIT object into 105 objects 
     for(var s=0; s<tableAkeys.length; s++){
-      p.sort[tableAkeys[s]] = collate(groupedByType[tableAkeys[s]], 22)
-      // console.log(tableAkeys[s]);
+        p.sort[tableAkeys[s]] = collate(groupedByType[tableAkeys[s]], 22)
       }
       // console.log(tableAkeys); ///105 separate objects 
 }
   
 
 /////////////////////\\\\\
-p.barChart = function(){
-p.push();
+  p.barChart = function(){
+    p.push();
+    var groupedByType = collate(tableA,22);
 
-var groupedByType = collate(tableA,22);
-// console.log(groupedByType);
-
-var groupedByTypeC = Object.keys(groupedByType);
-// console.log(groupedByTypeC);
-    var width = p.windowWidth, 
-        height = 4000,
-        margin = 50,
-        w = p.width - 2 * margin, // chart area width and height
-        h = p.height - 2 * margin;
-  
-  var barWidth =  (h / groupedByTypeC.length) * 0.1; // width of bar
-  var barMargin = (h / groupedByTypeC.length) * 0.001; // margin between two bars
+    var groupedByTypeC = Object.keys(groupedByType);
+      var width = p.windowWidth, 
+          height = 4000,
+          margin = 50,
+          w = p.width - 2 * margin, // chart area width and height
+          h = p.height - 2 * margin;
+    
+    var barWidth =  (h / groupedByTypeC.length) * 0.1; // width of bar
+    var barMargin = (h / groupedByTypeC.length) * 0.001; // margin between two bars
 
 for (var b=0; b<groupedByTypeC.length; b++) {
-    //var total = groupedByType[groupedByTypeC[b]].length;
-    var totalsFiltered = 0;
-    var femtotals = 0;
-    var maletotals = 0;
-////t vertical, b horizontal
-    for (var t = groupedByType[groupedByTypeC[b]].length - 1; t >= 0; t--) {
-      var currentGender = groupedByType[groupedByTypeC[b]][t][10];
-      if (currentGender == 'm') {
-         maletotals = maletotals + 1;
-  
-      } else if (currentGender == 'f'){
-          femtotals = femtotals + 1;
-       
+      var totalsFiltered = 0;
+      var femtotals = 0;
+      var maletotals = 0;
+  ////t vertical, b horizontal
+      for (var t = groupedByType[groupedByTypeC[b]].length - 1; t >= 0; t--) {
+        var currentGender = groupedByType[groupedByTypeC[b]][t][10];
+        if (currentGender == 'm') {
+           maletotals = maletotals + 1;
+
+        } else if (currentGender == 'f'){
+          femtotals = femtotals + 1;  
       };
 
       if(currentGender === 'm' || currentGender === 'f'){
         totalsFiltered = totalsFiltered + 1;
+        }    
+      };
+         var myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered};
+         barTotals.push(myObject);
       }
-      
-    };
-   var myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered};
-   barTotals.push(myObject);
 
-      }
-      p.push();
-      p.scale(0.16); 
-      p.rotate(p.radians(90));   // rotate to vertical
-      p.translate(200, t*(barWidth*8500 + barMargin)); // jump to the top right corner
+        p.push();
+        p.scale(0.16); 
+        p.rotate(p.radians(90));   // rotate to vertical
+        p.translate(200, t*(barWidth*8500 + barMargin)); // jump to the top right corner
      
-////sort
-      // console.log(barTotals)
+////sort by size
       barTotals.sort(function(a,b){
         return a['m'] - b['m']
       })
-      // console.log(barTotals)
       for (var i = barTotals.length - 1; i >= 0; i--) {
           p.noStroke();
           p.fill(92,242,145,120);
@@ -207,33 +190,31 @@ for (var b=0; b<groupedByTypeC.length; b++) {
 }
 var myp5 = new p5(s, 'c1');
 
-///////////////////
 
-
-////LINE CHART
+//////////LINE CHART/////////
 
 var t = function(p) {
 
+  p.fontRead = function(){
+      fontReady = true; 
+    }
+
   p.preload = function(){
-   // table = loadTable('assets/ModContGenderfinalgosort.csv','csv','header');  /////secondary sort gender, classification
-   p.tableL = p.loadTable('assets/ModContGenderfinaloygsort.csv','csv','header'); /////classification, year, gender
-   console.log(p.tableL);
+     p.tableL = p.loadTable('assets/ModContGenderfinaloygsort.csv','csv','header'); /////classification, year, gender
+     console.log(p.tableL);
+     KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
   }
 
   p.setup = function(){
-    // canvas = p.createCanvas(500, 500);
     canvas = p.createCanvas(p.windowWidth, p.windowHeight);
-    // canvas.parent("#c2");
     p.analyzeData();
     // p.categorize();
-    // p.lineChart();
-    p.displayData();
-    // p.drawLabelsCh();
+    p.lineChart();
+    p.drawLabelsCh();
     p.noLoop();
   }
 
-////group by type classification, then year & gender, then by name
-
+////group by type classification, then year & gender
     p.analyzeData = function(){
     var genderL = p.tableL.getColumn(10);  ////gender
     var nameL = p.tableL.getColumn(12); ////name, Artist Alpha Sort
@@ -245,23 +226,20 @@ var t = function(p) {
     var valW = p.tableL.get(300, 17);
      console.log(typeof valW);   ////object begin date is string
 
-     groupedByTypeL = collate(tableLA,22);
+/////group same items together using reduce function
+     groupedByTypeL = collate(tableLA,22); ////grouped by type of object
      console.log(groupedByTypeL); 
 
-     groupedByYearL = collate(tableLA,17);
-     // console.log(groupedByYearL);
+     groupedByYearL = collate(tableLA,17);  ///grouped by year
 
-     groupedByGenderL = collate(tableLA,10);
+     groupedByGenderL = collate(tableLA,10);  ///grouped by gender
      console.log(groupedByGenderL);
 
-    var groupedByTypeLC = Object.keys(groupedByTypeL);
+    var groupedByTypeLC = Object.keys(groupedByTypeL); ////artwork type object keys 
 
 
     console.log(groupedByTypeLC);
     console.log(groupedByTypeLC.length);
-
-     
-
 
 
     // for (var i=0; i<groupedByTypeLC.length; i++) {
@@ -303,7 +281,7 @@ yearNow.gender = [];
 yearNow.year = groupedByYearL; ////objects grouped by year
 yearNow.items = groupedByTypeL; ////objects grouped by classification
 yearNow.gender = groupedByGenderL; ////objects grouped by gender
-// console.log(groupedByGenderL);
+
 p.append(allYears,yearNow);
 
 var count = p.tableL.getRowCount();
@@ -313,7 +291,6 @@ var countC = p.tableL.getColumnCount();
 var row, col, val, min, max;
 
 var yearNow = {};
-    // yearNow.year = (p.int(p.tableL.getString(17)));
     yearNow.year = (p.int(p.tableL.findRows(String(17))));
     yearNow.items = p.tableL.findRows(String(yearNow.year),17);
     p.append(allYears, yearNow);
@@ -322,25 +299,15 @@ var minObjects = 15000;
 var maxObjects = 0;
     minYear = null;
     maxYear = null;
-// console.log(allYears);
 
 for (var i=0; i<count; i++) {
-      // var year = groupedByYearL;
       var year = (p.int(p.tableL.get(i,17)));
-      // console.log(typeof year)
-      // var year = p.int(p.tableL.getString(i,17));
       if(year!=yearNow.year){
         var yearNow = {};
-        // yearNow.year = year;
         yearNow.year = (p.int(p.tableL.getString(i,17)));
         yearNow.items = [];
-        // yearNow.items =  (p.tableL.findRows(String(yearNow.year),17));
         yearNow.items = p.tableL.getString(i,22);
         p.append(allYears, yearNow);
-
-console.log(yearNow.items.length);
-// console.log(yearNow.year);
-// console.log(yearNow.items);
         
         if(yearNow.items.length>maxObjects){
           maxObjects = yearNow.items.length;
@@ -349,126 +316,114 @@ console.log(yearNow.items.length);
 
         if(yearNow.items.length<minObjects){
           minObjects = yearNow.items.length;
-          minYear = allYears.length-1;
-           
+          minYear = allYears.length;           
         }
      }
-     // console.log("The Year " + maxYear);
-     //  console.log("The Year " + minYear); 
- // console.log("The Year " + allYears[maxYear].year + " has the most objects with " + allYears[maxYear].items.length + " items.");
- // console.log("The Year " + allYears[minYear].year + " has the least objects with " + allYears[minYear].items.length + " item.");
+  }
+// console.log("year with most objects "  + allYears[maxYear].year);
+console.log(allYears);
+
+// var groupedByTypeL = collate(p.tableL,22);
+// var groupedByTypeLC = Object.keys(groupedByTypeL);
+
+// var myObject2 = {name: groupedByTypeLC[b], total: objCount};
+//   lineTotals.push(myObject2);
+var typeCount = []
+console.log(groupedByTypeL);  ////objects
+ var groupedByTypeLC = Object.keys(groupedByTypeL);
+
+for (var i=0; i<groupedByTypeL[groupedByTypeLC.length]; i++) {
+      // var typeCount = typeL[i];
+     var typeCount = groupedByTypeL;
+     // p.tableL.getString(i,22);
+      console.log(groupedByTypeL[groupedByTypeLC.length]);
+
+      if(typeCount>maxObjects){
+        maxObjects = typeCount;
+        }
+
+        if(typeCount<minObjects){
+          minObjects = typeCount;   
+        } 
+        console.log(typeCount);
+  }
+ console.log(typeCount);
+
+
+//array for all possible object counts
+  for(var i=0; i<maxObjects+1; i++){
+      p.append(objectCounts, 0);
+    }
+    console.log("we now have an array with the length of " +  objectCounts.length);
 }
-// console.log(allYears)
-//////
-//  mxYear = null;//////mid years from 1850 onwards
-// for (var f=0; f<=p.count; f++){
-  // var year = groupedByYearL;
-//    if(year!=yearNow.year){
-        // var yearNow = {};
-        // yearNow.year = year;
-        // yearNow.items =[];
-        // yearNow.items = groupedByTypeL;
-        // p.append(allYears, yearNow);
-  // if(yearNow.items.length>maxObjects){
- //          maxObjects = yearNow.items.length;
- //          mxYear = midYears.length-1;
-// }
-// }
-// console.log("Number of artworks since 1850 is " + midYears.length + " the year with the most artworks 1850 -2017 is " + mxYear);
-//   }
-//////
-////essential to append items in yearNow to allYears
-for (var d=0; d<groupedByTypeLC.length; d++) {
 
-          for(var h=groupedByTypeL[groupedByTypeLC[d]].length-1; h>=0; h--){
-             // //console.log(groupedByTypeL[groupedByTypeLC[i]][h][17]); ////count per year
-             // // console.log(groupedByTypeL[groupedByTypeLC[i]][h][22]); ////count per classification
-             // p.append(allYears,yearNow); ////essential - items added to object
-
-           }
-         }
-
-      // console.log(allYears);
-}
-        // var myObject2 = {name: groupedByTypeLC[b], total: objCount};
-        //   lineTotals.push(myObject2);
-            // var typeCount = groupedByTypeL[groupedByTypeLC[i]];
-            // console.log(typeCount);  ////date
-
-
-// for (var i=0; i<typeL.length; i++) {
-//       // var typeCount = typeL[i];
-//      var typeCount = typeL.getString[i];
-//       console.log(typeCount);
-
-//       if(typeCount>maxObjects){
-//         maxObjects = typeCount;
-
-//         }
-
-//         if(typeCount<minObjects){
-//           minObjects = typeCount;
-        
-//         }
-     
-//   }
-//  console.log(typeCount);
-
-
-////array for all possible object counts
-  // for(var i=0; i<maxObjects+1; i++){
-  //     p.append(objectCounts, 0);
-  //   }
-  //   console.log("we now have an array with the length of " +  objectCounts.length);
-
-
-
-
-//=======  group sort by artist by object type
-    // groupedByName = collate(tableLA,12);  ////name, Artist Alpha Sort with array of artworks by artist
-    // console.log(groupedByName);
-
-    // //=======  group sort by objectbegin date
-//     groupedByYearL = collate(p.tableLA,17);  ////name, Artist Alpha Sort with array of artworks by artist
-//     console.log(groupedByYear);
-
-// /////group same items together using reduce function   
-//  ///object, artist alpha sort is keys, reduce into arrays same item 
-//     var tableLAkeys = Object.keys(groupedByYearL);  
-    // console.log(tableLAkeys.length);  ////3564 names, Artist Alpha Sort
-
+////var tableLAkeys = Object.keys(groupedByYearL);  
+//// console.log(tableLAkeys.length);  ////3564 names, Artist Alpha Sort
 ////iterate through object by keys and select artist names 
 //     for(var j=0; j<tableLAkeys.length; j++){
-//       sorted[tableLAkeys[j]] = collate(groupedByName[tableLAkeys[j]], 12)
-//     }
-//     // console.log(tableAkeys); //returns array of object keys (glass, sculpture etc)
-
+//       sorted[tableLAkeys[j]] = collate(groupedByName[tableLAkeys[j]], 12) ////array of object keys
+// }
 
 // //=================== classification object type
 //    var groupedByType = collate(p.tableLA,22);  ////classification
-//     console.log(groupedByType);
 //     // groupByObjType.push(groupedByType);
 
 // ////object, type (classification) is keys 
 //     var tableLAkeys = Object.keys(groupedByType);
-
 //     console.log(tableLAkeys.length);  ////105 types
-//     // console.log(tableAkeys); //returns array of object keys (glass, sculpture etc)
 
 // ////iterate through object by keys and SPLITS object into 105 objects 
 //     var tableLAkeys1;
 //     for(var s=0; s<tableAkeys.length; s++){
-//       p.sort[tableLAkeys[s]] = collate(groupedByType[tableLAkeys[s]], 22)
-//       // console.log(tableAkeys[s]);
-//     }
-      // console.log(tableAkeys); ///105 separate objects 
+//       p.sort[tableLAkeys[s]] = collate(groupedByType[tableLAkeys[s]], 22) ///105 separate objects  
+//    }
+
+
+
+
+ p.lineChart = function(){
+  p.push();
+  p.scale(0.5);
+  p.noStroke();
+  p.fill(255,0,0);
+
+  var totalFemaleArtistsPerBar = 0;
+  var totalMaleArtistsPerBar = 0;
+
+  var width = p.windowWidth/2, // canvas width and height
+      height = 500,
+      x1,x2,y1,y2;
+
+  var maxX = allYears.length;
+  
+  var maxY = 150000;
+
+  p.beginShape();
+
+  for(var i=0; i<maxX; i++){
+    p.stroke(255,0,0);
+    p.noFill();
+
+var x = p.map(i, 0, maxX, 20, 460);
+var y = p.map(maxX, 0, maxY, 100, 20);
+p.ellipse(x, y, 3 ,3 );
+
+    // x1 = p.map(i                       ,0 ,maxX, 30        ,width);
+    // x2 = p.map(i+1                     ,0, maxX, 30        ,width);
+    // //  y1 = map(data.getRow(i).get(0)   ,0, maxY, height-30, 0   );
+    // // y2 = map(data.getRow(i+1).get(0) ,0, maxY, height-30, 0   );
+    // y1 = p.map(allYears.items[i].get(1)   ,0, maxY, height-30, 0   );
+    // y2 = p.map(allYears.items[i+1].get(1) ,0, maxY, height-30, 0   );
+
+    //  line(x1,y1,x2,y2)
+
+   }
+ p.endShape();
 
 
 //   p.lineChart = function(){
-//   p.push();
-//     p.pop();
 
-// }
+
 //   var groupedByYear = collate(tableLA,17);  ////name, Artist Alpha Sort with array of artworks by artist
 //   // groupedByYear = collate(p.int(p.tableA.getString(17)));
 //   console.log(groupedByYear);
@@ -711,72 +666,9 @@ for (var d=0; d<groupedByTypeLC.length; d++) {
 //     }
 //     p.endShape();
 //   }
-
-//   mxYear = null;
-// // var countR = p.table.getRowCount();
-// for (var k=0; k<count; k++) {
-//       var year = p.int(p.table.getString(k,17));
-//       if(year!=yearNow.year){
-//         var yearNow = {};
-//         yearNow.year = year;
-//         yearNow.items =[];
-//         yearNow.items = p.table.findRows(String(yearNow.year),17);
-//         p.append(allYears, yearNow);
-        
-//         if(yearNow.items.length>maxObjects){
-//           maxObjects = yearNow.items.length;
-//           mxYear = midYears.length-1;
-//         }
-
-     
-// console.log("Number of artworks since 1850 is " + midYears.length + " the year with the most artworks 1850 -2017 is " + mxYear);
-//   }
-//  } 
 //   p.pop();
 
 // }
-
-
-
- p.displayData = function(){
-  p.push();
-  p.scale(0.5);
-  p.noStroke();
-  p.fill(255,0,0);
-
-  var totalFemaleArtistsPerBar = 0;
-  var totalMaleArtistsPerBar = 0;
-
-  var width = p.windowWidth/2, // canvas width and height
-      height = 500,
-      x1,x2,y1,y2;
-
-  var maxX = allYears.length;
-  
-  var maxY = 150000;
-
-
-  p.beginShape();
-
-  for(var i=0; i<maxX; i++){
-    p.stroke(255,0,0);
-    p.noFill();
-
-// var x = p.map(i, 0, maxX, 20, 460);
-// var y = p.map(maxX, 0, maxY, 100, 20);
-// p.ellipse(x, y, 3 ,3 );
-
-    x1 = p.map(i                       ,0 ,maxX, 30        ,width);
-    x2 = p.map(i+1                     ,0, maxX, 30        ,width);
-    //  y1 = map(data.getRow(i).get(0)   ,0, maxY, height-30, 0   );
-    // y2 = map(data.getRow(i+1).get(0) ,0, maxY, height-30, 0   );
-    y1 = p.map(allYears.items[i].get(1)   ,0, maxY, height-30, 0   );
-    y2 = p.map(allYears.items[i+1].get(1) ,0, maxY, height-30, 0   );
-
-     line(x1,y1,x2,y2)
-
-   }
- p.endShape();
 
 //   for(var i=0; i<allYears.length-1; i++){
 // //// years use map incoming value and range
@@ -837,156 +729,95 @@ for (var d=0; d<groupedByTypeLC.length; d++) {
 
 p.drawLabelsCh = function(){
     p.push();
-    p.translate(50,0);
 
-   // //x axis
-   //  p.textFont('Khand');
-   //  p.textSize(17);
-   //  p.stroke(77,77,77);
+// //x axis
+    p.textFont('Khand');
+    p.textSize(17);
+    p.stroke(77,77,77);
 
-   // //just the lines
-   // // line(margin,height-margin,width-margin,height-margin);
-   //  p.line(margin,747-margin,1341-margin,747-margin);
-   //  p.noStroke();
-   //  p.textAlign(p.CENTER);
+// //just the lines
+   // line(margin,height-margin,width-margin,height-margin);
+    p.line(margin,747-margin,1341-margin,747-margin);
+    p.noStroke();
+    p.textAlign(p.CENTER);
 
-  // draw the sections and add text for each section
-   //go throught the years
+// draw the sections and add text for each section
+//go throught the years
 for(var i=1850; i<=2017; i+=10){
-   // var y = height-margin+30;
    var y = 747-margin+30;
-   // x = map(i,1850,2017, margin, width-margin);
    var x = p.map(i,1850,2017, margin, 1341-margin);
-
-   // x = map(i,0, allYears.length,margin, width-margin);
     p.noStroke();
     p.fill(77,77,77);
     p.text(i, x, y);
     p.stroke(77,77,77);
     p.strokeWeight(1);
     p.line(x,y-22,x, y-30);
-  }
+  
     p.pop();
   }
   
+//// label the whole axis
+  p.textFont('Khand');
+  p.textAlign(p.RIGHT);
+  p.noStroke();
+  p.textSize(20);
+  p.text("Year: Object Begin Date", 990,730);
 
-// // label the whole axis
-//   p.textFont('Khand');
-//   p.textAlign(p.RIGHT);
-//   p.noStroke();
-//   p.textSize(20);
-//   p.text("Year: Object Begin Date", 990,730);
+//////draw the y Axis
+  p.stroke(77,77,77);
+  p.line(margin,747-margin,margin,margin);
+  p.noStroke();
+  p.textAlign(p.RIGHT);
+  p.textStyle(p.NORMAL);
 
-// //source
-//   p.textAlign(p.LEFT);
-//   p.noStroke();
-//   p.textSize(18);
-//   p.text("Source: MetObjects.csv, January 2018, spreadsheet shared with The New School.", margin-15,747-margin+105);
-//   p.text("Modern & Contemporary Art Collection Department, 14,350 artworks. Object Begin Date, Gender identified by Artist Display Name, 1850-2017 (14,284 artworks.)", margin-15,747-margin+135);
-
-// ////draw the y Axis
-//   p.stroke(77,77,77);
-//   p.line(margin,747-margin,margin,margin);
-//   p.noStroke();
-//   p.textAlign(p.RIGHT);
-//   p.textStyle(p.NORMAL);
-
-//   for(var i=0; i<maxObjects; i+=50){
-//     var x = margin-20;
-//     var y = p.map(i,0, maxObjects,747-margin, margin);
-//       p.noStroke();
-//       p.fill(77,77,77);
-//       p.text(i, x, y+5);
-//       p.stroke(77,77,77);
-//       p.strokeWeight(1);
-//       p.line(x+10,y,x+20,y);
-//   }
-
-//   p.push();
-//   p.translate(65,0);
-//   p.textFont('Khand');
-//   p.noStroke();
-//   p.textSize(20);
-//   p.translate(1000,700);
-//   p.rotate(p.radians(270)); 
-//   p.text("Number of Artworks", margin+300,margin-1135);
-//   p.pop();
-
-// ////the overall title
-//   p.push();
-//   p.translate(65,0);
-//   p.textFont('Khand');
-//   p.textStyle(p.NORMAL);
-//   p.noStroke();
-//   p.textAlign(p.LEFT);
-//   p.fill(77,77,77);
-//   p.textSize(42);
-//   p.text("What year were these artworks made?",500,75);
-//   p.fill(77,77,77);
-//   p.textSize(26);
-//   p.text("The Met Modern & Contemporary Art Collection", 500,120);
-//   p.textSize(38);
-//   p.pop();
-
-// ////legend
-//     p.textFont('Khand');
-//     p.noStroke();
-//     p.fill(179,118,244,140);  //f
-//     p.rect(100,100,25,25);
-//     p.fill(92,242,145,140); //m
-//     p.rect(100,130,25,25);
-//     p.fill(168,71,5,140);  //t
-//     p.rect(100,160,25,25);
-//     p.fill(165,160,152,140);   //u
-//     p.rect(100,190,25,25);
-//     p.fill(224,199,50,140);   //a //z
-//     p.rect(100,220,25,25);
-//     p.textStyle();
-//     p.textAlign(p.LEFT);
-//     p.textSize(20);
-//     p.fill (77,77,77);
-//     p.text("Artwork", 132,90);
-//     p.textStyle(p.NORMAL);
-//     p.textSize(18);
-//     p.text("female", 132,117);
-//     p.text("male", 132,147);
-//     p.text("couple / collaborative with both genders",132,177);
-//     p.text("unknown",132,207);
-//     p.text("named, gender not yet identified",132,237);
-
-//     p.pop();
-//   }
-  
-//  } 
-}
-
-var myp5 = new p5(t, 'c2');
-
+  for(var i=0; i<maxObjects; i+=50){
+      var x = margin-20;
+      var y = p.map(i,0, maxObjects,747-margin, margin);
+        p.noStroke();
+        p.fill(77,77,77);
+        p.text(i, x, y+5);
+        p.stroke(77,77,77);
+        p.strokeWeight(1);
+        p.line(x+10,y,x+20,y);
+    }
+        p.push();
+        p.translate(65,0);
+        p.textFont('Khand');
+        p.noStroke();
+        p.textSize(20);
+        p.translate(1000,700);
+        p.rotate(p.radians(270)); 
+        p.text("Number of Artworks", margin+300,margin-1135);
+        p.pop();
+    }  
+ } 
+var myp5 = new p5(t,'c2');
 
 
 //////////////////////
 
-////CIRCLES
+//////CIRCLES///////
 
 var q = function(p) {
 
+  p.fontRead = function(){
+      fontReady = true; 
+    }
+
   p.preload = function(){
-   // table = loadTable('assets/ModContGenderfinalgosort.csv','csv','header');  /////secondary sort gender, classification
-   p.tableC = p.loadTable('assets/ModContGenderfinaloygsort.csv','csv','header'); /////classification, year, gender
-   console.log(p.tableL);
+     p.tableC = p.loadTable('assets/ModContGenderfinaloygsort.csv','csv','header'); /////classification, year, gender
+     console.log(p.tableL);
+     KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
   }
 
   p.setup = function(){
-    // canvas = p.createCanvas(500, 500);
-    canvas = p.createCanvas(p.windowWidth, p.windowHeight);
-    // canvas.parent("#c2");
-    p.analyzeData();
-    // p.categorize();
-    // p.lineChart();
-    p.displayData();
-    // p.drawLabelsCh();
-    p.circles();
-    p.noLoop();
+      canvas = p.createCanvas(p.windowWidth, p.windowHeight);
+      p.analyzeData();
+      // p.categorize();
+      // p.displayData();
+      // p.drawLabelsCh();
+      p.circles();
+      p.noLoop();
   }
 
 ////group by type classification, then year & gender, then by name
@@ -1006,42 +837,38 @@ var q = function(p) {
      console.log(groupedByTypeC); 
 
      groupedByYearC = collate(tableCA,17);
-     // console.log(groupedByYearL);
 
      groupedByGenderC = collate(tableCA,10);
      console.log(groupedByGenderC);
 
     var groupedByTypeC = Object.keys(groupedByTypeC);
 
-
     console.log(groupedByTypeC);
     console.log(groupedByTypeC.length);
+  }
 
-    }
 
+p.circles = function(){
+    p.push();
 
-    p.circles = function(){
-p.push();
+  var groupedByTypeC = collate(tableA,22);
 
-var groupedByTypeC = collate(tableA,22);
-// console.log(groupedByType);
+  var groupedByTypeCC = Object.keys(groupedByTypeC);
 
-var groupedByTypeCC = Object.keys(groupedByTypeC);
-// console.log(groupedByTypeC);
-  //   var width = p.windowWidth, 
-  //       height = 4000,
-  //       margin = 50,
-  //       w = p.width - 2 * margin, // chart area width and height
-  //       h = p.height - 2 * margin;
-  
-  // var barWidth =  (h / groupedByTypeCC.length) * 0.1; // width of bar
-  // var barMargin = (h / groupedByTypeCC.length) * 0.001; // margin between two bars
+    //   var width = p.windowWidth, 
+    //       height = 4000,
+    //       margin = 50,
+    //       w = p.width - 2 * margin, // chart area width and height
+    //       h = p.height - 2 * margin;
+    
+    // var barWidth =  (h / groupedByTypeCC.length) * 0.1; // width of bar
+    // var barMargin = (h / groupedByTypeCC.length) * 0.001; // margin between two bars
 
-for (var b=0; b<groupedByTypeCC.length; b++) {
-    //var total = groupedByType[groupedByTypeC[b]].length;
-    var totalsFiltered = 0;
-    var femtotals = 0;
-    var maletotals = 0;
+  for (var b=0; b<groupedByTypeCC.length; b++) {
+      //var total = groupedByType[groupedByTypeC[b]].length;
+      var totalsFiltered = 0;
+      var femtotals = 0;
+      var maletotals = 0;
 ////t vertical, b horizontal
     for (var t = groupedByType[groupedByTypeCC[b]].length - 1; t >= 0; t--) {
       var currentGender = groupedByType[groupedByTypeCC[b]][t][10];
@@ -1049,25 +876,28 @@ for (var b=0; b<groupedByTypeCC.length; b++) {
          maletotals = maletotals + 1;
   
       } else if (currentGender == 'f'){
-          femtotals = femtotals + 1;
-       
+          femtotals = femtotals + 1;  
       };
 
       if(currentGender === 'm' || currentGender === 'f'){
         totalsFiltered = totalsFiltered + 1;
-      }
-      
+      } 
     };
    var myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered};
    barTotals.push(myObject);
 
-      }
+    }
 
-WHERE fem total, FIND type with most "F"
+// WHERE fem total, FIND type with most "F"
 
+  }
 }
 
 
+
+
+/////////////////////////////////////////////////
+////PARK
 ///COLOR works
 ////fill by gender - see further down
     // fill(179,118,244,120);
@@ -1083,6 +913,38 @@ WHERE fem total, FIND type with most "F"
 // ["glass": {fem : 10, male: 200, totalfiltered: 210}]
 
 ////////////
+
+//////////////////////////////////
+//  mxYear = null;//////mid years from 1850 onwards
+// for (var f=0; f<=p.count; f++){
+  // var year = groupedByYearL;
+//    if(year!=yearNow.year){
+        // var yearNow = {};
+        // yearNow.year = year;
+        // yearNow.items =[];
+        // yearNow.items = groupedByTypeL;
+        // p.append(allYears, yearNow);
+  // if(yearNow.items.length>maxObjects){
+ //          maxObjects = yearNow.items.length;
+ //          mxYear = midYears.length-1;
+// }
+// }
+// console.log("Number of artworks since 1850 is " + midYears.length + " the year with the most artworks 1850 -2017 is " + mxYear);
+// }
+
+/////////////////////////////////////
+////essential to append items in yearNow to allYears
+// for (var d=0; d<groupedByTypeLC.length; d++) {
+//           for(var h=groupedByTypeL[groupedByTypeLC[d]].length-1; h>=0; h--){
+//              // //console.log(groupedByTypeL[groupedByTypeLC[i]][h][17]); ////count per year
+//              // // console.log(groupedByTypeL[groupedByTypeLC[i]][h][22]); ////count per classification
+//              // p.append(allYears,yearNow); //// items added to object
+
+//            }
+//          }
+//       console.log(allYears);
+//////////////////////////////////////
+
 ////NOT working, list of classifications - map object holds key value pairs
 //   p.categorize = function(){
 //   var groupedByTypeA;
