@@ -736,62 +736,93 @@ for (var d=0; d<groupedByTypeLC.length; d++) {
 
 
  p.displayData = function(){
-  /////move chart over
   p.push();
-  p.translate(50,0);
   p.scale(0.5);
-
   p.noStroke();
   p.fill(255,0,0);
 
-  for(var i=0; i<allYears.length; i++){
-//// years use map incoming value and range
-    // console.log('thisisallYrs' + allYears[allYears.length-1].year);
-////map function 
-    // var x = map(allYears[i].year,1850,allYears[allYears.length-1].year, margin, width-margin);
-    var x = p.map(allYears[i].year,1850,allYears[allYears.length-1].year, margin, 1341-margin);
+  var totalFemaleArtistsPerBar = 0;
+  var totalMaleArtistsPerBar = 0;
 
-    var totalFemaleArtistsPerBar = 0;
-    var totalMaleArtistsPerBar = 0;
+  var width = p.windowWidth, // canvas width and height
+      height = 4000,
+      x1,x2,y1,y2;
 
-////THIS logs where it is mapping that is relatively corresponding to:
-   // console.log("mapping: " + allYears[i].year + "to: " + x);
+  var maxX = allYears.length-1;
+  
+  var maxY = 150000000;
+p.beginShape();
+for(var i=0; i<maxX; i++){
+  p.stroke(255,0,0);
+  p.noFill();
 
-  ///then do same for y height
-  for(var j=0; j<allYears[i].items.length; j++){
-      var y= p.map(j,0,maxObjects,747-margin, margin);
+// console.log(allYears[i].items);
+    x1 = p.map(i                       ,0 ,maxX, 0        ,width);
+    x2 = p.map(i+1                     ,0, maxX, 0        ,width);
+    //  y1 = map(data.getRow(i).get(0)   ,0, maxY, height-30, 0   );
+    // y2 = map(data.getRow(i+1).get(0) ,0, maxY, height-30, 0   );
+    y1 = p.map(allYears.items[i].get(1)   ,0, maxY, height-30, 0   );
+    y2 = p.map(allYears.items[i+1].get(1) ,0, maxY, height-30, 0   );
 
-///====FILL BY GENDER
-   var gender = allYears[i].items[j].obj.Gender;
-    if (gender === 'm') {
-       p.fill(92,242,145,90);
-       p.rect(x-1,y-1,3,2);
-       // console.log('m');
-       totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
+     line(x1,y1,x2,y2)
 
-    } else if (gender === 'f') {
-       p.fill(179,118,244,90);
-       p.rect(x-1,y-1,3,2);
-       // console.log('f');
-      totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
-     // console.log(totalFemaleArtistsPerBar);
-    }
-    // } 
+   }
+ p.endShape();
 
-  }
+//   for(var i=0; i<allYears.length-1; i++){
+// //// years use map incoming value and range
+//     // console.log('thisisallYrs' + allYears[allYears.length-1].year);
+// ////map function 
+//     // var x = map(allYears[i].year,1850,allYears[allYears.length-1].year, margin, width-margin);
+    
+//     var x = p.map(allYears[i].year,1850,allYears[allYears.length-1].year, margin, 1341-margin);
 
-//THIS gets number of FEMALE artworks per BAR with total bar height
-  barTotals.push({barTotal: allYears[i].items, femaleTotal: totalFemaleArtistsPerBar});
-//THIS gets number of FEMALE artworks 
-  yrFemTotals.push({year: allYears[i].year, total: totalFemaleArtistsPerBar});
+//     var totalFemaleArtistsPerBar = 0;
+//     var totalMaleArtistsPerBar = 0;
 
-//THIS gets number of MALE artworks per BAR with total bar height
-  barTotals2.push({barTotal: allYears[i].items, maleTotal: totalMaleArtistsPerBar});
-//THIS gets number of MALE artworks 
-  yrMaleTotals.push({year: allYears[i].year, total: totalMaleArtistsPerBar});
-  }
-  console.log(yrFemTotals);
-  console.log(yrMaleTotals);
+// ////THIS logs where it is mapping that is relatively corresponding to:
+//    // console.log("mapping: " + allYears[i].year + "to: " + x);
+
+//   ///then do same for y height
+//   for(var j=0; j<allYears[i].items.length-1; j++){
+//       var y= p.map(j,0,maxObjects,747-margin, margin);
+
+// ///====FILL BY GENDER
+
+//    var gender = allYears[i].items[j].gender;
+//     if (gender === 'm') {
+//        p.fill(92,242,145,90);
+//        p.ellipse(x,y,2,2);
+//        // console.log('m');
+//        totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
+
+//     } else if (gender === 'f') {
+//        p.fill(179,118,244,90);
+//        p.ellipse(x,y,2,2);
+//        // console.log('f');
+//       totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
+//      // console.log(totalFemaleArtistsPerBar);
+//     }
+//     // } 
+
+//   }
+//   var myObject = {lineTotal: allYears[i].items, femaleTotal: totalFemaleArtistsPerBar};
+//   // var myObject = {barTotal: allYears[i].items, femaleTotal: totalFemaleArtistsPerBar};
+//    lineTotals.push(myObject);
+
+// //THIS gets number of FEMALE artworks per BAR with total bar height
+//   lineTotals.push({lineTotal: allYears[i].items, femaleTotal: totalFemaleArtistsPerBar});
+// //THIS gets number of FEMALE artworks 
+//   yrFemTotals.push({year: allYears[i].year, total: totalFemaleArtistsPerBar});
+
+// //THIS gets number of MALE artworks per BAR with total bar height
+//   lineTotals.push({lineTotal: allYears[i].items, maleTotal: totalMaleArtistsPerBar});
+// //THIS gets number of MALE artworks 
+//   yrMaleTotals.push({year: allYears[i].year, total: totalMaleArtistsPerBar});
+//   }
+//   console.log(lineTotals);
+  // console.log(yrFemTotals);
+  // console.log(yrMaleTotals);
   p.pop();
 }
 
