@@ -5,10 +5,12 @@ var tableLA; ////array
 var groupedByType; ////classification, artwork material object
 var groupedByName;  ////artist name
 var groupedByYear; ////year
+var groupedByGender; ////gender
 
 var groupedByTypeL = []; ////classification, artwork material object
 var groupedByNameL = [];  ////artist name
 var groupedByYearL = []; ////year
+var groupedByGenderL = []; ////gender
 
 var groupByObjType;
 var sorted = [];
@@ -28,6 +30,8 @@ var barTotals =[];
 var yrMaleTotals = [];
 var barTotals2 =[];
 
+var lineTotals = [];
+
 var female;
 var male;
 var femaleL;
@@ -45,6 +49,8 @@ var genderL, nameL, dateL, typeL;
 var maxObjects, minObjects, maxCount, minCount;
 
 var objectCounts = [];
+var objCount = [];
+var typeCounts = [];
 
 var margin = 80;
 
@@ -95,16 +101,16 @@ var s = function(p){
 
 //=======  group sort by artist by object type
     groupedByName = collate(tableA,12);  ////name, Artist Alpha Sort with array of artworks by artist
-    console.log(groupedByName);
+    // console.log(groupedByName);
 
     //=======  group sort by objectbegin date
     groupedByYear = collate(tableA,17);  ////name, Artist Alpha Sort with array of artworks by artist
-    console.log(groupedByYear);
+    // console.log(groupedByYear);
 
 /////group same items together using reduce function   
  ///object, artist alpha sort is keys, reduce into arrays same item 
     var tableAkeys = Object.keys(groupedByName);  
-    console.log(tableAkeys.length);  ////3564 names, Artist Alpha Sort
+    // console.log(tableAkeys.length);  ////3564 names, Artist Alpha Sort
 
 ////iterate through object by keys and select artist names 
     for(var j=0; j<tableAkeys.length; j++){
@@ -115,12 +121,12 @@ var s = function(p){
 
 ////=================== classification object type
     groupedByType = collate(tableA,22);  ////classification
-    console.log(groupedByType);
+    // console.log(groupedByType);
     //// groupByObjType.push(groupedByType);
 
 ////object, type (classification) each of the keys 
     var tableAkeys = Object.keys(groupedByType);
-    console.log(tableAkeys.length);  ////105 types
+    // console.log(tableAkeys.length);  ////105 types
     // console.log(tableAkeys); ////returns array of object keys (glass, sculpture etc)
 
 ////iterate through object by keys and SPLIT object into 105 objects 
@@ -216,7 +222,7 @@ var t = function(p) {
   p.preload = function(){
    // table = loadTable('assets/ModContGenderfinalgosort.csv','csv','header');  /////secondary sort gender, classification
    p.tableL = p.loadTable('assets/ModContGenderfinaloygsort.csv','csv','header'); /////classification, year, gender
-   // console.log(tableL);
+   console.log(p.tableL);
   }
 
   p.setup = function(){
@@ -226,7 +232,7 @@ var t = function(p) {
     p.analyzeData();
     // p.categorize();
     // p.lineChart();
-    // p.displayData();
+    p.displayData();
     // p.drawLabelsCh();
     p.noLoop();
   }
@@ -241,12 +247,17 @@ var t = function(p) {
 
     tableLA = p.tableL.getArray(); 
 
-    // console.log(tableLA);
      groupedByTypeL = collate(tableLA,22);
-      console.log(groupedByTypeL);
-      console.log(groupedByTypeL.length);
+     console.log(groupedByTypeL); 
+
+     groupedByYearL = collate(tableLA,17);
+     // console.log(groupedByYearL);
+
+     groupedByGenderL = collate(tableLA,10);
+     console.log(groupedByGenderL);
 
     var groupedByTypeLC = Object.keys(groupedByTypeL);
+
 
     console.log(groupedByTypeLC);
     console.log(groupedByTypeLC.length);
@@ -257,34 +268,130 @@ var t = function(p) {
     // maleL = tableL.findRows('m', 10);  /////10829 rows with a MALE artist
     // // console.log(maleL);
 
-    var minObjects = 15000;
-    var maxObjects = 0;
-    // minYear = null;
-    // maxYear = null;
 
-    for (var i=0; i<groupedByTypeLC.length; i++) {
+    // for (var i=0; i<groupedByTypeLC.length; i++) {
 
-      for(var h=groupedByTypeL[groupedByTypeLC[i]].length-1; h>=0; h++){
-        var typeCount = groupedByTypeL[groupedByTypeLC[i]][h][17];
-      }
-     // var typeCount = groupedByTypeLC[i];
-     // var typeCount = groupedByTypeLC;
-      console.log(typeCount);
+    //       for(var h=groupedByTypeL[groupedByTypeLC[i]].length; h>=0; h--){
+    //         // var currentYear = groupedByTypeL[groupedByTypeLC[i]][h][17];
 
-      if(typeCount>maxObjects){
-        maxObjects = typeCount;
+    //          console.log(groupedByTypeL[groupedByTypeLC]);  
 
-        }
+    //         var typeCount = groupedByTypeL[groupedByTypeLC];
 
-        if(typeCount<minObjects){
-          minObjects = typeCount;
+    //         console.log(typeCount);  ////date
+  
+    //  // var typeCount = groupedByTypeLC[i];
+    //  // var typeCount = groupedByTypeLC;
+    //   // console.log(currentYear);
+
+    //   // var typeCount = groupedByTypeLC[i];
+
+    //   if(typeCount>maxObjects){
+    //     maxObjects = typeCount;
+    //     }
+
+    //     if(typeCount<minObjects){
+    //       minObjects = typeCount;
+    //     }
+      
+    //     console.log(typeCount); ////object key name 
+    //   }
+    // };
+ 
+ // console.log("Max objects " + maxObjects);
+ // console.log("Min objects " + minObjects);
+
+var yearNow = {};
+yearNow.items =[];
+yearNow.year =[];
+yearNow.gender = [];
+yearNow.year = groupedByYearL; ////objects grouped by year
+yearNow.items = groupedByTypeL; ////objects grouped by classification
+yearNow.gender = groupedByGenderL; ////objects grouped by gender
+// console.log(groupedByGenderL);
+p.append(allYears,yearNow);
+
+var count = p.tableL.getRowCount();
+var countC = p.tableL.getColumnCount();
+    console.log(count + " rows");
+    console.log(countC + " columns");
+var row, col, val, min, max;
+
+var minObjects = 15000;
+var maxObjects = 0;
+    minYear = null;
+    maxYear = null;
+// console.log(allYears);
+
+for (var i=0; i<count; i++) {
+      var year = groupedByYearL;
+      // var year = p.int(p.tableL.getString(i,17));
+      if(year!=yearNow.year){
+        var yearNow = {};
+        yearNow.year = year;
+        yearNow.items = [];
+        yearNow.items = groupedByTypeL;
+        // yearNow.items = p.tableL.findRows(String(yearNow.year),17);
+        p.append(allYears, yearNow);
+
         
+        if(yearNow.items.length>maxObjects){
+          maxObjects = yearNow.items.length;
+          maxYear = allYears.length-1;
         }
-     
-  };
- console.log(typeCount);
- console.log("Max objects " + maxObjects);
- console.log("Min objects " + minObjects);
+
+        if(yearNow.items.length<minObjects){
+          minObjects = yearNow.items.length;
+          minYear = allYears.length-1;
+           
+        }
+     }
+ // console.log("The Year " + allYears[maxYear].year + " has the most objects with " + allYears[maxYear].items.length + " items.");
+ // console.log("The Year " + allYears[minYear].year + " has the least objects with " + allYears[minYear].items.length + " item.");
+
+}
+console.log(allYears)
+//////
+//  mxYear = null;//////mid years from 1850 onwards
+// for (var f=0; f<=p.count; f++){
+  // var year = groupedByYearL;
+//    if(year!=yearNow.year){
+        // var yearNow = {};
+        // yearNow.year = year;
+        // yearNow.items =[];
+        // yearNow.items = groupedByTypeL;
+        // p.append(allYears, yearNow);
+  // if(yearNow.items.length>maxObjects){
+ //          maxObjects = yearNow.items.length;
+ //          mxYear = midYears.length-1;
+// }
+// }
+// console.log("Number of artworks since 1850 is " + midYears.length + " the year with the most artworks 1850 -2017 is " + mxYear);
+//   }
+//////
+////essential to append items in yearNow to allYears
+for (var d=0; d<groupedByTypeLC.length; d++) {
+
+          for(var h=groupedByTypeL[groupedByTypeLC[d]].length-1; h>=0; h--){
+             // //console.log(groupedByTypeL[groupedByTypeLC[i]][h][17]); ////count per year
+             // // console.log(groupedByTypeL[groupedByTypeLC[i]][h][22]); ////count per classification
+             p.append(allYears,yearNow); ////essential - items added to object
+
+             // if (yearNow == yearNow){
+             //  objYear = objYear + 1;
+             // } else 
+           }
+           // console.log(objCount.length);
+           //   console.log(objCount);
+         }
+
+      console.log(allYears);
+}
+        // var myObject2 = {name: groupedByTypeLC[b], total: objCount};
+        //   lineTotals.push(myObject2);
+            // var typeCount = groupedByTypeL[groupedByTypeLC[i]];
+            // console.log(typeCount);  ////date
+
 
 // for (var i=0; i<typeL.length; i++) {
 //       // var typeCount = typeL[i];
@@ -303,17 +410,16 @@ var t = function(p) {
      
 //   }
 //  console.log(typeCount);
-//  console.log("Max objects " + maxObjects);
-//  console.log("Min objects " + minObjects);
+
 
 ////array for all possible object counts
-  for(var i=0; i<maxObjects+1; i++){
-      p.append(objectCounts, 0);
-    }
-    console.log("we now have an array with the length of " +  objectCounts.length);
+  // for(var i=0; i<maxObjects+1; i++){
+  //     p.append(objectCounts, 0);
+  //   }
+  //   console.log("we now have an array with the length of " +  objectCounts.length);
 
 
-}
+
 
 //=======  group sort by artist by object type
     // groupedByName = collate(tableLA,12);  ////name, Artist Alpha Sort with array of artworks by artist
