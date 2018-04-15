@@ -147,10 +147,8 @@ var groupedByType = collate(tableA,22);
 
 var groupedByTypeC = Object.keys(groupedByType);
 // console.log(groupedByTypeC);
-    var width = p.windowWidth, // canvas width and height
+    var width = p.windowWidth, 
         height = 4000,
-        // var width = 800, // canvas width and height
-        // height = 1200,
         margin = 50,
         w = p.width - 2 * margin, // chart area width and height
         h = p.height - 2 * margin;
@@ -168,12 +166,10 @@ for (var b=0; b<groupedByTypeC.length; b++) {
       var currentGender = groupedByType[groupedByTypeC[b]][t][10];
       if (currentGender == 'm') {
          maletotals = maletotals + 1;
-         //fill(92,242,145,120);
-         //rect(20 + (b * 2), 20 + (t * 2), 10, 1);
+  
       } else if (currentGender == 'f'){
           femtotals = femtotals + 1;
-          // fill(179,118,244,120);
-          //rect(20 + (b * 2), 20 + (t * 2), 10, 1);
+       
       };
 
       if(currentGender === 'm' || currentGender === 'f'){
@@ -181,7 +177,6 @@ for (var b=0; b<groupedByTypeC.length; b++) {
       }
       
     };
-    // console.log("totals: "+totalsFiltered + " fem: " + femtotals + " male: "+ maletotals)
    var myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered};
    barTotals.push(myObject);
 
@@ -190,7 +185,7 @@ for (var b=0; b<groupedByTypeC.length; b++) {
       p.scale(0.16); 
       p.rotate(p.radians(90));   // rotate to vertical
       p.translate(200, t*(barWidth*8500 + barMargin)); // jump to the top right corner
-      // p.translate(150, -5200); // jump to the top right corner of the bar 
+     
 ////sort
       // console.log(barTotals)
       barTotals.sort(function(a,b){
@@ -247,6 +242,9 @@ var t = function(p) {
 
     tableLA = p.tableL.getArray(); 
 
+    var valW = p.tableL.get(300, 17);
+     console.log(typeof valW);   ////object begin date is string
+
      groupedByTypeL = collate(tableLA,22);
      console.log(groupedByTypeL); 
 
@@ -261,12 +259,9 @@ var t = function(p) {
 
     console.log(groupedByTypeLC);
     console.log(groupedByTypeLC.length);
- 
-    // femaleL = tableL.findRows('f', 10); /////2027 rows with a FEMALE artist 
-    // // console.log(femaleL);
 
-    // maleL = tableL.findRows('m', 10);  /////10829 rows with a MALE artist
-    // // console.log(maleL);
+     
+
 
 
     // for (var i=0; i<groupedByTypeLC.length; i++) {
@@ -317,6 +312,12 @@ var countC = p.tableL.getColumnCount();
     console.log(countC + " columns");
 var row, col, val, min, max;
 
+var yearNow = {};
+    // yearNow.year = (p.int(p.tableL.getString(17)));
+    yearNow.year = (p.int(p.tableL.findRows(String(17))));
+    yearNow.items = p.tableL.findRows(String(yearNow.year),17);
+    p.append(allYears, yearNow);
+
 var minObjects = 15000;
 var maxObjects = 0;
     minYear = null;
@@ -324,16 +325,22 @@ var maxObjects = 0;
 // console.log(allYears);
 
 for (var i=0; i<count; i++) {
-      var year = groupedByYearL;
+      // var year = groupedByYearL;
+      var year = (p.int(p.tableL.get(i,17)));
+      // console.log(typeof year)
       // var year = p.int(p.tableL.getString(i,17));
       if(year!=yearNow.year){
         var yearNow = {};
-        yearNow.year = year;
+        // yearNow.year = year;
+        yearNow.year = (p.int(p.tableL.getString(i,17)));
         yearNow.items = [];
-        yearNow.items = groupedByTypeL;
-        // yearNow.items = p.tableL.findRows(String(yearNow.year),17);
+        // yearNow.items =  (p.tableL.findRows(String(yearNow.year),17));
+        yearNow.items = p.tableL.getString(i,22);
         p.append(allYears, yearNow);
 
+console.log(yearNow.items.length);
+// console.log(yearNow.year);
+// console.log(yearNow.items);
         
         if(yearNow.items.length>maxObjects){
           maxObjects = yearNow.items.length;
@@ -346,11 +353,12 @@ for (var i=0; i<count; i++) {
            
         }
      }
+     // console.log("The Year " + maxYear);
+     //  console.log("The Year " + minYear); 
  // console.log("The Year " + allYears[maxYear].year + " has the most objects with " + allYears[maxYear].items.length + " items.");
  // console.log("The Year " + allYears[minYear].year + " has the least objects with " + allYears[minYear].items.length + " item.");
-
 }
-console.log(allYears)
+// console.log(allYears)
 //////
 //  mxYear = null;//////mid years from 1850 onwards
 // for (var f=0; f<=p.count; f++){
@@ -375,17 +383,12 @@ for (var d=0; d<groupedByTypeLC.length; d++) {
           for(var h=groupedByTypeL[groupedByTypeLC[d]].length-1; h>=0; h--){
              // //console.log(groupedByTypeL[groupedByTypeLC[i]][h][17]); ////count per year
              // // console.log(groupedByTypeL[groupedByTypeLC[i]][h][22]); ////count per classification
-             p.append(allYears,yearNow); ////essential - items added to object
+             // p.append(allYears,yearNow); ////essential - items added to object
 
-             // if (yearNow == yearNow){
-             //  objYear = objYear + 1;
-             // } else 
            }
-           // console.log(objCount.length);
-           //   console.log(objCount);
          }
 
-      console.log(allYears);
+      // console.log(allYears);
 }
         // var myObject2 = {name: groupedByTypeLC[b], total: objCount};
         //   lineTotals.push(myObject2);
@@ -744,21 +747,27 @@ for (var d=0; d<groupedByTypeLC.length; d++) {
   var totalFemaleArtistsPerBar = 0;
   var totalMaleArtistsPerBar = 0;
 
-  var width = p.windowWidth, // canvas width and height
-      height = 4000,
+  var width = p.windowWidth/2, // canvas width and height
+      height = 500,
       x1,x2,y1,y2;
 
-  var maxX = allYears.length-1;
+  var maxX = allYears.length;
   
-  var maxY = 150000000;
-p.beginShape();
-for(var i=0; i<maxX; i++){
-  p.stroke(255,0,0);
-  p.noFill();
+  var maxY = 150000;
 
-// console.log(allYears[i].items);
-    x1 = p.map(i                       ,0 ,maxX, 0        ,width);
-    x2 = p.map(i+1                     ,0, maxX, 0        ,width);
+
+  p.beginShape();
+
+  for(var i=0; i<maxX; i++){
+    p.stroke(255,0,0);
+    p.noFill();
+
+// var x = p.map(i, 0, maxX, 20, 460);
+// var y = p.map(maxX, 0, maxY, 100, 20);
+// p.ellipse(x, y, 3 ,3 );
+
+    x1 = p.map(i                       ,0 ,maxX, 30        ,width);
+    x2 = p.map(i+1                     ,0, maxX, 30        ,width);
     //  y1 = map(data.getRow(i).get(0)   ,0, maxY, height-30, 0   );
     // y2 = map(data.getRow(i+1).get(0) ,0, maxY, height-30, 0   );
     y1 = p.map(allYears.items[i].get(1)   ,0, maxY, height-30, 0   );
@@ -956,6 +965,108 @@ var myp5 = new p5(t, 'c2');
 
 
 //////////////////////
+
+////CIRCLES
+
+var q = function(p) {
+
+  p.preload = function(){
+   // table = loadTable('assets/ModContGenderfinalgosort.csv','csv','header');  /////secondary sort gender, classification
+   p.tableC = p.loadTable('assets/ModContGenderfinaloygsort.csv','csv','header'); /////classification, year, gender
+   console.log(p.tableL);
+  }
+
+  p.setup = function(){
+    // canvas = p.createCanvas(500, 500);
+    canvas = p.createCanvas(p.windowWidth, p.windowHeight);
+    // canvas.parent("#c2");
+    p.analyzeData();
+    // p.categorize();
+    // p.lineChart();
+    p.displayData();
+    // p.drawLabelsCh();
+    p.circles();
+    p.noLoop();
+  }
+
+////group by type classification, then year & gender, then by name
+
+    p.analyzeData = function(){
+    var genderL = p.tableC.getColumn(10);  ////gender
+    var nameL = p.tableC.getColumn(12); ////name, Artist Alpha Sort
+    var dateL = p.tableC.getColumn(17); ////object begin date
+    var typeL = p.tableC.getColumn(22); ////classification
+
+    tableCA = p.tableC.getArray(); 
+
+    var valW = p.tableC.get(300, 17);
+     console.log(typeof valW);   ////object begin date is string
+
+     groupedByTypeC = collate(tableCA,22);
+     console.log(groupedByTypeC); 
+
+     groupedByYearC = collate(tableCA,17);
+     // console.log(groupedByYearL);
+
+     groupedByGenderC = collate(tableCA,10);
+     console.log(groupedByGenderC);
+
+    var groupedByTypeC = Object.keys(groupedByTypeC);
+
+
+    console.log(groupedByTypeC);
+    console.log(groupedByTypeC.length);
+
+    }
+
+
+    p.circles = function(){
+p.push();
+
+var groupedByTypeC = collate(tableA,22);
+// console.log(groupedByType);
+
+var groupedByTypeCC = Object.keys(groupedByTypeC);
+// console.log(groupedByTypeC);
+  //   var width = p.windowWidth, 
+  //       height = 4000,
+  //       margin = 50,
+  //       w = p.width - 2 * margin, // chart area width and height
+  //       h = p.height - 2 * margin;
+  
+  // var barWidth =  (h / groupedByTypeCC.length) * 0.1; // width of bar
+  // var barMargin = (h / groupedByTypeCC.length) * 0.001; // margin between two bars
+
+for (var b=0; b<groupedByTypeCC.length; b++) {
+    //var total = groupedByType[groupedByTypeC[b]].length;
+    var totalsFiltered = 0;
+    var femtotals = 0;
+    var maletotals = 0;
+////t vertical, b horizontal
+    for (var t = groupedByType[groupedByTypeCC[b]].length - 1; t >= 0; t--) {
+      var currentGender = groupedByType[groupedByTypeCC[b]][t][10];
+      if (currentGender == 'm') {
+         maletotals = maletotals + 1;
+  
+      } else if (currentGender == 'f'){
+          femtotals = femtotals + 1;
+       
+      };
+
+      if(currentGender === 'm' || currentGender === 'f'){
+        totalsFiltered = totalsFiltered + 1;
+      }
+      
+    };
+   var myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered};
+   barTotals.push(myObject);
+
+      }
+
+WHERE fem total, FIND type with most "F"
+
+}
+
 
 ///COLOR works
 ////fill by gender - see further down
