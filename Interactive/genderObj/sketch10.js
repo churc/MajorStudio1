@@ -29,6 +29,7 @@ var yrFemTotals = [];
 var barTotals =[];
 var yrMaleTotals = [];
 var barTotals2 =[];
+var barTotals = [];
 var lineTotals = [];
 
 var female;
@@ -211,6 +212,7 @@ p.setup = function(){
     canvas = p.createCanvas(p.windowWidth, 850);
     p.analyzeData();
     p.lineChart();
+    p.line2();
     p.drawLabelsCh();
     p.noLoop();
   }
@@ -334,6 +336,10 @@ p.lineChart = function(){
       }
   }
 
+}
+
+
+p.line2 = function(){
     var groupedByType = collate(tableA,22);
     var groupedByTypeC = Object.keys(groupedByType);
     var width = p.windowWidth, 
@@ -365,39 +371,38 @@ for (var b=0; b<groupedByTypeC.length; b++) {
       };
          var myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered};
          barTotals.push(myObject);
+       }
          console.log(barTotals);  ////each classification with number of artworks & split 
-}
+
 
 p.beginShape();
-
+p.push();
 p.translate(50, 500);
   var x1,x2,y1,y2;
-  var maxX1 = Object.keys(barTotals);
-
-  maxX = maxX1.getRowCount;
+  // var maxX1 = Object.keys(barTotals);
+  var maxX1 = barTotals.length;
   var maxY = 15000;
-  console.log(maxX);
-  for (var n = 0; n < maxX1.length; n++) {
+  console.log(maxX1);
+  for (var n = 0; n < barTotals.length; n++) {
     p.stroke(50);
     p.strokeWeight(1);
     p.noFill();
-    var individualPiece = barTotals[n];
-    console.log(individualPiece);
 
-    // x1 = map(i                       ,0 ,maxX, 0        ,width);
-    // x2 = map(i+1                     ,0, maxX, 0        ,width);
-    // y1 = map(maxX1.getRow(i).get(2)   ,0, maxY, height-30, 0);
-    // y2 = map(maxX1.getRow(i+1).get(2) ,0, maxY, height-30, 0); 
+    x1 = p.map(n                       ,0 ,maxX1, 0        ,width);
+    x2 = p.map(n+1                     ,0, maxX1, 0        ,width);
+    y1 = p.map(maxX1.getRow(n).get(2)   ,0, maxY, height-30, 0);
+    y2 = p.map(maxX1.getRow(n+1).get(2) ,0, maxY, height-30, 0); 
 
-    // line(x1,y1,x2,y2)
-    // legend
-    // noStroke();
-    // fill(0);
-    // text(i,x1,height);
+    p.line(x1,y1,x2,y2)
+    ////legend
+    // p.noStroke();
+    // p.fill(0);
+    // p.text(n,x1,height);
 
    
 p.endShape();
-  
+ }
+ 
 //   p.beginShape();
 
 //   for(var i=0; i<maxX1.length; i++){
@@ -408,10 +413,9 @@ p.endShape();
 // var y = p.map(maxX, 0, maxY, 100, 20);
 // p.ellipse(x, y, 3 ,3 );
 //p.endShape;
+p.pop();
 
 }
-}
-
 
 //////////\\\\\\\\\\\\\\\\\\\\
 
