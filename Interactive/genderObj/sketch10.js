@@ -26,11 +26,11 @@ var femtotals;
 var maletotals;
 
 var yrFemTotals = [];
-var barTotals =[];
 var yrMaleTotals = [];
 var barTotals2 =[];
 var barTotals = [];
 var lineTotals = [];
+var barTot = [];
 
 var female;
 var male;
@@ -67,7 +67,7 @@ function collate(array, prop){
 }
 
 ///////=====BAR CHART=====////////////
-var s = function(p){
+var g = function(p){
 
    p.fontRead = function(){
       fontReady = true; 
@@ -123,16 +123,15 @@ var s = function(p){
     // console.log(tableAkeys.length);  ////105 types
 
 ////iterate through object by keys and SPLIT object into 105 objects 
-    for(var s=0; s<tableAkeys.length; s++){
-        p.sort[tableAkeys[s]] = collate(groupedByType[tableAkeys[s]], 22)
+    for(var l=0; l<tableAkeys.length; l++){
+        p.sort[tableAkeys[l]] = collate(groupedByType[tableAkeys[l]], 22)
       }
       // console.log(tableAkeys); ///105 separate objects 
 }
   
 ///////
   p.barChart = function(){
-
- 
+  p.push();
     var groupedByType = collate(tableA,22);
 
     var groupedByTypeC = Object.keys(groupedByType);
@@ -163,11 +162,11 @@ for (var b=0; b<groupedByTypeC.length; b++) {
         totalsFiltered = totalsFiltered + 1;
         }    
       };
-    };
+    
          var myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered};
          barTotals.push(myObject);
          console.log(barTotals);  ////each classification with number of artworks & split by gender
-
+}
         p.push();
         p.scale(0.16); 
         p.rotate(p.radians(90));   // rotate to vertical
@@ -187,11 +186,11 @@ for (var b=0; b<groupedByTypeC.length; b++) {
           p.rect(100 + (i * 20), 100, 20, (-1) * barTotals[i]['f']);
         };
       p.pop();
-  
+  p.pop();
   }
 }
 
-var myp5 = new p5(s, 'c1');
+var myp5 = new p5(g, 'c1');
 
 
 //////////=====LINE CHART=====/////////
@@ -370,9 +369,9 @@ for (var b=0; b<groupedByTypeC.length; b++) {
         }    
       };
          var myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered};
-         barTotals.push(myObject);
+         barTot.push(myObject);
        }
-         console.log(barTotals);  ////each classification with number of artworks & split 
+         console.log(barTot);  ////each classification with number of artworks & split 
 
 
 p.beginShape();
@@ -380,20 +379,20 @@ p.push();
 p.translate(50, 500);
   var x1,x2,y1,y2;
   // var maxX1 = Object.keys(barTotals);
-  var maxX1 = barTotals.length;
+  var maxX1 = barTot.length;
   var maxY = 15000;
   console.log(maxX1);
-  for (var n = 0; n < barTotals.length; n++) {
+  for (var n = 0; n < barTot.length; n++) {
     p.stroke(50);
     p.strokeWeight(1);
     p.noFill();
 
-    x1 = p.map(n                       ,0 ,maxX1, 0        ,width);
-    x2 = p.map(n+1                     ,0, maxX1, 0        ,width);
-    y1 = p.map(maxX1.getRow(n).get(2)   ,0, maxY, height-30, 0);
-    y2 = p.map(maxX1.getRow(n+1).get(2) ,0, maxY, height-30, 0); 
+    // x1 = p.map(n                       ,0 ,maxX1, 0        ,width);
+    // x2 = p.map(n+1                     ,0, maxX1, 0        ,width);
+    // y1 = p.map(maxX1.getRow(n).get(2)   ,0, maxY, height-30, 0);
+    // y2 = p.map(maxX1.getRow(n+1).get(2) ,0, maxY, height-30, 0); 
 
-    p.line(x1,y1,x2,y2)
+    // p.line(x1,y1,x2,y2)
     ////legend
     // p.noStroke();
     // p.fill(0);
