@@ -619,7 +619,7 @@ var angles = [ 30, 10, 45, 35, 60, 38, 75, 67 ];
 /////example
 p.pieChart = function(diameter, data) {
 p.push();
-p.translate(50,200);
+// p.translate(50,200);
    var width = 700, 
        height = 700;
 
