@@ -43,6 +43,10 @@ canvas{
   height: auto;
 }
 
+.bars{
+    font-size: 16px;
+}
+
 #yearsBars{
   width: 100%; 
   height: auto; 
@@ -61,18 +65,39 @@ canvas{
     width: 100%;
     height:50vh;
   }
+
   #c1{
-    width: 60%;
+    width: 90%;
     height:auto;
   }
+
   #c2{
-    width: 60%;
+    width: 90%;
     height:auto;
   }
+
   #c3{
-    width: 60%;
+    width: 90%;
     height:auto;
   }
+}
+
+
+div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    width: 60px;          
+    height: 28px;         
+    padding: 2px;       
+    font: 12px;    
+    background: grey; 
+    border: 0px;    
+    border-radius: 1px;     
+    pointer-events: none;     
+}
+
+.hidden {
+  display: none;
 }
 
 @media print, screen and (max-width: 480px) {
