@@ -15,7 +15,7 @@ var barTotals = [];
 
 var name, gender, date, type;
 
-var axisNumbers = [];
+var listItems = [];
 var upperLimit;
 var lowerLimit;
 
@@ -284,37 +284,31 @@ p.drawLabelsCh = function(){
 
 // ////return list of classification
 for(var i = 0; i<objectType.length; i++) {
-  createElement('h3', objectType[i].items);
+  listItems = document.createElement('h3', objectType[i].items);
 }
    p.textFont('Khand');
    p.noStroke();
    p.textAlign(p.LEFT);
    p.textSize(20);
-   p.fill (77,77,77);
-   p.text(objectType[i].items);
+   p.fill (0,255,255);
+   console.log(objectType);
+   p.text(objectType);
 
 // //// title
   p.push();
-  p.translate(margin, margin);
+  p.translate(-600, 20);
   p.textFont('Khand');
   p.textStyle(p.NORMAL);
   p.noStroke();
   p.textAlign(p.LEFT);
   p.fill(77,77,77);
-  p.textSize(42);
-  p.text("Classification (artwork object type) by Gender",500,75);
-  p.fill(77,77,77);
-  p.textSize(26);
-  p.text("In The Met Modern & Contemporary Art Collection", 500,120);
-  p.textSize(38);
-  p.pop();
-
-// //// label the whole axis
   p.textFont('Khand');
   p.textAlign(p.LEFT);
   p.noStroke();
-  p.textSize(60);
-  p.text("Classification by gender", margin, margin);
+  p.textSize(30);
+  p.text("Classification (artwork object type) by Gender", -100, 20);
+  p.text("In The Met Modern & Contemporary Art Collection", -100,50);
+p.pop();
 
 //////draw the y Axis
   upperLimit = barTotals[barTotals.length - 1]['f']
