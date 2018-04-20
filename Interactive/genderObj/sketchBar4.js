@@ -15,6 +15,10 @@ var barTotals = [];
 
 var name, gender, date, type;
 
+var axisNumbers = [];
+var upperLimit;
+var lowerLimit;
+
 var KhandFont, fontReady = false;
 
 var margin = 80;
@@ -115,7 +119,7 @@ p.mouseClicked = function(){
 }
   
   p.analyzeYears = function(){
-    gender = p.table.getColumn(10); ////gender
+      gender = p.table.getColumn(10); ////gender
       name = p.table.getColumn(12); ////name, Artist Alpha Sort
       date = p.table.getColumn(17); ////object begin date
       type = p.table.getColumn(22); ////classification
@@ -196,7 +200,7 @@ for (var i=0; i<count; i++) {
     var groupedByTypeC = Object.keys(groupedByType);
       var width = p.windowWidth, 
           height = p.windowHeight,
-          height = 5000,
+          height = 5076,
           margin = 50,
           w = p.width - 2 * margin, // chart area width and height
           h = p.height - 2 * margin;
@@ -256,40 +260,29 @@ for (var b=0; b<groupedByTypeC.length; b++) {
           objectType.push(objectNames); ////returns name of each classification
         };
       p.pop();
-  p.pop();
+  // p.pop();
   }
 
+console.log(barTotals);
 
 p.drawLabelsCh = function(){
     p.push();
+    var width = p.windowWidth, 
+        height = p.windowHeight
     // p.scale(0.5);
-    p.translate(p.windowWidth/2,700);
+    p.translate(p.windowWidth-140,10);
 // //x axis
     p.textFont('Khand');
     p.textSize(12);
     p.stroke(182,185,182);
 
-// //just the lines
-   // line(margin,height-margin,width-margin,height-margin);
-    // p.line(margin,747-margin,1341-margin,747-margin);
-    // p.noStroke();
-    // p.textAlign(p.CENTER);
-
-// add text 
-for(var i = 0; i<maxObjects; i=+100) {
-    var y = 747-margin+30;
-    var x = p.map(i,0,maxObjects, margin, 1341-margin);
+// //just the line
+    p.line(margin+20,margin,margin+20,p.height-margin);
     p.noStroke();
-    p.fill(77,77,77);
-    p.text(i, x, y+20);
-    p.stroke(244,220,0);
-    p.strokeWeight(1);
-    p.line(x,y,x,y); 
-  }
-  console.log(objectType);
-  console.log(groupedByTypeLC);
+    p.textAlign(p.CENTER);
 
-////return list of classification
+
+// ////return list of classification
 for(var i = 0; i<objectType.length; i++) {
   createElement('h3', objectType[i].items);
 }
@@ -300,7 +293,7 @@ for(var i = 0; i<objectType.length; i++) {
    p.fill (77,77,77);
    p.text(objectType[i].items);
 
-//// title
+// //// title
   p.push();
   p.translate(margin, margin);
   p.textFont('Khand');
@@ -316,39 +309,44 @@ for(var i = 0; i<objectType.length; i++) {
   p.textSize(38);
   p.pop();
 
-//// label the whole axis
+// //// label the whole axis
   p.textFont('Khand');
   p.textAlign(p.LEFT);
   p.noStroke();
-  p.textSize(12);
+  p.textSize(60);
   p.text("Classification by gender", margin, margin);
 
 //////draw the y Axis
-  p.stroke(182,185,182);
-  p.line(margin,747-margin,margin,margin);
+  upperLimit = barTotals[barTotals.length - 1]['f']
+  lowerLimit = -1 * (barTotals[barTotals.length - 1]['m'])
+  console.log(upperLimit)
+  console.log(lowerLimit)
   p.noStroke();
   p.textAlign(p.LEFT);
   p.textStyle(p.NORMAL);
 
-  for(var i=0; i<maxObjects; i+=50){
+  for(var i=lowerLimit; i<upperLimit; i+=50){
       var x = margin-20;
-      var y = p.map(i,0, maxObjects,747-margin, margin);
+      // var y = i;
+      //var y = p.map(i,lowerLimit, upperLimit,lowerLimit, upperLimit);
+      var y = p.map(i,lowerLimit, upperLimit,0,5076);
         p.noStroke();
         p.fill(77,77,77);
-        p.text(i, x, y+5);
+        p.textSize(16);
+        p.text(i, x, y);
         p.stroke(77,77,77);
         p.strokeWeight(1);
-        p.line(x+20,y,x+40,y);
+        p.line(x+25,y,x+40,y);
     }
         p.push();
         // p.translate(65,0);
         p.textFont('Khand');
         p.noStroke();
-        p.textSize(20);
-        p.translate(1000,700);
+        p.textSize(60);
+        p.translate(150,1000);
         p.rotate(p.radians(270)); 
         p.text("Artwork material type", margin+300,margin-1085);
-        p.pop();
+       // p.pop();
   p.pop();
   } 
 
