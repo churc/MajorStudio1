@@ -267,30 +267,32 @@ console.log(barTotals);
 
 p.drawLabelsCh = function(){
     p.push();
+
     var width = p.windowWidth, 
         height = p.windowHeight
-    // p.scale(0.5);
-    p.translate(p.windowWidth-140,10);
+
+    p.translate(p.windowWidth-170,10);
 // //x axis
     p.textFont('Khand');
     p.textSize(12);
-    p.stroke(182,185,182);
+    p.stroke(255,0,0);
 
 // //just the line
-    p.line(margin+20,margin,margin+20,p.height-margin);
+    p.line(margin+20,margin,margin+20,3076-margin);
     p.noStroke();
     p.textAlign(p.CENTER);
 
 
 // ////return list of classification
 for(var i = 0; i<objectType.length; i++) {
-  listItems = document.createElement('h3', objectType[i].items);
+  // listItems = document.createElement('h3', objectType[i].items);
+  listItems = document.createElement('h3', objectType);
 }
    p.textFont('Khand');
    p.noStroke();
    p.textAlign(p.LEFT);
    p.textSize(20);
-   p.fill (0,255,255);
+   p.fill (220,20,80);
    console.log(objectType);
    p.text(objectType);
 
@@ -311,6 +313,9 @@ for(var i = 0; i<objectType.length; i++) {
 p.pop();
 
 //////draw the y Axis
+p.push();
+p.scale(0.5);
+
   upperLimit = barTotals[barTotals.length - 1]['f']
   lowerLimit = -1 * (barTotals[barTotals.length - 1]['m'])
   console.log(upperLimit)
@@ -323,15 +328,16 @@ p.pop();
       var x = margin-20;
       // var y = i;
       //var y = p.map(i,lowerLimit, upperLimit,lowerLimit, upperLimit);
-      var y = p.map(i,lowerLimit, upperLimit,0,5076);
+      var y = p.map(i,lowerLimit, upperLimit,0,5100);
         p.noStroke();
         p.fill(77,77,77);
-        p.textSize(16);
+        p.textSize(24);
         p.text(i, x, y);
         p.stroke(77,77,77);
         p.strokeWeight(1);
         p.line(x+25,y,x+40,y);
     }
+     p.pop();
         p.push();
         // p.translate(65,0);
         p.textFont('Khand');
@@ -340,8 +346,8 @@ p.pop();
         p.translate(150,1000);
         p.rotate(p.radians(270)); 
         p.text("Artwork material type", margin+300,margin-1385);
-       // p.pop();
-  p.pop();
+       p.pop();
+ p.pop();
   } 
 
 
