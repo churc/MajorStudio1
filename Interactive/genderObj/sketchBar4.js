@@ -42,7 +42,6 @@ var g = function(p){
   }
 
     p.setup = function(){
-    // canvas = p.createCanvas(p.windowWidth, p.windowHeight);
     canvas = p.createCanvas(1500, 2900);
     p.sortFemale();
     p.mouseClicked('.bars');
@@ -107,8 +106,6 @@ p.mouseClicked = function(){
 
 ////object, type (classification) each of the keys 
     var tableAkeys = Object.keys(groupedByType); ////returns array of object keys (glass, sculpture etc)
-    
-      ////105 types
 
 ////iterate through object by keys and SPLIT object into 105 objects 
     for(var l=0; l<tableAkeys.length; l++){
@@ -229,12 +226,8 @@ for (var b=0; b<groupedByTypeC.length; b++) {
         myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered};
          
          myObject.addClass="bars";
-         // myObject.id = "eachType";
-         // myObject[groupedByTypeC].id = "eachType";
-         // myObjectids.appendChild(myObject);
 
-         barTotals.push(myObject); ////each classification with number of artworks & split by gender
-         // console.log(barTotals);  
+         barTotals.push(myObject); ////each classification with number of artworks & split by gender  
 }
         p.push();
         p.scale(0.5); 
@@ -249,11 +242,9 @@ for (var b=0; b<groupedByTypeC.length; b++) {
       for (var i = barTotals.length-1; i >= 0; i--) {
           p.noStroke();
           p.fill(92,242,145);
-          // p.rect(100 + (i * 20), 100, 20, barTotals[i]['m']);
           p.rect(100 + (i * 10), 5, 2, barTotals[i]['m']);
           p.noStroke();
           p.fill(179,118,244);
-          // p.rect(100 + (i * 20), 100, 20, (-1) * barTotals[i]['f']);
           p.rect(100 + (i * 10), 5, 2, (-1) * barTotals[i]['f']);
 
           ////label
@@ -264,7 +255,6 @@ for (var b=0; b<groupedByTypeC.length; b++) {
           var objectNames = barTotals[i].name;
           objectType.push(objectNames); ////returns name of each classification
         };
-        // console.log(objectType);
       p.pop();
   p.pop();
   }
@@ -300,8 +290,6 @@ for(var i = 0; i<maxObjects; i=+100) {
   console.log(groupedByTypeLC);
 
 ////return list of classification
-// var items=objectType.items;
-
 for(var i = 0; i<objectType.length; i++) {
   createElement('h3', objectType[i].items);
 }
@@ -312,6 +300,21 @@ for(var i = 0; i<objectType.length; i++) {
    p.fill (77,77,77);
    p.text(objectType[i].items);
 
+//// title
+  p.push();
+  p.translate(margin, margin);
+  p.textFont('Khand');
+  p.textStyle(p.NORMAL);
+  p.noStroke();
+  p.textAlign(p.LEFT);
+  p.fill(77,77,77);
+  p.textSize(42);
+  p.text("Classification (artwork object type) by Gender",500,75);
+  p.fill(77,77,77);
+  p.textSize(26);
+  p.text("In The Met Modern & Contemporary Art Collection", 500,120);
+  p.textSize(38);
+  p.pop();
 
 //// label the whole axis
   p.textFont('Khand');
