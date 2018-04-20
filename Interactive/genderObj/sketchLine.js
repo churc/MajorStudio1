@@ -79,8 +79,6 @@ p.analyzeData = function(){
     yearNow.items =[];
     yearNow.year =[];
     yearNow.gender = [];
-    // yearNow.year = groupedByYearL; ////objects grouped by year
-    // yearNow.items = groupedByTypeL; ////objects grouped by classification
     yearNow.gender = groupedByGenderL; ////objects grouped by gender
 
     p.append(allYears,yearNow);
@@ -93,7 +91,6 @@ p.analyzeData = function(){
 
     var yearNow = {};
         yearNow.year = (p.int(p.tableL.getString(0,17)));
-        // yearNow.year = (p.int(p.tableL.findRows(String(17))));
         yearNow.items = p.tableL.findRows(String(yearNow.year),17);
         p.append(allYears, yearNow);
 
@@ -193,9 +190,6 @@ p.push();
 p.translate(50, 500);
   var initial = 0;
   var x1,x2,y1,y2;
-  // var maxX1 = Object.keys(barTot);
-  // var maxX1 = 30;
-  // var maxY = 1000;
   var maxX1 = 1;
   var maxY = 2000;
   console.log(maxX1);
@@ -204,13 +198,6 @@ p.translate(50, 500);
     p.stroke(50);
     p.strokeWeight(1);
     p.noFill();
-
-    // x1 = p.map(initial                      ,0 ,maxX1, 0        ,width);
-    // x2 = p.map(initial+1                     ,0, maxX1, 0        ,width);
-    // y1 = p.map(allYears[n].items.length  ,0, maxY, height-30, 0);
-    // y2 = p.map(allYears[n+1].items.length ,0, maxY, height-30, 0); 
-    // initial + 1;
-
     x1 = p.map(initial                      ,0 ,maxX1, 0        ,width);
     x2 = p.map(initial+1                     ,0, maxX1, 0        ,width);
     y1 = p.map(allYears[n].items.length  ,0, maxY, 0, height);
@@ -221,98 +208,21 @@ p.translate(50, 500);
     console.log(y1);
     console.log(y2);
     console.log(initial);
-// allYears[1].items.length
     p.line(x1,y1,x2,y2)
-    //legend
-    // p.noStroke();
-    // p.fill(0);
-    // p.text(n,x1,height);
+  //legend
+    p.noStroke();
+    p.fill(0);
+    p.text(n,x1,height);
   
 
    
 p.endShape();
  }
  
-//   p.beginShape();
-
-//   for(var i=0; i<maxX1.length; i++){
-//     p.stroke(255,0,0);
-//     p.noFill();
-
-// var x = p.map(i, 0, maxX, 20, 460);
-// var y = p.map(maxX, 0, maxY, 100, 20);
-// p.ellipse(x, y, 3 ,3 );
-//p.endShape;
 p.pop();
 
 }
-
-//////////\\\\\\\\\\\\\\\\\\\\
-
-// p.drawLabelsCh = function(){
-//     p.push();
-//     p.translate(88,0);
-// // //x axis
-//     p.textFont('Khand');
-//     p.textSize(17);
-//     p.stroke(77,77,77);
-
-// // //just the lines
-//    // line(margin,height-margin,width-margin,height-margin);
-//     p.line(margin,747-margin,1341-margin,747-margin);
-//     p.noStroke();
-//     p.textAlign(p.CENTER);
-
-// // draw the sections and add text for each section
-// //go throught the years
-// for(var i=1850; i<=2017; i+=10){
-//     var y = 747-margin+30;
-//     var x = p.map(i,1850,2017, margin, 1341-margin);
-//     p.noStroke();
-//     p.fill(77,77,77);
-//     p.text(i, x, y);
-//     p.stroke(77,77,77);
-//     p.strokeWeight(1);
-//     p.line(x,y-22,x, y-30);
-  
-//   }
-  
-// //// label the whole axis
-//   p.textFont('Khand');
-//   p.textAlign(p.RIGHT);
-//   p.noStroke();
-//   p.textSize(20);
-//   p.text("Year: Object Begin Date", 990,730);
-
-// //////draw the y Axis
-//   p.stroke(77,77,77);
-//   p.line(margin,747-margin,margin,margin);
-//   p.noStroke();
-//   p.textAlign(p.RIGHT);
-//   p.textStyle(p.NORMAL);
-
-//   for(var i=0; i<maxObjects; i+=50){
-//       var x = margin-20;
-//       var y = p.map(i,0, maxObjects,747-margin, margin);
-//         p.noStroke();
-//         p.fill(77,77,77);
-//         p.text(i, x, y+5);
-//         p.stroke(77,77,77);
-//         p.strokeWeight(1);
-//         p.line(x+10,y,x+20,y);
-//     }
-//         p.push();
-//         p.translate(65,0);
-//         p.textFont('Khand');
-//         p.noStroke();
-//         p.textSize(20);
-//         p.translate(1000,700);
-//         p.rotate(p.radians(270)); 
-//         p.text("Artwork by type", margin+300,margin-1085);
-//         // p.text("Artwork by type", margin+300,margin-1135);
-//         p.pop();
-//       p.pop();
-//   }  
+ 
  }
 
 var myp5 = new p5(t,'c2');
