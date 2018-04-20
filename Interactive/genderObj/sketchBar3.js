@@ -9,8 +9,8 @@ var allYears = [];
 
 var sorted = [];
 var myObjClass = [];
-var myObjectids;
-
+var objectNames;
+var objectType = [];
 var barTotals = [];
 
 var name, gender, date, type;
@@ -156,9 +156,12 @@ p.mouseClicked = function(){
 
     var yearNow = {};
         yearNow.year = (p.int(p.table.getString(0,17)));
-        // yearNow.year = (p.int(p.tableL.findRows(String(17))));
+        yearNow.items = [];
         yearNow.items = p.table.findRows(String(yearNow.year),17);
+        yearNow.url = []; ////attach Met classification url to each object
+        yearNow.url.href = "https://www.metmuseum.org/art/collection/search#!?offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&department=21"
         p.append(allYears, yearNow);
+
 
     var minObjects = 150000;
         maxObjects = 0;
@@ -172,8 +175,11 @@ for (var i=0; i<count; i++) {
         yearNow.year = year;
         yearNow.items = [];
         yearNow.items = p.table.findRows(String(yearNow.year),17);
+        yearNow.url = []; ////attach Met classification url to each object
+        yearNow.url.href = "https://www.metmuseum.org/art/collection/search#!?offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&department=21"
         p.append(allYears, yearNow);
-        
+
+
         if(yearNow.items.length>maxObjects){
           maxObjects = yearNow.items.length;
           maxYear = allYears.length-1;
@@ -184,32 +190,9 @@ for (var i=0; i<count; i++) {
           minYear = allYears.length;           
         }
      }
+    
+    // console.log(minObjects)
   }
-// console.log("year with most objects "  + allYears[maxYear].year);
-// console.log(allYears[minYear].year);
-// console.log(allYears); ////array of objects with year and artwork type
-
-// mxYear = null;
-// var midYears;
-
-// for (var s=0; s<=p.count; s++) {
-//       var year = p.int(p.tableL.getString(s,17));
-//       if(year!=yearNow.year){
-//         var yearNow = {};
-//         yearNow.year = year;
-//         yearNow.items =[];
-//         yearNow.items = p.tableL.findRows(String(yearNow.year),17);
-//         p.append(allYears, yearNow);
-        
-//         if(yearNow.items.length>maxObjects){
-//           maxObjects = yearNow.items.length;
-//           mxYear = midYears.length-1;
-//         }
-//      }
-   
-// console.log("Number of artworks since 1850 is " + (midYears.length-1) + " the year with the most artworks 1850 -2017 is " + mxYear);
-// }
-
 }
 
 ///////=====BAR CHART=====////////////
@@ -247,15 +230,15 @@ for (var b=0; b<groupedByTypeC.length; b++) {
         }    
       };
          var myObject = document.createElement('types');
-          myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered};
+        myObject = {name: groupedByTypeC[b], f: femtotals, m: maletotals, total: totalsFiltered};
          
          myObject.addClass="bars";
-         myObject.id = "eachType";
+         // myObject.id = "eachType";
          // myObject[groupedByTypeC].id = "eachType";
          // myObjectids.appendChild(myObject);
 
-         barTotals.push(myObject);
-         // console.log(barTotals);  ////each classification with number of artworks & split by gender
+         barTotals.push(myObject); ////each classification with number of artworks & split by gender
+         // console.log(barTotals);  
 }
         p.push();
         p.scale(0.5); 
@@ -277,7 +260,15 @@ for (var b=0; b<groupedByTypeC.length; b++) {
           // p.rect(100 + (i * 20), 100, 20, (-1) * barTotals[i]['f']);
           p.rect(100 + (i * 10), 5, 2, (-1) * barTotals[i]['f']);
 
+          ////label
+          p.fill(255,0,0);
+          p.textSize(10);
+          
+          p.text(barTotals[i].name, 5, barWidth/2 + 5); // write data
+          var objectNames = barTotals[i].name;
+          objectType.push(objectNames); ////returns name of each classification
         };
+        console.log(objectType);
       p.pop();
   p.pop();
   }
@@ -285,11 +276,12 @@ for (var b=0; b<groupedByTypeC.length; b++) {
 
 p.drawLabelsCh = function(){
     p.push();
-    p.translate(88,0);
+    // p.scale(0.5);
+    p.translate(p.windowWidth/2,700);
 // //x axis
     p.textFont('Khand');
-    p.textSize(17);
-    p.stroke(77,77,77);
+    p.textSize(12);
+    p.stroke(182,1885,182);
 
 // //just the lines
    // line(margin,height-margin,width-margin,height-margin);
@@ -300,30 +292,31 @@ p.drawLabelsCh = function(){
 // draw the sections and add text for each section
 
 // //go throught the years
-// for(var i=1850; i<=2017; i+=10){
-//     var y = 747-margin+30;
-//     var x = p.map(i,1850,2017, margin, 1341-margin);
-//     p.noStroke();
-//     p.fill(77,77,77);
-//     p.text(i, x, y);
-//     p.stroke(77,77,77);
-//     p.strokeWeight(1);
-//     p.line(x,y-22,x, y-30);
+for(var i =0; barTotals.length-1;  i++) {
+    var y = 747-margin+30;
+    var x = p.map(i,0,barTotals.length-1, margin, 1341-margin);
+    p.noStroke();
+    p.fill(77,77,77);
+    console.log(barTotals);
+    // p.text(barTotals[i].name, x, y);
+    p.stroke(244,220,0);
+    p.strokeWeight(1);
+    p.line(x,y-22,x, y-30);
   
-//   }
+  }
   
 //// label the whole axis
   p.textFont('Khand');
-  p.textAlign(p.RIGHT);
+  p.textAlign(p.LEFT);
   p.noStroke();
-  p.textSize(20);
+  p.textSize(12);
   // p.text("Year: Object Begin Date", 990,730);
 
 //////draw the y Axis
-  p.stroke(77,77,77);
+  p.stroke(182,185,182);
   p.line(margin,747-margin,margin,margin);
   p.noStroke();
-  p.textAlign(p.RIGHT);
+  p.textAlign(p.LEFT);
   p.textStyle(p.NORMAL);
 
   for(var i=0; i<maxObjects; i+=50){
