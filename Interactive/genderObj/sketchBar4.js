@@ -296,7 +296,7 @@ for(var i = 0; i<objectType.length; i++) {
 
 // //// title
   p.push();
-  p.translate(-600, 20);
+  // p.translate(-600, 20);
   p.textFont('Khand');
   p.textStyle(p.NORMAL);
   p.noStroke();
@@ -306,8 +306,8 @@ for(var i = 0; i<objectType.length; i++) {
   p.textAlign(p.LEFT);
   p.noStroke();
   p.textSize(30);
-  p.text("Classification (artwork object type) by Gender", -100, 20);
-  p.text("In The Met Modern & Contemporary Art Collection", -100,50);
+  p.text("Classification (artwork object type) by Gender", -1150, 30);
+  p.text("In The Met Modern & Contemporary Art Collection", -1150,60);
 p.pop();
 
 //////draw the y Axis
@@ -339,7 +339,7 @@ p.pop();
         p.textSize(60);
         p.translate(150,1000);
         p.rotate(p.radians(270)); 
-        p.text("Artwork material type", margin+300,margin-1085);
+        p.text("Artwork material type", margin+300,margin-1385);
        // p.pop();
   p.pop();
   } 
