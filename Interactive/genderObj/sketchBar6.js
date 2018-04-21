@@ -49,20 +49,14 @@ var g = function(p){
   }
 
     p.setup = function(){
-    canvas = p.createCanvas(1500, 2900);
+    canvas = p.createCanvas(p.windowWidth, 3500);
     p.analyzeData();
     p.analyzeYears();
     p.barChart();
     p.drawLabelsCh();
-    // button = p.createButton("classification (artwork material types)");
-    // button.position(30,800);
     p.show();
     p.mouseClicked("#types");
-    // text = p.createDiv("#type");
-    // text.position(30, 840);
     p.background(238, 222, 161, 1);
-    // p.sortFemale();
-    // p.mouseClicked('.bars');
     p.noLoop();
   }
 
@@ -197,7 +191,7 @@ for (var i=0; i<count; i++) {
     var groupedByTypeC = Object.keys(groupedByType);
       var width = p.windowWidth, 
           height = p.windowHeight,
-          height = 5126,
+          height = 5500,
           margin = 50,
           w = p.width - 2 * margin, // chart area width and height
           h = p.height - 2 * margin;
@@ -343,15 +337,3 @@ p.push();
 }
 
 var myp5 = new p5(g, 'c1');
-
-// p.sortFemale = function() {
-//     $('c1').click(function() {
-//      barTotals.sort(function(a,b){
-//         return b['m'] - a['m']
-//       });
-//   });
-// }
-
-// p.mouseClicked = function(){
-//       p.sortFemale();
-//   }
