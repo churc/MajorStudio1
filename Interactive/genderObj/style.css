@@ -32,9 +32,8 @@ body{
   padding: 0;
   background-color: grey;
   /*display: block;*/
-/*  position: relative;
   justify-content: center;
-  align-items: center; */
+  align-items: center; 
  }
 
 canvas{
@@ -49,6 +48,7 @@ canvas{
 
 p{
    margin:0;
+   margin-left:20px;
    padding: 0;
    border:0;
 }
@@ -95,7 +95,6 @@ h3#h3{
 }
 
 button{
-    position: absolute;
     width:280px;
     height:50px;
     overflow:hidden;
@@ -110,7 +109,6 @@ button{
 }
 
 .classificationTypes{
-    position: absolute;
     width:280px;
     height:50px;
     overflow:hidden;

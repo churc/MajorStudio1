@@ -76,20 +76,6 @@ p.mouseClicked = function(){
     p.show = (!p.show);
 }
 
-// p.show = function(){
-//     objNames = document.getElementById("#type");
-//     // if (objNames.style.display === "null") {
-//     //     objNames.style.display = "block";
-//     // } else {
-//     //     objNames.style.display = "null";
-//     // }
-// }
-
-// $('button').click(function() {
-//     $('#type').addClass('classificationTypes');
-//   });
-
-
 
 ////group by type classification & gender, then by name
 p.analyzeData = function(){
@@ -282,7 +268,7 @@ p.drawLabelsCh = function(){
         height = p.windowHeight
 
   
-//////return list of classification types
+//////return list of classification types & numbers
   p.textFont('Khand');
   p.noStroke();
   p.textAlign(p.CENTER);
@@ -291,22 +277,12 @@ p.drawLabelsCh = function(){
   listItems = objectType;
   p.text(listItems);
   console.log(listItems);
-////WORKS
-  // $('#types').empty();
-  // for(var i = 0; i < listItems.length; i ++ ) {
-  //                         var classification = listItems[i];
-  //                         var classificationHTML = '<li>';
-  //                             classificationHTML += '<p>'+listItems[i]+'<p>'
-  //                             classificationHTML += '<a href = "https://www.metmuseum.org/art/collection/search#!?offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&department=21">';
-  //                             classificationHTML += '</a>';
-  //                             classificationHTML += '</li>';
-  //                 $('#types').append('<div>'+classificationHTML+'</div>');  ////put the artwork types into list  
-  //         }
+
   $('#types').empty();
   for(var i = barTotals.length-1; i >= 0; i--) {
                           var classification = barTotals[i];
                           var classificationHTML = '<li>';
-                              classificationHTML += '<p>'+barTotals[i].name + "  ......"+"  "+"  Total: "+barTotals[i].total+ "  ...."+"  "+" Female: "+barTotals[i].f+", "+" Male: "+barTotals[i].m+'<p>'
+                              classificationHTML += '<p>'+barTotals[i].name + "  ......"+"  "+"  Total: "+barTotals[i].total+ ":  "+"  "+" Female: "+barTotals[i].f+", "+" Male: "+barTotals[i].m+'<p>'
                               classificationHTML += '<a href = "https://www.metmuseum.org/art/collection/search#!?offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&department=21">';
                               classificationHTML += '</a>';
                               classificationHTML += '</li>';
