@@ -243,7 +243,7 @@ for (var b=0; b<groupedByTypeC.length; b++) {
           console.log(barTotals[i]);
 
           p.push();
-          p.translate(100,100);
+          p.translate(50,80);
           p.rotate(p.radians(270));
           p.textSize(20);
           p.text(barTotals[i].name, 5, barWidth/2 + 5); // text-names
@@ -265,7 +265,7 @@ p.drawLabelsCh = function(){
 //////return list of classification types & numbers
   p.textFont('Khand');
   p.noStroke();
-  p.textAlign(p.CENTER);
+  p.textAlign(p.LEFT);
   p.fill(255,0,0);
   p.textSize(10);
   listItems = objectType;
@@ -276,7 +276,7 @@ p.drawLabelsCh = function(){
   for(var i = barTotals.length-1; i >= 0; i--) {
                           var classification = barTotals[i];
                           var classificationHTML = '<li>';
-                              classificationHTML += '<p>'+barTotals[i].name + "  ......"+"  "+"  Total: "+barTotals[i].total+ ":  "+"  "+" Female: "+barTotals[i].f+", "+" Male: "+barTotals[i].m+'<p>'
+                              classificationHTML += '<p>'+barTotals[i].name + "  ......"+""+barTotals[i].total+ ":  "+"  "+"  female "+barTotals[i].f+", "+"  male "+barTotals[i].m+'<p>'
                               classificationHTML += '<a href = "https://www.metmuseum.org/art/collection/search#!?offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&department=21">';
                               classificationHTML += '</a>';
                               classificationHTML += '</li>';
@@ -294,8 +294,8 @@ p.drawLabelsCh = function(){
   p.textAlign(p.LEFT);
   p.noStroke();
   p.textSize(30);
-  p.text("Classification (artwork object type) by Gender", 80, 50);
-  p.text("In The Met Modern & Contemporary Art Collection", 80,85);
+  p.text("Classification (artwork object type) by Gender", 130, 90);
+  p.text("In The Met Modern & Contemporary Art Collection", 130,125);
 p.pop();
 
 p.push();
