@@ -292,8 +292,8 @@ p.drawLabelsCh = function(){
   p.textAlign(p.LEFT);
   p.noStroke();
   p.textSize(30);
-  p.text("Classification (artwork object type) by Gender", 30, 50);
-  p.text("In The Met Modern & Contemporary Art Collection", 30,85);
+  p.text("Classification (artwork object type) by Gender", 80, 50);
+  p.text("In The Met Modern & Contemporary Art Collection", 80,85);
 p.pop();
 
 p.push();
@@ -313,24 +313,24 @@ p.push();
       var y = p.map(i,upperLimit, lowerLimit, lowerLimit, upperLimit);
         p.noStroke();
         p.fill(77,77,77);
-        p.textSize(24);
+        p.textSize(30);
         p.text(i+3, x, y);
         p.stroke(77,77,77);
         p.strokeWeight(2);
-        p.line(x-25,y-8,x,y-8);    
+        p.line(x-25,y-10,x,y-10);    
     }
   p.pop(); 
-
+  p.pop();
     p.push();
-        p.translate(p.windowWidth/6,2000);
         p.textFont('Khand');
         p.noStroke();
         p.textSize(60);
         p.fill(42,155,285,90);
+        p.translate(150,1000);
         p.rotate(p.radians(270)); 
-        p.text("Artwork material type", 1350,p.windowWidth-(margin*6));
+        p.text("Artwork material type", margin+310,-margin);
     p.pop();
- p.pop();
+
   } 
 }
 
