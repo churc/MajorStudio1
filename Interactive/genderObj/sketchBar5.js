@@ -49,6 +49,8 @@ var g = function(p){
 
     p.setup = function(){
     canvas = p.createCanvas(1500, 2900);
+    p.background(238, 222, 161
+      , 1);
     p.show();
     // p.sortFemale();
     // p.mouseClicked('.bars');
@@ -62,16 +64,17 @@ var g = function(p){
 
 p.show = function(){
   $('button').click(function() {
-    $('#h3').addClass('classificationTypes');
+    $('#type').addClass('classificationTypes');
   });
 }
 
 p.mouseClicked = function(){
-    p.show = !p.show;
+    p.show = (!p.show);
+    // !show = p.show;
 }
 
 ////group by type classification & gender, then by name
-    p.analyzeData = function(){
+p.analyzeData = function(){
       gender = p.table.getColumn(10); ////gender
       name = p.table.getColumn(12); ////name, Artist Alpha Sort
       date = p.table.getColumn(17); ////object begin date
@@ -99,7 +102,6 @@ p.mouseClicked = function(){
 
 ////============ classification object type
     groupedByType = collate(tableA,22);  ////classification
-    //// groupByObjType.push(groupedByType);
 
 ////object, type (classification) each of the keys 
     var tableAkeys = Object.keys(groupedByType); ////returns array of object keys (glass, sculpture etc)
@@ -196,7 +198,7 @@ for (var i=0; i<count; i++) {
           w = p.width - 2 * margin, // chart area width and height
           h = p.height - 2 * margin;
     
-    var barWidth =  (h / groupedByTypeC.length) * 2; // width of bar
+    var barWidth =  (h / groupedByTypeC.length) * 3; // width of bar
     var barMargin = (h / groupedByTypeC.length) * 0.001; // margin between two bars
 
 for (var b=0; b<groupedByTypeC.length; b++) {
@@ -225,7 +227,7 @@ for (var b=0; b<groupedByTypeC.length; b++) {
          barTotals.push(myObject); ////each classification with number of artworks & split by gender  
 }
         p.push();
-        p.scale(0.5); 
+        p.scale(0.6); 
         p.translate(p.windowWidth/2,700);
 
 ////sort by size;
@@ -235,10 +237,10 @@ for (var b=0; b<groupedByTypeC.length; b++) {
       for (var i = barTotals.length-1; i >= 0; i--) {
           p.noStroke();
           p.fill(92,242,145);
-          p.rect(100 + (i * 10), 5, 2, barTotals[i]['m']);
+          p.rect(100 + (i * 10), 5, 3, barTotals[i]['m']);
           p.noStroke();
           p.fill(179,118,244);
-          p.rect(100 + (i * 10), 5, 2, (-1) * barTotals[i]['f']);
+          p.rect(100 + (i * 10), 5, 3, (-1) * barTotals[i]['f']);
           
           p.text(barTotals[i].name, 5, barWidth/2 + 5); // write data
           var objectNames = barTotals[i].name;
@@ -269,18 +271,13 @@ p.drawLabelsCh = function(){
   for(var i = 0; i < listItems.length; i ++ ) {
                           var classification = listItems[i];
                           var classificationHTML = '<li>';
+                              classificationHTML += '<p>'+listItems[i]+'<p>'
                               classificationHTML += '<a href = "https://www.metmuseum.org/art/collection/search#!?offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&department=21">';
                               classificationHTML += '</a>';
                               classificationHTML += '</li>';
-                  $('#types').append('<h3>'+classificationHTML+'</h3>');         ////put the article info into the web page with jquery  
+                  $('#types').append('<div>'+classificationHTML+'</div>');  ////put the artwork types into list  
           }
      
-   p.textFont('Khand');
-   p.noStroke();
-   p.textAlign(p.LEFT);
-   p.textSize(20);
-   p.fill (220,20,80);
-
 // //// title
   p.push();
   p.textFont('Khand');
@@ -297,8 +294,8 @@ p.drawLabelsCh = function(){
 p.pop();
 
 p.push();
-    p.scale(0.5);
-    p.translate(p.windowWidth/6*8.5,4736);
+    p.scale(0.6);
+    p.translate(p.windowWidth/6*8.5,4742);
 
     upperLimit = barTotals[barTotals.length - 1]['f']
     lowerLimit = -1 * (barTotals[barTotals.length - 1]['m'])
