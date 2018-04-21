@@ -60,6 +60,6 @@
 ### [Initial](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_churchouse.pdf) qualitative sketch ideas; [sketches](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_uncertainty_churchouse.pdf) for final project; [concepts](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQualConcepts2_clarechurchouse.pdf)
 
 
-#### Interactive Project The Top 10: Artwork Classification by Gender 
+#### Interactive Project: [Artwork Classification by Gender](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 
 ### Examine which female artists have the most artworks in The Met's Modern & Contemporary Art Collection, compare with male artists. What kind of works are these?
