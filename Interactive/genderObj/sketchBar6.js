@@ -256,11 +256,6 @@ for (var b=0; b<groupedByTypeC.length; b++) {
           objectType.push(objectNames); ////returns name of each classification
           p.pop();
 
-    // rect(0, 0, data[i], barWidth); // draw rect
-    // text(data[i], 5, barWidth/2 + 5);
-
-
-
         };
       p.pop();
   }
@@ -293,9 +288,7 @@ p.drawLabelsCh = function(){
                               classificationHTML += '</li>';
                   $('#types').append('<div>'+classificationHTML+'</div>');  ////put the artwork types into list  
           }
-/////tooltips
-///////tooltips css tricks
-// $("#types a[name]").tooltips();
+
 
 // //// title
   p.push();
