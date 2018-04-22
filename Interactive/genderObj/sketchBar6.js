@@ -49,7 +49,7 @@ var g = function(p){
   }
 
     p.setup = function(){
-    canvas = p.createCanvas(p.windowWidth, 3500);
+    canvas = p.createCanvas(p.windowWidth, 3300);
     p.analyzeData();
     p.analyzeYears();
     p.barChart();
@@ -235,33 +235,41 @@ for (var b=0; b<groupedByTypeC.length; b++) {
       for (var i = barTotals.length-1; i >= 0; i--) {
           p.noStroke();
           p.fill(92,242,145);
-          p.rect(100 + (i * 10), 5, 3, barTotals[i]['m']);
+          p.rect(100 + (i * 10), 5, 10, barTotals[i]['m']);
           p.noStroke();
           p.fill(179,118,244);
-          p.rect(100 + (i * 10), 5, 3, (-1) * barTotals[i]['f']);
+          p.rect(100 + (i * 10), 5, 10, (-1) * barTotals[i]['f']);
           console.log(barTotals[i].name)
           console.log(barTotals[i]);
 
           p.push();
-          p.translate(50,80);
+          p.translate(5,0);
           p.rotate(p.radians(270));
-          p.textSize(20);
-          p.text(barTotals[i].name, 5, barWidth/2 + 5); // text-names
+          p.fill(255,0,0);
+          p.textSize(16);
+          p.text(barTotals[i].name+barTotals[i].total, 5+7, 105+(i * 10)); // text-names
+          // p.text(barTotals[i].name, 5, barWidth/2 + 5); // text-names
           var objectNames = barTotals[i].name;
           objectType.push(objectNames); ////returns name of each classification
           p.pop();
+
+    // rect(0, 0, data[i], barWidth); // draw rect
+    // text(data[i], 5, barWidth/2 + 5);
+
+
+
         };
       p.pop();
   }
 
 
 p.drawLabelsCh = function(){
+//////get info
     p.push();
 
     var width = p.windowWidth, 
         height = p.windowHeight
 
-  
 //////return list of classification types & numbers
   p.textFont('Khand');
   p.noStroke();
@@ -282,6 +290,9 @@ p.drawLabelsCh = function(){
                               classificationHTML += '</li>';
                   $('#types').append('<div>'+classificationHTML+'</div>');  ////put the artwork types into list  
           }
+/////tooltips
+///////tooltips css tricks
+// $("#types a[name]").tooltips();
 
 // //// title
   p.push();

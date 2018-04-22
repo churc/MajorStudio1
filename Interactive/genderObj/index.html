@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
 
- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 
   <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
 
@@ -13,14 +13,21 @@
 
   <script language="javascript" src="libraries/p5.dom.js"></script>
 
- <!--  // <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+ <!--  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
 
 
 <!-- <script language="javascript" type="text/javascript" src="sketchLine.js"></script> -->
   
 <!-- <script language="javascript" type="text/javascript" src="flavioLine.js"></script> -->
     <script language="javascript" type="text/javascript" src=" sketchBar6.js"></script>
+    <script src="js/tooltips.js"></script>
+    <script>
+    $(function() {
+      $("#page-wrap a[title]").tooltips();
+    });
+  </script>
 <link rel="stylesheet" src="libraries/Khand-Regular.ttf">
+
 <!-- this line removes any default padding and style. you might only need one of these values set. -->
 
   <style> body {padding: 0; margin: 0;} </style>
