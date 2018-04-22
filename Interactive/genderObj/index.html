@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
-
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+ <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 
   <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
 
@@ -20,10 +20,10 @@
   
 <!-- <script language="javascript" type="text/javascript" src="flavioLine.js"></script> -->
     <script language="javascript" type="text/javascript" src=" sketchBar6.js"></script>
-    <script src="js/tooltips.js"></script>
+    <script src="tooltips.js"></script>
     <script>
     $(function() {
-      $("#page-wrap a[title]").tooltips();
+      $("#page-wrap a[name]").tooltips();
     });
   </script>
 <link rel="stylesheet" src="libraries/Khand-Regular.ttf">
@@ -39,18 +39,20 @@
 </head>
 
 <body>
-<div id="c1"> 
-<div>
-<button id="submit" position="30px,700px" class="classificationTypes" >classification (artwork material types) <span style="font-size:19px;text-transform:lowercase;">greatest to least in number</span></button></div>
+  <div id="page-wrap">
+
+   <a href="#" name="OooohLook at me"</a> 
+  
+ 
+<div id="c1"></div> </div>
+  <input type="button" id="submit" class="classificationTypes" onclick="button"><span>classification (artwork material types)<span class="span2" >greatest to least in number</span></span></input>
+
+  <!-- <span> classification (artwork material types)><span style="font-size:19px;text-transform:lowercase;">greatest to least in number</span></span>  -->
 <container class="container">
 <div id="types" >
-<!-- <ul class="listing"> -->
- <!--  <li> -->
-    </p><h3 class="listing"></h3></p>
- <!--  </li> -->
- <!-- </ul>  -->
+    <p><h3 class="listing"></h3></p>
 </div>
-</container></div>
+</container>
 
 
 

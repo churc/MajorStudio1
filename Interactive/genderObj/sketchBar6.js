@@ -20,6 +20,7 @@ var upperLimit;
 var lowerLimit;
 
 var button; 
+var submit;
 var objNames;
 
 var KhandFont, fontReady = false;
@@ -54,22 +55,24 @@ var g = function(p){
     p.analyzeYears();
     p.barChart();
     p.drawLabelsCh();
-    p.show();
-    p.mouseClicked("#types");
+    p.showTypes();
+    p.mousePressed('button');
     p.background(238, 222, 161, 1);
     p.noLoop();
   }
 
-p.show = function(){
-  $('button').click(function() {
-    $('#types').addClass('classificationTypes');
-  });
+// var submit = document.createElement("button");
+
+p.showTypes = function(){
+    var button = document.getElementById("submit");
+    $('button').click(function() {
+    $('#types').addClass('listingW');
+    })
 }
 
-p.mouseClicked = function(){
-    p.show = (!p.show);
+p.mousePressed = function(){
+    p.show = !p.show;
 }
-
 
 ////group by type classification & gender, then by name
 p.analyzeData = function(){
