@@ -213,7 +213,7 @@ for (var i=0; i<count; i++) {
           w = p.width - 2 * margin, // chart area width and height
           h = p.height - 2 * margin;
     
-    var barWidth =  (h / groupedByTypeC.length) * 3; // width of bar
+    var barWidth =  (h / groupedByTypeC.length) * 1; // width of bar
     var barMargin = (h / groupedByTypeC.length) * 0.001; // margin between two bars
 
 for (var b=0; b<groupedByTypeC.length; b++) {
@@ -250,11 +250,12 @@ for (var b=0; b<groupedByTypeC.length; b++) {
         return a['m'] - b['m']
       })
       for (var i = barTotals.length-1; i >= 0; i--) {
-          p.noStroke();
-          p.fill(92,242,145,90);
+          p.strokeWeight(1.5);
+          p.stroke("#ffffff");
+          p.fill(92,242,145,150);
           p.rect(100 + (i * 10), 5, 10, barTotals[i]['m']);
-          p.noStroke();
-          p.fill(179,118,244,90);
+          // p.noStroke();
+          p.fill(179,118,244,140);
           p.rect(100 + (i * 10), 5, 10, (-1) * barTotals[i]['f']);
           // console.log(barTotals[i].name)
           // console.log(barTotals[i]);
@@ -287,7 +288,7 @@ p.reSort = function(){
     
       for (var i = barTotalsSort.length-1; i >= 0; i--) {
           p.noStroke();
-          p.fill(255,0,0,40);
+          p.fill(255,0,0,30);
           p.rect(100 + (i * 10), 5, 10, (-1) * barTotalsSort[i]['f']);
           p.noStroke();
           p.fill(0,255,255,40);
