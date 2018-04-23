@@ -18,8 +18,9 @@
 
 <!-- <script language="javascript" type="text/javascript" src="sketchLine.js"></script> -->
   
-<!-- <script language="javascript" type="text/javascript" src="flavioLine.js"></script> -->
-    <script language="javascript" type="text/javascript" src=" sketchBar6.js"></script>
+<!-- <script language="javascript" type="text/javascript" src="zoom.js"></script>
+ -->
+    <script language="javascript" type="text/javascript" src=" sketchBar7.js"></script>
     <script src="tooltips.js"></script>
     <script>
     $(function() {
@@ -43,11 +44,12 @@
   
  
 <div id="c1"></div> </div>
-  <input type="button" id="submit" class="classificationTypes" onclick="button"><span>classification (artwork material types)<span class="span2" >greatest to least in number</span></span></input>
+<button id="submit" class="classificationTypes" onclick="p.toggleTypes()">classification (artwork material types)      greatest to least in number</button>
+<!--   <input type="button" id="submit" class="classificationTypes" onclick="button"><span>classification (artwork material types)<span class="span2" >greatest to least in number</span></span></input> -->
 
 
 <container class="container">
-<div id="types" >
+<div id="types" style="display:none;">
     <p><h3 class="listing"></h3></p>
 </div>
 </container>

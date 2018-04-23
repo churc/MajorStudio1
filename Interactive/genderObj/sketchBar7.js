@@ -273,8 +273,7 @@ for (var b=0; b<groupedByTypeC.length; b++) {
   p.pop();
 }
 
-////============sort by size by female;
-
+//////============sort by size by female;
 
 p.reSort = function(){
     p.push();
@@ -285,8 +284,7 @@ p.reSort = function(){
       barTotalsSort.sort(function(a,b){
         return a['f'] - b['f']
       })
-
-       
+    
       for (var i = barTotalsSort.length-1; i >= 0; i--) {
           p.noStroke();
           p.fill(255,0,0,40);
@@ -309,16 +307,6 @@ p.reSort = function(){
       p.pop();
 };
 
-////analyzeGender ////CHECK
-
-// a      = [5, 5, 5, 2, 2, 2, 2, 2, 9, 4];
-// result = { };
-// for(var i = 0; i < a.length; ++i) {
-//     if(!result[a[i]])
-//         result[a[i]] = 0;
-//     ++result[a[i]];
-// }
-
 
 p.analyzeArtists = function(){
       name = p.table.getColumn(12); ////name, Artist Alpha Sort
@@ -328,61 +316,38 @@ p.analyzeArtists = function(){
      
      console.log(groupedByNameL); 
 
-      var totalsFilter = 0;
-      var ftotals = 0;
-      var mtotals = 0;
-
      var groupedByNameKeys = Object.keys(groupedByNameL);
      console.log(groupedByNameKeys);
 
     for (var c=0; c<groupedByNameKeys.length; c++) {
-      // var totalsFiltered = 0;
-      // var femtotals = 0;
-      // var maletotals = 0;
- 
  // console.log(groupedByNameL[groupedByNameKeys[c]]);
 
-    for (var r = 0; r<=groupedByNameL[groupedByNameKeys[c]].lengthww; r++) {
+    for (var r = 0; r<groupedByNameL[groupedByNameKeys[c]].length-1; ++r) {
         
         currentArtist = groupedByNameL[groupedByNameKeys[c]][r][12];
+
         if(!currentArtist[groupedByNameL[groupedByNameKeys[c]][r]])
           currentArtist[groupedByNameL[groupedByNameKeys[c]][r]] = 0;
         ++currentArtist[groupedByNameL[groupedByNameKeys[c]][r]];
-// console.log(currentArtist); ////returns number by each artist name
-        currentArtistCount = currentArtist;
-        //////////WORKS
+
+        var currentArtistCount = currentArtist;
+ 
+     }
         console.log(currentArtistCount); ////returns number by each artist name
-
+        // console.log(currentArtistCount.length);
     
- if (currentArtistCount == 'm') {
-           mtotals = mtotals + 1;
-
-        } else if (currentArtistCount == 'f'){
-          ftotals = ftotals + 1;  
-      };
-
-      if(currentArtistCount === 'm' || currentArtistCount === 'f'){
-        totalsFilter = totalsFilter + 1;
-        }    
-
-
-      };
       myObjectName = document.createElement('names');
-      // myObjectName = {name: currentArtistCount, total: groupedByNameL[groupedByNameKeys[c]][r]};
 
-        myObjectName = {name: groupedByNameKeys[c], total: totalsFilter, total2: [groupedByNameL[groupedByNameKeys[c]][r]], total3: };
+     // myObjectName = {name:  groupedByNameL[groupedByNameKeys[c]][r][12], total: currentArtistCount.length};
+      myObjectName = {name: groupedByNameKeys[c], total: currentArtistCount.length};
+  }
+  
 // console.log(currentArtist); ////returns list of the 3,564 artists names
         
-console.log(myObjectName)
+console.log(myObjectName);
        
 }
-// console.log(currentArtistCount)
-// console.log(currentArtist[groupedByNameL])  
-
-}
-
-
-
+ 
 
 //////////////////////tooltips to do
 var options = {
@@ -438,9 +403,7 @@ p.drawLabelsCh = function(){
                               classificationHTML += '</li>';
                   $('#types').append('<div>'+classificationHTML+'</div>');  ////put the artwork types into list  
           }
-/////tooltips
-///////tooltips css tricks
-// $("#types a[name]").tooltips();
+
 
 // //// title
   p.push();
