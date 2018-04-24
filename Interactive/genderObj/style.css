@@ -1,4 +1,7 @@
- 
+ @font-face {
+   font-family:  'Khand', sans-serif;
+  }
+   
 html, body {
   width: auto;
   height: 100%;
@@ -229,7 +232,7 @@ span.span2{
   left: 55;
   font-family: 'Khand', sans-serif;
   /*font-family: "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;*/
-  color: rgb(77,77,77);
+  color: rgb(102,102,102);
   font-size:14px;
 }
 
