@@ -49,15 +49,12 @@ function switchText(indivType){
     $('#tooltip').text(indivType)
 }
 
-// ////toggle text off on
-//  p.toggleTypes = function(){
-//   var contentId = document.getElementById("types");
-//   contentId.style.display == "none" ? contentId.style.display = "block":
-//   contentId.style.display = "none";
-// }
 
 var g = function(p){
 
+p.move = function(){
+  p.translate(0,300);
+}
    p.fontRead = function(){
       fontReady = true; 
     }
@@ -76,7 +73,8 @@ var g = function(p){
 }
 
     p.setup = function(){
-    canvas = p.createCanvas(p.windowWidth, 3300);
+    canvas = p.createCanvas(p.windowWidth, 3600);
+    p.move();
     p.analyzeData();
     p.analyzeYears();
     p.barChart();
@@ -85,6 +83,7 @@ var g = function(p){
     p.reSort();
     p.analyzeArtists();
     p.background(238, 222, 161, 1);
+    p.header();
   }
 
 
@@ -94,7 +93,6 @@ p.showTypes = function(){
       $('#types').toggle();
     });
 }
-
 
 ////group by type classification & gender, then by name
 p.analyzeData = function(){
@@ -282,10 +280,10 @@ for (var b=0; b<groupedByTypeC.length; b++) {
 //////listen for mouse, show tooltips
 p.draw = function(){
   for (var i = bars.length - 1; i >= 0; i--) {
-    var d = p.dist(p.mouseX, p.mouseY, bars[i].x-2, bars[i].y )
+    var d = p.dist(p.mouseX, p.mouseY, bars[i].x-25, bars[i].y )
 
    //if (p.mouseX == bars[i].x && (p.mouseY >= bars[i].y && p.mouseY <= (bars[i].y + bars[i].height) ) ) {
-   if (p.mouseX == bars[i].x-2){
+   if (p.mouseX == bars[i].x-15){
       console.log('mousedover')
       switchText(bars[i].name)
     };
@@ -332,7 +330,7 @@ p.analyzeArtists = function(){
       tableA = p.table.getArray(); 
 
      groupedByNameL = collate(tableA,12); ////grouped by name
-     // console.log(groupedByNameL); 
+     console.log(groupedByNameL); 
 
      var groupedByNameKeys = Object.keys(groupedByNameL);
      // console.log(groupedByNameKeys);
@@ -344,8 +342,47 @@ p.analyzeArtists = function(){
   }          
   console.log(myObjectName);  ////returns artist name & number of items in collection    
 }
-     
+ 
 
+////header
+p.header = function(){
+    p.push();
+      p.translate(0,-310);
+      p.textFont('Khand');
+      p.noStroke();
+      p.fill(179,118,244,120); ////gender
+      p.rect(28,53,67,42);
+      p.fill(92,242,145,130); 
+      p.rect(95,53,59,42);
+      p.fill(191,61,4,80); ////medium
+      p.rect(230,53,139,42);
+
+      p.fill(191,61,4,80); ////medium
+      p.rect(555,276,79,28);
+      p.fill(179,118,244,90); ////gender
+      p.rect(865,276,69,28);
+      p.fill(92,242,145,90); ////gender
+      p.rect(974,276,51,28);
+      
+      p.textStyle(p.NORMAL);
+      p.noStroke();
+      p.textAlign(p.LEFT);
+      p.fill(77,77,77);
+      p.textSize(48);
+      p.text("Gender and Medium:", 30, 90);
+      p.textSize(40);
+      p.text("The Met Modern & Contemporary Art", 387, 90);
+      // p.textSize(35);
+      // p.text("Which Mediums Dominate", 390, 130);
+      p.textSize(38);
+      p.text("Which mediums are most collected by gender?", 55, 259);
+      p.textSize(26);
+      p.text("Roll over the bars in the chart below to explore the 105 medium classifications, shown by female and male", 55, 300);
+    
+  p.pop();
+
+}     
+ 
 p.drawLabelsCh = function(){
 //////get info on each object and return on screen
     p.push();
@@ -374,19 +411,20 @@ p.drawLabelsCh = function(){
                   $('#types').append('<div>'+classificationHTML+'</div>');  ////put the artwork types into list  
           }
 
+
 // //// title
   p.push();
   p.textFont('Khand');
   p.textStyle(p.NORMAL);
   p.noStroke();
   p.textAlign(p.LEFT);
-  p.fill(77,77,77);
-  p.textFont('Khand');
-  p.textAlign(p.LEFT);
-  p.noStroke();
-  p.textSize(30);
-  p.text("Classification (artwork object type) by Gender", 130, 90);
-  p.text("In The Met Modern & Contemporary Art Collection", 130,125);
+  p.fill(102,102,102);
+  p.textSize(26);
+  p.text("Classification of artworks by medium, by gender", 170, 150);
+  p.textSize(18);
+  p.text("each bar represents an artwork medium", 170,178);
+  // p.fill(191,61,4,80); ////medium
+  // p.rect(430,125,78,28);
 p.pop();
 
 p.push();
@@ -422,13 +460,20 @@ p.push();
         p.translate(150,1000);
         p.rotate(p.radians(270)); 
         p.text("Artwork material type", margin+310,-margin);
-        p.fill(33,33,33);
+        p.fill(105,105,105);
         p.textSize(30);
         p.text("male", margin+380,-margin+70);
         p.text("female", margin+560,-margin+70);
+        p.fill(92,242,145,150);
+        p.ellipse(margin+365,-margin+61,20,20);
+        p.fill(179,118,244,130);
+        p.ellipse(margin+545,-margin+61,20,20);
+
     p.pop();
 
-  } 
+  }
+
+
 }
 
 var myp5 = new p5(g, 'c1');
