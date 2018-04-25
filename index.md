@@ -61,7 +61,7 @@
 
 
 
-#### Interactive Project: [Artwork Classification by Gender](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
+#### Interactive Project: [Gender and Medium at The Met](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 
 ### Examine which female artists have the most artworks in The Met's Modern & Contemporary Art Collection, compare with male artists. What kind of works are these?
 ### [Sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant2_churchouse.pdf); [more sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant3_churchouse.pdf); [png1](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-13.png); [png2](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-14.png); [png3](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-15.png); [png4](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-16.png)
