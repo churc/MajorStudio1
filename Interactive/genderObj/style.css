@@ -10,7 +10,7 @@ html, body {
 
 body{
   margin: 0;
-  display: flex;
+/*  display: flex;*/
   padding: 0;
   padding-bottom: 20;
   justify-content: center;

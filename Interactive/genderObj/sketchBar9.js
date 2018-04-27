@@ -56,7 +56,7 @@ function switchText(indivType){
 var g = function(p){
 
 p.move = function(){
-  p.translate(-50,3650);
+  // p.translate(0,3650);
 }
    p.fontRead = function(){
       fontReady = true; 
@@ -226,7 +226,7 @@ for (var i=0; i<count; i++) {
           w = p.width - 2 * margin, // chart area width and height
           h = p.height - 2 * margin;
     
-    var barWidth =  (h / groupedByTypeC.length) * 1; // width of bar
+    // var barWidth =  (h / groupedByTypeC.length) * 1; // width of bar
     var barMargin = (h / groupedByTypeC.length) * 0.001; // margin between two bars
 
 for (var b=0; b<groupedByTypeC.length; b++) {
@@ -255,8 +255,8 @@ for (var b=0; b<groupedByTypeC.length; b++) {
          barTotals.push(myObject); ////each classification with number of artworks & split by gender  
 }
         p.push();
-        p.scale(0.8); 
-         p.translate(1440/3,700);
+        // p.scale(0.8); 
+        //  p.translate(1440/3,700);
 
 /////sort by size by female
 barTotalsSort = barTotals;
@@ -268,10 +268,10 @@ barTotalsSort = barTotals;
           p.strokeWeight(1.5);
           p.stroke("#ffffff");
           p.fill(92,242,145,150); ////green bars artworks by men
-          p.rect(100 + (i * 10), 5, 10, barTotals[i]['m']);
+          p.rect(100 + (i * 10), $(window).height()/2, 10, barTotals[i]['m']/2);
           p.fill(179,118,244,140);  ////purple bars artworks by women
-          var bar = p.rect(100 + (i * 10), 5, 10, (-1) * barTotals[i]['f']);
-          bars.push({x:100 + (i * 10), y:5, width: 0.5, height: barTotals[i]['f'], name:barTotals[i].name});
+          var bar = p.rect(100 + (i * 10), $(window).height()/2, 10, (-1) * barTotals[i]['f']/2);
+          bars.push({x:100 + (i * 10), y:$(window).height()/2, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name});
 
           p.push();
 
@@ -314,17 +314,23 @@ barTotalsSort = barTotals;
 //////listen for mouse, show tooltips
 p.draw = function(){
 
-
+  var onLabel = false;
   for (var i = bars.length - 1; i >= 0; i--) {
     var d = p.dist(p.mouseX, p.mouseY, bars[i].x, bars[i].y )
 
    // if (p.mouseX == bars[i].x-16 && (p.mouseY >= bars[i].y && p.mouseY <= (bars[i].y + bars[i].height) ) ) {
    // if (p.mouseX == bars[i].x-15){
-   if (p.mouseX == bars[i].x-100){
-      console.log('mousedover')
+   if ((p.mouseX >= bars[i].x) && (p.mouseX <= bars[i].x + 10)){
+      console.log('x:', p.mouseX)
+      console.log('y:', p.mouseY)
+
       switchText(bars[i].name)
+      onLabel = true;
     };
   };
+  if(onLabel == false){
+    switchText("")
+  }
 
 }
 
@@ -416,7 +422,7 @@ p.analyzeArtists = function(){
 ////header
 p.header = function(){
     p.push();
-      p.translate(0,-310);
+      // p.translate(0,-310);
       p.textFont('Khand');
       p.noStroke();
       p.fill(179,118,244,120); ////gender
@@ -498,7 +504,7 @@ p.drawLabelsCh = function(){
 p.pop();
 
 p.push();
-    p.scale(0.8);
+    //p.scale(0.8);
     p.translate(1440*1.13,4742);
 
     upperLimit = barTotals[barTotals.length - 1]['f']
@@ -527,7 +533,7 @@ p.push();
         p.noStroke();
         p.textSize(70);
         p.fill(42,155,285,90);
-        p.translate(150,1000);
+        // p.translate(150,1000);
         p.rotate(p.radians(270)); 
         p.text("Medium", margin+260,margin/3);
         p.fill(105,105,105);
