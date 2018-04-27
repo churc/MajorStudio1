@@ -80,7 +80,8 @@ p.move = function(){
 }
 
     p.setup = function(){
-    canvas = p.createCanvas(1440, 2800);
+    // canvas = p.createCanvas(1440, 2800);
+    canvas = p.createCanvas(1440, 5000);
     p.windowResized();
     p.move();
     p.analyzeData();
@@ -95,7 +96,7 @@ p.move = function(){
   }
 
   p.windowResized = function() {
-  // resizeCanvas(windowWidth, windowHeight);
+  p.resizeCanvas(p.windowWidth, p.windowHeight);
 }
 
 p.showTypes = function(){
@@ -269,10 +270,10 @@ barTotalsSort = barTotals;
           p.strokeWeight(1.5);
           p.stroke("#ffffff");
           p.fill(92,242,145,150); ////green bars artworks by men
-          p.rect(100 + (i * 10), $(window).height()/2, 10, barTotals[i]['m']/2);
+          p.rect(160 + (i * 10), $(window).height()/2, 10, barTotals[i]['m']/2);
           p.fill(179,118,244,140);  ////purple bars artworks by women
-          var bar = p.rect(100 + (i * 10), $(window).height()/2, 10, (-1) * barTotals[i]['f']/2);
-          bars.push({x:100 + (i * 10), y:$(window).height()/2, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
+          var bar = p.rect(160 + (i * 10), $(window).height()/2, 10, (-1) * barTotals[i]['f']/2);
+          bars.push({x:160 + (i * 10), y:$(window).height()/2, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
 
           p.push();
 
@@ -308,6 +309,8 @@ barTotalsSort = barTotals;
       //     objectType.push(objectNames); ////returns name of each classification
           p.pop();
         };
+        console.log(barTotalsSort);
+        // p.saveJSON(barTotalsSort, 'totals.json');
   p.pop();
 
 }
@@ -377,7 +380,7 @@ p.analyzeArtists = function(){
      var groupedByNameKeys = Object.keys(groupedByNameL);
      // console.log(groupedByNameKeysSort);
 
-  groupedByNameKeysSort = groupedByNameKeys;
+      groupedByNameKeysSort = groupedByNameKeys;
       groupedByNameKeysSort.sort(function(a,b){
         return a - b
       })
@@ -385,7 +388,7 @@ p.analyzeArtists = function(){
     for (var c=0; c<groupedByNameKeysSort.length; c++) {
      var currentArtistCount = groupedByNameL[groupedByNameKeysSort[c]].length
     
-     myObjectName.push({name: groupedByNameKeysSort[c], total: currentArtistCount}); 
+      myObjectName.push({name: groupedByNameKeysSort[c], total: currentArtistCount}); 
 
 ////sort by size
       myObjectNameSort = myObjectName;
@@ -398,24 +401,24 @@ p.analyzeArtists = function(){
 }
  
 
-//  p.analyzeArtists = function(){
-//       name = p.table.getColumn(12); ////name, Artist Alpha Sort
-//       tableA = p.table.getArray(); 
+ p.analyzeArtists = function(){
+      name = p.table.getColumn(12); ////name, Artist Alpha Sort
+      tableA = p.table.getArray(); 
 
 
-//      groupedByNameL = collate(tableA,12); ////grouped by name
-//      console.log(groupedByNameL); 
+     groupedByNameL = collate(tableA,12); ////grouped by name
+     console.log(groupedByNameL); 
 
-//      var groupedByNameKeys = Object.keys(groupedByNameL);
-//      // console.log(groupedByNameKeys);
+     var groupedByNameKeys = Object.keys(groupedByNameL);
+     // console.log(groupedByNameKeys);
 
-//     for (var c=0; c<groupedByNameKeys.length; c++) {
-//      var currentArtistCount = groupedByNameL[groupedByNameKeys[c]].length
+    for (var c=0; c<groupedByNameKeys.length; c++) {
+     var currentArtistCount = groupedByNameL[groupedByNameKeys[c]].length
      
-//      myObjectName.push({name: groupedByNameKeys[c], total: currentArtistCount}); 
-//   }          
-//   console.log(myObjectName);  ////returns artist name & number of items in collection    
-// }
+     myObjectName.push({name: groupedByNameKeys[c], total: currentArtistCount}); 
+  }          
+  console.log(myObjectName);  ////returns artist name & number of items in collection    
+}
  
 
 ////header
@@ -428,8 +431,8 @@ p.header = function(){
       p.rect(48,10,67,42);
       p.fill(92,242,145,130); 
       p.rect(115,10,59,42);
-      p.fill(191,61,4,80); ////medium
-      p.rect(250,10,139,42);
+      // p.fill(191,61,4,80); ////medium
+      // p.rect(250,10,139,42);
 
       // p.fill(191,61,4,80); ////medium
       // p.rect(555,276,79,28);
@@ -443,9 +446,9 @@ p.header = function(){
       p.textAlign(p.LEFT);
       p.fill(77,77,77);
       p.textSize(48);
-      p.text("Gender and Medium:", 50, 45);
+      p.text("Gender and Medium:", 50, 48);
       p.textSize(40);
-      p.text("The Met Modern & Contemporary Art", 400, 45);
+      p.text("The Met Modern & Contemporary Art", 400, 48);
       // p.textSize(35);
       // p.text("Which Mediums Dominate", 390, 130);
       // p.textSize(38);
@@ -494,17 +497,18 @@ p.drawLabelsCh = function(){
   p.textAlign(p.LEFT);
   p.fill(102,102,102);
   p.textSize(39);
-  p.text("The Modern & Contemporary Department's 105 Medium Classifications", 50, 110);
-  p.text("Sorted by Gender", 50, 150);
-  p.textSize(20);
-  p.text("roll over a bar to explore each of the medium classifications", 50, 180);
+  p.text("105 Medium Classifications Sorted by Gender", 50, 116);
+  // p.text("Sorted by Gender", 50, 156);
+  // p.textSize(20);
+  // p.text("roll over a bar to explore each of the medium classifications", 50, 186);
   // p.fill(191,61,4,80); ////medium
   // p.rect(430,125,78,28);
 p.pop();
 
+////axis number of objects
 p.push();
     p.scale(0.5);
-    p.translate(width*1.58,4793);
+    p.translate(width*1.66,4790);
 
     upperLimit = barTotals[barTotals.length - 1]['f']
     lowerLimit = -1 * (barTotals[barTotals.length - 1]['m'])
@@ -534,15 +538,15 @@ p.push();
         p.fill(42,155,285,90);
         p.translate(0,0);
         p.rotate(p.radians(270)); 
-        p.text("Medium", margin*5,margin*20);
+        p.text("Medium", -640,p.width/4+margin);
         p.fill(105,105,105);
         p.textSize(30);
-        p.text("male", margin+230,margin);
-        p.text("female", margin+410,margin);
+        p.text("male", -485, p.width-margin);
+        p.text("female", -320, p.width-margin);
         p.fill(92,242,145,150);
-        p.ellipse(margin+212,margin-8,20,20);
+        p.ellipse(-500, p.width-margin*1.1,20,20);
         p.fill(179,118,244,130);
-        p.ellipse(margin+393,margin-8,20,20);
+        p.ellipse(-335, p.width-margin*1.1,20,20);
 
     p.pop();
 
