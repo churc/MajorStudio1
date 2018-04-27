@@ -1,16 +1,20 @@
  @font-face {
    font-family:  'Khand', sans-serif;
   }
-   
+
 html, body {
   width: auto;
   height: 100%;
 }
 
+
 body{
   margin: 0;
+  display: flex;
   padding: 0;
   padding-bottom: 20;
+  justify-content: center;
+  align-items: center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -120,7 +124,7 @@ span.span2{
     text-transform: uppercase;
     float:left;
     text-align: left;
-    top:1000px;
+    top:800px;
     left: 0px;
 }
 
@@ -136,16 +140,15 @@ span.span2{
   grid-gap: 5px;
   justify-items: start;
   position: absolute; /*important*/
-  top: 1070px;
+  top: 870px;
   left: 30px;
   right: 20px;
   margin-right: 15px;
 }
 
 #submit{
-    position: absolute;  important
-    top: 995px;
-
+    position: absolute;  /*important*/
+    top: 795px;
     left: 0px;
     width:406px;
     vertical-align: middle;  
@@ -186,18 +189,17 @@ span.span2{
 }
 
   #c1{
-    /*width: 90%;*/
     width: 100%;
     height:auto;
   }
 
   #c2{
-    width: 90%;
+    width: 100%;
     height:auto;
   }
 
   #c3{
-    width: 90%;
+    width: 100%;
     height:auto;
   }
 }
@@ -209,8 +211,8 @@ span.span2{
 #tooltip{
   z-index:200;
   position: absolute; /*needs position for z-index to work*/
-  top: 800;
-  left:450;
+  top: 680;
+  left:650;
   font-family: 'Helvetica', sans-serif;
   color: #444444;
   font-size:15px;
@@ -228,7 +230,7 @@ span.span2{
 
 #description{
   position: absolute;
-  top: 292;
+  top: 192;
   left: 55;
   font-family: 'Khand', sans-serif;
   /*font-family: "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;*/
@@ -238,7 +240,7 @@ span.span2{
 
 #footer{
   position: absolute;
-  top: 3580;
+  top: 4280;
   left: 30;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
   color:#777777;
