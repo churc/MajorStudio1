@@ -48,8 +48,12 @@ function collate(array, prop){
 }
 
 ////container for bar info text - tooltip
-function switchText(indivType){
+function switchText(indivType, x, y){
     $('#tooltip').text(indivType)
+    //move it to the x y position
+    $('#tooltip').css('position', 'absolute');
+    $('#tooltip').css('top', y-25); 
+    $('#tooltip').css('left', x); 
 }
 
 
@@ -76,7 +80,7 @@ p.move = function(){
 }
 
     p.setup = function(){
-    canvas = p.createCanvas(1440, 8050);
+    canvas = p.createCanvas(1440, 2800);
     p.windowResized();
     p.move();
     p.analyzeData();
@@ -226,7 +230,6 @@ for (var i=0; i<count; i++) {
           w = p.width - 2 * margin, // chart area width and height
           h = p.height - 2 * margin;
     
-    // var barWidth =  (h / groupedByTypeC.length) * 1; // width of bar
     var barMargin = (h / groupedByTypeC.length) * 0.001; // margin between two bars
 
 for (var b=0; b<groupedByTypeC.length; b++) {
@@ -255,8 +258,6 @@ for (var b=0; b<groupedByTypeC.length; b++) {
          barTotals.push(myObject); ////each classification with number of artworks & split by gender  
 }
         p.push();
-        // p.scale(0.8); 
-        //  p.translate(1440/3,700);
 
 /////sort by size by female
 barTotalsSort = barTotals;
@@ -271,7 +272,7 @@ barTotalsSort = barTotals;
           p.rect(100 + (i * 10), $(window).height()/2, 10, barTotals[i]['m']/2);
           p.fill(179,118,244,140);  ////purple bars artworks by women
           var bar = p.rect(100 + (i * 10), $(window).height()/2, 10, (-1) * barTotals[i]['f']/2);
-          bars.push({x:100 + (i * 10), y:$(window).height()/2, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name});
+          bars.push({x:100 + (i * 10), y:$(window).height()/2, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
 
           p.push();
 
@@ -318,18 +319,16 @@ p.draw = function(){
   for (var i = bars.length - 1; i >= 0; i--) {
     var d = p.dist(p.mouseX, p.mouseY, bars[i].x, bars[i].y )
 
-   // if (p.mouseX == bars[i].x-16 && (p.mouseY >= bars[i].y && p.mouseY <= (bars[i].y + bars[i].height) ) ) {
-   // if (p.mouseX == bars[i].x-15){
-   if ((p.mouseX >= bars[i].x) && (p.mouseX <= bars[i].x + 10)){
+   if ((p.mouseX >= bars[i].x) && (p.mouseX <= bars[i].x + 10) && (p.mouseY >= (bars[i].y-bars[i].height) && p.mouseY <= (bars[i].y +bars[i].maleHeight))){
       console.log('x:', p.mouseX)
       console.log('y:', p.mouseY)
 
-      switchText(bars[i].name)
+      switchText(bars[i].name, p.mouseX, p.mouseY)
       onLabel = true;
     };
   };
   if(onLabel == false){
-    switchText("")
+    switchText("", p.mouseX, p.mouseY)
   }
 
 }
@@ -426,11 +425,11 @@ p.header = function(){
       p.textFont('Khand');
       p.noStroke();
       p.fill(179,118,244,120); ////gender
-      p.rect(28,53,67,42);
+      p.rect(48,10,67,42);
       p.fill(92,242,145,130); 
-      p.rect(95,53,59,42);
+      p.rect(115,10,59,42);
       p.fill(191,61,4,80); ////medium
-      p.rect(230,53,139,42);
+      p.rect(250,10,139,42);
 
       // p.fill(191,61,4,80); ////medium
       // p.rect(555,276,79,28);
@@ -444,9 +443,9 @@ p.header = function(){
       p.textAlign(p.LEFT);
       p.fill(77,77,77);
       p.textSize(48);
-      p.text("Gender and Medium:", 30, 90);
+      p.text("Gender and Medium:", 50, 45);
       p.textSize(40);
-      p.text("The Met Modern & Contemporary Art", 387, 90);
+      p.text("The Met Modern & Contemporary Art", 400, 45);
       // p.textSize(35);
       // p.text("Which Mediums Dominate", 390, 130);
       // p.textSize(38);
@@ -495,17 +494,17 @@ p.drawLabelsCh = function(){
   p.textAlign(p.LEFT);
   p.fill(102,102,102);
   p.textSize(39);
-  p.text("The Modern & Contemporary Department's 105 Medium Classifications", 151, 110);
-  p.text("Sorted by Gender", 151, 150);
+  p.text("The Modern & Contemporary Department's 105 Medium Classifications", 50, 110);
+  p.text("Sorted by Gender", 50, 150);
   p.textSize(20);
-  p.text("roll over a bar to explore each of the medium classifications", 151, 180);
+  p.text("roll over a bar to explore each of the medium classifications", 50, 180);
   // p.fill(191,61,4,80); ////medium
   // p.rect(430,125,78,28);
 p.pop();
 
 p.push();
-    //p.scale(0.8);
-    p.translate(1440*1.13,4742);
+    p.scale(0.5);
+    p.translate(width*1.58,4793);
 
     upperLimit = barTotals[barTotals.length - 1]['f']
     lowerLimit = -1 * (barTotals[barTotals.length - 1]['m'])
@@ -523,8 +522,8 @@ p.push();
         p.textSize(30);
         p.text(i+3, x, y);
         p.stroke(77,77,77);
-        p.strokeWeight(2);
-        p.line(x-25,y-10,x,y-10);    
+        p.strokeWeight(1.5);
+        p.line(x-30,y-9,x,y-9);    
     }
   p.pop(); 
   p.pop();
@@ -533,9 +532,9 @@ p.push();
         p.noStroke();
         p.textSize(70);
         p.fill(42,155,285,90);
-        // p.translate(150,1000);
+        p.translate(0,0);
         p.rotate(p.radians(270)); 
-        p.text("Medium", margin+260,margin/3);
+        p.text("Medium", margin*5,margin*20);
         p.fill(105,105,105);
         p.textSize(30);
         p.text("male", margin+230,margin);
