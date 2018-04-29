@@ -1,72 +1,21 @@
 [
   {
-    "img": "img0"
-    "name": "Reginald Marsh",
-    "artworks": 927,
+    "img": "img0",
+    "name": "Arthur Dove",
+    "artworks": 81,
     "medium": [
-                ["924 drawings"],
-                ["2 prints"],
-                ["1 painting"],
+                ["71 drawings"],
+                ["10 paintings"],
               ],
     "nationality": "American",
-    "dates": 1898-1954
+    "dates": "1880-1946",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Dove.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?q=arthur%20dove&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&artist=Dove,%20Arthur$Arthur%20Dove&department=21",
+    "x": 600,
+    "y": 220
   },
   {
-    "img": "img1"
-    "name": "Dorothy Liebes",
-    "artworks": 89,
-    "medium": ["89 textile-woven"],
-    "nationality": "American",
-    "dates": 1897-1972
-  },
-  {
-    "img": "img2"
-    "name": "Carlo Scarpa",
-    "artworks": 254,
-    "medium": [
-                ["241 glass"],
-                ["8 drawings"],
-                ["3 sterling silver"],
-                ["1 silverplate gold"],
-                ["1 polished steel, brass, glass"],
-              ],
-    "nationality": "Italian",
-    "dates": 1906-1978
-  },
-  {
-    "img": "img3"
-    "name": "Anni Albers",
-    "artworks": 80,
-    "medium": [
-                ["79 textile-woven"],
-                ["1 textile-velvets"],
-              ],
-    "nationality": "American, born Germany",
-    "dates": 1899-1994
-  },
-  {
-    "img": "img4"
-    "name": "Louis A. Stirn",
-    "artworks": 172,
-    "medium": ["172 textiles-printed"],
-    "nationality": "American, born Germany",
-    "dates": 1863-1962
-  },
-  {
-    "img": "img5"
-    "name": "Margarete Willers",
-    "artworks": 65,
-    "medium": [
-                ["31 drawings"],
-                ["30 textiles-woven"],
-                ["3 textiles-sample books"],
-                ["1 archive"],
-              ],
-    "nationality": "German",
-    "dates": 1883-1977
-  },
-  {
-    "img": "img6"
+    "img": "img1",
     "name": "Pablo Picasso",
     "artworks": 168,
     "medium": [
@@ -80,60 +29,14 @@
                 ["1 book"],
               ],
      "nationality": "Spanish",
-    "dates": 1881-1973
+    "dates": "1881-1973",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/assets/Picasso.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?q=Pablo%20Picasso&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&artist=Picasso,%20Pablo$Pablo%20Picasso&department=21",
+    "x": 600,
+    "y": 220
   },
   {
-    "img": "img7"
-    "name": "Vuokko Eskolin-Nurmesniemi",
-    "artworks": 52,
-    "medium": ["52 textiles-printed"],
-    "nationality": "Finnish",
-    "dates": "1930-"
-  },
-  {
-    "img": "img8"
-    "name": "Abraham Walkowitz",
-    "artworks": 167,
-    "medium": ["167 drawings"],
-    "country": "American, born Russia",
-    "dates": 1878-1965
-  },
-  {
-    "img": "img9"
-    "name": "Eva Zeisel",
-    "artworks": 51,
-    "medium": [
-                ["27 ceramics-pottery"],
-                ["18 ceramics-porcelain"],
-                ["4 ceramics-pottery"],
-                ["2 glass"],
-              ],
-    "nationality": "American, born Budapest",
-    "dates": 1906-2011
-  },
-  {
-    "img": "img10"
-    "name": "Jackson Pollock",
-    "artworks": 117,
-    "medium": ["113 drawings"],
-                ["4 paintings"],
-    "nationality": "American",
-    "dates": 1912-1956
-  },
-  {
-    "img": "img11"
-    "name": "Hilde Reindl",
-    "artworks": 48,
-    "medium": [
-                ["44 drawings"],
-                ["2 textiles"],
-                ["2 textiles-sample books"],
-              ],
-    "nationality": "German",
-    "dates": 1909-1990
-  },
-  {
-    "img": "img12"
+    "img": "img2",
     "name": "Henri Matisse",
     "artworks": 105,
     "medium": [
@@ -145,46 +48,62 @@
                 ["1 ceramics-pottery"],
               ],
     "nationality": "French",
-    "dates": 1869-1954
+    "dates": "1869-1954",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Matisse.png",
+    "href": "https://www.metmuseum.org",
+    "x": 600,
+    "y": 220
   },
   {
-    "img": "img13"
-    "name": "Gunta Stolzl",
-    "artworks": 39,
-    "medium": [
-                ["20 textiles"],
-                ["10 drawings"],
-                ["7 textiles-woven"],
-                ["1 textiles-sample books"],
-                ["1 archive"],
-              ],
-    "nationality": "German",
-    "dates": 1897-1983
-  },
-  {
-    "img": "img14"
-    "name": "Marsten Hartley",
+    "img": "img3",
+    "name": "Marsden Hartley",
     "artworks": 104,
     "medium": [
                 ["87 paintings"],
                 ["17 drawings"],
               ],
     "nationality": "American",
-    "dates": 1877-1843
+    "dates": "1877-1843",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Hartley.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?q=Hartley&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&artist=Hartley,%20Marsden$Marsden%20Hartley&department=21",
+    "x": 600,
+    "y": 220
   },
   {
-    "img": "img15"
-    "name": "Marion Weeber",
-    "artworks": 35,
+    "img": "img4",
+    "name": "Carlo Scarpa",
+    "artworks": 254,
     "medium": [
-                ["32 metalwork"],
-                ["3 drawings"],
+                ["241 glass"],
+                ["8 drawings"],
+                ["3 sterling silver"],
+                ["1 silverplate gold"],
+                ["1 polished steel, brass, glass"],
               ],
-    "nationality": "American",
-    "dates": 1905-2000
+    "nationality": "Italian",
+    "dates": "1906-1978",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Scarpa.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?q=Carlo%20Scarpa&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&artist=Scarpa,%20Carlo$Carlo%20Scarpa&department=21",
+    "x": 600,
+    "y": 220
   },
   {
-    "img": "img16"
+    "img": "img5",
+    "name": "Anni Albers",
+    "artworks": 80,
+    "medium": [
+                ["79 textile-woven"],
+                ["1 textile-velvets"],
+              ],
+    "nationality": "American, born Germany",
+    "dates": "1899-1994",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Albers.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?q=Anni%20Albers&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&artist=Albers,%20Anni$Anni%20Albers&department=21",
+    "x": 600,
+    "y": 220
+  },
+  {
+    "img": "img6",
     "name": "Paul Klee",
     "artworks": 98,
     "medium": [
@@ -195,10 +114,83 @@
                 ["2 drawings|paintings"],
               ],
     "nationality": "German, born Switzerland",
-    "dates": 1879-1940
+    "dates": "1879-1940",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Klee.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?q=Paul%20Klee&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&artist=Klee,%20Paul$Paul%20Klee&department=21",
+    "x": 600,
+    "y": 220   
   },
   {
-    "img": "img17"
+    "img": "img7",
+    "name": "Reginald Marsh",
+    "artworks": 927,
+    "medium": [
+                ["924 drawings"],
+                ["2 prints"],
+                ["1 painting"]
+              ],
+    "nationality": "American",
+    "dates": "1898-1954",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Marsh.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?q=Reginald%20Marsh&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&artist=Marsh,%20Reginald$Reginald%20Marsh&department=21",
+    "x": 600,
+    "y": 220
+  },
+  {
+    "img": "img8",
+    "name": "Louis A. Stirn and Edmund A. Stirn",
+    "artworks": 172,
+    "medium": ["172 textiles-printed"],
+    "nationality": "American, born Germany",
+    "dates": "1863-1962",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Stirn.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?q=Louis%20A.%20Stirn&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&artist=Stirn,%20Louis%20A.$Louis%20A.%20Stirn&department=21",
+    "x": 600,
+    "y": 220
+  },
+  {
+    "img": "img9",
+    "name": "Jackson Pollock",
+    "artworks": 117,
+    "medium":[ ["113 drawings"],
+              ["4 paintings"],
+              ],
+    "nationality": "American",
+    "dates": "1912-1956",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Pollock.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?artist=Pollock,%20Jackson$Jackson%20Pollock&department=21&q=Jackson%20Pollock&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20",
+    "x": 600,
+    "y": 220
+  },
+  {
+    "img": "img10",
+    "name": "Dorothy Liebes",
+    "artworks": 89,
+    "medium": ["89 textile-woven"],
+    "nationality": "American",
+    "dates": "1897-1972",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Liebes.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?artist=Liebes,%20Dorothy$Dorothy%20Liebes&department=21&q=Dorothy%20Liebes&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20",
+    "x": 600,
+    "y": 220
+  },
+  {
+    "img": "img11",
+    "name": "Georgia O’Keeffe",
+    "artworks": 22,
+    "medium": [
+                ["16 paintings"],
+                ["6 drawings"],
+              ],
+    "nationality": "American",
+    "dates": "1887-1986",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/OKeeffe.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?artist=O'Keeffe,%20Georgia$Georgia%20O'Keeffe&department=21&q=Georgia&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20",
+    "x": 600,
+    "y": 220
+  },
+  {
+    "img": "img12",
     "name": "Lygia Pape",
     "artworks": 32,
     "medium": [
@@ -214,28 +206,118 @@
                 ["2 drawings"],
               ],
     "nationality": "Brazilian",
-    "dates": 1927-2004
+    "dates": "1927-2004",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Pape.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?q=Lygia%20Pape&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20",
+    "x": 600,
+    "y": 220
   },
   {
-    "img": "img18"
-    "name": "Arthur Dove",
-    "artworks": 81,
+    "img": "img13",
+    "name": "Gunta Stolzl",
+    "artworks": 39,
     "medium": [
-                ["71 drawings"],
-                ["10 paintings"],
+                ["20 textiles"],
+                ["10 drawings"],
+                ["7 textiles-woven"],
+                ["1 textiles-sample books"],
+                ["1 archive"],
               ],
-    "nationality": "American",
-    "dates": 1880-1946
+    "nationality": "German",
+    "dates": "1897-1983",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Stolzl.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?artist=Stolzl,%20Gunta$Gunta%20St%C3%B6lzl&department=21&q=Gunta%20Stolzl&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20",
+    "x": 600,
+    "y": 220
   },
   {
-    "img": "img19"
-    "name": "Georgia O’Keefe",
-    "artworks": 22,
+    "img": "img14",
+    "name": "Abraham Walkowitz",
+    "artworks": 167,
+    "medium": ["167 drawings"],
+    "country": "American, born Russia",
+    "dates": "1878-1965",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Walkowitz.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?artist=Walkowitz,%20Abraham$Abraham%20Walkowitz&department=21&q=Abraham%20Walkowitz&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20",
+    "x": 600,
+    "y": 220
+  },
+  {
+    "img": "img15",
+    "name": "Marion Weeber",
+    "artworks": 35,
     "medium": [
-                ["16 paintings"],
-                ["6 drawings"],
+                ["32 metalwork"],
+                ["3 drawings"],
               ],
     "nationality": "American",
-    "dates": 1887-1986
+    "dates": "1905-2000",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Weeber.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?artist=Weeber,%20Marion$Marion%20Weeber&department=21&q=Marion%20Weeber&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20",
+    "x": 600,
+    "y": 220
+  },
+  {
+    "img": "img16",
+    "name": "Margarete Willers",
+    "artworks": 65,
+    "medium": [
+                ["31 drawings"],
+                ["30 textiles-woven"],
+                ["3 textiles-sample books"],
+                ["1 archive"],
+              ],
+    "nationality": "German",
+    "dates": "1883-1977",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Willers.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?artist=Willers,%20Margarete$Margarete%20Willers&department=21&q=Margarete%20Willers&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20",
+    "x": 600,
+    "y": 220
+  },
+  {
+    "img": "img17",
+    "name": "Eva Zeisel",
+    "artworks": 51,
+    "medium": [
+                ["27 ceramics-pottery"],
+                ["18 ceramics-porcelain"],
+                ["4 ceramics-pottery"],
+                ["2 glass"],
+              ],
+    "nationality": "American, born Budapest",
+    "dates": "1906-2011",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Zeisel.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?artist=Zeisel,%20Eva$Eva%20Zeisel&department=21&q=Eva%20Zeisel&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20",
+    "x": 600,
+    "y": 220
+  },
+  {
+    "img": "img18",
+    "name": "Vuokko Eskolin-Nurmesniemi",
+    "artworks": 52,
+    "medium": ["52 textiles-printed"],
+    "nationality": "Finnish",
+    "dates": "1930-",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Nurmesniemi.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?artist=Eskolin-Nurmesniemi$Vuokko%20Eskolin-Nurmesniemi&department=21&q=Vuokko%20Eskolin-Nurmesniemi&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20",
+    "x": 600,
+    "y": 220
+
+  },
+  {
+    "img": "img19",
+    "name": "Hilde Reindl",
+    "artworks": 48,
+    "medium": [
+                ["44 drawings"],
+                ["2 textiles"],
+                ["2 textiles-sample books"],
+              ],
+    "nationality": "German",
+    "dates": "1909-1990",
+    "url": "https://raw.githubusercontent.com/churc/MajorStudio1/master/Interactive/genderObj/assets/Reindl.png",
+    "href": "https://www.metmuseum.org/art/collection/search#!?artist=Reindl,%20Hilde$Hilde%20Reindl&department=21&q=Hilde%20Reindl&offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20",
+    "x": 600,
+    "y": 220
   }
 ]
