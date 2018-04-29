@@ -61,7 +61,7 @@ p.preload = function() {
 }
 
 p.setup = function() {
-  p.createCanvas(1440,830);
+  p.createCanvas(1440,900);
   // p.background(255,0,0);
   p.showArtists();
   // p.show();
@@ -97,6 +97,7 @@ p.showArtists = function () {
   p.image(img0, 720,790);
   p.image(img1, 199,992);
   p.image(img5, 1270,1820);
+  p.image(img17, 1300,1100);
   p.scale(.7);
   p.image(img6, 556,890);
   p.image(img7, 2010,440);
@@ -104,19 +105,19 @@ p.showArtists = function () {
   p.image(img9, 1011,555);
   p.scale(.8);
   p.image(img10, 1528,370);
-  p.image(img11, 177,562);
-  p.image(img12, 3100,1620);
+  p.image(img11, 247,662);
+  p.image(img12, 3100,1740);
   p.image(img13, 2020,1285);
   p.image(img14, 2751,1151);
   p.image(img2, 2003,777);
   p.image(img3, 820,554);
-  p.image(img4, 2580,1400);
+  p.image(img4, 3480,1600);
   p.image(img15, 469,210);
   p.image(img16, 1045,240);
   p.scale(1.3);
-  p.image(img17, 1800,1500);
+  
   p.image(img18, 2230,370);
-  p.image(img19, 1800,600);
+  p.image(img19, 2700,480);
  
 
   // p.image(img0, this.x, this.y);
@@ -296,6 +297,33 @@ var myp5 = new p5(w, 'c4');
 
 // $("div#c2").append('<a href="' + "https://churc.github.io/MajorStudio1/MetProjects/gender" + "c2" + '</a>');
 
+///////////load svg
 
 
+var whoWhat;
+
+var b = function(p){
+
+
+p.preload = function() {
+  // whoWhat = p.loadImage("assets/quant7_forwebsvg_churchouse1-10-06.svg");
+  whoWhat = p.loadImage("assets/quant7_forwebsvg_churchouse-06.png");
+}
+
+p.setup = function() {
+  p.createCanvas(1440,3400);
+
+  p.showWhoWhat();
+
+  p.noLoop(); 
+}
+
+p.showWhoWhat = function(){
+  p.scale(0.55);
+    p.image(whoWhat, 250, 120, 2467,6358.5);
+    // p.image(whoWhat, p.mouseX, 0);
+
+}
+}
+var myp5 = new p5(b, 'c5');
 
