@@ -7,9 +7,8 @@ html, body {
   height: 100%;
 }
 
-
 body{
-  margin: 0px;
+  margin: 0;
   padding: 0;
   padding-bottom: 20;
   justify-content: center;
@@ -19,9 +18,8 @@ body{
   -o-background-size: cover;
 }
 
-
 .canvas{
-  width: 100%;  /*overide canvas width - increase to full page */
+  width: 90%;  /*overide canvas width - increase to full page */
   height: auto;  
   padding-left: 0;
   padding-right: 0;
@@ -39,7 +37,6 @@ p{
    border:0;
    
 }
-
 
 h3#h3{
     display: inline-block;
@@ -322,7 +319,7 @@ span.span2{
 
 #footer{
   position: absolute;
-  top: 3200;
+  top: 8400;
   left: 30;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
   color:#777777;

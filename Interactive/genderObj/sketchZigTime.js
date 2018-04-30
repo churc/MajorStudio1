@@ -427,29 +427,29 @@ p.analyzeGender = function(){
 ///====FILL BY GENDER
    var gender = allYears[i].items[j].obj.Gender;
     if (gender === 'm') {
-       p.fill(92,242,145,150);
+       p.fill(92,242,145,170);
        p.rect(x-2,y-1,5,2);
        // console.log('m');
        totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
 
     } else if (gender === 'f') {
-       p.fill(179,118,244,150);
+       p.fill(179,118,244,170);
        p.rect(x-2,y-1,5,2);
        // console.log('f');
       totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
      // console.log(totalFemaleArtistsPerBar);
     } else if (gender === 't') {
-       p.fill(168,71,5,150);
+       p.fill(168,71,5,170);
        p.rect(x-2,y-1,5,2);
       // console.log('t');
       
     } else if (gender === 'u') {
-       p.fill(165,160,152,150);
+       p.fill(165,160,152,170);
        p.rect(x-2,y-1,5,2);
        // console.log('u');
 
     } else if (gender === 'z') {
-       p.fill(224,199,50,150);
+       p.fill(224,199,50,170);
        p.rect(x-2,y-1,5,2);
        //console.log('z');
 
@@ -514,7 +514,7 @@ for(var i=1850; i<=2017; i+=10){
   p.textAlign(p.RIGHT);
   p.noStroke();
   p.textSize(20);
-  p.text("Year: Object Begin Date", 990,795);
+  p.text("Year: Object Begin Date", 990,780);
 
 //source
   p.textAlign(p.LEFT);
