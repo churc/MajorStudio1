@@ -211,7 +211,7 @@ var s = function(p){
   }
 }
 
-var myp5 = new p5(s, 'c1');
+var myp5 = new p5(s, 'canvas-zigzag');
 
 
 
@@ -236,7 +236,7 @@ var w = function(p) {
   }
 
    p.setup = function(){
-     p.createCanvas(p.windowWidth,850);
+     p.createCanvas(1440,930);
      p.background(100,10);
      p.analyzeData();
      p.analyzeGender();
@@ -401,10 +401,13 @@ p.analyzeGender = function(){
 
 ///DISPLAY PER YEAR by GENDER
   p.displayData = function(){
+
   /////move chart over
 
   p.push();
-  p.translate(50,0);
+  p.translate(90,30);
+
+  p.scale(0.89);
 
   p.noStroke();
   p.fill(255,0,0);
@@ -424,29 +427,29 @@ p.analyzeGender = function(){
 ///====FILL BY GENDER
    var gender = allYears[i].items[j].obj.Gender;
     if (gender === 'm') {
-       p.fill(92,242,145,90);
+       p.fill(92,242,145,150);
        p.rect(x-2,y-1,5,2);
        // console.log('m');
        totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
 
     } else if (gender === 'f') {
-       p.fill(179,118,244,90);
+       p.fill(179,118,244,150);
        p.rect(x-2,y-1,5,2);
        // console.log('f');
       totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
      // console.log(totalFemaleArtistsPerBar);
     } else if (gender === 't') {
-       p.fill(168,71,5,80);
+       p.fill(168,71,5,150);
        p.rect(x-2,y-1,5,2);
       // console.log('t');
       
     } else if (gender === 'u') {
-       p.fill(165,160,152,80);
+       p.fill(165,160,152,150);
        p.rect(x-2,y-1,5,2);
        // console.log('u');
 
     } else if (gender === 'z') {
-       p.fill(224,199,50,90);
+       p.fill(224,199,50,150);
        p.rect(x-2,y-1,5,2);
        //console.log('z');
 
@@ -476,7 +479,9 @@ p.analyzeGender = function(){
 
   p.drawLabelsCh = function(){
     p.push();
-    p.translate(50,0);
+    p.translate(90,30);
+
+    p.scale(0.89);
 
    //x axis
     p.textFont('Khand');
@@ -509,7 +514,7 @@ for(var i=1850; i<=2017; i+=10){
   p.textAlign(p.RIGHT);
   p.noStroke();
   p.textSize(20);
-  p.text("Year: Object Begin Date", 990,730);
+  p.text("Year: Object Begin Date", 990,795);
 
 //source
   p.textAlign(p.LEFT);
@@ -595,8 +600,5 @@ for(var i=1850; i<=2017; i+=10){
   
 }
 
-var myp5 = new p5(w, 'c2');
-
-
-
+var myp5 = new p5(w, 'canvas-timeline');
 
