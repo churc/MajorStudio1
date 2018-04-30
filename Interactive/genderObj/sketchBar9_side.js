@@ -370,13 +370,10 @@ barTotalsSort = barTotals;
         // p.saveJSON(barTotalsSort, 'totals.json');
 // p.pop();
 }
-
+console.log(bars);
 //////listen for mouse, show tooltips
 p.draw = function(){
-  
-   console.log(bars);
-    console.log(bars.length)
-    
+ 
  
   var onLabel = false;
   for (var i = bars.length - 1; i >= 0; i--) {
@@ -388,16 +385,16 @@ p.draw = function(){
     // }
 
     var barH = bars[i];
-
+  // console.log(barH);
 
     var boundary = {
       start: {
-         x: bars[i].y/4,
-         y: bars[i].x/4,
+         x: barH.y/4,
+         y: barH.x/4,
       }, 
       end: {
-        x: (bars[i].y/4 + bars[i].height + bars[i].maleHeight/4),
-        y: (bars[i].x/4 + 15),
+        x: barH.y/4 + barH.height + barH.maleHeight/4,
+        y: barH.x/4 + 15,
       }
     }
 
@@ -414,7 +411,7 @@ p.draw = function(){
   }
 
 }
-
+//////original
 // p.draw = function(){
   
 //   // p.translate(-150,2050);
@@ -456,7 +453,7 @@ p.draw = function(){
 
 // }
 
-// //////listen for mouse, show tooltips
+// //////this works on vertical bar_listen for mouse, show tooltips
 // p.draw = function(){
 
 //   var onLabel = false;
