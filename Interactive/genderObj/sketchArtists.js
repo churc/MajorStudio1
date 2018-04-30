@@ -1,3 +1,4 @@
+var artists;
 var img0;
 var img1;
 var img2;
@@ -19,12 +20,12 @@ var img17;
 var img18;
 var img19;
 
+var artistObject;
 
 var items = [];
 var uncert;
 var sent = [];
 var d;
-var MetArray = [];
 var rSelect;
 
 var KhandFont, fontReady = false;
@@ -37,96 +38,133 @@ var w = function(p){
 
 
 p.preload = function() {
-    // items = loadJSON("assets/UncertainPub.json", showImg);
-    img0 = p.loadImage('assets/Dove.png');
-    img1 = p.loadImage('assets/Picasso.png');
-    img2 = p.loadImage('assets/Matisse.png');
-    img3 = p.loadImage('assets/Hartley.png');
-    img4 = p.loadImage('assets/Scarpa.png');
-    img5 = p.loadImage('assets/Albers.png');
-    img6 = p.loadImage('assets/Klee.png');
-    img7 = p.loadImage('assets/Marsh.png');
-    img8 = p.loadImage('assets/Stirn.png');
-    img9 = p.loadImage('assets/Albers.png');
-    img10 = p.loadImage('assets/Liebes.png');
-    img11 = p.loadImage('assets/OKeefe.png');
-    img12 = p.loadImage('assets/Pape.png');
-    img13 = p.loadImage('assets/Stolzl.png');
-    img14 = p.loadImage('assets/Walkowitz.png');
-    img15 = p.loadImage('assets/Weeber.png');
-    img16 = p.loadImage('assets/Willers.png');
-    img17 = p.loadImage('assets/Zeisel.png');
-    img18 = p.loadImage('assets/Nurmesniemi.png');
-    img19 = p.loadImage('assets/Reindl.png');
+    artists = p.loadJSON("assets/artists.json");
 }
 
 p.setup = function() {
   p.createCanvas(1440,900);
-  // p.background(255,0,0);
   p.showArtists();
-  // p.show();
-  p.mouseClicked('span');
-  p.noLoop(); 
+  p.mouseClicked('span'); 
 }
 
   p.windowResized = function() {
     p.resizeCanvas(p.windowWidth, p.windowHeight);
 }
 
-// p.show = function() {
-//     // this.x = x;
-//     // this.y = y;
+p.show = function() {
+    // this.x = x;
+    // this.y = y;
 
-//     $('span').click(function() {
-//     $('p#title').addClass('titleW');
-//     $('p#date').addClass('titleW');
-//     $('p#credit').addClass('titleW'); 
-//     $('p#desc').addClass('titleW'); //note hide weblabel text 
-//   })
-// }
+    $('span').click(function() {
+    $('p#title').addClass('titleW');
+    $('p#date').addClass('titleW');
+    $('p#credit').addClass('titleW'); 
+    $('p#desc').addClass('titleW'); //note hide weblabel text 
+  })
+}
 
 p.mouseClicked = function(){
   p.show = (!p.show);
 }
   
-
+/////who the artists are
 p.showArtists = function () {
   // p.imageMODE(p.CENTER);
 
-  p.scale(0.6);
-  p.image(img0, 720,790);
-  p.image(img1, 199,992);
-  p.image(img5, 1270,1820);
-  p.image(img17, 1300,1100);
-  p.scale(.7);
-  p.image(img6, 556,890);
-  p.image(img7, 2010,440);
-  p.image(img8, 1903,1137);
-  p.image(img9, 1011,555);
-  p.scale(.8);
-  p.image(img10, 1528,370);
-  p.image(img11, 247,662);
-  p.image(img12, 3100,1740);
-  p.image(img13, 2020,1285);
-  p.image(img14, 2751,1151);
-  p.image(img2, 2003,777);
-  p.image(img3, 820,554);
-  p.image(img4, 3480,1600);
-  p.image(img15, 469,210);
-  p.image(img16, 1045,240);
-  p.scale(1.3);
-  
-  p.image(img18, 2230,370);
-  p.image(img19, 2700,480);
+  // p.scale(0.6);
+  // p.image(img0, 720,790);
+  var link0 = document.createElement('a');
+  var canvas = document.getElementById('canvas-artists');
+  link0.target = "blank";
+  link0.href = "https://www.metmuseum.org";
+
+  console.log(artists);
+
+   for (var n = 0; n < Object.keys(artists).length; n++) {
+      
+      var artistObject = document.createElement('div');
+
+      $(artistObject).addClass("artists");
+      
+          var artistImage = document.createElement('img');
+          artistImage.src = artists[n].url;
+          artistImage.addClass="artists";
+          artistImage.id='artistImage'+n;
+        
+          var artistLink = document.createElement('a');
+          artistLink.target = "blank";
+          artistLink.href =  artists[n].url;
+          artistLink.appendChild(artistImage);
+
+          artistObject.appendChild(artistLink);
+          canvas.appendChild(artistObject);
+        // console.log('artist link', artistLink);
+          console.log('artist object', artistObject);
+
+      }
+
+  }
+}
+var myp5 = new p5(w, 'canvas-artists');
+
+
+//////artists and kind of objects
+var whoWhat;
+
+var b = function(p){
+
+
+p.preload = function() {
+  whoWhat = p.loadImage("assets/quant7_forweb_churchouse1-10-06.png");
+}
+
+p.setup = function() {
+  p.createCanvas(1440,3400);
+  p.showWhoWhat();
+}
+
+////show where mouse is 
+p.draw = function() {
+    console.log(p.mouseX, p.mouseY);
+}
+
+////display png
+p.showWhoWhat = function(){
+  p.scale(0.55);
+  p.image(whoWhat, 250, 120, 2467,6358.5);  
+
+  // p.image(whoWhat, p.mouseX, 0);
+
+  }
+}
+var myp5 = new p5(b, 'canvas-artworks');
+
+
+  // p.image(img1, 199,992);
+  // p.image(img5, 1270,1820);
+  // p.image(img17, 1300,1100);
+  // p.scale(.7);
+  // p.image(img6, 556,890);
+  // p.image(img7, 2010,440);
+  // p.image(img8, 1903,1137);
+  // p.image(img9, 1011,555);
+  // p.scale(.8);
+  // p.image(img10, 1528,370);
+  // p.image(img11, 247,662);
+  // p.image(img12, 3100,1740);
+  // p.image(img13, 2020,1285);
+  // p.image(img14, 2751,1151);
+  // p.image(img2, 2003,777);
+  // p.image(img3, 820,554);
+  // p.image(img4, 3480,1600);
+  // p.image(img15, 469,210);
+  // p.image(img16, 1045,240);
+  // p.scale(1.3); 
+  // p.image(img18, 2230,370);
+  // p.image(img19, 2700,480);
  
 
-  // p.image(img0, this.x, this.y);
-//   for(var i=0; i <=20; i++){
-//     var img = 'img'+i+'.png';
-//   // p.image(img, this.x, this.y);
-// }
-//   p.image(img[i], this.x, this.y);
-  console.log('hi');
+
 
 //   var length = Object.keys(items).length-1;
 //   console.log(length);
@@ -146,10 +184,10 @@ p.showArtists = function () {
 //           unc.id='unc';
 //           // unc.id='unc'+n;
         
-//           var obj_url = document.createElement('a');
-//           obj_url.target = "blank";
-//           obj_url.href = "https://www.metmuseum.org" + items[n].media.images.primaryImage.objectUrl;
-//           obj_url.appendChild(unc);
+          // var obj_url = document.createElement('a');
+          // obj_url.target = "blank";
+          // obj_url.href = "https://www.metmuseum.org" + items[n].media.images.primaryImage.objectUrl;
+          // obj_url.appendChild(unc);
 
 //           met_object.appendChild(obj_url);
 //       };
@@ -265,33 +303,30 @@ p.showArtists = function () {
 //         $(this).html(uncert);
 //         // console.log(uncert);
 //       });
- };
 
 
-var rSelect = document.createElement("button");
 
-function shuffleMyArray(){
-    var button = document.getElementById("rSelect");
+// var rSelect = document.createElement("button");
 
-    $('.designed-image').remove()
-    shuffle(MetArray,true);
-    for (var r=0; r<MetArray.length; r++){
-      document.body.appendChild(MetArray[r]);
-    };
+// function shuffleMyArray(){
+//     var button = document.getElementById("rSelect");
 
-    $('p').each(function(){
-        var uncert = $(this).text().replace(/uncertain/g,"<span>uncertain</span>");
-        $(this).html(uncert);
-      });
+//     $('.designed-image').remove()
+//     shuffle(MetArray,true);
+//     for (var r=0; r<MetArray.length; r++){
+//       document.body.appendChild(MetArray[r]);
+//     };
 
-button.onclick = function() {
-    shuffleMyArray();
-    };
-  };
+//     $('p').each(function(){
+//         var uncert = $(this).text().replace(/uncertain/g,"<span>uncertain</span>");
+//         $(this).html(uncert);
+//       });
 
-}
+// button.onclick = function() {
+//     shuffleMyArray();
+//     };
+//   };
 
-var myp5 = new p5(w, 'c4');
 
 
 
@@ -300,30 +335,4 @@ var myp5 = new p5(w, 'c4');
 ///////////load svg
 
 
-var whoWhat;
-
-var b = function(p){
-
-
-p.preload = function() {
-  // whoWhat = p.loadImage("assets/quant7_forwebsvg_churchouse1-10-06.svg");
-  whoWhat = p.loadImage("assets/quant7_forwebsvg_churchouse-06.png");
-}
-
-p.setup = function() {
-  p.createCanvas(1440,3400);
-
-  p.showWhoWhat();
-
-  p.noLoop(); 
-}
-
-p.showWhoWhat = function(){
-  p.scale(0.55);
-    p.image(whoWhat, 250, 120, 2467,6358.5);
-    // p.image(whoWhat, p.mouseX, 0);
-
-}
-}
-var myp5 = new p5(b, 'c5');
 

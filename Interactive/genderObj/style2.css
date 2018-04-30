@@ -9,7 +9,7 @@ html, body {
 
 
 body{
-  margin: 0;
+  margin: 0px;
   padding: 0;
   padding-bottom: 20;
   justify-content: center;
@@ -149,19 +149,21 @@ span.span2{
   margin-right: 15px;
 }
 
+
 #submit{
     position: absolute;  /*important*/
-    /*left: 0px;*/
-  /*  width:406px;*/
-    right:200px;
-    width: 515px;
-    top: 180px;
-    left:705px;
+
+    width: 45px;
+    height:200px;
+    top: 410px;
+    left:625px;
     vertical-align: middle;  
     padding-left: 50px;
     padding-right:15px;
     padding-top:9px;
-    padding-bottom:4px; 
+    padding-bottom:4px;
+    background-color: transparent;
+    color: transparent; 
 }
 
 #submit:focus{
@@ -194,23 +196,6 @@ span.span2{
   font-size:15px;
 }
 
-  #c1{
-   /* width: 100%;
-    height:auto;*/
-    width: 100%;
-    height: 5000;
-  }
-
-  #c2{
-    width: 100%;
-    height:auto;
-  }
-
-  #c3{
-    width: 100%;
-    height:auto;
-  }
-}
 
 .hidden {
   display: none;
@@ -227,6 +212,87 @@ span.span2{
   font-size:15px;
 }
 
+.images{
+  position: absolute;
+}
+
+.img1 {
+  left: 199;
+  top: 992;
+}
+.img5 {
+  left: 1270;
+  top: 1820;
+}
+.img17 {
+  left: 1300;
+  top: 1100;
+}
+.img6 {
+  left: 556;
+  top: 890;
+}
+.img7 {
+  left: 2010;
+  top: 440;
+}
+.img8 {
+  left: 1903;
+  top: 1137;
+}
+.img9 {
+  left: 1011;
+  top: 555;
+}
+.img10 {
+  left: 1528;
+  top: 370;
+}
+.img11 {
+  left: 247;
+  top: 662;
+}
+.img12 {
+  left: 3100;
+  top: 1740;
+}
+.img13 {
+  left: 2020;
+  top: 1285;
+}
+.img14{
+  left: 2751;
+  top: 1151;
+}
+.img2{
+  left: 2003;
+  top: 777;
+}
+.img3{
+  left: 820;
+  top: 554;
+}
+.img4{
+  left: 3480;
+  top: 1600;
+}
+.img15{
+  left: 469;
+  top: 210;
+}
+.img16{
+  left: 1045;
+  top: 240;
+}
+.img18{
+  left: 2230;
+  top: 370;
+}
+.img19{
+  left: 2700;
+  top: 480);
+}
+
 #header{
   position: absolute;
   top: 95;
@@ -235,6 +301,13 @@ span.span2{
   /*font-family: "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;*/
   color: rgb(102,102,102);
   font-size:14px;
+}
+
+#labels{
+  position: absolute;
+  font-family: 'Khand', sans-serif;
+  color: #444444;
+  font-size:15px;
 }
 
 #description{
@@ -249,12 +322,32 @@ span.span2{
 
 #footer{
   position: absolute;
-  top: 2800;
+  top: 3200;
   left: 30;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
   color:#777777;
   font-size:15px;
 }
+
+p#title:hover{
+  color: #393636;
+}
+
+p#date:hover{
+  color: #393636;
+}
+
+p#credit:hover{
+  color: #393636;
+}
+
+p#des:hover{
+  color:#393636;
+}
+.titleA{
+  color: #393636;
+}
+
 
 
 @media screen and (max-width:720px){
