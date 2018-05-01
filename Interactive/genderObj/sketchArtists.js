@@ -97,8 +97,16 @@ p.artists = function(){
   p.noStroke();
   p.textAlign(p.LEFT);
   p.fill(112,112,112);
-  p.textSize(14);
+  p.textSize(38);
   p.text("Arthur Dove: 81 artworks", 500,980);
+  ////to add div 
+  // var divArtist = document.createElement('div');
+  // divArtist.id = 'ArthurDove';
+  // document.getElementById('canvas-artists').appendChild(divArtist);
+  // var divText = document.createElement('p');
+  // divText.innerText = 'Arthur Dove';
+  // divArtist.appendChild(divText);
+
   p.image(img1, 199,992);
   p.text("Pablo Picasso: 168 artworks", 199,992);
   p.image(img5, 990,820);
@@ -150,7 +158,7 @@ p.artists = function(){
   p.noStroke();
   p.textAlign(p.LEFT);
   p.fill(102,102,102);
-  p.textSize(85);
+  p.textSize(90);
   p.text("Who are the most collected female and male artists?", 1600, 75);
   }
 /////who the artists are
@@ -158,7 +166,7 @@ p.showArtists = function() {
   // p.imageMODE(p.CENTER);
 
   // p.scale(0.6);
-  // p.image(img0, 720,790);
+  p.image(img0, 720,790);
   var link0 = document.createElement('a');
   var canvas = document.getElementById('canvas-artists');
   link0.target = "blank";
@@ -183,9 +191,9 @@ p.showArtists = function() {
           artistLink.appendChild(artistImage);
 
           artistObject.appendChild(artistLink);
-        //   canvas.appendChild(artistObject);
-        // // console.log('artist link', artistLink);
-        //   console.log('artist object', artistObject);
+          canvas.appendChild(artistObject);
+        // console.log('artist link', artistLink);
+          console.log('artist object', artistObject);
 
 
   ////name, artwork number, medium, nationality, date
@@ -257,11 +265,8 @@ p.showArtists = function() {
           canvas.appendChild(artistObject);
         // console.log('artist link', artistLink);
           console.log('artist object', artistObject);
-
           artistInfo.push(artistObject);
         
-
-
       }
 
   }
@@ -274,7 +279,6 @@ var myp5 = new p5( w, 'canvas-artists');
 var whoWhat;
 
 var b = function(p){
-
 
 p.preload = function() {
   whoWhat = p.loadImage("assets/quant9_forwebsvg_churchouse-01.png");
@@ -295,7 +299,6 @@ p.showWhoWhat = function(){
   p.scale(0.5);
   p.image(whoWhat, 250, 120, 5064/2,15618/2);  
 
-  // p.image(whoWhat, p.mouseX, 0);
 
   }
 }
