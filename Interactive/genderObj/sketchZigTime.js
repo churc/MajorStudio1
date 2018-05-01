@@ -489,7 +489,7 @@ p.analyzeGender = function(){
     p.stroke(77,77,77);
 
    //just the lines
-    p.line(margin,747-margin,1341-margin,747-margin);
+    p.line(margin,747-margin,1350-margin,747-margin);
     p.noStroke();
     p.textAlign(p.CENTER);
 
@@ -513,7 +513,7 @@ for(var i=1850; i<=2017; i+=10){
   p.textFont('Khand');
   p.textAlign(p.RIGHT);
   p.noStroke();
-  p.textSize(20);
+  p.textSize(21);
   p.text("Year: Object Begin Date", 990,780);
 
 //source
@@ -521,11 +521,12 @@ for(var i=1850; i<=2017; i+=10){
   p.noStroke();
   p.textSize(18);
   p.text("Source: MetObjects.csv, January 2018, spreadsheet shared with The New School.", margin-15,747-margin+105);
-  p.text("Modern & Contemporary Art Collection Department, 14,350 artworks. Object Begin Date, Gender identified by Artist Display Name, 1850-2017 (14,284 artworks.)", margin-15,747-margin+135);
+  p.text("Modern & Contemporary Art Collection Department, 14,350 artworks. Object Begin Date, Gender identified by Artist Display Name, 1850-2017 (14,284 artworks)", margin-15,747-margin+135);
 
 ////draw the y Axis
   p.stroke(77,77,77);
   p.line(margin,747-margin,margin,margin);
+
   p.noStroke();
   p.textAlign(p.RIGHT);
   p.textStyle(p.NORMAL);
@@ -545,7 +546,7 @@ for(var i=1850; i<=2017; i+=10){
   p.translate(65,0);
   p.textFont('Khand');
   p.noStroke();
-  p.textSize(20);
+  p.textSize(22);
   p.translate(1000,700);
   p.rotate(p.radians(270)); 
   p.text("Number of Artworks", margin+300,margin-1135);
@@ -554,13 +555,54 @@ for(var i=1850; i<=2017; i+=10){
 ////the overall title
   p.push();
   p.translate(65,0);
+  p.stroke(112,112,112);
+  p.noFill();
+  p.ellipse(355.5,251,5,5);
+  p.line(357,250,400,240);
   p.textFont('Khand');
   p.textStyle(p.NORMAL);
   p.noStroke();
   p.textAlign(p.LEFT);
+  p.fill(112,112,112);
+  p.textSize(15);
+  p.text("1900 spike: many are artist unknown, manufacturing companies", 410, 240);
+  p.text("female artworks dated 1900 include work by Anni Albers, Margarete Willers & Hilde Reindl", 410, 255);
   p.fill(77,77,77);
   p.textSize(40);
   p.text("What year were these artworks made?",540,110);
+
+  p.stroke(112,112,112);
+  p.noFill();
+  p.ellipse(710,608,5,5);
+  p.line(710,607,740,535);
+  p.fill(112,112,112);
+  p.noStroke();
+  p.textSize(15);
+  p.text("1947 female spike include artworks by Dorothy Liebes & Eva Zeisel", 740,527);
+  // p.text("women as by men", 1250,653);
+
+  p.stroke(112,112,112);
+  p.noFill();
+  p.ellipse(810.5,642,5,5);
+  p.line(811,639.5,854,570);
+  p.fill(112,112,112);
+  p.noStroke();
+  p.textSize(15);
+  p.text("1959 couple / collaborative spike: many are artworks by", 860,570);
+  p.text("Ada Louise Huxtable & Garth Huxtable", 860,585);
+
+  p.stroke(112,112,112);
+  p.noFill();
+  p.ellipse(1193,693.5,5,5);
+  p.line(1194.5,691,1243,635);
+  p.fill(112,112,112);
+  p.noStroke();
+  p.textSize(15);
+  p.text("2010: more artworks with", 1250,638);
+  p.text("object begin date by women", 1250,653);
+  p.text("than by men (16 to 11)", 1250,668);
+
+
   // p.fill(77,77,77);
   // p.textSize(26);
   // p.text("The Met Modern & Contemporary Art Collection", 500,120);
