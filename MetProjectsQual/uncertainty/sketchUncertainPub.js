@@ -26,7 +26,8 @@ function show() {
     $('p#title').addClass('titleW');
     $('p#date').addClass('titleW');
     $('p#credit').addClass('titleW'); 
-    $('p#desc').addClass('titleW'); //note hide weblabel text 
+    $('p#des').addClass('titleW'); 
+    //note hide weblabel text 
   })
 }
 
@@ -38,7 +39,7 @@ function mouseClicked(){
 function showImg() {
 
 	var length = Object.keys(items).length-1;
-	// console.log(length);
+	console.log(length);
 
 		for (var n = 0; n < length; n++) {
  			
@@ -138,7 +139,7 @@ function showImg() {
 					var desc = document.createElement('p');
 
 					var selDesc = items[n];
-					var lengthSelD = Object.keys(selDesc).length-1;
+					// var lengthSelD = Object.keys(selDesc).length-1;
 					var textD = selDesc.webLabel.text;
 
 						if(!items[n].message){
@@ -158,12 +159,13 @@ function showImg() {
 								desc.id = 'des';
 								// desc.id = 'des'+n;
 								met_object.appendChild(desc);
-								console.log(desc);
+
 						};
 					}
 	 				document.body.appendChild(met_object);
- 					// console.log(met_object);
- 					MetArray.push(met_object);	
+ 					
+ 					MetArray.push(met_object);
+
 		};
 					// console.log(MetArray);
 
