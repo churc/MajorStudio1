@@ -26,7 +26,7 @@ function show() {
     $('p#title').addClass('titleW');
     $('p#date').addClass('titleW');
     $('p#credit').addClass('titleW'); 
-    // $('p#desc').addClass('titleW'); //note hide weblabel text 
+    $('p#desc').addClass('titleW'); //note hide weblabel text 
   })
 }
 
