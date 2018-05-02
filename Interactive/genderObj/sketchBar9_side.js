@@ -83,8 +83,10 @@ p.move = function(){
 
     p.setup = function(){
     // canvas = p.createCanvas(p.windowWidth,5000);
+    p.noLoop();
     canvas = p.createCanvas(1440, 3200);
-    p.windowResized();
+    // p.frameRate(2);
+    // p.windowResized();
     p.move();
     p.analyzeData();
     p.analyzeYears();
@@ -96,9 +98,9 @@ p.move = function(){
     p.background(238, 222, 161, 1);
   }
 
-  p.windowResized = function() {
-  p.resizeCanvas(p.windowWidth, p.windowHeight);
-}
+//   p.windowResized = function() {
+//   p.resizeCanvas(p.windowWidth, p.windowHeight);
+// }
 
 p.showTypes = function(){
     var button = document.getElementById("button");
@@ -374,18 +376,20 @@ console.log(bars);
 //////listen for mouse, show tooltips
 p.draw = function(){
  
- 
+ // console.log('x:', p.mouseX)
+ //      console.log('y:', p.mouseY)
   var onLabel = false;
   for (var i = bars.length - 1; i >= 0; i--) {
     var d = p.dist(p.mouseX, p.mouseY, bars[i].x, bars[i].y)
     
     // if(i == 0 ) {
     //   console.log(bars[i]);
-      // ((p.mouseX >= bars[i].x) && (p.mouseX <= bars[i].x + 15) && (p.mouseY >= (bars[i].y-bars[i].height) && p.mouseY <= (bars[i].y +bars[i].maleHeight))){
+    //   ((p.mouseX >= bars[i].x) && (p.mouseX <= bars[i].x + 15) && (p.mouseY >= (bars[i].y-bars[i].height) && p.mouseY <= (bars[i].y +bars[i].maleHeight)))
     // }
 
     var barH = bars[i];
   // console.log(barH);
+  // console.log(p.mouseX);
 
     var boundary = {
       start: {
@@ -397,10 +401,9 @@ p.draw = function(){
         y: barH.x/4 + 15,
       }
     }
-
+// if ((p.mouseX >=boundary.start.x) && (p.mouseX <= boundary.end.x) && (p.mouseY >= boundary.start.y)  && (p.mouseY <= boundary.end.y)){
    if ((p.mouseX >=boundary.start.x) && (p.mouseX <= boundary.end.x) && (p.mouseY >= boundary.start.y)  && (p.mouseY <= boundary.end.y)){
-      console.log('x:', p.mouseX)
-      console.log('y:', p.mouseY)
+    
 
       switchText(bars[i].name, p.mouseX, p.mouseY)
       onLabel = true;
@@ -408,6 +411,8 @@ p.draw = function(){
   };
   if(onLabel == false){
     switchText("", p.mouseX, p.mouseY)
+    console.log('x:', p.mouseX)
+      console.log('y:', p.mouseY)
   }
 
 }
