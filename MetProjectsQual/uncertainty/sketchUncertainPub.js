@@ -138,7 +138,7 @@ function showImg() {
 					var desc = document.createElement('p');
 
 					var selDesc = items[n];
-					// var lengthSelD = Object.keys(selDesc).length-1;
+					var lengthSelD = Object.keys(selDesc).length-1;
 					var textD = selDesc.webLabel.text;
 
 						if(!items[n].message){
@@ -158,7 +158,7 @@ function showImg() {
 								desc.id = 'des';
 								// desc.id = 'des'+n;
 								met_object.appendChild(desc);
-								// console.log(desc);
+								console.log(desc);
 						};
 					}
 	 				document.body.appendChild(met_object);
