@@ -237,11 +237,13 @@ var w = function(p) {
 
    p.setup = function(){
      p.createCanvas(1440,930);
-     p.background(100,10);
+      // p.createCanvas(1440,930);
+     // p.background(100,10);
      p.analyzeData();
      p.analyzeGender();
      p.displayData();
      p.drawLabelsCh();
+     p.noLoop();
 
   }
 
@@ -408,7 +410,7 @@ p.analyzeGender = function(){
   p.translate(90,30);
 
   p.scale(0.89);
-
+// p.scale(0.7);
   p.noStroke();
   p.fill(255,0,0);
 
@@ -482,6 +484,7 @@ p.analyzeGender = function(){
     p.translate(90,30);
 
     p.scale(0.89);
+    // p.scale(0.7);
 
    //x axis
     p.textFont('Khand');
@@ -554,7 +557,11 @@ for(var i=1850; i<=2017; i+=10){
 
 ////the overall title
   p.push();
-  p.translate(65,0);
+  p.translate(50,-40);
+  // p.translate(65,0);
+
+p.push();
+p.translate(37,0);
   p.stroke(112,112,112);
   p.noFill();
   p.ellipse(355.5,251,5,5);
@@ -565,32 +572,45 @@ for(var i=1850; i<=2017; i+=10){
   p.textAlign(p.LEFT);
   p.fill(112,112,112);
   p.textSize(15);
+
   p.text("1900 spike: many are artist unknown, manufacturing companies", 410, 240);
   p.text("female artworks dated 1900 include work by Anni Albers, Margarete Willers & Hilde Reindl", 410, 255);
   p.fill(77,77,77);
   p.textSize(40);
-  p.text("What year were these artworks made?",540,110);
+  p.text("",540,110);
+  // p.text("What year were these artworks made?",540,110);
+p.pop();
 
+p.push();
+p.translate(6,4);
   p.stroke(112,112,112);
   p.noFill();
   p.ellipse(710,608,5,5);
   p.line(710,607,740,535);
   p.fill(112,112,112);
+  p.textFont('Khand');
+  p.textStyle(p.NORMAL);
+  p.textAlign(p.LEFT);
   p.noStroke();
   p.textSize(15);
   p.text("1947 female spike include artworks by Dorothy Liebes & Eva Zeisel", 740,527);
   // p.text("women as by men", 1250,653);
-
+p.pop();
   p.stroke(112,112,112);
   p.noFill();
   p.ellipse(810.5,642,5,5);
   p.line(811,639.5,854,570);
   p.fill(112,112,112);
+  p.textFont('Khand');
+  p.textStyle(p.NORMAL);
+  p.textAlign(p.LEFT);
   p.noStroke();
   p.textSize(15);
   p.text("1959 couple / collaborative spike: many are artworks by", 860,570);
   p.text("Ada Louise Huxtable & Garth Huxtable", 860,585);
 
+p.push();
+p.translate(-28.5,-8);
   p.stroke(112,112,112);
   p.noFill();
   p.ellipse(1193,693.5,5,5);
@@ -602,13 +622,12 @@ for(var i=1850; i<=2017; i+=10){
   p.text("object begin date by women", 1250,653);
   p.text("than by men (16 to 11)", 1250,668);
 
-
   // p.fill(77,77,77);
   // p.textSize(26);
   // p.text("The Met Modern & Contemporary Art Collection", 500,120);
   // p.textSize(38);
   p.pop();
-
+p.pop();
 
 ///legend
     p.textFont('Khand');
