@@ -42,14 +42,19 @@ function showImg() {
 	console.log(length);
 
 		for (var n = 0; n < length; n++) {
- 			
+/////use if statement to take out images with uncertain in text other than title, date or description
+////returns all images that have text
+ if (!items[n].message && items[n].titles.primaryTitle.includes("uncertain") || items[n].tombstone["1"].text.includes("uncertain")||items[n].tombstone["0"].text.includes("uncertain")|| (items[n].tombstone<=["6"]  && items[n].tombstone["6"].label.includes("Uncertain"))||items[n].webLabel.text.includes("uncertain")) {
+
+
  			var met_object = document.createElement('div');
  			met_object.id = "met_object"+n;
 
  			$(met_object).addClass("designed-image");
  			// console.log(met_object);
 ////image
- 			if (!items[n].message) {
+ 			// if (!items[n].message && items[n].titles.primaryTitle.includes("uncertain") || items[n].tombstone["1"].text.includes("uncertain")||items[n].tombstone["0"].text.includes("uncertain")|| (items[n].tombstone<=["6"]  && items[n].tombstone["6"].label.includes("Uncertain"))||items[n].webLabel.text.includes("uncertain")) {
+	 			if (!items[n].message){	
 	 				var unc = document.createElement('img');
 	 				unc.src = items[n].media.images.primaryImage.webImageUrl;
 	 				unc.addClass="designed-image";
@@ -165,7 +170,7 @@ function showImg() {
 	 				document.body.appendChild(met_object);
  					
  					MetArray.push(met_object);
-
+}
 		};
 					// console.log(MetArray);
 
