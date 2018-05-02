@@ -59,9 +59,6 @@ function switchText(indivType, x, y){
 
 var g = function(p){
 
-p.move = function(){
-  // p.translate(0,3650);
-}
    p.fontRead = function(){
       fontReady = true; 
     }
@@ -73,15 +70,14 @@ p.move = function(){
   }
 
 ////toggle text off on
- p.toggleTypes = function(){
-  var contentId = document.getElementById("types");
-  contentId.style.display == "none" ? contentId.style.display = "block":
-  contentId.style.display = "none";
-}
+//  p.toggleTypes = function(){
+//   var contentId = document.getElementById("types");
+//   contentId.style.display == "none" ? contentId.style.display = "block":
+//   contentId.style.display = "none";
+// }
 
     p.setup = function(){
     canvas = p.createCanvas(1440, 2800);
-    p.move();
     p.analyzeData();
     p.analyzeYears();
     p.barChart();
@@ -89,7 +85,6 @@ p.move = function(){
     p.showTypes();
     p.analyzeArtists();
     p.background(238, 222, 161, 1);
-    // p.header();
   }
 
 
@@ -219,7 +214,6 @@ for (var i=0; i<count; i++) {
 
     var groupedByTypeC = Object.keys(groupedByType);
       var width = 1440, 
-          // height = p.windowHeight,
           height = 5500,
           margin = 50,
           w = p.width - 2 * margin, // chart area width and height
@@ -275,32 +269,11 @@ barTotalsSort = barTotals;
           p.rotate(p.radians(270));
           // p.fill(255,0,0);
           p.textSize(14);
+
           p.text(barTotalsSort[i].name+barTotalsSort[i].total, 5+7, 105+(i * 10)); // text-names
            var objectNames = barTotals[i].name;
           objectType.push(objectNames); ////returns name of each classification
 
-
-////sort by size by male;
-      // barTotals.sort(function(a,b){
-      //   return a['m'] - b['m']
-      // })
-      // for (var i = barTotals.length-1; i >= 0; i--) {
-      //     p.strokeWeight(1.5);
-      //     p.stroke("#ffffff");
-      //     p.fill(92,242,145,150); ////green bars artworks by men
-      //     p.rect(100 + (i * 10), 5, 10, barTotals[i]['m']);
-      //     p.fill(179,118,244,140);  ////purple bars artworks by women
-      //     var bar = p.rect(100 + (i * 10), 5, 10, (-1) * barTotals[i]['f']);
-      //     bars.push({x:100 + (i * 10), y:5, width: 0.5, height: barTotals[i]['f'], name:barTotals[i].name});
-      //     p.push();
-      //     // p.translate(5,0);
-      //     // p.rotate(p.radians(270));
-      //     p.fill((255, 255,255,255));
-      //     p.textSize(16);
-      //     p.text(barTotals[i].name+barTotals[i].total, 5+7, 105+(i * 10)); // text-names
-      //     // p.text(barTotals[i].name, 5, barWidth/2 + 5); // text-names
-      //     var objectNames = barTotals[i].name;
-      //     objectType.push(objectNames); ////returns name of each classification
           p.pop();
         };
         console.log(barTotalsSort);
@@ -321,7 +294,7 @@ p.draw = function(){
       console.log('y:', p.mouseY)
 
       // switchText(bars[i].name, p.mouseX, p.mouseY)
-      switchText((bars[i].name + "  ......"+""+barTotals[i].total+ ":  "+"  "+"  female: "+barTotals[i].f+", "+"  male: "+barTotals[i].m), p.mouseX, p.mouseY)
+      switchText = ((bars[i].name + ": "bars[i].height+bars[i].maleHeight+":  "+"  "+"  female: "+bars[i].height+", "+"  male: "+bars[i].maleHeight), p.mouseX, p.mouseY);
       onLabel = true;
     };
   };
@@ -363,63 +336,26 @@ p.analyzeArtists = function(){
 }
  
 
-//  p.analyzeArtists = function(){
-//       name = p.table.getColumn(12); ////name, Artist Alpha Sort
-//       tableA = p.table.getArray(); 
+ p.analyzeArtists = function(){
+      name = p.table.getColumn(12); ////name, Artist Alpha Sort
+      tableA = p.table.getArray(); 
 
-//      groupedByNameL = collate(tableA,12); ////grouped by name
-//      console.log(groupedByNameL); 
+     groupedByNameL = collate(tableA,12); ////grouped by name
+     console.log(groupedByNameL); 
 
-//      var groupedByNameKeys = Object.keys(groupedByNameL);
-//      // console.log(groupedByNameKeys);
+     var groupedByNameKeys = Object.keys(groupedByNameL);
+     // console.log(groupedByNameKeys);
 
-//     for (var c=0; c<groupedByNameKeys.length; c++) {
-//      var currentArtistCount = groupedByNameL[groupedByNameKeys[c]].length
+    for (var c=0; c<groupedByNameKeys.length; c++) {
+     var currentArtistCount = groupedByNameL[groupedByNameKeys[c]].length
      
-//      myObjectName.push({name: groupedByNameKeys[c], total: currentArtistCount}); 
-//   }          
-//   console.log(myObjectName);  ////returns artist name & number of items in collection    
-// }
+     myObjectName.push({name: groupedByNameKeys[c], total: currentArtistCount}); 
+  }          
+  console.log(myObjectName);  ////returns artist name & number of items in collection    
+}
  
 
-////header
-// p.header = function(){
-//     p.push();
-//       // p.translate(0,-310);
-//       p.textFont('Khand');
-//       p.noStroke();
-//       p.fill(179,118,244,120); ////gender
-//       p.rect(48,10,67,42);
-//       p.fill(92,242,145,130); 
-//       p.rect(115,10,59,42);
-//       // p.fill(191,61,4,80); ////medium
-//       // p.rect(250,10,139,42);
-
-//       // p.fill(191,61,4,80); ////medium
-//       // p.rect(555,276,79,28);
-//       // p.fill(179,118,244,90); ////gender
-//       // p.rect(865,276,69,28);
-//       // p.fill(92,242,145,90); ////gender
-//       // p.rect(974,276,51,28);
-      
-//       p.textStyle(p.NORMAL);
-//       p.noStroke();
-//       p.textAlign(p.LEFT);
-//       p.fill(77,77,77);
-//       p.textSize(48);
-//       p.text("Gender and Medium:", 50, 48);
-//       p.textSize(40);
-//       p.text("The Met Modern & Contemporary Art", 400, 48);
-//       // p.textSize(35);
-//       // p.text("Which Mediums Dominate", 390, 130);
-//       // p.textSize(38);
-//       // p.text("Mediums are most collected by gender?", 55, 259);
-//       // p.textSize(26);
-//       // p.text("Roll over each bar to explore each of the medium classifications", 170, 300);
-    
-//   p.pop();
-
-// }     
+ 
  
 p.drawLabelsCh = function(){
 //////get info on each object and return on screen
@@ -450,27 +386,10 @@ p.drawLabelsCh = function(){
           }
 
 
-// //// title
-//   p.push();
-//   p.textFont('Khand');
-//   p.textStyle(p.NORMAL);
-//   p.noStroke();
-//   p.textAlign(p.LEFT);
-//   p.fill(102,102,102);
-//   p.textSize(39);
-//   p.text("105 Medium Classifications Sorted by Gender", 50, 116);
-//   // p.text("Sorted by Gender", 50, 156);
-//   // p.textSize(20);
-//   // p.text("roll over a bar to explore each of the medium classifications", 50, 186);
-//   // p.fill(191,61,4,80); ////medium
-//   // p.rect(430,125,78,28);
-// p.pop();
-
 ////axis number of objects
 p.push();
     p.scale(0.5);
     p.translate(width*1.69,4790);
-// p.translate(width*1.66,4790);
     upperLimit = barTotals[barTotals.length - 1]['f']
     lowerLimit = -1 * (barTotals[barTotals.length - 1]['m'])
     console.log(upperLimit)
@@ -488,7 +407,6 @@ p.push();
         p.text(i+3, x, y);
         p.stroke(77,77,77);
         p.strokeWeight(1.5);
-        // p.line(x-30,y-9,x,y-9);
         p.line(x-30,y-9.9,x,y-9.9);     
     }
   p.pop(); 
@@ -496,22 +414,19 @@ p.push();
     p.push();
         p.textFont('Khand');
         p.noStroke();
-        p.textSize(70);
-        p.fill(42,155,285,90);
+        p.textSize(30);
+        p.fill(110,101,115,90);
         p.translate(0,0);
         p.rotate(p.radians(270)); 
         // p.text("Medium", -640,p.width/4+margin);
+        p.text("Number of artworks by medium", -541, 245);
         p.fill(105,105,105);
         p.textSize(30);
-        // p.text("male", -485, p.width-margin-20);
-        // p.text("female", -320, p.width-margin-20);
         p.text("male", -470, 150);
         p.text("female", -320, 150);
         p.fill(92,242,145,150);
-        // p.ellipse(-500, p.width-margin*1.25-20,20,20);
         p.ellipse(-485, 142,20,20);
         p.fill(179,118,244,130);
-        // p.ellipse(-335, p.width-margin*1.25-20,20,20);
         p.ellipse(-335, 142,20,20);
 
     p.pop();
@@ -524,36 +439,4 @@ p.push();
 var myp5 = new p5(g, 'canvas-sketchBar-vertical');
 
 
-//////============sort by size by male;
-// p.reSort = function(){
-//     p.push();
-        // p.scale(0.6); 
-        // p.translate(1440/2,700);
-  // if (bars are clicked){
-    // barTotalsSort = barTotals;
-    //   barTotalsSort.sort(function(a,b){
-    //     return a['m'] - b['m']
-    //   })
-    
-    //   for (var i = barTotalsSort.length-1; i >= 0; i--) {
-    //       p.noStroke();
-    //       p.fill(255,0,0,0);
-    //       p.rect(100 + (i * 10), 5, 10, (-1) * barTotalsSort[i]['f']);
-    //       p.noStroke();
-    //       p.fill(0,255,255,0);
-    //       p.rect(100 + (i * 10), 5, 10, barTotalsSort[i]['m']);
-    //       console.log(barTotalsSort[i].name)
-    //       console.log(barTotalsSort[i]);
-
-    //       p.push();
-    //       p.translate(5,0);
-    //       p.rotate(p.radians(270));
-    //       p.fill(255,0,0);
-    //       p.textSize(16);
-    //       p.text(barTotalsSort[i].name+barTotalsSort[i].total, 5+7, 105+(i * 10)); // text-names
-    //       // p.text(barTotalsSort[i].name, 5, barWidth/2 + 5); // text-names
-        //   p.pop();
-        // };
-//       p.pop();
-// };
 
