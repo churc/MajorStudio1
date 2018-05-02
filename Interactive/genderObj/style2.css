@@ -81,7 +81,7 @@ h1{
   left: 730;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
-  line-height: 28px;
+  line-height: 30px;
   font-size: 22px;
   font-weight: 70;
 }
@@ -92,7 +92,7 @@ h1{
   left: 730;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
-  line-height: 28px;
+  line-height: 30px;
   font-size: 22px;
   font-weight: 70;
 }
@@ -103,7 +103,7 @@ h1{
   left: 730;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
-  line-height: 28px;
+  line-height: 30px;
   font-size: 22px;
   font-weight: 70;
 }
@@ -393,7 +393,7 @@ h1{
 
 #footer{
   position: absolute;
-  top: 9000;
+  top: 8700;
   left: 30;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
   color:#777777;
