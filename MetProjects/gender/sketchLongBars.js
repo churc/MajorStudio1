@@ -170,7 +170,7 @@ p.pop();
     p.fill(77,77,77);
     p.textSize(43);
     p.textStyle(p.NORMAL);
-    p.text("Another View of All Artworks by Gender", 335,32);
+//     p.text("Another View of All Artworks by Gender", 335,32);
   }
 
 p.drawmeasureline = function(){
