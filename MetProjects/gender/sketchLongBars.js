@@ -32,7 +32,7 @@ var margin = 80;
 // ////VERTICAL BARS TOTALS 
 
 var t = function(p) {
-  p.push();
+
   p.translate(0,25);
 
   p.fontRead = function(){
@@ -219,7 +219,7 @@ p.drawmeasureline = function(){
 p.pop();
 
    }
-   p.pop();
+  
 }
 
 var myp5 = new p5(t, 'c2');
