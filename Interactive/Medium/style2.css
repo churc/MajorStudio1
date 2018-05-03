@@ -20,7 +20,7 @@ body{
 }
 
 .canvas{
-  width: 90%;  /*overide canvas width - increase to full page */
+  width: 100%;  /*overide canvas width - increase to full page */
   height: auto;  
   padding-left: 0;
   padding-right: 0;
