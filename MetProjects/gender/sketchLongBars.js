@@ -33,8 +33,6 @@ var margin = 80;
 
 var t = function(p) {
 
-  p.translate(0,25);
-
   p.fontRead = function(){
       fontReady = true; 
     }
@@ -59,6 +57,7 @@ var t = function(p) {
   }
 
   p.displaySingleBars = function(){
+ 
     p.noStroke();
     p.fill(255,0,0);
 
