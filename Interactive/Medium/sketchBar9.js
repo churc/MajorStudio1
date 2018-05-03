@@ -36,7 +36,8 @@ var objNames;
 
 var KhandFont, fontReady = false;
 
-var margin = 80;
+// var margin = 80;
+var margin = 50;
 
 function collate(array, prop){
     return array.reduce(function(groups, item){
@@ -59,9 +60,6 @@ function switchText(indivType, x, y){
 
 var g = function(p){
 
-p.move = function(){
-  // p.translate(0,100);
-}
    p.fontRead = function(){
       fontReady = true; 
     }
