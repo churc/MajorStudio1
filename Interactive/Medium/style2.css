@@ -24,7 +24,7 @@ body{
   height: auto;  
   padding-left: 0;
   padding-right: 0;
-  padding-top:50;
+  padding-top:0;
   margin: 0;
   resize: both;
   position: relative;
@@ -220,7 +220,6 @@ span.span2{
   padding: 25px 25px;
   font-family: 'Khand', sans-serif;
   color:#333333;
-  /*float: left;*/
   cursor: pointer;
 }
 
@@ -239,32 +238,20 @@ span.span2{
   line-height:19px;
   cursor: pointer;
 }
-/*#tooltip-inner {
-    max-width: 100px;
-    width: 100px;
-    height:auto;
-}*/
-
-/*#tooltip-left:before,
-#tooltip-left:after {
-  right: 100%;
-  bottom: 50%;
-  left: auto;
-}*/
 
 #tooltip-left:before {
   margin-left: 0;
   margin-right:22px;
 }
 
-#tooltip-left:hover:before,
+/*#tooltip-left:hover:before,
 #tooltip-left:hover:after,
 #tooltip-left:focus:before,
 #tooltip-left:focus:after {
   -webkit-transform: translateX(-22px);
   -moz-transform:    translateX(-22px);
   transform:         translateX(-22px); 
-}
+}*/
 
 
 #tooltip.active {

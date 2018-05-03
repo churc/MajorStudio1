@@ -37,7 +37,7 @@ var objNames;
 var KhandFont, fontReady = false;
 
 // var margin = 80;
-var margin = 50;
+var margin = 65;
 
 function collate(array, prop){
     return array.reduce(function(groups, item){
@@ -53,12 +53,15 @@ function switchText(indivType, x, y){
     $('#tooltip').text(indivType)
     //move it to the x y position
     $('#tooltip').css('position', 'absolute');
-    $('#tooltip').css('top', y-25); 
-    $('#tooltip').css('left', x); 
+    // $('#tooltip').css('top', y-25); 
+    // $('#tooltip').css('left', x); 
+     $('#tooltip').css('top', y-120); 
+    $('#tooltip').css('left', x-110); 
 }
 
 
 var g = function(p){
+
 
    p.fontRead = function(){
       fontReady = true; 
