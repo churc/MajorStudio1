@@ -99,8 +99,9 @@ h1{
 
 #medium-header{
   position: absolute;
-  top: 1715;
+  top: 1735;
   left: 730;
+  bottom:60;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
   line-height: 30px;
@@ -121,7 +122,7 @@ h1{
 
 #artworks-header{
   position: absolute;
-  top: 4515;
+  top: 1955;
   left: 730;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
@@ -175,7 +176,7 @@ h1{
 
 #footer{
   position: absolute;
-  top: 8700;
+  top: 6200;
   left: 200;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
   color:#777777;

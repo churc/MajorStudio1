@@ -85,7 +85,7 @@ p.preload = function() {
 }
 
 p.setup = function() {
-  p.createCanvas(1440,4120);
+  p.createCanvas(1440,4550);
   p.showWhoWhat();
   p.noLoop();
 }
@@ -94,7 +94,7 @@ p.setup = function() {
 ////display png
 p.showWhoWhat = function(){
   p.scale(0.5);
-  p.translate(-20,0);
+  p.translate(-20,675);
   p.image(whoWhat, 250, 165, 2430,7962);  
   }
 }
