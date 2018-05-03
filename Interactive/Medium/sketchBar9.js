@@ -37,7 +37,7 @@ var objNames;
 var KhandFont, fontReady = false;
 
 // var margin = 80;
-var margin = 65;
+var margin = 80;
 
 function collate(array, prop){
     return array.reduce(function(groups, item){
