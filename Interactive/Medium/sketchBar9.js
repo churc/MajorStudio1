@@ -86,6 +86,7 @@ var g = function(p){
     p.analyzeYears();
     p.barChart();
     p.drawLabelsCh();
+    p.label();
     p.showTypes();
     p.analyzeArtists();
     p.background(238, 222, 161, 1);
@@ -551,13 +552,34 @@ p.push();
          p.fill(180,130,100,240);
         p.ellipse(-335, 142,20,20);
 
-
+      p.pop();
 
     p.pop();
 
   }
 
+p.label = function(){
+    p.push();
+        // p.translate(37,0);
+        p.stroke(112,112,112);
+        p.noFill();
+        p.ellipse(1180,249,5,5);
+        p.line(1178,247,1015, 168);
+        p.textFont('Khand');
+        p.textStyle(p.NORMAL);
+        p.noStroke();
+        p.textAlign(p.LEFT);
+        p.fill(112,112,112);
+        p.textSize(15);
 
+        p.text("For medium with > than 10 artworks, women", 850, 80);
+        p.text("are only collected in greater numbers than men", 850, 97);
+        p.text("for textile work: textiles- miscellaneous (12 / 0);",850,114);
+        p.text("textiles-samples books (13 / 1);",850,131);
+        p.text("textiles-tapestries (21 / 9);",850,148);
+        p.text("textiles (59 / 7); & textiles woven (251 / 36)", 850, 165);
+        
+  }
 }
 
 var myp5 = new p5(g, 'canvas-sketchBar-vertical');
