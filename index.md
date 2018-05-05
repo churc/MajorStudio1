@@ -74,7 +74,12 @@
 
 
 #### 
-#### Interactive Project: [Gender and Medium at The Met](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
+#### Interactive Narrative Project: [Gender and Medium at The Met](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 
 ### Examine which female artists have the most artworks in The Met's Modern & Contemporary Art Collection, compare with male artists. What kind of works are these?
-### [Sketches for project 1: iteration of exercise 1](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant3_churchouse_project1.pdf); [sketches for project 2: new interactive](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant2_churchouse_project2.pdf); [individual sketches for interactive project in process: png1](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-13.png); [png2](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-14.png); [png3](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-15.png); [png4](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-16.png)
+### [Sketches for project 1: iteration of exercise 1](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant3_churchouse_project1.pdf)
+### [Sketches for project 2: new interactive](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant2_churchouse_project2.pdf)
+### [Sketches for interactive project in process](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-13.png)
+### [png2](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-14.png)
+### [png3](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-15.png) 
+### [png4](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-16.png)
