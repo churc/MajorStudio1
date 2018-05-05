@@ -10,7 +10,7 @@
 ### 2)   Using total numbers, vertical bar visualization: Another View of All Artworks by Gender
 ### 3)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What Year Were These Artworks Made
 
-### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjects/initialsketches.png);
+### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/initialsketches.png)
 ### [Initial concept](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
 ### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) 
 
