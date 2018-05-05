@@ -82,7 +82,7 @@
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant3_churchouse_project1.pdf)
 ### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/Interactive/Interactivity_quant_churchouse.pdf)
 ### [Sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant2_churchouse_project2.pdf)
-### [Further sketch ideas]()
+### [Next iteration sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant4_churchouse-16.png)
 ### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/Interactive/finalSketch.png)
 
 
