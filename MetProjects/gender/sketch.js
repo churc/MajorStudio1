@@ -445,7 +445,7 @@ p.pop();
 
 var myp5 = new p5(t, 'canvas-verticalBars');
 
-$("div#c2").append('<a href="' + "https://churc.github.io/MajorStudio1/MetProjects/gender" + "c2" + '</a>');
+$("div#canvas-verticalBars").append('<a href="' + "https://churc.github.io/MajorStudio1/MetProjects/gender" + "canvas-verticalBars" + '</a>');
 
 
 
@@ -815,6 +815,7 @@ for(var i=1850; i<=2017; i+=10){
 }
 
 var myp5 = new p5(w, 'canvas-timeline');
+$("div#canvas-timeline").append('<a href="' + "https://churc.github.io/MajorStudio1/MetProjects/gender" + "canvas-timeline" + '</a>');
 
 
 
