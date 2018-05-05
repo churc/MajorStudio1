@@ -11,9 +11,9 @@
 ### 3)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What Year Were These Artworks Made
 
 ### Initial sketch ideas: 
-### [Initial sketch 1](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project1_gender.jpg); 
-### [Initial sketch 2](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project2_uncertainty.jpg); 
-### [Initial sketch 3](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project3_donations.jpg); 
+### [ISketch 1](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project1_gender.jpg); 
+### [Sketch 2](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project2_uncertainty.jpg); 
+### [Sketch 3](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project3_donations.jpg); 
 ### [Initial concept](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
 ### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) 
 
