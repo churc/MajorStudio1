@@ -4,7 +4,7 @@ var tableA;
 var allYears = [];
 
 
-var lineGroup = [];
+var lineGroup;
 
 
 var barTot = [];
@@ -190,7 +190,7 @@ for (var b=0; b<groupedByTypeC.length; b++) {
   // var mediumArray = [];
 // for (var n = groupedByYear.length - 1; n >= 0; n--) {
 // for (var n = groupedByType[groupedByTypeC[b]].length; n >= 0; n--) {
-  for (var n = groupedByYear[groupedByYearC[b]].length; n >= 0; n--) {
+  for (var n = groupedByYear[groupedByYearC[b]].length-1; n >= 0; n--) {
   //then medium per year
   groupedByYear[n]
   console.log(groupedByYear[groupedByYearC[b]])
@@ -199,7 +199,10 @@ for (var b=0; b<groupedByTypeC.length; b++) {
   // console.log(groupedByYear(groupedByType[groupedByTypeC[b]]));
   
 
-      var totalsFiltered = 0;
+////////////CHANGED HERE DOWN TO TRY FOR EACH
+ 
+
+var totalsFiltered = 0;
       var femtotals = 0;
       var maletotals = 0;
   ////t vertical, b horizontal
@@ -211,8 +214,8 @@ console.log(groupedByYear[groupedByYearC[n]])
       
 
         var currentGender = groupedByYear[groupedByYearC[n]][t][10];
-        // console.log(currentGender);
-     
+        console.log(currentGender);
+ 
 
         if (currentGender == 'm') {
            maletotals = maletotals + 1;
@@ -227,29 +230,91 @@ console.log(groupedByYear[groupedByYearC[n]])
       };
   
       var myObj = document.createElement('mediumLines');
-         myObj = {name: groupedByYear[groupedByYearC[n]], f: femtotals, m: maletotals, total: totalsFiltered};
-        
-         mediumArray.push(myObj);
-       
+         // myObj = {name: groupedByYear[groupedByYearC[n]], date: groupedByYearC[1], medium: groupedByType[1], f: femtotals, m: maletotals, total: totalsFiltered};
+        myObj = {name: groupedByYear[groupedByYearC[n]], medium: groupedByTypeC[b], date: groupedByYearC[n], f: femtotals, m: maletotals, total: totalsFiltered};
 
+        console.log(myObj);
+        mediumArray.push(myObj);
+       
+ 
 
 
 };
 console.log(myObj);
- 
+console.log(mediumArray); 
 
 // console.log(mediumArray.length)
-var mediumName = groupedByTypeC[b]
+// var mediumName = groupedByTypeC[b]
 // var mediumName = groupedByYearC[b]
- debugger 
+
 lineGroup.push({mediumArray})
+ 
 
 
        }
          // console.log(barTot);  ////each classification with number of artworks & split 
-console.log('++++++')
+console.log('++++++FINAL')
 console.log(lineGroup)
+debugger
 
+
+
+
+
+////////////TRY STOPPING HERE 
+
+//       var totalsFiltered = 0;
+//       var femtotals = 0;
+//       var maletotals = 0;
+//   ////t vertical, b horizontal
+//       // for (var t = groupedByYear[n].length - 1; t >= 0; t--) {
+//         for (var t = groupedByYear[groupedByYearC[n]].length-1; t >= 0; t--) {
+//         //then medium per year per object
+//         // var groupByYear = groupedByType[groupedByTypeC[b]][t][17];
+// console.log(groupedByYear[groupedByYearC[n]])
+      
+
+//         var currentGender = groupedByYear[groupedByYearC[n]][t][10];
+//         // console.log(currentGender);
+     
+
+//         if (currentGender == 'm') {
+//            maletotals = maletotals + 1;
+
+//         } else if (currentGender == 'f'){
+//           femtotals = femtotals + 1;  
+//       };
+
+//       if(currentGender === 'm' || currentGender === 'f'){
+//         totalsFiltered = totalsFiltered + 1;
+//         }    
+//       };
+  
+//       var myObj = document.createElement('mediumLines');
+//          myObj = {name: groupedByYear[groupedByYearC[n]], f: femtotals, m: maletotals, total: totalsFiltered};
+        
+//          mediumArray.push(myObj);
+       
+
+
+
+// };
+// console.log(myObj);
+// console.log(mediumArray); 
+
+// // console.log(mediumArray.length)
+// // var mediumName = groupedByTypeC[b]
+// // var mediumName = groupedByYearC[b]
+
+// lineGroup.push({mediumArray})
+ 
+
+
+//        }
+//          // console.log(barTot);  ////each classification with number of artworks & split 
+// console.log('++++++')
+// console.log(lineGroup)
+/////////////////////////////////////////////////////////
 
 
 
