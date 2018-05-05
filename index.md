@@ -46,7 +46,8 @@
 
 
 
-#### 
+
+
 #### Qualitative Project [Where uncertainty falls: the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 
 ### Display groups of artworks connected by a particular search word, as another way of entering the collection. Are the images related, where do the references appear, what reference similarities or variations are there between different objects?  
@@ -73,7 +74,8 @@
 
 
 
-#### 
+
+
 #### Interactive Narrative Project: [Gender and Medium at The Met](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 
 ### Examine which female artists have the most artworks in The Met's Modern & Contemporary Art Collection, compare with male artists. What kind of works are these?
@@ -83,3 +85,11 @@
 ### [png2](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-14.png)
 ### [png3](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-15.png) 
 ### [png4](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-16.png)
+
+
+
+#### Spatial Contexts Project
+
+### Examine ways the gender quantitative project might exist in a spatial context within an art gallery or museum.
+### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/spatial_initialSketches.png)
+### [Sketches](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/ProjectSketches.png)
