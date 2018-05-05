@@ -11,7 +11,7 @@
 ### 3)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What Year Were These Artworks Made
 
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/initialsketches.png)
-### [Initial concept](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
+### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
 ### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) 
 
 
@@ -57,15 +57,18 @@
 ### Uncertainty in the header is linked to the title and date text. Click on the green button for random reload.
 
 
+### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_churchouse.pdf)
+### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQualConcepts2_clarechurchouse.pdf)
+### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_uncertainty_churchouse.pdf) 
 
 
 
 
-![where uncertainty falls](MetProjectsQual/uncertainty/assets/qual_uncertain.png)
+
+![where uncertainty falls](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets/whereuncertainty.png)
 
 
 
-### [Initial](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_churchouse.pdf) qualitative sketch ideas; [sketches](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQual_uncertainty_churchouse.pdf) for final project; [concepts](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/MetQualConcepts2_clarechurchouse.pdf)
 
 
 
