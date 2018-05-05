@@ -3,8 +3,12 @@ var tableL;
 var tableA;
 var allYears = [];
 
-
-var lineGroup;
+var myObj = [];
+var myObjAll = [];
+// var mediumArray = [];
+// var lineGroup;
+var mediumArray = [];
+var lineGroup = [];
 
 
 var barTot = [];
@@ -21,7 +25,8 @@ var groupedByTypeC; ////object keys of groupedByType
 
 var maxObjects, minObjects;
 
- var mediumArray = [];
+
+
 
 var KhandFont, fontReady = false;
 
@@ -190,7 +195,10 @@ for (var b=0; b<groupedByTypeC.length; b++) {
   // var mediumArray = [];
 // for (var n = groupedByYear.length - 1; n >= 0; n--) {
 // for (var n = groupedByType[groupedByTypeC[b]].length; n >= 0; n--) {
-  for (var n = groupedByYear[groupedByYearC[b]].length-1; n >= 0; n--) {
+
+///////note changed this here if do groupedByYear[groupedByYearC[b]].length does work to return one array
+  // for (var n = groupedByYear[groupedByYearC[b]].length; n >= 0; n--) {
+  for (var n = groupedByYearC.length-1; n >= 0; n--) {
   //then medium per year
   groupedByYear[n]
   console.log(groupedByYear[groupedByYearC[b]])
@@ -229,33 +237,43 @@ console.log(groupedByYear[groupedByYearC[n]])
         }    
       };
   
-      var myObj = document.createElement('mediumLines');
-         // myObj = {name: groupedByYear[groupedByYearC[n]], date: groupedByYearC[1], medium: groupedByType[1], f: femtotals, m: maletotals, total: totalsFiltered};
-        myObj = {name: groupedByYear[groupedByYearC[n]], medium: groupedByTypeC[b], date: groupedByYearC[n], f: femtotals, m: maletotals, total: totalsFiltered};
+      // var myObj = document.createElement('mediumLines');
+        // myObj = {name: groupedByYear[groupedByYearC[n]], medium: groupedByTypeC[b], date: groupedByYearC[n], f: femtotals, m: maletotals, total: totalsFiltered};
 
+myObj = ({name: groupedByYear[groupedByYearC[n]], medium: groupedByTypeC[b], date: groupedByYearC[n], f: femtotals, m: maletotals, total: totalsFiltered});
+        myObj.addClass="lines";
+        // myObj = myObjAll;
         console.log(myObj);
+
         mediumArray.push(myObj);
        
  
 
 
 };
-console.log(myObj);
+// console.log(myObj);
 console.log(mediumArray); 
 
-// console.log(mediumArray.length)
+
 // var mediumName = groupedByTypeC[b]
 // var mediumName = groupedByYearC[b]
 
-lineGroup.push({mediumArray})
- 
+// lineGroup.push({mediumArray})
+ lineGroup.push({mediumArray})
 
 
        }
-         // console.log(barTot);  ////each classification with number of artworks & split 
-console.log('++++++FINAL')
-console.log(lineGroup)
+
+
+
+//          // console.log(barTot);  ////each classification with number of artworks & split 
+// console.log('++++++FINAL')
+console.log(lineGroup);
+console.log(mediumArray); 
+
 debugger
+}
+
 
 
 
@@ -318,64 +336,64 @@ debugger
 
 
 
-p.beginShape();
-p.push();
-p.translate(50, 500);
-  var initial = 0;
-  var x1,x2,y1,y2;
-  // var maxX1 = Object.keys(barTot);
-  // var maxX1 = 30;
-  // var maxY = 1000;
-  var maxX1 = 1;
-  var maxY = 2000;
-  // console.log(maxX1);
-  // console.log(allYears);
-  for (var n = 0; n < allYears.length-1; n++) {
-    p.stroke(50);
-    p.strokeWeight(1);
-    p.noFill();
+// p.beginShape();
+// p.push();
+// p.translate(50, 500);
+//   var initial = 0;
+//   var x1,x2,y1,y2;
+//   // var maxX1 = Object.keys(barTot);
+//   // var maxX1 = 30;
+//   // var maxY = 1000;
+//   var maxX1 = 1;
+//   var maxY = 2000;
+//   // console.log(maxX1);
+//   // console.log(allYears);
+//   for (var n = 0; n < allYears.length-1; n++) {
+//     p.stroke(50);
+//     p.strokeWeight(1);
+//     p.noFill();
 
-    // x1 = p.map(initial                      ,0 ,maxX1, 0        ,width);
-    // x2 = p.map(initial+1                     ,0, maxX1, 0        ,width);
-    // y1 = p.map(allYears[n].items.length  ,0, maxY, height-30, 0);
-    // y2 = p.map(allYears[n+1].items.length ,0, maxY, height-30, 0); 
-    // initial + 1;
+//     // x1 = p.map(initial                      ,0 ,maxX1, 0        ,width);
+//     // x2 = p.map(initial+1                     ,0, maxX1, 0        ,width);
+//     // y1 = p.map(allYears[n].items.length  ,0, maxY, height-30, 0);
+//     // y2 = p.map(allYears[n+1].items.length ,0, maxY, height-30, 0); 
+//     // initial + 1;
 
-    x1 = p.map(initial                      ,0 ,maxX1, 0        ,width);
-    x2 = p.map(initial+1                     ,0, maxX1, 0        ,width);
-    y1 = p.map(allYears[n].items.length  ,0, maxY, 0, height);
-    y2 = p.map(allYears[n+1].items.length ,0, maxY, 0, height); 
-    initial + 1;
-    // console.log(x1);
-    // console.log(x2);
-    // console.log(y1);
-    // console.log(y2);
-    // console.log(initial);
-// allYears[1].items.length
-    p.line(x1,y1,x2,y2)
-    //legend
-    // p.noStroke();
-    // p.fill(0);
-    // p.text(n,x1,height);
+//     x1 = p.map(initial                      ,0 ,maxX1, 0        ,width);
+//     x2 = p.map(initial+1                     ,0, maxX1, 0        ,width);
+//     y1 = p.map(allYears[n].items.length  ,0, maxY, 0, height);
+//     y2 = p.map(allYears[n+1].items.length ,0, maxY, 0, height); 
+//     initial + 1;
+//     // console.log(x1);
+//     // console.log(x2);
+//     // console.log(y1);
+//     // console.log(y2);
+//     // console.log(initial);
+// // allYears[1].items.length
+//     p.line(x1,y1,x2,y2)
+//     //legend
+//     // p.noStroke();
+//     // p.fill(0);
+//     // p.text(n,x1,height);
   
 
    
-p.endShape();
- }
+// p.endShape();
  
-//   p.beginShape();
+ 
+// //   p.beginShape();
 
-//   for(var i=0; i<maxX1.length; i++){
-//     p.stroke(255,0,0);
-//     p.noFill();
+// //   for(var i=0; i<maxX1.length; i++){
+// //     p.stroke(255,0,0);
+// //     p.noFill();
 
-// var x = p.map(i, 0, maxX, 20, 460);
-// var y = p.map(maxX, 0, maxY, 100, 20);
-// p.ellipse(x, y, 3 ,3 );
-//p.endShape;
-p.pop();
+// // var x = p.map(i, 0, maxX, 20, 460);
+// // var y = p.map(maxX, 0, maxY, 100, 20);
+// // p.ellipse(x, y, 3 ,3 );
+// //p.endShape;
+// p.pop();
 
-}
+// }
 
 //////////\\\\\\\\\\\\\\\\\\\\
 
