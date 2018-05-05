@@ -1,4 +1,5 @@
 var table;
+var tableB;
 
 var yrFemTotals = [];
 var barTotals =[];
@@ -386,17 +387,6 @@ p.pop();
 }
 
 
- //  p.drawLabelsBar = function(){
- // //title bars
- //    p.textFont('Khand');
- //    p.textAlign(p.LEFT);
- //    p.noStroke();
- //    p.fill(77,77,77);
- //    p.textSize(44);
- //    p.textStyle(p.NORMAL);
- //    // p.text("Another View of All Artworks by Gender", 370,32);
- //  }
-
 p.drawmeasureline = function(){
     p.push();
     
@@ -445,8 +435,6 @@ p.pop();
 
 var myp5 = new p5(t, 'canvas-verticalBars');
 
-$("div#canvas-verticalBars").append('<a href="' + "https://churc.github.io/MajorStudio1/MetProjects/gender" + "canvas-verticalBars" + '</a>');
-
 
 
 ////////Chart items by YEAR TIMELINE
@@ -459,7 +447,7 @@ var w = function(p) {
     }
 
   p.preload = function(){
-   p.table = p.loadTable('assets/ModContGenderfinalzasort.csv','csv','header');
+   p.tableB = p.loadTable('assets/ModContGenderfinalzasort.csv','csv','header');
 
    KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
   }
@@ -480,41 +468,41 @@ var w = function(p) {
   }
 
   p.analyzeData = function(){
-    var count = p.table.getRowCount();
-    var countC = p.table.getColumnCount();
+    var count = p.tableB.getRowCount();
+    var countC = p.tableB.getColumnCount();
     console.log(count + " rows");
     console.log(countC + " columns");
 
 // ///first female artist gender column 10
-  var female = p.table.findRow('f', 10);
+  var female = p.tableB.findRow('f', 10);
   console.log(female);
 //============
 
 // =======all rows with a FEMALE artist
-    var female = p.table.findRows('f', 10);
+    var female = p.tableB.findRows('f', 10);
     console.log(female);
 
 //=======all rows with a MALE artist
-    var male = p.table.findRows('m', 10);
+    var male = p.tableB.findRows('m', 10);
     console.log(male);
 
 //=======all rows where BOTH male and female named as artists 
-    var couple = p.table.findRows('t', 10);
+    var couple = p.tableB.findRows('t', 10);
     console.log(couple);
 
 //=======all rows where the artist is UNKNOWN
-    var unknown = p.table.findRows('u', 10);
+    var unknown = p.tableB.findRows('u', 10);
     console.log(unknown);
 
 //=======all rows where there is an artist but I haven't found their gender
-    var todo = p.table.findRows('z', 10);
+    var todo = p.tableB.findRows('z', 10);
     console.log(todo);
 
 // ///=======gives the YEARS w/ the max & min number of objects
   var yearNow = {};
-    yearNow.year = (p.int(p.table.getString(0,17)));
+    yearNow.year = (p.int(p.tableB.getString(0,17)));
 
-    yearNow.items = p.table.findRows(String(yearNow.year),17);
+    yearNow.items = p.tableB.findRows(String(yearNow.year),17);
     p.append(allYears, yearNow);
 
     minObjects = 150000;
@@ -524,12 +512,12 @@ var w = function(p) {
 
 
 for (var i=0; i<count; i++) {
-      var year = p.int(p.table.getString(i,17));
+      var year = p.int(p.tableB.getString(i,17));
       if(year!=yearNow.year){
         var yearNow = {};
         yearNow.year = year;
         yearNow.items =[];
-        yearNow.items = p.table.findRows(String(yearNow.year),17);
+        yearNow.items = p.tableB.findRows(String(yearNow.year),17);
         p.append(allYears, yearNow);
         
         if(yearNow.items.length>maxObjects){
@@ -548,12 +536,12 @@ for (var i=0; i<count; i++) {
   mxYear = null;
 
 for (var s=0; s<=p.count; s++) {
-      var year = p.int(p.table.getString(s,17));
+      var year = p.int(p.tableB.getString(s,17));
       if(year!=yearNow.year){
         var yearNow = {};
         yearNow.year = year;
         yearNow.items =[];
-        yearNow.items = p.table.findRows(String(yearNow.year),17);
+        yearNow.items = p.tableB.findRows(String(yearNow.year),17);
         p.append(allYears, yearNow);
         
         if(yearNow.items.length>maxObjects){
@@ -570,7 +558,7 @@ console.log("Number of artworks since 1850 is " + midYears.length + " the year w
 // /======TOTAL NUMBER of FEMALE, MALE, TWO, UNKNOWN artists shown on bar chart  
 
 p.analyzeGender = function(){
-  var cnt = p.table.getRowCount();
+  var cnt = p.tableB.getRowCount();
   var gender = {};
 
   var MaleArtists = 0;
@@ -580,12 +568,12 @@ p.analyzeGender = function(){
   var ToFindOutArtists = 0;
   var Other = 0;
 
-  gender.gen = (String(p.table.getString(0,10)));
+  gender.gen = (String(p.tableB.getString(0,10)));
 
   for(var g=0; g<cnt; g++){
-    var gender = p.table.getString(g,10);
+    var gender = p.tableB.getString(g,10);
 
-  gender.items = p.table.findRows(String(gender.gen),10);
+  gender.items = p.tableB.findRows(String(gender.gen),10);
   if (gender === 'm') {
       MaleArtists = MaleArtists + 1;
 
@@ -815,7 +803,6 @@ for(var i=1850; i<=2017; i+=10){
 }
 
 var myp5 = new p5(w, 'canvas-timeline');
-$("div#canvas-timeline").append('<a href="' + "https://churc.github.io/MajorStudio1/MetProjects/gender" + "canvas-timeline" + '</a>');
 
 
 
