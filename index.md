@@ -79,6 +79,7 @@
 #### Interactive Narrative Project: [Gender and Medium at The Met](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 
 ### Examine which female artists have the most artworks in The Met's Modern & Contemporary Art Collection, compare with male artists. What kind of works are these?
+### [Initial Concept](https://github.com/churc/MajorStudio1/blob/master/Interactive/Interactivity_quant_churchouse.pdf)
 ### [Sketches for project 1: iteration of exercise 1](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant3_churchouse_project1.pdf)
 ### [Sketches for project 2: new interactive](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant2_churchouse_project2.pdf)
 ### [Sketches for interactive project in process](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant5_churchouse-13.png)
