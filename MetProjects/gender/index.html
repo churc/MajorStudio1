@@ -1,9 +1,10 @@
-<html>
+<!--doctype html-->
+   <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+ <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> -->
 
   <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
 
@@ -11,30 +12,58 @@
    
 
   <script language="javascript" src="libraries/p5.dom.js"></script>
+
+ <!--  <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
+
+
+<!-- <script language="javascript" type="text/javascript" src="sketchLine.js"></script> -->
   
 
+<!-- <script language="javascript" type="text/javascript" src="sketchArtists.js"></script>  -->
+<!-- <script language="javascript" type="text/javascript" src="sketchLine3.js"></script>  -->
+<!-- <script language="javascript" type="text/javascript" src="flavioLine2.js"></script>  -->
+   <script language="javascript" type="text/javascript" src="sketch3.js"></script>
 
-  <script language="javascript" type="text/javascript" src="sketch.js"></script>
-<!--  <script language="javascript" type="text/javascript" src="sketchLongBars.js"></script> -->
+<link rel="stylesheet" src="libraries/Khand-Regular.ttf">
+
+
+  <style> body {padding: 0; margin: 0;} </style>
 
   <!-- link to stylesheet -->
  <link rel="stylesheet" href="style.css">
- <link rel="stylesheet" src="libraries/Khand-Regular.ttf">
-<!-- this line removes any default padding and style. you might only need one of these values set. -->
 
-  <style> body {padding: 0; margin: 0;} </style>
+
 </head>
 
 <body>
-  <div>
+  <<!-- div id="page-wrap">
+     <div id="verticalBars-header" ><h2>Another View of All Artworks by Gender</h2></div>
+
+ <div> -->
       
-           <!--  <div id="c1"></div> <br><br> -->
-            <div id="c2"></div> <br>
-            <!-- <div id="c3"></div> -->
+            <div id="canvas-zigzag"></div> <br><br>
+            <div id="canvas-verticalBars"></div> <br>
+            <div id="canvas-timeline"></div>
 
 </div>
-          
 
+ 
+<!-- <div id="c1"></div> </div>
+<span id="tooltip"> </span>
+<button id="submit" class="classificationTypes" onclick="p.toggleTypes()">medium<br>greatest to least in number</button>
+
+
+
+<container class="container">
+<div id="types" style="display:none;">
+    <p><h3 class="listing"></h3></p>
+</div>
+</container> -->
+
+<div id="footer" ><h5>Modern & Contemporary Art Collection makers of the 14,350 artworks have been identified by gender: 2,027 artworks are by women and 10,829 are 
+by men. The remaining 1,494 are ‘unidentified by maker’, or the artwork is by a named artist whose 
+gender is not yet identified, or by an artist couple / collaborative with both women and men. This data is from The Met January 2018 
+<a href="https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv">csv</a>.<br> The Met data open access csv is updated weekly and is available on <a href="https://github.com/metmuseum/openaccess">github</a></h5></div>
 
 
 </body>
