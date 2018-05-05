@@ -6,16 +6,16 @@
 
 
 ### Visualizations:
-#### 1)   Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: Gender  
-#### 2)   Using total numbers, vertical bar visualization: Another View of All Artworks by Gender
-#### 3)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What Year Were These Artworks Made
+### 1)   Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: Gender  
+### 2)   Using total numbers, vertical bar visualization: Another View of All Artworks by Gender
+### 3)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What Year Were These Artworks Made
 
-### [nitial concept](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
-### Initial quantitative sketch ideas: 
-#### [Sketch 1](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project1_gender.jpg); 
-#### [Sketch 2](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project2_uncertainty.jpg); 
-#### [Sketch 3](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project3_donations.jpg); 
-### [Sketches](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) for final project; 
+### Initial sketch ideas: 
+### [Initial sketch 1](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project1_gender.jpg); 
+### [Initial sketch 2](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project2_uncertainty.jpg); 
+### [Initial sketch 3](https://github.com/churc/MajorStudio1/blob/master/MetProjects/project3_donations.jpg); 
+### [Initial concept](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
+### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) 
 
 
 ### Note - spike in the number of artworks in 1900: hundreds of objects have Object Begin Date (and Object End Date) recorded as 1900, most of these are manufactoring companies noted as 'unknown designer.'
