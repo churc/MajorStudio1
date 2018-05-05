@@ -65,7 +65,7 @@
 
 
 
-![where uncertainty falls](https://github.com/churc/MajorStudio1/blob/master/MetProjectsQual/uncertainty/assets/whereuncertainty.png)
+![where uncertainty falls](MetProjectsQual/uncertainty/assets/whereuncertainty.png)
 
 
 
