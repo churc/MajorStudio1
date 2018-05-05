@@ -80,7 +80,7 @@
 
 ### Examine which female artists have the most artworks in The Met's Modern & Contemporary Art Collection, compare with male artists. What kind of works are these?
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant3_churchouse_project1.pdf)
-### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/Interactive/Interactivity_quant_churchouse.pdf)
+### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/Interactive/Interactivity_narrative_churchouse)
 ### [Sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant2_churchouse_project2.pdf)
 ### [Next iteration sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant4_churchouse-16.png)
 ### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/Interactive/finalSketch.png)
