@@ -236,7 +236,6 @@ p.translate(50, 500);
   
   
   for (var r = 0; r < mediumArray.length; r++) {
-    console.log(lineGroup.length)
    
     p.stroke(50);
     p.strokeWeight(1);
@@ -248,11 +247,11 @@ p.translate(50, 500);
     x2 = p.map(initial+1                     ,0, maxX1, 0        ,width);
 
     y1 = p.map(lineGroup[r],           0, maxY, 0, height);
-console.log(lineGroup[r])
-console.log(lineGroup[r].mediumArray[1])
+
+// console.log(lineGroup[r].mediumArray)
 console.log(lineGroup[r].mediumArray[r])  /////need to plot by how many arrays in this grouped by medium
-console.log(lineGroup[r].mediumArray[1].medium)
-console.log(lineGroup[r].mediumArray[r].medium)
+// console.log(lineGroup[r].mediumArray[1].medium)
+
 
 
     y2 = p.map(lineGroup[r+1] ,0, maxY, 0, height); 
