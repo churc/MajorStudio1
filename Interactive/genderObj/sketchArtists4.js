@@ -35,12 +35,13 @@ p.showWrappedBars = function(){
   p.scale(0.5);
   p.image(wrappedBars, 80, 695, 2470, 704);  
   }
-}
 
+}
 var myp5 = new p5(l, 'canvas-zigzag');
 
 
-//////=======gender timeline
+
+////=======gender timeline==========
 
 var genderTimeline;
 
@@ -49,7 +50,7 @@ var c = function(p){
 
   p.fontRead = function(){
       fontReady = true; 
-    }
+}
 
 p.preload = function() {
   genderTimeline = p.loadImage("assets/gender_timelineChart.png");
@@ -57,7 +58,7 @@ p.preload = function() {
 }
 
 p.setup = function() {
-  p.createCanvas(1440,810);
+  p.createCanvas(1440,885);
   p.showTimeline();
   p.noLoop();
 }
@@ -67,15 +68,14 @@ p.setup = function() {
 p.showTimeline = function(){
   p.scale(0.5);
   p.image(genderTimeline, 45, 15, 2798,1426);  
-
-
   }
-}
 
+}
 var myp5 = new p5(c, 'canvas-timeline');
 
 
-//////========medium bar chart
+
+//////========medium bar chart============
 
 var table;
 var tableA;
@@ -128,14 +128,16 @@ function collate(array, prop){
 
 ////container for bar info text - tooltip
 function switchText(indivType, x, y){
+
     $('#tooltip').text(indivType)
 //move it to the x y position
     $('#tooltip').css('position', 'absolute');
-    // $('#tooltip').css('top', y-120); 
+    // $('#tooltip').css('top', y); 
     // $('#tooltip').css('left', x); 
-     // $('#tooltip').css('top', y-120+ $('canvas').position().y  ); 
-      $('#tooltip').css('top', y-900);
+    $('#tooltip').css('top', y-640 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
+    // $('#tooltip').css('top', y-120+ $('#canvas-sketchBar-vertical').position().y); 
     $('#tooltip').css('left', x-110); 
+   
 }
 
 
@@ -161,12 +163,12 @@ var g = function(p){
 
     p.setup = function(){
     canvas = p.createCanvas(1440, 2800);
-    p.translate(0,80);
+    // p.translate(0,80);
     p.analyzeData();
     p.analyzeYears();
     p.barChart();
     p.drawLabelsCh();
-    p.label();
+    p.labels();
     p.showTypes();
     p.analyzeArtists();
     p.background(238, 222, 161, 1);
@@ -368,7 +370,8 @@ barTotalsSort = barTotals;
 
 //////listen for mouse, show tooltips
 p.draw = function(){
-
+//   p.push();
+// p.translate(0,100);
   var onLabel = false;
   for (var i = bars.length - 1; i >= 0; i--) {
     var d = p.dist(p.mouseX, p.mouseY, bars[i].x, bars[i].y )
@@ -376,15 +379,16 @@ p.draw = function(){
    if ((p.mouseX >= bars[i].x) && (p.mouseX <= bars[i].x + 10) && (p.mouseY >= (bars[i].y-bars[i].height) && p.mouseY <= (bars[i].y +bars[i].maleHeight))){
       console.log('x:', p.mouseX)
       console.log('y:', p.mouseY)
-
+////tooltip text
       switchText((bars[i].name + ": "+((bars[i].height+bars[i].maleHeight)*2)+":  "+"  "+"  female: "+(bars[i].height*2)+", "+"  male: "+(bars[i].maleHeight*2)), p.mouseX, p.mouseY);
       onLabel = true;
+      
     };
   };
   if(onLabel == false){
     switchText("", p.mouseX, p.mouseY)
   }
-
+// p.pop();
 }
 
 
@@ -531,7 +535,7 @@ p.push();
 
   }
 
-p.label = function(){
+p.labels = function(){
     p.push();
         // p.translate(37,0);
         p.stroke(112,112,112);
@@ -570,7 +574,7 @@ p.preload = function() {
 }
 
 p.setup = function() {
-  p.createCanvas(1440,4480);
+  p.createCanvas(1440,4410);
   p.showWhoWhat();
   p.noLoop();
 }
@@ -580,7 +584,6 @@ p.setup = function() {
 p.showWhoWhat = function(){
   p.scale(0.5);
   p.translate(-20,400);
-  // p.translate(-20,600);
   // p.image(whoWhat, 250, 165, 2430,7962);
   p.image(whoWhat, 250, -80, 2430,7962);  
   }

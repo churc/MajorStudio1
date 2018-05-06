@@ -72,7 +72,7 @@ h1{
   font-style: normal;
   color: rgb(102,102,102);
   line-height: 27px;
-  font-size: 21px;
+  font-size: 19px;
   font-weight: 180;
 }
 
@@ -100,7 +100,7 @@ h1{
 
 #medium-header{
   position: absolute;
-  top: 1735;
+  top: 1727;
   left: 730;
   bottom:60;
   font-family: 'Khand', sans-serif;
@@ -173,7 +173,7 @@ h1{
 
 #footer{
   position: absolute;
-  top: 8880;
+  top: 8805;
   left: 190;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
   color:#777777;
@@ -186,9 +186,9 @@ h1{
 }
 
 span{
-    position: absolute;  /*important*/
-    top: 702px;
-    left: 40px;
+    position: absolute;  /*important  */
+    top: 1950px;
+    left: 70px;
     font-family: 'Khand', sans-serif;
     color:#333333;
     font-size:21px;
@@ -197,23 +197,57 @@ span{
 
 span.span2{
     position: absolute;  /*important*/
-    top: 35px;
-    left: 50px;
+    /*top: 35px;*/
+    /*left: 50px;*/
     font-family: 'Khand', sans-serif;
     color:#333333;
     font-size:21px;
     text-transform: lowercase;
 }
 
+#tooltip:before{
+  z-index:200;
+  position: absolute; /*needs position for z-index to work*/
+  top: 50px;
+  max-width: 100px;
+  width: 100px;
+  height:auto;
+  padding: 25px 25px;
+  font-family: 'Khand', sans-serif;
+  color:#333333;
+  cursor: pointer;
+}
+
 #tooltip{
   z-index:200;
-  position: absolute; needs position for z-index to work
-  top: 680;
-  right:1250;
-  font-family: 'Helvetica', sans-serif;
-  color: #444444;
-  font-size:15px;
+  position: absolute; /*needs position for z-index to work*/
+  max-width: 100px;
+  width: 100px;
+  height:auto;
+  padding: 25px 25px;
+  font-family: 'Khand', sans-serif;
+  color:#777777;
+  font-size:21px;
+  line-height:19px;
+  cursor: pointer;
 }
+
+#tooltip-left:before {
+  margin-left: 0;
+  margin-right:22px;
+}
+
+#tooltip.active {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+}
+
+#tooltip.out {
+  opacity: 0;
+}
+
 
 @media screen and (max-width:720px){
   .selectorSide{
