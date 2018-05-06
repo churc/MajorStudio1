@@ -105,7 +105,7 @@
 
 
 
-#### Spatial Contexts Project
+#### Spatial Contexts Project: [If you were a woman - a man - would your work be in this collection?]
 
 ### Examine ways the gender quantitative project might exist in a spatial context within an art gallery or museum.
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/spatial_initialSketches.png)
