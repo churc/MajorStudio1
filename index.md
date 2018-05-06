@@ -89,7 +89,7 @@
 
 
 
-![gender and medium](Interactive/Medium/interactive.png)
+![gender and medium](Interactive/Medium/assets/interactive.png)
 
 
 #### Spatial Contexts Project
