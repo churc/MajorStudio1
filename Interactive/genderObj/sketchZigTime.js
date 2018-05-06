@@ -429,29 +429,32 @@ p.analyzeGender = function(){
 ///====FILL BY GENDER
    var gender = allYears[i].items[j].obj.Gender;
     if (gender === 'm') {
-       p.fill(92,242,145,170);
+      p.tint(255, 252);
+       p.fill(92,242,145,240);
        p.rect(x-2,y-1,5,2);
        // console.log('m');
        totalMaleArtistsPerBar = totalMaleArtistsPerBar + 1;
 
     } else if (gender === 'f') {
-       p.fill(179,118,244,170);
+      p.tint(255, 252);
+       p.fill(179,118,244,240);
        p.rect(x-2,y-1,5,2);
        // console.log('f');
       totalFemaleArtistsPerBar = totalFemaleArtistsPerBar + 1;
      // console.log(totalFemaleArtistsPerBar);
     } else if (gender === 't') {
-       p.fill(168,71,5,170);
+      p.tint(255, 252);
+       p.fill(168,71,5,240);
        p.rect(x-2,y-1,5,2);
       // console.log('t');
       
     } else if (gender === 'u') {
-       p.fill(165,160,152,170);
+       p.fill(165,160,152,240);
        p.rect(x-2,y-1,5,2);
        // console.log('u');
 
     } else if (gender === 'z') {
-       p.fill(224,199,50,170);
+       p.fill(224,199,50,240);
        p.rect(x-2,y-1,5,2);
        //console.log('z');
 
@@ -517,7 +520,7 @@ for(var i=1850; i<=2017; i+=10){
   p.textAlign(p.RIGHT);
   p.noStroke();
   p.textSize(21);
-  p.text("Year: Object Begin Date", 990,780);
+  p.text("Year: Object Begin Date", 990,745);
 
 //source
   p.textAlign(p.LEFT);
@@ -582,7 +585,7 @@ p.translate(37,0);
 p.pop();
 
 p.push();
-p.translate(6,4);
+p.translate(6.5,4);
   p.stroke(112,112,112);
   p.noFill();
   p.ellipse(710,608,5,5);
@@ -596,6 +599,9 @@ p.translate(6,4);
   p.text("1947 female spike include artworks by Dorothy Liebes & Eva Zeisel", 740,527);
   // p.text("women as by men", 1250,653);
 p.pop();
+
+p.push();
+p.translate(-2,0);
   p.stroke(112,112,112);
   p.noFill();
   p.ellipse(810.5,642,5,5);
@@ -608,6 +614,7 @@ p.pop();
   p.textSize(15);
   p.text("1959 couple / collaborative spike: many are artworks by", 860,570);
   p.text("Ada Louise Huxtable & Garth Huxtable", 860,585);
+p.pop();
 
 p.push();
 p.translate(-28.5,-8);
@@ -616,16 +623,15 @@ p.translate(-28.5,-8);
   p.ellipse(1193,693.5,5,5);
   p.line(1194.5,691,1243,635);
   p.fill(112,112,112);
+  p.textFont('Khand');
+  p.textStyle(p.NORMAL);
+  p.textAlign(p.LEFT);
   p.noStroke();
   p.textSize(15);
-  p.text("2010: more artworks with", 1250,638);
-  p.text("object begin date by women", 1250,653);
-  p.text("than by men (16 to 11)", 1250,668);
+  p.text("2010: more artworks with", 1252,618);
+  p.text("object begin date by women", 1252,633);
+  p.text("than by men (16 to 11)", 1252,648);
 
-  // p.fill(77,77,77);
-  // p.textSize(26);
-  // p.text("The Met Modern & Contemporary Art Collection", 500,120);
-  // p.textSize(38);
   p.pop();
 p.pop();
 
