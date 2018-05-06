@@ -78,7 +78,9 @@
 
 #### Interactive Narrative Project: [Gender and Medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 
-### Examine which female artists have the most artworks in The Met's Modern & Contemporary Art Collection, compare with male artists. What kind of works are these?
+### Identify who are the most collected artists in The Met's Modern & Contemporary Art Collection by gender, and examine what medium  these are. 
+### Work with the 12,856 artworks made either by women or by men from the total collection of 14,350, use the 'classification' column containing 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc.)
+### Do a series of visualizations that explore connections between gender and medium. 
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant3_churchouse_project1.pdf)
 ### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/Interactive/Interactivity_narrative_churchouse.pdf)
 ### [Sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant2_churchouse_project2.pdf) and [next iteration sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant4_churchouse-16.png)
