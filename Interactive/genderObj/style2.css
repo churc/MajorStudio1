@@ -110,8 +110,8 @@ h1{
   font-weight: 70;
 }
 
-/*#artists-header{
-  position: absolute;
+/*#artists-header{ /* artists portraits*/
+  /*position: absolute;
   top: 3000;
   left: 730;
   font-family: 'Khand', sans-serif;
@@ -123,7 +123,7 @@ h1{
 
 #artworks-header{
   position: absolute;
-  top: 4570;
+  top: 4580;
   left: 730;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
@@ -132,8 +132,8 @@ h1{
   font-weight: 70;
 }
 
-/*#types{
-  text-align: left;
+/*#types{  /*medium text*/
+  /*text-align: left;
   justify-content: left;
   margin-bottom: 0px;
   margin-left:10px;
@@ -185,25 +185,14 @@ h1{
   display: none;
 }
 
-span{
-    position: absolute;  /*important  */
-    top: 1950px;
-    left: 70px;
-    font-family: 'Khand', sans-serif;
-    color:#333333;
-    font-size:21px;
-    text-transform: uppercase;
-}
 
-span.span2{
-    position: absolute;  /*important*/
-    /*top: 35px;*/
-    /*left: 50px;*/
-    font-family: 'Khand', sans-serif;
+/*/*span.span2{    /* medium text*/
+ /*position: absolute; */ /*important*/
+/*  font-family: 'Khand', sans-serif;
     color:#333333;
     font-size:21px;
     text-transform: lowercase;
-}
+}*/
 
 #tooltip:before{
   z-index:200;
@@ -221,15 +210,18 @@ span.span2{
 #tooltip{
   z-index:200;
   position: absolute; /*needs position for z-index to work*/
+  top: 2000px;
+  left: 60px;
   max-width: 100px;
   width: 100px;
   height:auto;
   padding: 25px 25px;
   font-family: 'Khand', sans-serif;
   color:#777777;
-  font-size:21px;
+  font-size:20px;
   line-height:19px;
   cursor: pointer;
+  text-transform: lowercase;
 }
 
 #tooltip-left:before {

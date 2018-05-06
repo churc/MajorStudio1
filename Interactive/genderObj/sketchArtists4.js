@@ -5,11 +5,10 @@ var artistObject;
 
 var KhandFont, fontReady = false;
 
-
 var margin = 30;
 
 
-//////gender wrapped bars zigzag
+//////======gender wrapped bars zigzag========
 
 var wrappedBars;
 
@@ -62,7 +61,6 @@ p.setup = function() {
   p.showTimeline();
   p.noLoop();
 }
-
 
 ////display png
 p.showTimeline = function(){
@@ -126,7 +124,7 @@ function collate(array, prop){
   }, {})
 }
 
-////container for bar info text - tooltip
+////container for bar info text: tooltip
 function switchText(indivType, x, y){
 
     $('#tooltip').text(indivType)
@@ -134,15 +132,12 @@ function switchText(indivType, x, y){
     $('#tooltip').css('position', 'absolute');
     // $('#tooltip').css('top', y); 
     // $('#tooltip').css('left', x); 
-    $('#tooltip').css('top', y-640 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
-    // $('#tooltip').css('top', y-120+ $('#canvas-sketchBar-vertical').position().y); 
+    $('#tooltip').css('top', y-640 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas 
     $('#tooltip').css('left', x-110); 
    
 }
 
-
 var g = function(p){
-
 
    p.fontRead = function(){
       fontReady = true; 
@@ -353,14 +348,11 @@ barTotalsSort = barTotals;
           bars.push({x:160 + (i * 10), y:$(window).height()/2, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
 
           p.push();
-
-          // p.translate(5,0);
           p.rotate(p.radians(270));
           p.textSize(14);
           p.text(barTotalsSort[i].name+barTotalsSort[i].total, 5+7, 105+(i * 10)); // text-names
            var objectNames = barTotals[i].name;
           objectType.push(objectNames); ////returns name of each classification
-
           p.pop();
         };
         console.log(barTotalsSort);
@@ -370,8 +362,6 @@ barTotalsSort = barTotals;
 
 //////listen for mouse, show tooltips
 p.draw = function(){
-//   p.push();
-// p.translate(0,100);
   var onLabel = false;
   for (var i = bars.length - 1; i >= 0; i--) {
     var d = p.dist(p.mouseX, p.mouseY, bars[i].x, bars[i].y )
@@ -380,7 +370,7 @@ p.draw = function(){
       console.log('x:', p.mouseX)
       console.log('y:', p.mouseY)
 ////tooltip text
-      switchText((bars[i].name + ": "+((bars[i].height+bars[i].maleHeight)*2)+":  "+"  "+"  female: "+(bars[i].height*2)+", "+"  male: "+(bars[i].maleHeight*2)), p.mouseX, p.mouseY);
+      switchText((bars[i].name + ": "+((bars[i].height+bars[i].maleHeight)*2)+","+"     "+"female: "+(bars[i].height*2)+", "+"  male: "+(bars[i].maleHeight*2)), p.mouseX, p.mouseY);
       onLabel = true;
       
     };
@@ -388,7 +378,6 @@ p.draw = function(){
   if(onLabel == false){
     switchText("", p.mouseX, p.mouseY)
   }
-// p.pop();
 }
 
 
@@ -428,7 +417,6 @@ p.analyzeArtists = function(){
       name = p.table.getColumn(12); ////name, Artist Alpha Sort
       tableA = p.table.getArray(); 
 
-
      groupedByNameL = collate(tableA,12); ////grouped by name
      console.log(groupedByNameL); 
 
@@ -447,11 +435,11 @@ p.analyzeArtists = function(){
 p.drawLabelsCh = function(){
 //////get info on each object and return on screen
     p.push();
-
     var width = 1440, 
         height = p.windowHeight
 
 //////return list of classification types & numbers
+/////note taken this off the page 
   p.textFont('Khand');
   p.noStroke();
   p.textAlign(p.LEFT);
@@ -465,14 +453,13 @@ p.drawLabelsCh = function(){
   for(var i = barTotals.length-1; i >= 0; i--) {
                           var classification = barTotals[i];
                           var classificationHTML = '<li>';
-                          ////taken list off chart 
+                    ////taken list off chart 
                               // classificationHTML += '<p>'+barTotals[i].name + "  ......"+""+barTotals[i].total+ ":  "+"  "+"  female "+barTotals[i].f+", "+"  male "+barTotals[i].m+'<p>'
                               classificationHTML += '<a href = "https://www.metmuseum.org/art/collection/search#!?offset=0&pageSize=0&sortBy=Relevance&sortOrder=asc&perPage=20&department=21">';
                               classificationHTML += '</a>';
                               classificationHTML += '</li>';
-                  $('#types').append('<div>'+classificationHTML+'</div>');  ////put the artwork types into list  
+                  // $('#types').append('<div>'+classificationHTML+'</div>');  ////put the artwork types into list  
           }
-
 
 // //// title
   p.push();
@@ -511,14 +498,12 @@ p.push();
   p.pop(); 
   p.pop();
     p.push();
-
-    p.textFont('Khand');
+        p.textFont('Khand');
         p.noStroke();
         p.textSize(28);
-        p.fill(110,101,115,90);
+        p.fill(110,101,115,110);
         p.translate(0,0);
-        p.rotate(p.radians(270)); 
-        
+        p.rotate(p.radians(270));     
         p.text("Number of artworks by medium", -541, 1320);
         p.fill(105,105,105);
         p.textSize(30);
@@ -530,14 +515,11 @@ p.push();
         p.ellipse(-335, 142,20,20);
 
       p.pop();
-
     p.pop();
-
   }
 
 p.labels = function(){
     p.push();
-        // p.translate(37,0);
         p.stroke(112,112,112);
         p.noFill();
         p.ellipse(1180,249,5,5);
@@ -558,33 +540,30 @@ p.labels = function(){
         
   }
 }
-
 var myp5 = new p5(g, 'canvas-sketchBar-vertical');
 
 
 
-//////========artists and kind of objects
+//////========artists and kind of objects===========
 
 var whoWhat;
 
 var b = function(p){
 
 p.preload = function() {
-  whoWhat = p.loadImage("assets/quant9_artistsMedium_churchouse-03.png");
+  whoWhat = p.loadImage("assets/quant9_forwebfinal_churchouse2.png");
 }
 
 p.setup = function() {
-  p.createCanvas(1440,4410);
+  p.createCanvas(1440,4200);
   p.showWhoWhat();
   p.noLoop();
 }
 
-
 ////display png
 p.showWhoWhat = function(){
   p.scale(0.5);
-  p.translate(-20,400);
-  // p.image(whoWhat, 250, 165, 2430,7962);
+  p.translate(-20,325);
   p.image(whoWhat, 250, -80, 2430,7962);  
   }
 }
