@@ -92,7 +92,8 @@
 
 
 ### Identify who are the most collected artists in The Met's Modern & Contemporary Art department by gender, and examine what medium  their artworks are. 
-### Work with the 12,856 artworks made either by women or by men from the total collection of 14,350, use the 'classification' column containing 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc.)
+### Using the 12,856 artworks made either by women or by men from the total collection of 14,350 artwork; the 'classification' column contains 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc.)
+### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
 ### Do a series of visualizations that explore connections between gender and medium. 
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant3_churchouse_project1.pdf)
 ### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/Interactive/Interactivity_narrative_churchouse.pdf)
