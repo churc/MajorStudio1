@@ -38,8 +38,6 @@ var t = function(p) {
     }
 
   p.preload = function(){
-  //mytable is comma separated value "csv"
-  //and has a header specifying the columns labels
    p.table = p.loadTable('assets/ModContGenderfinalazsort.csv','csv','header');
 
    KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
@@ -68,7 +66,6 @@ var t = function(p) {
     var width = 5800,
         height = p.windowHeight,
         margin = 40,
-        // margin = 15,
         w = width - 2 * margin, // chart area width and height
         h = height - 2 * margin;
     
@@ -202,9 +199,6 @@ p.drawmeasureline = function(){
     var y = 0;
 
     var x = p.map(b,0,10829, 0, 10829/2);
-
-    // x = map(i,0, allYears.length,margin, width-margin);
-   
       p.noStroke();
       p.fill(77,77,77);
       p.stroke(77,77,77);
