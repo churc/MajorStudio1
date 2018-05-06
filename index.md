@@ -1,6 +1,19 @@
 #### Quantitative Project [Gender at The Met, What % of the Modern & Contemporary Art Collection's 14,350 works are by women?](https://churc.github.io/MajorStudio1/MetProjects/gender) 
    
-   
+
+
+
+
+
+![by Year](MetProjects/gender/assets/gender_timelineChart.png)
+
+
+
+
+
+
+
+
 ### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/tree/master/MetProjects/gender/assets): 14,350 artworks in the Modern and Contemporary Art Collection, ranging from 1437 – 2017 together with undated, most 'Object Begin Date' entries fall after 1850. ‘Artist Display Name’ column used to identify artists by gender. 
 ### Gender categories: female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified 
 
@@ -30,25 +43,18 @@
 
 
 
-![by Year](MetProjects/gender/assets/gender_timelineChart.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #### Qualitative Project [Where uncertainty falls: the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
+
+
+
+
+![where uncertainty falls](MetProjectsQual/uncertainty/assets/whereuncertainty.png)
+
+
+
+
+
 
 ### Display groups of artworks connected by a particular search word, as another way of entering the collection. Are the images related, where do the references appear, what reference similarities or variations are there between different objects?  
 
@@ -67,16 +73,23 @@
 
 
 
-![where uncertainty falls](MetProjectsQual/uncertainty/assets/whereuncertainty.png)
-
-
-
-
 
 
 
 
 #### Interactive Narrative Project: [Gender and Medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
+
+
+
+
+
+![gender and medium](Interactive/Medium/assets/interactive.png)
+
+
+
+
+
+
 
 ### Identify who are the most collected artists in The Met's Modern & Contemporary Art Collection by gender, and examine what medium  these are. 
 ### Work with the 12,856 artworks made either by women or by men from the total collection of 14,350, use the 'classification' column containing 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc.)
@@ -89,8 +102,6 @@
 
 
 
-
-![gender and medium](Interactive/Medium/assets/interactive.png)
 
 
 #### Spatial Contexts Project
