@@ -89,7 +89,7 @@
 
 
 
-![gender and medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/interactive.png)
+![gender and medium](Interactive/genderObj/interactive.png)
 
 
 #### Spatial Contexts Project
