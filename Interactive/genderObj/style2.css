@@ -100,8 +100,7 @@ h1{
 
 #medium-header{
   position: absolute;
-  /*top: 1735;*/
-  top: 6050;
+  top: 1735;
   left: 730;
   bottom:60;
   font-family: 'Khand', sans-serif;
@@ -124,8 +123,7 @@ h1{
 
 #artworks-header{
   position: absolute;
-  top: 1775;
-  /*top: 1955;*/
+  top: 4570;
   left: 730;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
@@ -148,17 +146,14 @@ h1{
   background-color: rgb(109,101,73, .1);
 }*/
 
-
 .bars{
     font-size: 16px;
     
 }
 
-
 .images{
   position: absolute;
 }
-
 
 #labels{
   position: absolute;
@@ -172,14 +167,13 @@ h1{
   top: 192;
   left: 55;
   font-family: 'Khand', sans-serif;
-  /*font-family: "Helvetica Neue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;*/
   color: rgb(102,102,102);
   font-size:14px;
 }
 
 #footer{
   position: absolute;
-  top: 6200;
+  top: 8400;
   left: 200;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
   color:#777777;
@@ -215,7 +209,6 @@ span.span2{
   z-index:200;
   position: absolute; needs position for z-index to work
   top: 680;
- /* left:650;*/
   right:1250;
   font-family: 'Helvetica', sans-serif;
   color: #444444;
