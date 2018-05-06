@@ -88,6 +88,10 @@
 
 
 
+
+![gender and medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/interactive.png)
+
+
 #### Spatial Contexts Project
 
 ### Examine ways the gender quantitative project might exist in a spatial context within an art gallery or museum.
