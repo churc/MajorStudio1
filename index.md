@@ -113,3 +113,4 @@
 ### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/spatial_concept_churchouse.pdf)
 ### [Sketches](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/ProjectSketches.png)
 ### [Mobile](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/met_mobile-02.png)
+### [Spatial context](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/MoMA_gender.png)
