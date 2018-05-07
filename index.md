@@ -112,3 +112,4 @@
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/spatial_initialSketches.png)
 ### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/spatial_concept_churchouse.pdf)
 ### [Sketches](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/ProjectSketches.png)
+### [Mobile](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/met_mobile-02.png)
