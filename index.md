@@ -14,7 +14,7 @@
 
 
 
-### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/MetProjects/gender/assets/ModContGenderfinalzasort.csv): 14,350 artworks in the Modern and Contemporary Art Collection, ranging from 1437 – 2017 together with undated, most 'Object Begin Date' entries fall after 1850. ‘Artist Display Name’ column used to identify artists by gender. 
+### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/ModContGenderfinalazsort.csv): 14,350 artworks in the Modern and Contemporary Art Collection, ranging from 1437 – 2017 together with undated, most 'Object Begin Date' entries fall after 1850. ‘Artist Display Name’ column used to identify artists by gender. 
 ### Gender categories: female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified 
 
 
