@@ -1,0 +1,292 @@
+@font-face {
+   font-family:  'Khand', sans-serif;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+html, body {
+  width: auto;
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  padding-bottom: 20;
+  justify-content: center;
+  align-items: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.canvas{
+  width: 90%;  /*overide canvas width - increase to full page */
+  height: auto;  
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  resize: both;
+  position: relative;
+}
+
+p{
+   margin:0;
+   margin-left:9px;
+   margin-right:30px;
+   margin-top: 7px;
+   padding: 0;
+   border:0;
+   
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 70;
+}
+
+h1{
+    justify-content: left;
+    text-align: left;
+    list-style-type: none;
+    font-family: 'Khand', sans-serif;
+    font-size:58px;
+    font-weight: 70;
+}
+h2{
+   justify-content: left;
+    text-align: left;
+    list-style-type: none;
+    font-family: 'Khand', sans-serif;
+    font-size:34px;
+    font-weight: 70;
+}
+
+#header{
+  position: fixed; /*sticky header*/
+  top: 15px;
+  left: 366px;
+  font-family: 'Khand', sans-serif;
+  color: rgb(102,102,102);
+  font-size: 58px;
+  font-weight: 70;
+  line-height:50px;
+}
+
+#header2{
+  position: absolute;
+  top: 75;
+  left: 370;
+  font-family: 'Khand', sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-style: normal;
+  color: rgb(102,102,102);
+  line-height: 27px;
+  font-size: 19px;
+  font-weight: 180;
+}
+
+#header3{
+  position: absolute;
+  top: 125;
+  left: 370;
+  font-family: 'Khand', sans-serif;
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
+  font-style: normal;
+  color: rgb(102,102,102);
+  line-height: 27px;
+  font-size: 19px;
+  font-weight: 180;
+}
+
+#spatial1-header{
+  position: absolute;
+  top: 500;
+  left: 730;
+  font-family: 'Khand', sans-serif;
+  color: rgb(102,102,102);
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: 70;
+}
+
+#spatial2-header{
+  position: absolute;
+  top: 920;
+  left: 730;
+  font-family: 'Khand', sans-serif;
+  color: rgb(102,102,102);
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: 70;
+}
+
+#medium-header{
+  position: absolute;
+  top: 1727;
+  left: 730;
+  bottom:60;
+  font-family: 'Khand', sans-serif;
+  color: rgb(102,102,102);
+  line-height: 30px;
+  font-size: 22px;
+  font-weight: 70;
+}
+
+#canvas-spatial1{
+   margin: 0 auto;
+   width: 1015;
+}
+
+#canvas-spatial2{
+   margin: 0 auto;
+   width: 1078;
+}
+
+/*#artists-header{ /* artists portraits*/
+  /*position: absolute;
+  top: 3000;
+  left: 730;
+  font-family: 'Khand', sans-serif;
+  color: rgb(102,102,102);
+  line-height: 28px;
+  font-size: 22px;
+  font-weight: 70;
+}*/
+
+/*#artworks-header{
+  position: absolute;
+  top: 4580;
+  left: 730;
+  font-family: 'Khand', sans-serif;
+  color: rgb(102,102,102);
+  line-height: 28px;
+  font-size: 22px;
+  font-weight: 70;
+}*/
+
+/*#types{  /*medium text*/
+  /*text-align: left;
+  justify-content: left;
+  margin-bottom: 0px;
+  margin-left:10px;
+  border:none;
+  list-style-type: none;
+  font-family: 'Khand', sans-serif;
+  font-size:20px;
+  line-height:19px;
+  color: #777777;
+  background-color: rgb(109,101,73, .1);
+}*/
+
+.bars{
+    font-size: 16px;
+    
+}
+
+.images{
+  position: absolute;
+}
+
+#labels{
+  position: absolute;
+  font-family: 'Khand', sans-serif;
+  color: #444444;
+  font-size:15px;
+}
+
+#description{
+  position: absolute;
+  top: 192;
+  left: 55;
+  font-family: 'Khand', sans-serif;
+  color: rgb(102,102,102);
+  font-size:14px;
+}
+
+#footer{
+  position: absolute;
+  top: 8805;
+  left: 190;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
+  color:#777777;
+  font-size:15px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
+/*/*span.span2{    /* medium text*/
+ /*position: absolute; */ /*important*/
+/*  font-family: 'Khand', sans-serif;
+    color:#333333;
+    font-size:21px;
+    text-transform: lowercase;
+}*/
+
+#tooltip:before{
+  z-index:200;
+  position: absolute; /*needs position for z-index to work*/
+  top: 50px;
+  max-width: 100px;
+  width: 100px;
+  height:auto;
+  padding: 25px 25px;
+  font-family: 'Khand', sans-serif;
+  color:#333333;
+  cursor: pointer;
+}
+
+#tooltip{
+  z-index:200;
+  position: absolute; /*needs position for z-index to work*/
+  top: 2000px;
+  left: 60px;
+  max-width: 100px;
+  width: 100px;
+  height:auto;
+  padding: 25px 25px;
+  font-family: 'Khand', sans-serif;
+  color:#777777;
+  font-size:20px;
+  line-height:19px;
+  cursor: pointer;
+  text-transform: lowercase;
+}
+
+#tooltip-left:before {
+  margin-left: 0;
+  margin-right:22px;
+}
+
+#tooltip.active {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition:    all 0.2s ease;
+  -ms-transition:     all 0.2s ease;
+  -o-transition:      all 0.2s ease;
+}
+
+#tooltip.out {
+  opacity: 0;
+}
+
+
+@media screen and (max-width:720px){
+  .selectorSide{
+    width: 100%;
+    height:50vh;
+  }
+
+@media print, screen and (max-width: 480px) {
+  .container {
+      grid-template-columns: 40px 40px 40px;
+      grid-template-rows: auto;
+      justify-items: start;
+  }
+
+}
+
+
+
+
