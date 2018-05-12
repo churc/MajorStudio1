@@ -62,34 +62,36 @@ h2{
 
 #header{
   position: fixed; /*sticky header*/
-  top: 15px;
-  left: 366px;
+  top: 0px;
+  left: 436;
+  /*left: 366px;*/
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
   font-size: 58px;
   font-weight: 70;
   line-height:50px;
+  z-index: 200;
 }
 
 #header2{
   position: absolute;
-  top: 75;
-  left: 370;
+  top: 70;
+  /*left: 370;*/
+  left: 436;
   font-family: 'Khand', sans-serif;
-  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-style: normal;
   color: rgb(102,102,102);
   line-height: 27px;
-  font-size: 19px;
+  font-size: 28px;
   font-weight: 180;
 }
 
 #header3{
   position: absolute;
-  top: 125;
-  left: 370;
+  top: 120;
+  /*left: 370;*/
+  left: 436;
   font-family: 'Khand', sans-serif;
-  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-style: normal;
   color: rgb(102,102,102);
   line-height: 27px;
@@ -97,10 +99,21 @@ h2{
   font-weight: 180;
 }
 
-#spatial1-header{
+#header4{
   position: absolute;
-  top: 500;
-  left: 730;
+  /*top: 120;*/
+  left: 1060;
+  font-family: 'Khand', sans-serif;
+  font-style: normal;
+  color: rgb(102,102,102);
+  line-height: 27px;
+  font-size: 19px;
+  font-weight: 180;
+}
+
+.spatial1-header{
+  position: absolute;
+  top: 175;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
   line-height: 30px;
@@ -108,10 +121,9 @@ h2{
   font-weight: 70;
 }
 
-#spatial2-header{
+.spatial2-header{
   position: absolute;
-  top: 920;
-  left: 730;
+  top: 915;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
   line-height: 30px;
@@ -119,11 +131,10 @@ h2{
   font-weight: 70;
 }
 
-#medium-header{
+.spatial3-header{
   position: absolute;
-  top: 1727;
-  left: 730;
-  bottom:60;
+  top: 1530;
+  bottom: 30;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
   line-height: 30px;
@@ -133,49 +144,18 @@ h2{
 
 #canvas-spatial1{
    margin: 0 auto;
-   width: 1015;
+   width: 1050;
 }
 
 #canvas-spatial2{
    margin: 0 auto;
-   width: 1078;
+   width: 1050;
 }
 
-/*#artists-header{ /* artists portraits*/
-  /*position: absolute;
-  top: 3000;
-  left: 730;
-  font-family: 'Khand', sans-serif;
-  color: rgb(102,102,102);
-  line-height: 28px;
-  font-size: 22px;
-  font-weight: 70;
-}*/
-
-/*#artworks-header{
-  position: absolute;
-  top: 4580;
-  left: 730;
-  font-family: 'Khand', sans-serif;
-  color: rgb(102,102,102);
-  line-height: 28px;
-  font-size: 22px;
-  font-weight: 70;
-}*/
-
-/*#types{  /*medium text*/
-  /*text-align: left;
-  justify-content: left;
-  margin-bottom: 0px;
-  margin-left:10px;
-  border:none;
-  list-style-type: none;
-  font-family: 'Khand', sans-serif;
-  font-size:20px;
-  line-height:19px;
-  color: #777777;
-  background-color: rgb(109,101,73, .1);
-}*/
+#canvas-spatial3{
+   margin: 0 auto;
+   width: 1050;
+}
 
 .bars{
     font-size: 16px;
@@ -204,11 +184,11 @@ h2{
 
 #footer{
   position: absolute;
-  top: 8805;
-  left: 190;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;
-  color:#777777;
-  font-size:15px;
+  top: 2205;
+  left: 200;
+  font-family: 'Khand', sans-serif;
+  color: #777777;
+  font-size: 26px;
 }
 
 
@@ -217,72 +197,15 @@ h2{
 }
 
 
-/*/*span.span2{    /* medium text*/
- /*position: absolute; */ /*important*/
-/*  font-family: 'Khand', sans-serif;
-    color:#333333;
-    font-size:21px;
-    text-transform: lowercase;
-}*/
-
-#tooltip:before{
-  z-index:200;
-  position: absolute; /*needs position for z-index to work*/
-  top: 50px;
-  max-width: 100px;
-  width: 100px;
-  height:auto;
-  padding: 25px 25px;
-  font-family: 'Khand', sans-serif;
-  color:#333333;
-  cursor: pointer;
-}
-
-#tooltip{
-  z-index:200;
-  position: absolute; /*needs position for z-index to work*/
-  top: 2000px;
-  left: 60px;
-  max-width: 100px;
-  width: 100px;
-  height:auto;
-  padding: 25px 25px;
-  font-family: 'Khand', sans-serif;
-  color:#777777;
-  font-size:20px;
-  line-height:19px;
-  cursor: pointer;
-  text-transform: lowercase;
-}
-
-#tooltip-left:before {
-  margin-left: 0;
-  margin-right:22px;
-}
-
-#tooltip.active {
-  -webkit-transition: all 0.2s ease;
-  -moz-transition:    all 0.2s ease;
-  -ms-transition:     all 0.2s ease;
-  -o-transition:      all 0.2s ease;
-}
-
-#tooltip.out {
-  opacity: 0;
-}
-
 
 @media screen and (max-width:720px){
-  .selectorSide{
-    width: 100%;
-    height:50vh;
+  #page-wrap{
+    width: 70%;
   }
 
 @media print, screen and (max-width: 480px) {
-  .container {
-      grid-template-columns: 40px 40px 40px;
-      grid-template-rows: auto;
-      justify-items: start;
+  #page-wrap {
+    width: 40%; 
   }
 
 }
