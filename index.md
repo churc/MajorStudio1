@@ -108,11 +108,14 @@
 
 ### **Spatial Contexts Project** [If you were a woman - a man - would your work be in this collection?]
 
+![who's in this room by gender](SpatialContexts/museum_intRev2_24.png)
+
 ### Examine ways the gender quantitative project might exist in a spatial context within an art gallery or museum.
-### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/spatial_initialSketches.png)
-### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/spatial_concept_churchouse.pdf)
-### [Sketches](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/ProjectSketches.png)
-### [Mobile](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/met_mobile-02.png)
-### [Spatial context](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/MoMA_gender.png)
-### [Spatial context](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/emptyspace2-01.png)
+### [Initial sketch ideas](SpatialContexts/spatial_initialSketches.png)
+### [Initial concepts](SpatialContexts/spatial_concept_churchouse.pdf)
+### [Sketches](SpatialContexts/ProjectSketches1.png)
+### [Sketches2](SpatialContexts/ProjectSketches2.png)
+### [Spatial context](SpatialContexts/museum_extRev2_24.png)
+### [Spatial context](SpatialContexts/museum_intRev2_24.png)
+### [AR](SpatialContexts/museum_intRev2-mobile-blur-24-final.png)
 
