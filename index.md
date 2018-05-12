@@ -109,7 +109,7 @@
 ### **Spatial Contexts Project** [If you were a woman - a man - would your work be in this collection?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html)
 
 
-![who's in this room by gender](SpatialContexts/museum_intRev2_24.png)
+![who's in this room by gender](SpatialContexts/museum_intRev2_final_24.png)
 
 ### Examine ways the gender quantitative project might exist in a spatial context within an art gallery or museum.
 ### [Initial sketch ideas](SpatialContexts/spatial_initialSketches.png)
@@ -117,6 +117,6 @@
 ### [Sketches 1](SpatialContexts/ProjectSketches1.png)
 ### [Sketches 2](SpatialContexts/ProjectSketches2.png)
 ### [Spatial context - gallery entrance](SpatialContexts/museum_extRev2_24.png)
-### [Spatial context - gallery space](SpatialContexts/museum_intRev2_24.png)
+### [Spatial context - gallery space](SpatialContexts/museum_intRev2_final_24.png)
 ### [AR](SpatialContexts/museum_intRev2-mobile-blur-24-final.png)
 
