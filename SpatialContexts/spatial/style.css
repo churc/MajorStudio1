@@ -202,12 +202,12 @@ h2{
   #page-wrap{
     width: 70%;
   }
+}
 
 @media print, screen and (max-width: 480px) {
   #page-wrap {
     width: 40%; 
   }
-
 }
 
 
