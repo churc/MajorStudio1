@@ -113,8 +113,8 @@
 ### Examine ways the gender quantitative project might exist in a spatial context within an art gallery or museum.
 ### [Initial sketch ideas](SpatialContexts/spatial_initialSketches.png)
 ### [Initial concepts](SpatialContexts/spatial_concept_churchouse.pdf)
-### [Sketches](SpatialContexts/ProjectSketches1.png)
-### [Sketches2](SpatialContexts/ProjectSketches2.png)
+### [Sketches 1](SpatialContexts/ProjectSketches1.png)
+### [Sketches 2](SpatialContexts/ProjectSketches2.png)
 ### [Spatial context - gallery entrance](SpatialContexts/museum_extRev2_24.png)
 ### [Spatial context - gallery space](SpatialContexts/museum_intRev2_24.png)
 ### [AR](SpatialContexts/museum_intRev2-mobile-blur-24-final.png)
