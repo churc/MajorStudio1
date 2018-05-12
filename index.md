@@ -106,7 +106,7 @@
 
 
 
-### **Spatial Contexts Project** [If you were a woman - a man - would your work be in this collection?]
+### **Spatial Contexts Project** [If you were a woman - a man - would your work be in this collection?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html)
 
 ![who's in this room by gender](SpatialContexts/museum_intRev2_24.png)
 
