@@ -560,7 +560,7 @@ var whoWhat;
 var b = function(p){
 
 p.preload = function() {
-  whoWhat = p.loadImage("assets/quant9_forwebfinal_churchouse2.png");
+  whoWhat = p.loadImage("assets/quant9_forwebsvg_churchouse_FINAL.png");
 }
 
 p.setup = function() {
