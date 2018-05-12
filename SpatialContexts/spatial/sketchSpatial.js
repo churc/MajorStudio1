@@ -50,7 +50,8 @@ p.fontRead = function(){
     }
 
 p.preload = function() {
-  spatial2 = p.loadImage("assets/museum_intRev2-01.png");
+spatial2 = p.loadImage("assets/museum_intRev2_final_24.png");
+
   KhandFont = p.loadFont('libraries/Khand-Regular.ttf', p.fontRead);
 }
 
