@@ -5,7 +5,6 @@ var margin = 10;
 var n = function(p){
 
 // p.preload = function(){
-//   artists = p.loadJSON("assets/artists.json", artists);
 
 //     img0 = p.loadImage('assets/Dove.png');
 //     img1 = p.loadImage('assets/Picasso.png');
@@ -127,7 +126,7 @@ p.setup = function() {
 ////display png
 p.showMap = function(){
 	p.scale(0.8)
-  p.image(zigzag, 100, 60, 2316/2, 1836/2);  
+  p.image(zigzag, 100, 25, 2316/2, 1836/2);  
   }
 }
 
