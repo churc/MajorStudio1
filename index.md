@@ -78,7 +78,7 @@
 
 
 
-#### **Interactive Narrative Project** [Gender and Medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
+#### **Interactive Narrative Project** [Gender & Medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html) in The Met's Modern & Contemporary Art Collection
 
 
 
