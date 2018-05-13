@@ -163,3 +163,35 @@ p.showmet = function(){
 }
 
 var myp5 = new p5(g, 'canvas-met');
+
+
+
+////////////==========///////////////////
+
+//////zigzag
+
+var zig;
+
+var m = function(p){
+
+
+p.preload = function() {
+  zig = p.loadImage("assets/gender_zigzag.png");
+
+}
+
+p.setup = function() {
+  p.createCanvas(1100, 450);
+  p.showzig();
+}
+
+
+
+////display png
+p.showzig = function(){
+	// p.scale(0.8)
+  p.image(zig, 10, 10, 1000, 463);  
+  }
+}
+
+var myp5 = new p5(m, 'canvas-zig');
