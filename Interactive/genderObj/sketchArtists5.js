@@ -350,14 +350,14 @@ barTotalsSort = barTotals;
           p.stroke("#ffffff");
           p.fill(92,242,145,150); ////green bars artworks by men
       ////1440 screen
-          p.rect(160 + (i * 10), $(window).height()/2.13, 10, barTotals[i]['m']/2);
+          p.rect(160 + (i * 10), $(window).height()/2.12, 10, barTotals[i]['m']/2);
       ////1980 screen
           // p.rect(160 + (i * 10), $(window).height()/2.87, 10, barTotals[i]['m']/2);
 
           p.fill(179,118,244,140);  ////purple bars artworks by women
       ////1440 screen
-          var bar = p.rect(160 + (i * 10), $(window).height()/2.13, 10, (-1) * barTotals[i]['f']/2);
-          bars.push({x:160 + (i * 10), y:$(window).height()/2.13, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
+          var bar = p.rect(160 + (i * 10), $(window).height()/2.12, 10, (-1) * barTotals[i]['f']/2);
+          bars.push({x:160 + (i * 10), y:$(window).height()/2.12, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
       ////1980 screen
           // var bar = p.rect(160 + (i * 10), $(window).height()/2.87, 10, (-1) * barTotals[i]['f']/2);
           // bars.push({x:160 + (i * 10), y:$(window).height()/2.87, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
