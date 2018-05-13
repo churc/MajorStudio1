@@ -113,12 +113,13 @@ var b = function(p){
 
 
 p.preload = function() {
-  zigzag = p.loadImage("assets/gender_zigzag.png");
+  zigzag = p.loadImage("assets/interactive_artworks.png");
   // metMap = p.loadImage("assets/Met_map.png");
+  SpatialContexts/museum_intRev2_final_24.png
 }
 
 p.setup = function() {
-  p.createCanvas(800, 437);
+  p.createCanvas(2316/2, 790);
   p.showMap();
 }
 
@@ -126,8 +127,8 @@ p.setup = function() {
 
 ////display png
 p.showMap = function(){
-	p.scale(0.85)
-  p.image(zigzag, 0, 0, 1000, 437);  
+	p.scale(0.8)
+  p.image(zigzag, 100, 80, 2316/2, 1836/2);  
   }
 }
 
