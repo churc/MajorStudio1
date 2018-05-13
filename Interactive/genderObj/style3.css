@@ -1,6 +1,5 @@
  @font-face {
    font-family:  'Khand', sans-serif;
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
 html, body {
@@ -17,6 +16,7 @@ body{
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+  -webkit-font-smoothing: antialiased;
 }
 
 .canvas{
@@ -56,8 +56,8 @@ h1{
 #header{
   position: fixed; /*sticky header*/
   top: 10px;
-  /*left: 366px;*/ /* 1440 screen*/ 
-  left: 603px;  /* 1980 screen*/
+  left: 366px; /* 1440 screen*/ 
+  /*left: 603px;*/  /* 1980 screen*/
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
   font-size: 58px;
@@ -68,10 +68,9 @@ h1{
 #header2{
   position: absolute;
   top: 79;
-  /*left: 370;*/
-  left: 606px;
+  left: 370;
+  /*left: 606px;*/
   font-family: 'Khand', sans-serif;
-  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;*/
   font-style: normal;
   color: rgb(102,102,102);
   line-height: 27px;
@@ -82,8 +81,8 @@ h1{
 #zigzag-header{
   position: absolute;
   top: 230;
-  /*left: 730;*/
-  left: 966;
+  left: 730;
+  /*left: 966;*/
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
   line-height: 30px;
@@ -94,8 +93,8 @@ h1{
 #timeline-header{
   position: absolute;
   top: 820;
-  /*left: 730;*/
-  left: 966;
+  left: 730;
+  /*left: 966;*/
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
   line-height: 30px;
@@ -106,8 +105,8 @@ h1{
 #medium-header{
   position: absolute;
   top: 1727;
-  /*left: 730;*/
-  left: 966;
+  left: 730;
+  /*left: 966;*/  
   bottom:60;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
@@ -119,8 +118,8 @@ h1{
 #artworks-header{
   position: absolute;
   top: 4580;
-  /*left: 730;*/
-  left: 966;
+  left: 730;
+  /*left: 966;*/
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
   line-height: 28px;
@@ -162,9 +161,6 @@ h1{
   width: 1440;
 }
 
-main{
-  background(100,10);
-}
 
 .bars{
     font-size: 16px;
@@ -221,7 +217,8 @@ main{
   z-index:200;
   position: absolute; /*needs position for z-index to work*/
   top: 2000px;
-  left: -40px;
+  /* left: -40px;*/ /* 1980 screen */
+  left: 40px;
   max-width: 100px;
   width: 100px;
   height:auto;
@@ -236,7 +233,8 @@ main{
 
 container#tooltip.tip{
   top: 2000px;
-  left: -40px;
+ /* left: -40px;*/ /* 1980 screen */
+  left: 40px;
   padding: 70px 0px 0px 150px;
 }
 
@@ -259,13 +257,13 @@ container#tooltip.tip{
 
 @media screen and (max-width:720px){
   #page-wrap{
-    width: 70%;
+    width: 600px;
   }
 }
 
 @media print, screen and (max-width: 480px) {
   #page-wrap {
-    width: 40%; 
+    width: 380px; 
   }
 }
 
