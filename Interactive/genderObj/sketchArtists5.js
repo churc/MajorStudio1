@@ -347,14 +347,14 @@ barTotalsSort = barTotals;
           p.stroke("#ffffff");
           p.fill(92,242,145,150); ////green bars artworks by men
       ////github screen
-          p.rect(160 + (i * 10), $(window).height()/1.91, 10, barTotals[i]['m']/2);
+          p.rect(160 + (i * 10), $(window).height()/1.92, 10, barTotals[i]['m']/2);
       ////1980 screen
           // p.rect(160 + (i * 10), $(window).height()/2.87, 10, barTotals[i]['m']/2);
 
           p.fill(179,118,244,140);  ////purple bars artworks by women
       ////github screen
-          var bar = p.rect(160 + (i * 10), $(window).height()/1.91, 10, (-1) * barTotals[i]['f']/2);
-          bars.push({x:160 + (i * 10), y:$(window).height()/1.91, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
+          var bar = p.rect(160 + (i * 10), $(window).height()/1.92, 10, (-1) * barTotals[i]['f']/2);
+          bars.push({x:160 + (i * 10), y:$(window).height()/1.92, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
 
       ////1980 screen
           // var bar = p.rect(160 + (i * 10), $(window).height()/2.87, 10, (-1) * barTotals[i]['f']/2);
