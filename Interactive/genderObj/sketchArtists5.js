@@ -65,7 +65,7 @@ p.setup = function() {
 ////display png
 p.showTimeline = function(){
   p.scale(0.5);
-  p.image(genderTimeline, 45, 15, 2798,1426);  
+  p.image(genderTimeline, 25, 15, 2798,1426);  
   }
 
 }
@@ -132,9 +132,12 @@ function switchText(indivType, x, y){
     $('#tooltip').css('position', 'absolute');
     // $('#tooltip').css('top', y); 
     // $('#tooltip').css('left', x); 
+  ////github screen
+    // $('#tooltip').css('top', y-640 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
+    // $('#tooltip').css('left', x-240);
   ////1440 screen
     $('#tooltip').css('top', y-640 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
-    $('#tooltip').css('left', x-240);
+    $('#tooltip').css('left', x-140);
   ////1980 screen
     // $('#tooltip').css('top', y-630 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
    // $('#tooltip').css('left', x-70);
@@ -347,14 +350,19 @@ barTotalsSort = barTotals;
           p.stroke("#ffffff");
           p.fill(92,242,145,150); ////green bars artworks by men
       ////github screen
-          p.rect(160 + (i * 10), $(window).height()/1.93, 10, barTotals[i]['m']/2);
+          // p.rect(160 + (i * 10), $(window).height()/1.91, 10, barTotals[i]['m']/2);
+      ////1440 screen
+          p.rect(160 + (i * 10), $(window).height()/2, 10, barTotals[i]['m']/2);
       ////1980 screen
           // p.rect(160 + (i * 10), $(window).height()/2.87, 10, barTotals[i]['m']/2);
 
           p.fill(179,118,244,140);  ////purple bars artworks by women
-      ////github screen
-          var bar = p.rect(160 + (i * 10), $(window).height()/1.923, 10, (-1) * barTotals[i]['f']/2);
-          bars.push({x:160 + (i * 10), y:$(window).height()/1.923, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
+       ////github screen
+          // var bar = p.rect(160 + (i * 10), $(window).height()/1.91, 10, (-1) * barTotals[i]['f']/2);
+          // bars.push({x:160 + (i * 10), y:$(window).height()/1.91, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
+      ////1440 screen
+          var bar = p.rect(160 + (i * 10), $(window).height()/2, 10, (-1) * barTotals[i]['f']/2);
+          bars.push({x:160 + (i * 10), y:$(window).height()/2, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
 
       ////1980 screen
           // var bar = p.rect(160 + (i * 10), $(window).height()/2.87, 10, (-1) * barTotals[i]['f']/2);
@@ -574,7 +582,7 @@ p.setup = function() {
 ////display png
 p.showWhoWhat = function(){
   p.scale(0.5);
-  p.translate(-20,325);
+  p.translate(0,325);
   p.image(whoWhat, 250, -80, 2430,7962);  
   }
 }

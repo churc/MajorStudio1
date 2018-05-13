@@ -128,20 +128,22 @@ h1{
 }
 
 #canvas-zigzag{
-  /*width: 100%;*/  /*overide canvas width - increase to full page */
-  /*height: auto;*/
+  width: 100%;  /*overide canvas width - increase to full page */
+  height: auto;
 
-  margin: 0 auto;
-  width: 1440;
+ /* margin: 0 auto;
+  width: 1340; */ /*for 1440 screen */
+  /*width: 1440;*/ /*for 1980 screen */
 }
 
 #canvas-timeline{
- /* width: 100%; 
+  width: 100%; 
   height: auto; 
-  resize: both;*/
+  resize: both;
 
-  margin: 0 auto;
-  width: 1440;
+ /* margin: 0 auto;
+  width: 1340; */ /*for 1440 screen */
+  /*width: 1440;*/ /*for 1980 screen */
   padding-bottom: 40;
 }
 
@@ -149,16 +151,18 @@ h1{
   width: 100%;  /*overide canvas width - increase to full page */
   height: auto;
 
-  margin: 0 auto;
-  width: 1440;
+ /* margin: 0 auto;
+  width: 1340; */ /*for 1440 screen */
+  /*width: 1440;*/ /*for 1980 screen */
 }
 
 #canvas-artworks{
-  /*width: 100%;*/  /*overide canvas width - increase to full page */
-  /*height: auto;*/
+  width: 100%;  /*overide canvas width - increase to full page */
+  height: auto;
 
-  margin: 0 auto;
-  width: 1440;
+ /* margin: 0 auto;
+  width: 1340; */ /*for 1440 screen */
+  /*width: 1440;*/ /*for 1980 screen */
 }
 
 
@@ -190,10 +194,10 @@ h1{
 #footer{
   position: absolute;
   top: 8805;
-  left: 167;
+  left: 120;
   font-family: 'Khand', sans-serif;
   color:#777777;
-  font-size:22px;
+  font-size:19px;
 }
 
 .hidden {
