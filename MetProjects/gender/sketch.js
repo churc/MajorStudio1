@@ -44,7 +44,6 @@ var s = function(p){
   p.setup = function(){
     p.createCanvas(p.windowWidth,800);
     p.drawLabelsTot();
-
     p.drawLabelsBar();
 
     p.push(); ;
@@ -453,9 +452,8 @@ var w = function(p) {
   }
 
    p.setup = function(){
-     p.createCanvas(p.windowWidth,850);
-     p.createCanvas(p.windowWidth,1050);
-     p.background(100,10);
+     p.createCanvas(p.windowWidth,950);
+     p.background(100,5);
      p.analyzeData();
      p.analyzeGender();
      p.displayData();

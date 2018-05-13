@@ -1,29 +1,44 @@
  @font-face {
    font-family:  'Khand', sans-serif;
-  } 
+  }
+
 html, body {
   width: auto;
   height: 100%;
 }
 
+
 body{
   margin: 0;
   padding: 0;
   padding-bottom: 20;
-
   justify-content: center;
   align-items: center;
-
-  font-family:  'Khand', sans-serif;
-  font-kerning:normal;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
 }
 
-h1,h2,h3,h4,h5,h6{
-  font-family:  'Khand', sans-serif;
+
+.canvas{
+  width: 100%; 
+  height: auto;  
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+  resize: both;
+  position: relative;
 }
+
+p{
+   margin:0;
+   margin-right:10px;
+   margin-top: 7px;
+   padding: 0;
+   border:0;
+   
+}
+
 
 h3#h3{
     display: inline-block;
@@ -34,75 +49,6 @@ h3#h3{
     font-size:15px;
 }
 
- div{
-  width: 100%;
-  height: auto;
-  margin: 0;
-  padding: 0;
-
-  /*display: block;*/
-
-  resize: both;
-/*  position: relative;
-  justify-content: center;
-  align-items: center; */
- }
-
-canvas{
-  /*width: 100%;  overide canvas width - increase to full page 
-  height: auto;*/  
-  /*display: block;*/
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0 auto;
-  font-family: 'Khand', sans-serif;
-
-  resize: both;
-
-  position: relative;
-}
-
-
-#canvas-wrappedBars{
-  /*width: 100%;*/  /*overide canvas width - increase to full page */
-  /*height: auto;*/
-
-  margin: 0 auto;
-  width: 1440;
-}
-
-#canvas-singleBars{
-  /*width: 100%;*/  /*overide canvas width - increase to full page */
-  /*height: auto;*/
-
-  margin: 0 auto;
-  width: 1440;
-}
-
-#canvas-timeline{
- /* width: 100%; 
-  height: auto; 
-
-
-  resize: both;*/
-
-  margin: 0 auto;
-  width: 1440;
-  padding-bottom: 40;
-}
-
-main{
-  background(100,10);
-}
-
-.ground-timeline{
-  background(100,10);
-}
-
-#showInfo{
-  font-size: 12px;
-  font-family: 'Khand', sans-serif;
-}
 
 span{
     position: absolute;  
@@ -134,15 +80,33 @@ span.span2{
   font-size:14px;
 }
 
+#canvas-wrappedBars{
+  width: 100%;  /*overide canvas width - increase to full page */
+  height: auto;
+
+  /*margin: 0 auto;  
+  width: 1440;*/  /*1980 screen */
+}
+
+#canvas-singleBars{
+  width: 100%;  
+  height: auto;
+}
+
+#canvas-timeline{
+  width: 100%; 
+  height: auto;
+  resize: both;
+}
 
 #footer{
   position: absolute;
-  top: 7455;
+  top: 7355;
   left: 80;
   right: 80;
-  /*font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, sans-serif;*/
+  font-family: 'Khand', sans-serif;
   color:#777777;
-  font-size:15px;
+  font-size:16px;
 }
 
 
@@ -151,8 +115,20 @@ span.span2{
     width: 100%;
     height:50vh;
   }
+   #canvas-wrappedBars{
+    width: 60%;
+    height:auto;
+  }
+  #canvas-singleBars{
+    width: 60%;
+    height:auto;
+  }
+  #canvas-timeline{
+    width: 60%;
+    height:auto;
+  }
+}
   
-
 @media print, screen and (max-width: 480px) {
   #canvas-wrappedBars{
     width: 30%;
@@ -166,7 +142,6 @@ span.span2{
     width: 30%;
     height:auto;
   }
-
 }
 
 
