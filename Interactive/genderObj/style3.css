@@ -20,8 +20,7 @@ body{
 }
 
 .canvas{
-  width: 90%;  /*overide canvas width - increase to full page */
-
+  width: 90%;  
   height: auto;  
   padding-left: 0;
   padding-right: 0;
@@ -128,7 +127,7 @@ h1{
 }
 
 #canvas-zigzag{
-  width: 100%;  /*overide canvas width - increase to full page */
+  width: 100%;  
   height: auto;
 
  /* margin: 0 auto;
@@ -194,7 +193,7 @@ h1{
 #footer{
   position: absolute;
   top: 8805;
-  left: 120;
+  left: 130;
   font-family: 'Khand', sans-serif;
   color:#777777;
   font-size:19px;
@@ -222,10 +221,12 @@ h1{
   position: absolute; /*needs position for z-index to work*/
   top: 2000px;
   /* left: -40px;*/ /* 1980 screen */
-  left: 40px;
+  /*left: 40px;*/
+  left: 60px;
   max-width: 100px;
   width: 100px;
   height:auto;
+  /*padding: 25px 25px;*/
   padding: 70px 0px 0px 150px;
   font-family: 'Khand', sans-serif;
   color:#777777;
