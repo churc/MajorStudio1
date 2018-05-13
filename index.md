@@ -84,7 +84,7 @@
 
 
 
-![gender and medium](Interactive/Medium/assets/interactive.png)
+![gender and medium](Interactive/interactive_artworks.png)
 
 
 
