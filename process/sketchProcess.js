@@ -194,3 +194,34 @@ p.showzig = function(){
 }
 
 var myp5 = new p5(m, 'canvas-zig');
+
+
+////////////==========///////////////////
+
+//////qual
+
+var qual;
+
+var t = function(p){
+
+
+p.preload = function() {
+  qual = p.loadImage("assets/uncertainty_images_1.png");
+}
+
+p.setup = function() {
+  // p.createCanvas(1980/3, 1080/3);
+  p.noCanvas();
+  p.showqual();
+}
+
+
+
+////display png
+p.showqual = function(){
+
+  p.image(qual, 0,0, 1980/3, 1080/3);
+  }
+}
+
+var myp5 = new p5(t, 'canvas-qual');

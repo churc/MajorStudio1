@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /*grid-template-columns: 75% 25%;*/
-  grid-template-rows: 5vw 4vw 55vw 40vw 22vw 30vw 22vw 18vw 30vw 10vw 82vw 30vw 30vw 10vw;
+  grid-template-rows: 5vw 4vw 55vw 40vw 28vw 32vw 25vw 22vw 30vw 10vw 82vw 35vw 25vw 25vw 30vw;
   grid-gap: 0.5em;
   margin: 0 auto;
   max-width: 56em;
@@ -44,7 +44,7 @@ h3{
 }
 
 h4{
-	font-size: 19px;
+	font-size: 21px;
 }
 
 h5{
@@ -78,7 +78,7 @@ sideheader{
 
 content0 {
   grid-column: 1 / span 5;
-  background: #bdba6380;
+  background: #bdba6320;
   display: flex;
   justify-content: center;
   margin: 10px;
@@ -87,7 +87,7 @@ content0 {
  
 content1 {
   grid-column: 1 / span 3;
-  background: #bdba6380;
+  background: #6d654920;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,7 +102,7 @@ content1 {
   vertical-align: middle;
   align-content: center;
   margin: 10px;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 content2 {
@@ -117,7 +117,7 @@ content2 {
  side2 {
   grid-column: span 2;
   display: flex;
-  background: #bdba6380;
+  background: #6d654920;
   align-items: left;
   justify-content: center;
   text-align: center;
@@ -155,7 +155,7 @@ content4 {
 
  side4 {
   grid-column: span 2;
-  background: #bdba6380;
+  background: #6d654920;
   display: flex;
   align-items: left;
   justify-content: center;
@@ -168,18 +168,17 @@ content4 {
 }
 
 content5 {
-  grid-column: 1 / span 3;
-  /*background: #eaeaea;*/
+  grid-column: 1 / span 5;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
 }
 
- side5 {
+ /*side5 {
   grid-column: span 2;
   /*background: #bdba6380;*/
-  display: flex;
+  /*display: flex;
   align-items: left;
   justify-content: center;
   text-align: center;
@@ -187,7 +186,7 @@ content5 {
   align-content: center;
   margin: 10px;
   padding-top: 50px;
-}
+}*/
 
 
 content6#canvas-zig {
@@ -212,7 +211,8 @@ content6#canvas-zig {
 
 content7 {
   grid-column: 1 / span 3;
-  background: #eaeaea;
+  /*background: #6d654920;*/
+  background: #05bff560;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,7 +222,7 @@ content7 {
 
  side7 {
   grid-column: span 2;
-  background: #eaeaea;
+  background: #05bff560;
   display: flex;
   align-items: left;
   justify-content: center;
@@ -236,7 +236,6 @@ content7 {
 
 content8{
   grid-column: 1 / span 3;
-  /*background: #eaeaea;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -245,7 +244,7 @@ content8{
 
  side8 {
   grid-column: span 2;
-  background: #bdba6380;
+  background: #6d654920;
   display: flex;
   align-items: left;
   justify-content: center;
@@ -259,16 +258,58 @@ content8{
 
 content9 {
   grid-column: 1 / span 3;
-  /*background: #eaeaea;*/
+  position:relative;
+  /*background: #6d654920;*/
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+
+}
+
+#container{
+	position:relative;
+	grid-column: 1 / span 3;
+}
+
+#canvas-qual{
+	position: absolute; 
+   max-width:700px;
+}
+
+h4#overqual { 
+	z-index:100;
+	position: absolute; 
+   top: 120px; 
+   text-align: center;
+   grid-column: 1 / span 3;
+}
+
+
+ side9 {
+  grid-column: span 2;
+  /*background: #6d654920;*/
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  align-content: center;
+  margin: 10px;
+  padding-top: 50px;
+}
+
+content10 {
+  grid-column: 1 / span 3;
+  
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 10px;
 }
 
- side9 {
+ side10 {
   grid-column: span 2;
-  background: #bdba6380;
+  background: #05bff560;
   display: flex;
   align-items: left;
   justify-content: center;
@@ -281,7 +322,7 @@ content9 {
 
 footer {
   grid-column: 1 / span 5;
-  background: #eaeaea;
+   /*background: #6d654920;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -290,19 +331,14 @@ footer {
 
 @media (max-width: 700px) {
   
-  content0,content1,content2,content3,content4,content5,content6,content7,content8,content9,
-  side0,side1,side2,side3,side4,side5,side6,side7,side8,side9 {
+  content0,content1,content2,content3,content4,content5,content6,content7,content8,content9,content10,
+  side0,side1,side2,side3,side4,side5,side6,side7,side8,side9,side10 {
     grid-column: 1 / span 5;
   }
   
 }
 
 
-
-/*header{
-  height: 10vw;
-}*/
-
 footer {
-  height: 5vw;
+  height: 10vw;
 }
