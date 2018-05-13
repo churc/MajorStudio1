@@ -134,7 +134,7 @@ function switchText(indivType, x, y){
     // $('#tooltip').css('left', x); 
   ////1440 screen
     $('#tooltip').css('top', y-640 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
-    $('#tooltip').css('left', x-110);
+    $('#tooltip').css('left', x-140);
   ////1980 screen
     // $('#tooltip').css('top', y-630 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
    // $('#tooltip').css('left', x-70);
