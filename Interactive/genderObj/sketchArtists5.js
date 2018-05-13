@@ -352,7 +352,7 @@ barTotalsSort = barTotals;
       ////github screen
 //           p.rect(160 + (i * 10), $(window).height()/1.91, 10, barTotals[i]['m']/2);
       ////1440 screen
-          p.rect(160 + (i * 10), $(window).height()/2.2, 10, barTotals[i]['m']/2);
+          p.rect(160 + (i * 10), $(window).height()/2.1, 10, barTotals[i]['m']/2);
       ////1980 screen
           // p.rect(160 + (i * 10), $(window).height()/2.87, 10, barTotals[i]['m']/2);
 
@@ -361,8 +361,8 @@ barTotalsSort = barTotals;
 //           var bar = p.rect(160 + (i * 10), $(window).height()/1.91, 10, (-1) * barTotals[i]['f']/2);
 //           bars.push({x:160 + (i * 10), y:$(window).height()/1.91, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
       ////1440 screen
-          var bar = p.rect(160 + (i * 10), $(window).height()/2.2, 10, (-1) * barTotals[i]['f']/2);
-          bars.push({x:160 + (i * 10), y:$(window).height()/2.2, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
+          var bar = p.rect(160 + (i * 10), $(window).height()/2.1, 10, (-1) * barTotals[i]['f']/2);
+          bars.push({x:160 + (i * 10), y:$(window).height()/2.1, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
 
       ////1980 screen
           // var bar = p.rect(160 + (i * 10), $(window).height()/2.87, 10, (-1) * barTotals[i]['f']/2);
