@@ -112,11 +112,11 @@
 ![who's in this room by gender](SpatialContexts/museum_intRev2_final_24.png)
 
 ### Examine ways the gender quantitative project might exist in a spatial context within an art gallery or museum.
-### [Initial sketch ideas](SpatialContexts/spatial_initialSketches.png)
-### [Initial concepts](SpatialContexts/spatial_concept_churchouse.pdf)
-### [Sketches 1](SpatialContexts/ProjectSketches1.png)
-### [Sketches 2](SpatialContexts/ProjectSketches2.png)
-### [Spatial context - gallery entrance](SpatialContexts/museum_extRev2_24.png)
-### [Spatial context - gallery space](SpatialContexts/museum_intRev2_final_24.png)
-### [AR](SpatialContexts/museum_intRev2-mobile-blur-24-final.png)
+### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/spatial_initialSketches.png)
+### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/spatial_concept_churchouse.pdf)
+### [Sketches 1](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/ProjectSketches1.png)
+### [Sketches 2](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/ProjectSketches2.png)
+### [Spatial context - gallery entrance](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_extRev2_24.png)
+### [Spatial context - gallery space](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_intRev2_final_24.png)
+### [AR](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_intRev2-mobile-blur-24-final.png)
 
