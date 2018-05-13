@@ -176,12 +176,11 @@ var m = function(p){
 
 
 p.preload = function() {
-  zig = p.loadImage("assets/gender_zigzag.png");
-
+  zig = p.loadImage("assets/gender_zigzag2.png");
 }
 
 p.setup = function() {
-  p.createCanvas(1100, 450);
+  p.createCanvas(2456/2.4, 790/2.4);
   p.showzig();
 }
 
@@ -189,8 +188,8 @@ p.setup = function() {
 
 ////display png
 p.showzig = function(){
-	// p.scale(0.8)
-  p.image(zig, 10, 10, 1000, 463);  
+
+  p.image(zig, 10, -10, 2456/2.4, 790/2.4);
   }
 }
 

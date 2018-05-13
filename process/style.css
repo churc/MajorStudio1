@@ -7,7 +7,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   /*grid-template-columns: 75% 25%;*/
-  grid-template-rows: 5vw 4vw 55vw 40vw 22vw 30vw 22vw 18vw 27vw 10vw 85vw 30vw 30vw 10vw;
+  grid-template-rows: 5vw 4vw 55vw 40vw 22vw 30vw 22vw 18vw 30vw 10vw 82vw 30vw 30vw 10vw;
   grid-gap: 0.5em;
   margin: 0 auto;
   max-width: 56em;
@@ -192,11 +192,9 @@ content5 {
 
 content6#canvas-zig {
   grid-column: 1 / span 3;
-  /*background: #d8e7ac;*/
   display: flex;
-  align-items: center;
   justify-content: center;
-  margin-top:-10px;
+  vertical-align: middle;
 }
 
  /*side6 {
@@ -214,7 +212,7 @@ content6#canvas-zig {
 
 content7 {
   grid-column: 1 / span 3;
-  /*background: #eaeaea;*/
+  background: #eaeaea;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -224,15 +222,15 @@ content7 {
 
  side7 {
   grid-column: span 2;
-  /*background: #d8e7ac;*/
+  background: #eaeaea;
   display: flex;
   align-items: left;
   justify-content: center;
   text-align: center;
   vertical-align: middle;
   align-content: center;
-  margin: 10px;
-  padding-top: 50px;
+  margin: 8px;
+  padding-top: 8px;
 }
 
 
@@ -255,6 +253,7 @@ content8{
   vertical-align: middle;
   align-content: center;
   margin: 10px;
+  margin-top: 30px;
   padding-top: 50px;
 }
 
