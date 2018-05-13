@@ -1,6 +1,6 @@
 var KhandFont, fontReady = false;
 
-var margin = 30;
+var margin = 10;
 
 var n = function(p){
 
@@ -105,7 +105,7 @@ var n = function(p){
 
 var myp5 = new p5( n, 'canvas-artists');
 
-//////map
+//////interactive-artworks
 
 var zigzag;
 
@@ -115,7 +115,6 @@ var b = function(p){
 p.preload = function() {
   zigzag = p.loadImage("assets/interactive_artworks.png");
   // metMap = p.loadImage("assets/Met_map.png");
-  SpatialContexts/museum_intRev2_final_24.png
 }
 
 p.setup = function() {
@@ -128,9 +127,39 @@ p.setup = function() {
 ////display png
 p.showMap = function(){
 	p.scale(0.8)
-  p.image(zigzag, 100, 80, 2316/2, 1836/2);  
+  p.image(zigzag, 100, 60, 2316/2, 1836/2);  
   }
 }
 
 var myp5 = new p5(b, 'canvas-zigzag');
 
+
+////////////==========///////////////////
+
+//////Met collection
+
+var met;
+
+var g = function(p){
+
+
+p.preload = function() {
+  met = p.loadImage("assets/Met_collectionOnline.png");
+
+}
+
+p.setup = function() {
+  p.createCanvas(1407, 560);
+  p.showmet();
+}
+
+
+
+////display png
+p.showmet = function(){
+	// p.scale(0.8)
+  p.image(met, 350, 100, 1407/2, 813/2);  
+  }
+}
+
+var myp5 = new p5(g, 'canvas-met');
