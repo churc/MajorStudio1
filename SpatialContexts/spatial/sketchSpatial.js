@@ -28,8 +28,7 @@ p.setup = function() {
 
 ////display png
 p.showSpatial1 = function(){
-  // p.scale(0.95);
-  p.image(spatial1, 0, 225, 1004, 605);
+  p.image(spatial1, 197, 225, 1004, 605);
 
   }
 console.log("working1") 
@@ -65,7 +64,7 @@ p.setup = function() {
 p.showSpatial2 = function(){
   p.scale(0.328);
 
-  p.image(spatial2, 0, 95, 3060, 1418);  
+  p.image(spatial2, 598, 95, 3060, 1418);  
   
   }
 console.log("working2") 
@@ -92,7 +91,7 @@ p.preload = function() {
 }
 
 p.setup = function() {
-  p.createCanvas(1440,850);
+  p.createCanvas(1440,740);
   p.showSpatial2();
   p.noLoop();
 }
@@ -101,7 +100,7 @@ p.setup = function() {
 p.showSpatial2 = function(){
   p.scale(0.079);
 
-  p.image(spatial3, 0, 95, 12773, 5869);  
+  p.image(spatial3, 2470, 95, 12773, 5869);  
   
   }
 console.log("working3") 

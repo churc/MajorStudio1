@@ -20,7 +20,7 @@ body{
 }
 
 .canvas{
-  width: 90%;  /*overide canvas width - increase to full page */
+  width: 90%;  /*overide canvas width */
   height: auto;  
   padding-left: 0;
   padding-right: 0;
@@ -63,8 +63,8 @@ h2{
 #header{
   position: fixed; /*sticky header*/
   top: 0px;
-  left: 436;
-  /*left: 366px;*/
+  /*left: 436; */ /*1980 screen*/
+  left: 197px;
   font-family: 'Khand', sans-serif;
   color: rgb(102,102,102);
   font-size: 58px;
@@ -76,8 +76,8 @@ h2{
 #header2{
   position: absolute;
   top: 70;
-  /*left: 370;*/
-  left: 436;
+  left: 200;
+  /*left: 436;*/ /*1980 screen*/
   font-family: 'Khand', sans-serif;
   font-style: normal;
   color: rgb(102,102,102);
@@ -89,8 +89,8 @@ h2{
 #header3{
   position: absolute;
   top: 120;
-  /*left: 370;*/
-  left: 436;
+  left: 200;
+  /*left: 436;*/ /*1980 screen*/
   font-family: 'Khand', sans-serif;
   font-style: normal;
   color: rgb(102,102,102);
@@ -101,8 +101,8 @@ h2{
 
 #header4{
   position: absolute;
-  /*top: 120;*/
-  left: 1060;
+  /*left: 1060;*/ /*1980 screen*/
+  left: 830;
   font-family: 'Khand', sans-serif;
   font-style: normal;
   color: rgb(102,102,102);
@@ -143,18 +143,26 @@ h2{
 }
 
 #canvas-spatial1{
-   margin: 0 auto;
-   width: 1050;
+  width: 100%;  /*overide canvas width - increase to full page */
+  height: auto;
+   /*margin: 0 auto;
+   width: 1050; *//*1980 screen */
 }
 
 #canvas-spatial2{
-   margin: 0 auto;
-   width: 1050;
+  width: 100%;  /*overide canvas width - increase to full page */
+  height: auto;
+ 
+  /*margin: 0 auto;  /*1980 screen */
+   /*width: 1050; */
 }
 
 #canvas-spatial3{
-   margin: 0 auto;
-   width: 1050;
+  width: 100%;  /*overide canvas width - increase to full page */
+  height: auto;
+
+  /*margin: 0 auto;
+   width: 1050; *//*1980 screen */
 }
 
 .bars{
@@ -184,11 +192,12 @@ h2{
 
 #footer{
   position: absolute;
-  top: 2205;
-  left: 200;
+  top: 2180;
+  /*left: 200;*/ /*1980 screen*/
+  left: 130;
   font-family: 'Khand', sans-serif;
   color: #777777;
-  font-size: 26px;
+  font-size: 21px;
 }
 
 
