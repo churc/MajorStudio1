@@ -1,4 +1,4 @@
-#### **Quantitative Project** [Gender at The Met, What % of the Modern & Contemporary Art Collection's 14,350 works are by women?](https://churc.github.io/MajorStudio1/MetProjects/gender/index.html) 
+#### **Quantitative Project** [Gender at The Met, what % of the Modern & Contemporary Art Collection's 14,350 works are by women?](https://churc.github.io/MajorStudio1/MetProjects/gender/index.html) 
    
 
 
@@ -56,10 +56,8 @@
 
 
 
-### Display groups of artworks connected by a particular search word, as another way of entering the collection. Are the images related, where do the references appear, what reference similarities or variations are there between different objects? The visualization focuses on the relation of text and image.
-
-### "Uncertain" and "uncertainty" searches returns 426 artworks (March 2018, public domain, with images).
-### The word uncertain/ty is depicted where it occurs within the web label text. Titles, dates and descriptions are hidden, visible on hover. 
+### The project uses public domain images from the whole of The Met database using ‘uncertain’ and ‘uncertainty’ as a search term and organizing principle to view what is assessed in the text as ‘uncertain.’ The visualization focuses on the relation of text and image.
+### The word uncertain/ty is depicted where it occurs within the web label text, on titles or on dates. Titles, dates and descriptions are hidden, visible on hover. 
 ### Click on red 'uncertainty' text in the header (where uncertainty falls) to view all titles, dates. 204 artworks have uncertain/ty in their web label descriptions. Since the web labels are not in the public domain, each artwork is linked to The Met web label. 
 ### Material type selections: paintings, sculpture, textiles, clay, stone, glass, ink, paper; and specific time periods link to The Met website searches.
 ### Click on the green button for random reload.
@@ -92,8 +90,9 @@
 
 
 
-### Identify who are the most collected artists in The Met's Modern & Contemporary Art department by gender, and examine what kind of artworks they made. 
-### Using the 12,856 artworks made either by women or by men from the total collection of 14,350 artwork; the 'classification' column contains 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc.)
+### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
+### Using the 12,856 artworks made either by women or by men from the total collection of 14,350 artwork, and the 'classification' column contains 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc.)
+### Narrative investigation of who has made the artworks in the collection by gender, the top collected artists by gender, what medium the artworks are, and the relation between medium and gender. 
 ### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
 ### Do a series of visualizations that explore connections between gender and medium in the collection.
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant3_churchouse_project1.pdf)
