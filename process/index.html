@@ -32,13 +32,13 @@
 
 <content0  id="canvas-zigzag"> </content0>
 
-<content1> <h3>As part of MSDV Major Studio 1, we worked with The Metropolitan Museum of Art's database. <br>The Met has over 5,000 years of art spanning across cultures and owns in the range of one and a half million objects.<br><br><strong><i>Gender & medium</i></strong> focuses on The Modern & Contemporary Art Collection, one of the 17 departments, containing 14,350 artworks as of January 2018. Gender is not tracked in any formal sense across all departments, and I wanted to find out the percent of artworks owned by women. This project investigates the gender of the artists that are in the collection, who the top collected artists are by gender, what medium these artworks are, and whether there are differences in the medium of the artworks collected by gender.<br><br>A second, qualitative, project - <strong><i>where uncertainty falls</i></strong> -  approaches The Met collection from the point of view of words used to describe artworks - here artworks are displayed that have the word 'uncertain' in some part of their web label, title or date.
+<content1> <h3>As part of MSDV Major Studio 1, we worked with The Metropolitan Museum of Art's database. <br>The Met's collection spans over 5,000 years and includes roughly one and a half million objects from an array of cultures.<br><br><strong><i>Gender & medium</i></strong> focuses on The Modern & Contemporary Art Collection, one of The Met's seventeen collection departments. As of January 2018, Modern & Contemporary Art contained 14,350 artworks. Gender is not formally tracked across The Met's holdings, and this project aims to: 1) establish the percentage of artworks made by women; 2) identify artists with the greatest number of artworks; and 3) examine correlations between particular mediums and gender.<br><br>A second, qualitative, project - <strong><i>where uncertainty falls</i></strong> -  approaches The Met collection from the point of view of text used to describe artworks. This project highlights all artworks whose web label description, title or date contains the word 'uncertain' or 'uncertainty.'
 </h3></content1>
 <side1><h2>Overview</h2>
 </side1>
 
 <content2><h3>
-  Background included an overview of The Met's holdings, database, api, and digital strategies, including informational meetings with The Digital Department's Jennie Choi, Spencer Kiser and Loic Tallon at different points of the project. <br><br>I examined the data using csvkit, selecting the Modern & Contemporary Art Collection's 14,350 artworks, identifying each artist by gender (on Artist Display Name), and exploring medium using the collection's ‘Classification’ column of 105 different medium. For example, painting, drawing, prints, ceramics, textiles, and specific categories within and across medium such as textiles-tapestries.
+  Background included an overview of The Met's holdings, database, api, and digital strategies, including informational meetings with The Digital Department's Jennie Choi, Spencer Kiser and Loic Tallon at different points of the project. <br><br>I examined the data using CSVKit, selecting The collection's database of 14,350 artworks. Each artists was identified by gender (on Artist Display Name), and the category of 'medium' was based on the collection's ‘Classification’ column of 105 different mediums. For example, painting, drawing, prints, ceramics, textiles, as well as specific categories within and across mediums such as textiles-tapestries.
 </h3>
 </content2>
 <side2><h2><i>Gender & Medium:</i> Process</h2>
@@ -46,12 +46,12 @@
 
 <content3  id="canvas-met"> </content3>
 
-<content4><h3><strong>Role:</strong> Concept design, data analysis, data visualizations, web design<br><br><strong>Tools:</strong> CSVKit, p5.js, Javascript, JQuery, HTML/CSS<br><br>Data:</strong> MetObjects.csv, January 2018, spreadsheet.<br>&emsp;&emsp;&ensp;&nbsp;The Met's <a href="https://github.com/metmuseum/openaccess">github database</a> </h3>
+<content4><h3><strong>Role:</strong> Concept design, data analysis, data visualizations, web design<br><br><strong>Tools:</strong> CSVKit, p5.js, Javascript, JQuery, HTML/CSS<br><br>Data:</strong> MetObjects.csv, January 2018, spreadsheet.<br>&emsp;&emsp;&ensp;The Met's <a href="https://github.com/metmuseum/openaccess">github database</a> </h3>
 </content4>
 <side4><h2>Tools</h2>
 </side4>
 
-<content5><h3>Most of the department's artwork images are not in the public domain, so the visualizations depict the number of artworks, and show headshots, mostly from wikipedia. Some artists headshots are not readily available online.<br><br>The aim of the depictions is to display a particular aspect of the database to do with artwork medium and gender, and to engage the viewer in the collection.</h3>
+<content5><h3>Most of the department's artwork images are not in the public domain, thus the visualizations focus on the number of artworks, and provide headshots where available. Most of these are from wikipedia; some artists headshots are not readily available online.<br><br>The aim of the depictions is to display particular aspects of the database having to do with artwork medium and gender, and to see what correlations between the two might exist.</h3>
 </content5>
 
 <content6 id="canvas-zig">
@@ -62,7 +62,7 @@
   <side7><h2>Website</h2></side7>
 
 
-<content8><h3>	Out of 14,350 artworks:<ul>
+<content8><h3>	Out of 14,350 artworks (rounded to 2 decimal points):<ul>
   <li>10,829 are by male artists (75.46%)</li>
   <li>2,027 are by female artist (14.13%)</li>
   <li>1,318 are by unknown artists (9.18%) (including many listed with manufacturing companies from around 1900s) </li>
@@ -96,8 +96,8 @@ And the top ten collected men are:
  <li>Arthur Dove, 81</li> 
 </ul>
 
-Notably, of the top collected women, only 4/10: Lygia Pape, Georgia O’Keeffe, Hilde Reindl, are predominantly represented in the collection by drawings and paintings. It’s the opposite for men with 8/10 men with paintings, drawing, prints in the collection.<br>
-The only medium where have women outnumbered men in the collection (for medium with more than 10 artworks) are all textiles (Textiles: - miscellaneous: 12 women, 0 men; Textiles-samples books: 13 women, 1 man; Textiles-tapestries: 21 women, 9 men; Textiles: 59 women, 7 men; Textiles woven 251 women, 36 men.) 
+Notably, of the women with the largest number of holdings, only 4 out of 10: Lygia Pape, Georgia O’Keeffe, Hilde Reindl, are predominantly represented in the collection with drawings and paintings. The opposite holds true for men, with 8 out of 10 men principally represented in the collection with paintings, drawings and prints.<br>
+Looking at medium that contain more than 10 artworks, men outnumber women in each of the mediums collected by the department with the exception of textile-related mediums. Here, women outnumber men in the following classifications: (Textiles: - miscellaneous: 12 women, 0 men; Textiles-samples books: 13 women, 1 man; Textiles-tapestries: 21 women, 9 men; Textiles: 59 women, 7 men; Textiles woven 251 women, 36 men.) 
 </h3></content8>
 <side8><h2>Findings</h2></side8>
 
@@ -109,7 +109,7 @@ The only medium where have women outnumbered men in the collection (for medium w
 <side9><h2>Qualitative project</h2>
 </side9>
 
-<content10><h3>Spatial contexts works with the project data and reimagines it within a gallery space. If you were a woman - a man - unknown - would your work be in the collection takes the project into physical space. The aim is to invite inquiry in a gallery setting: who has made these artworks? The lengths and color of the lines reflect gender. The lines lead to specific works. <a href="https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html">Who's in this room by gender?</a></h3></content10>
+<content10><h3>Spatial contexts works with the project data and reimagines it within a gallery space. 'If you were a woman - a man - unknown - would your work be in the collection?' takes the project into physical space. The aim is to invite inquiry in a gallery setting: who has made these artworks? The lengths and color of the lines reflect gender. The lines lead to specific works. <a href="https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html">Who's in this room by gender?</a></h3></content10>
 <side10><h2>Spatial contexts project</h2>
 </side10>
 
