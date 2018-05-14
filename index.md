@@ -110,12 +110,13 @@
 
 ![who's in this room by gender](SpatialContexts/museum_intRev2_final_24.png)
 
-### Examine ways the gender quantitative project might exist in a spatial context within an art gallery or museum.
+### Examine ways the gender quantitative project might exist within a museum and engage the viewer.
+### The project depicts a spatial line installation an art gallery space that represents the percent of female / male artists by gender within each room; lines of color that run across the floor – making the viewer step over them – and wrap up the walls to end at specific artworks; % at the end of each line specify the % gender representation within each room.
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/spatial_initialSketches.png)
 ### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/spatial_concept_churchouse.pdf)
 ### [Sketches 1](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/ProjectSketches1.png)
 ### [Sketches 2](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/ProjectSketches2.png)
 ### [Spatial context - gallery entrance](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_extRev2_24.png)
 ### [Spatial context - gallery space](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_intRev2_final_24.png)
-### [AR](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_intRev2-mobile-blur-24-final.png)
+### [AR](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_intRev2-mobile-blur-24-final.png) - looking through your phone as you enter a gallery, you can ‘see’ the lines as if they are in the physical space, depicting the gender of the artists with work in that room.
 
