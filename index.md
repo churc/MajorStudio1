@@ -78,7 +78,7 @@
 
 
 
-#### **Interactive Narrative Project** [Gender & Medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html) in The Met's Modern & Contemporary Art Collection
+#### **Interactive Narrative Project** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html) in The Met's Modern & Contemporary Art Collection
 
 
 
@@ -106,7 +106,7 @@
 
 
 
-### **Spatial Contexts Project** [If you were a woman - a man - would your work be in this collection?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html)
+### **Spatial Contexts Project** [Who's in this room by gender?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html) If you were a woman - a man - would your work be in this collection?
 
 
 ![who's in this room by gender](SpatialContexts/museum_intRev2_final_24.png)
