@@ -6,11 +6,10 @@
  body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 4vw 1vw 55vw 28vw 22vw 35vw 17vw 17vw 26vw 8vw 70vw 43vw 20vw 7vw 5vw;
+  grid-template-rows: 4vw 1vw 57vw 28vw 22vw 35vw 17vw 17vw 24vw 8vw 70vw 42vw 18vw 2vw 5vw;
   grid-gap: 0.5em;
   margin: 0 auto;
   max-width: 56em;
-  /*padding: 1em 0;*/
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -25,8 +24,8 @@ h1{
     list-style-type: none;
     font-family: 'Khand', sans-serif;
     font-size:50px;
-    color: green;
-    font-weight: 70;
+    color: #e4002b;
+    font-weight: lighter;
 }
 
 h2{
@@ -55,21 +54,37 @@ a {
   text-transform: uppercase;
 }
 
-header {
-  grid-column: 1 / span 5;
-  background: #ffffff;
+
+content13 {
+  grid-column: 1 / span 2;
   display: flex;
-  padding-top: -10px;
-  margin: 0 0 0 490px;
   align-items: top;
   justify-content: left;
+  padding: 12px;
 }
 
-sideheader{
-	grid-column: 1 / span 5;
-	display: flex;
+ side13 {
+  grid-column: span 3;
+  display: flex;
+  align-items: top;
+  justify-content: left; 
+  padding: 12px;  
+}
+
+content12 {
+  grid-column: 1 / span 2;
+  display: flex;
   align-items: top;
   justify-content: left;
+  padding: 12px;
+}
+
+ side12 {
+  grid-column: span 3;
+  display: flex;
+  align-items: top;
+  justify-content: left;
+  padding: 12px;  
 }
 
 #canvas-zigzag{
@@ -86,7 +101,6 @@ content0 {
   display: flex;
   align-items: top;
   justify-content: center;
-  /*justify-content: left;*/
   margin: 10px;
   padding: 12px;
 }
@@ -105,8 +119,6 @@ content1 {
  side1 {
   grid-column: span 2;
   display: flex;
-  margin: 10px;
-  /*padding: 12px;*/
   align-items: top;
   justify-content: center;  
 }
@@ -126,9 +138,7 @@ content2 {
   grid-column: span 2;
   display: flex;
   background: #6d654910;
-  margin: 10px;
   padding: 12px;
-  padding-left:22px;
   vertical-align: middle;
   align-items: top;
   text-align: center;
@@ -160,7 +170,6 @@ content4 {
   grid-column: span 2;
   background: #6d654910;
   display: flex;
-  margin: 10px;
   padding: 12px;
    align-items: top;
   justify-content: center;
@@ -169,7 +178,7 @@ content4 {
 content5 {
   grid-column: 1 / span 5;
   display: flex;
-  align-items: top;
+  align-items: center;
   justify-content: left;
   margin: 10px;
   padding: 12px;
@@ -190,8 +199,7 @@ content7 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 10px;
-  /*padding: 12px;*/
+  padding: 12px;
 }
 
 
@@ -199,14 +207,6 @@ content7 {
   grid-column: span 2;
   border: 6px solid #41b3f980;
   display: flex;
-  /*align-items: left;
-  justify-content: center;
-  text-align: center;
-  vertical-align: middle;
-  align-content: center;*/
-  /*margin: 10px;*/
-  /*padding: 12px;*/
-  /*padding-top: 8px;*/
    align-items: top;
   justify-content: center;
 }
@@ -219,14 +219,12 @@ content8{
   margin: 10px;
   margin-top: 12px;
   padding: 12px;
-  /*padding-top:24px;*/
 }
 
  side8 {
   grid-column: span 2;
   background: #6d654910;
   display: flex;
-  margin: 10px;
   padding: 12px;
   align-items: top;
   justify-content: center;
@@ -236,7 +234,6 @@ content9 {
   grid-column: 1 / span 3;
   position:relative;
   display: flex;
-  /*justify-content: center;*/
   margin: 10px;
   padding: 12px;
   align-items: top;
@@ -262,19 +259,11 @@ h4#overqual {
    grid-column: 1 / span 3;
 }
 
-
  side9 {
   grid-column: span 2;
   display: flex;
   border: 6px solid #8aaf3c80;
-  /*align-items: left;
-  justify-content: center;
-  text-align: center;
-  vertical-align: middle;
-  align-content: center;*/
-  margin: 10px;
   padding: 12px;
-  /*padding-top: 45px;*/
   align-items: top;
   text-align: center;
   z-index:100;
@@ -293,13 +282,6 @@ content10 {
   grid-column: span 2;
   border: 6px solid #41b3f980;
   display: flex;
-  /*align-items: left;
-  justify-content: center;
-  text-align: center;
-  vertical-align: middle;
-  align-content: center;*/
-  margin: 10px;
-  /*margin-top: 11px;*/
   padding: 12px;
   align-items: top;
   text-align: center;
@@ -328,6 +310,5 @@ footer {
   side0,side1,side2,side3,side4,side5,side6,side7,side8,side9,side10 {
     grid-column: 1 / span 5;
   }
-  
 }
 

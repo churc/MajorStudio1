@@ -24,7 +24,7 @@ p.setup = function() {
 ////display png
 p.showMap = function(){
 	p.scale(0.8)
-  p.image(zigzag, 100, 25, 2316/2, 1836/2);  
+  p.image(zigzag, 100, 40, 2316/2, 1836/2);  
   }
 }
 
@@ -86,7 +86,7 @@ p.setup = function() {
 ////display png
 p.showzig = function(){
 
-  p.image(zig, 0, -10, 2456/2.5, 790/2.5);
+  p.image(zig, 0, -18, 2456/2.5, 790/2.5);
   }
 }
 
@@ -117,7 +117,7 @@ p.setup = function() {
 ////display png
 p.showqual = function(){
 
-  p.image(qual, -5,0, 1980/3.1, 1080/3.1);
+  p.image(qual, -15, 0, 1980/3.1, 1077/3.1);
   }
 }
 
