@@ -1,7 +1,7 @@
 #### **Quantitative Project:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
 ### What percent of the Modern & Contemporary Art Collection's 14,350 works are by women?
 ![by Year](MetProjects/gender/assets/gender_images_1b.png)
-### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/ModContGenderfinalazsort.csv): 14,350 artworks in the Modern and Contemporary Art Collection, ranging from 1437 – 2017 together with undated, most 'Object Begin Date' entries fall after 1850. ‘Artist Display Name’ column used to identify artists by gender. 
+### Source: [MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/ModContGenderfinalazsort.csv): 14,350 artworks in the Modern and Contemporary Art Collection, ranging from 1437 – 2017 together with undated, most 'Object Begin Date' entries fall after 1850. ‘Artist Display Name’ column used to identify artists by gender. 
 ### Gender categories: female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified 
 
 
@@ -59,7 +59,7 @@
 ### 3)   Using the classification column identifying 105 mediums, vertical bar visualization of medium by gender: What medium are being collected by gender?
 ### 4)   Identifying the top ten collected women and the top ten collected men and their artworks by medium: Who are the most collected women and men in this collection and what did they make?
 
-### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
+### Source: [MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
 
 ### [Project process webpage](https://churc.github.io/MajorStudio1/process/)
 
