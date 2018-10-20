@@ -1,5 +1,5 @@
 #### **Quantitative Project:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
-### What percent of the Modern & Contemporary Art Collection's 14,350 works are by women?
+### What percent of The Metropolitan Museum of Art Modern & Contemporary Art Collection's 14,350 works are by women?
 ![by Year](MetProjects/gender/assets/gender_images_1b.png)
 ### Source: [MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/ModContGenderfinalazsort.csv): 14,350 artworks in the Modern and Contemporary Art Collection, ranging from 1437 – 2017 together with undated, most 'Object Begin Date' entries fall after 1850. ‘Artist Display Name’ column used to identify artists by gender. 
 ### Gender categories: female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified 
