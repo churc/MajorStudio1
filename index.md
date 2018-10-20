@@ -5,10 +5,8 @@
 
 
 
- &nbsp; &nbsp;
 
-![by Year](MetProjects/gender/assets/gender_timelineChart.png)
-
+![by Year](MetProjects/gender/assets/gender_images_1.png)
 
 
 
@@ -24,7 +22,10 @@
 ### 1)   Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: Gender  
 ### 2)   Using total numbers, vertical bar visualization: Another view of all artworks by gender
 ### 3)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What year were these artworks made
-![by Year](MetProjects/gender/assets/gender_images_1.png)
+
+&nbsp; &nbsp;
+![by Year](MetProjects/gender/assets/gender_timelineChart.png)
+&nbsp;
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/initialsketches.png)
 ### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
 ### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) 
