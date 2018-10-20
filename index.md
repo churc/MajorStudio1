@@ -1,4 +1,5 @@
-#### **Quantitative Project:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender), what percent of the Modern & Contemporary Art Collection's 14,350 works are by women?]
+#### **Quantitative Project:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
+#### What percent of the Modern & Contemporary Art Collection's 14,350 works are by women?
    
 
 
@@ -45,7 +46,8 @@
 
 
 
-#### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty): the incidence of the word "uncertain" in The Met's collection]
+#### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
+#### The incidence of the word "uncertain" in The Met's collection
 
 
 
@@ -77,7 +79,8 @@
 
 
 
-#### **Interactive Narrative Project:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html): Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
+#### **Interactive Narrative Project:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
+#### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
 
 
 
@@ -106,7 +109,8 @@
 
 
 
-#### **Spatial Contexts Project:** [Who's in this room by gender?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html) If you were a woman - a man - would your work be in this collection?
+#### **Spatial Contexts Project:** [Who's in this room by gender?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html) 
+#### If you were a woman - a man - would your work be in this collection?
 
 
 ![who's in this room by gender](SpatialContexts/museum_intRev2_final_24.png)
