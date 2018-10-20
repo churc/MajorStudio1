@@ -25,6 +25,8 @@
 ### 2)   Using total numbers, vertical bar visualization: Another view of all artworks by gender
 ### 3)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What year were these artworks made
 
+![by Year](MetProjects/gender/assets/gender_images_1.png)
+
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/initialsketches.png)
 ### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
 ### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) 
@@ -48,6 +50,7 @@
 
 #### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 #### The incidence of the word "uncertain" in The Met's collection
+
 
 
 
@@ -81,7 +84,6 @@
 
 #### **Interactive Narrative Project:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 #### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
-
 
 
 ![gender and medium](Interactive/interactive_artworks.png)
