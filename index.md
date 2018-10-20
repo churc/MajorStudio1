@@ -1,5 +1,6 @@
-#### **Quantitative Project:** [Gender at The Met, what % of the Modern & Contemporary Art Collection's 14,350 works are by women?](https://churc.github.io/MajorStudio1/MetProjects/gender/index.html) 
+#### **Quantitative Project:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender), what percent of the Modern & Contemporary Art Collection's 14,350 works are by women?]
    
+
 
 
 
@@ -44,7 +45,7 @@
 
 
 
-#### **Qualitative Project:** [Where uncertainty falls: the incidence of the word "uncertain" in The Met's collection](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
+#### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty): the incidence of the word "uncertain" in The Met's collection]
 
 
 
@@ -76,9 +77,7 @@
 
 
 
-#### **Interactive Narrative Project:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)         in The Met's Modern & Contemporary Art Collection
-
-
+#### **Interactive Narrative Project:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html): Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
 
 
 
