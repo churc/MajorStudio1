@@ -1,19 +1,6 @@
 #### **Quantitative Project:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
 ### What percent of the Modern & Contemporary Art Collection's 14,350 works are by women?
-   
-
-
-
-
-
 ![by Year](MetProjects/gender/assets/gender_images_1.png)
-
-
-
-
-
-
-
 ### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/ModContGenderfinalazsort.csv): 14,350 artworks in the Modern and Contemporary Art Collection, ranging from 1437 – 2017 together with undated, most 'Object Begin Date' entries fall after 1850. ‘Artist Display Name’ column used to identify artists by gender. 
 ### Gender categories: female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified 
 
@@ -25,7 +12,7 @@
 
 &nbsp; &nbsp;
 ![by Year](MetProjects/gender/assets/gender_timelineChart.png)
-&nbsp;
+
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/initialsketches.png)
 ### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
 ### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) 
@@ -34,7 +21,7 @@
 ### Note - spike in the number of artworks in 1900: hundreds of objects have Object Begin Date (and Object End Date) recorded as 1900, most of these are manufacturing companies noted as 'unknown designer.'
 
 
- &nbsp; &nbsp; &nbsp; 
+ &nbsp; &nbsp; &nbsp; &nbsp;
 
 
 #### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
@@ -60,7 +47,7 @@
 ### Source: [Json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets/UncertainPub.json)
 
 
- &nbsp; &nbsp; &nbsp; 
+ &nbsp; &nbsp; &nbsp; &nbsp;
 
 #### **Interactive Narrative Project:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 ### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
@@ -81,7 +68,7 @@
 
 
 
- &nbsp; &nbsp; &nbsp; 
+ &nbsp; &nbsp; &nbsp; &nbsp;
 
 
 #### **Spatial Contexts Project:** [Who's in this room by gender?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html) 
