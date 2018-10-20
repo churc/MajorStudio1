@@ -24,9 +24,7 @@
 ### 1)   Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: Gender  
 ### 2)   Using total numbers, vertical bar visualization: Another view of all artworks by gender
 ### 3)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What year were these artworks made
-
 ![by Year](MetProjects/gender/assets/gender_images_1.png)
-
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/initialsketches.png)
 ### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProject_process_description.pdf)
 ### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/MetProjects/MetProjects_churchouse.pdf) 
@@ -41,13 +39,11 @@
 #### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 ### The incidence of the word "uncertain" in The Met's collection
 
- &nbsp; &nbsp;
+ &nbsp;&nbsp;
 
 ![where uncertainty falls](MetProjectsQual/uncertainty/assets/whereuncertainty.png)
 
  &nbsp;
-
-
 
 
 ### The project uses public domain images from the whole of The Met database using ‘uncertain’ and ‘uncertainty’ as a search term and organizing principle to view what is assessed in the text as ‘uncertain.’ The visualization focuses on the relation of text and image.
@@ -67,22 +63,18 @@
 
 #### **Interactive Narrative Project:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 ### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
-
-
 ![gender and medium](Interactive/interactive_artworks.png)
-
- &nbsp; 
 
 
 ### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
 ### Using the 12,856 artworks made either by women or by men from the total collection of 14,350 artwork, and the 'classification' column contains 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc.)
 ### Narrative investigation of who has made the artworks in the collection by gender, the top collected artists by gender, what medium the artworks are, and the relation between medium and gender. 
-### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
-### Do a series of visualizations that explore connections between gender and medium in the collection.
+### Series of visualizations that explore connections between gender and medium in the collection.
 ### [Initial sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant3_churchouse_project1.pdf)
 ### [Initial concepts](https://github.com/churc/MajorStudio1/blob/master/Interactive/Interactivity_narrative_churchouse.pdf)
 ### [Sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant2_churchouse_project2.pdf) and [next iteration sketch ideas](https://github.com/churc/MajorStudio1/blob/master/Interactive/quant4_churchouse-16.png)
 ### [Sketches for final project](https://github.com/churc/MajorStudio1/blob/master/Interactive/finalSketch.png)
+### [Source: MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
 
 ### [Project process webpage](https://churc.github.io/MajorStudio1/process/)
 
