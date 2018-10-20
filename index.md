@@ -35,19 +35,17 @@
 ### Note - spike in the number of artworks in 1900: hundreds of objects have Object Begin Date (and Object End Date) recorded as 1900, most of these are manufacturing companies noted as 'unknown designer.'
 
 
- &nbsp; &nbsp;
+ &nbsp; &nbsp; &nbsp; 
 
 
 #### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 #### The incidence of the word "uncertain" in The Met's collection
 
-
-
-
+ &nbsp; &nbsp;
 
 ![where uncertainty falls](MetProjectsQual/uncertainty/assets/whereuncertainty.png)
 
-
+ &nbsp;
 
 
 
@@ -65,7 +63,7 @@
 ### Source: [Json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets/UncertainPub.json)
 
 
- &nbsp; &nbsp;
+ &nbsp; &nbsp; &nbsp; 
 
 #### **Interactive Narrative Project:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 #### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
@@ -73,10 +71,7 @@
 
 ![gender and medium](Interactive/interactive_artworks.png)
 
-
-
-
-
+ &nbsp; 
 
 
 ### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
@@ -93,14 +88,17 @@
 
 
 
- &nbsp; &nbsp;
+ &nbsp; &nbsp; &nbsp; 
 
 
 #### **Spatial Contexts Project:** [Who's in this room by gender?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html) 
 #### If you were a woman - a man - would your work be in this collection?
 
+ &nbsp; &nbsp;
 
 ![who's in this room by gender](SpatialContexts/museum_intRev2_final_24.png)
+
+ &nbsp; 
 
 ### Examine ways the gender quantitative project might exist within a museum and engage the viewer.
 ### The project depicts a spatial line installation an art gallery space that represents the percent of female / male artists by gender within each room; lines of color that run across the floor – making the viewer step over them – and wrap up the walls to end at specific artworks; % at the end of each line specify the % gender representation within each room.
