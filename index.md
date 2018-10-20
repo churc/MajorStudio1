@@ -18,7 +18,7 @@
 ### Gender categories: female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified 
 
 
-### Visualizations:
+### [Visualizations](https://churc.github.io/MajorStudio1/MetProjects/gender):
 ### 1)   Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: Gender  
 ### 2)   Using total numbers, vertical bar visualization: Another view of all artworks by gender
 ### 3)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What year were these artworks made
