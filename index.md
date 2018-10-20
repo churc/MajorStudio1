@@ -61,7 +61,6 @@
 ### Source: [Json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets/UncertainPub.json)
 
 
-### [Project process webpage](https://churc.github.io/MajorStudio1/process/)
 
  &nbsp; &nbsp; &nbsp; &nbsp;
  
@@ -81,3 +80,5 @@
 
 ### [AR](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_intRev2-mobile-blur-24-final.png) - looking through your phone as you enter a gallery, you can ‘see’ the lines as if they are in the physical space, depicting the gender of the artists with work in that room.
 
+ &nbsp; 
+### [Projects process webpage](https://churc.github.io/MajorStudio1/process/)
