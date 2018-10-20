@@ -35,17 +35,7 @@
 ### Note - spike in the number of artworks in 1900: hundreds of objects have Object Begin Date (and Object End Date) recorded as 1900, most of these are manufacturing companies noted as 'unknown designer.'
 
 
-
-
-
-
-
-
-
-
-
-
-
+ &nbsp; &nbsp;
 
 
 #### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
@@ -75,12 +65,7 @@
 ### Source: [Json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets/UncertainPub.json)
 
 
-
-
-
-
-
-
+ &nbsp; &nbsp;
 
 #### **Interactive Narrative Project:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 #### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
@@ -108,7 +93,7 @@
 
 
 
-
+ &nbsp; &nbsp;
 
 
 #### **Spatial Contexts Project:** [Who's in this room by gender?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html) 
