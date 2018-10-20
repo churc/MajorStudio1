@@ -32,8 +32,7 @@
 
 ### The project uses public domain images from the whole of The Met database using ‘uncertain’ and ‘uncertainty’ as a search term and organizing principle to view what is assessed in the text as ‘uncertain.’ The visualization focuses on the relation of text and image.
 ### The word uncertain/ty is depicted where it occurs within the web label text, on titles or on dates. Titles, dates and descriptions are hidden, visible on hover. 
-### Click on red 'uncertainty' text in the header (where uncertainty falls) to view all titles, dates. 204 artworks have uncertain/ty in their web label descriptions. Since the web labels are not in the public domain, each artwork is linked to The Met web label. 
-### Click on the green button for random reload.
+### Click on red 'uncertainty' text in the header (where uncertainty falls) to view all titles, dates. 204 artworks have uncertain/ty in their web label descriptions. Since the web labels are not in the public domain, each artwork is linked to The Met web label. Click on the green button for random reload.
 
 ### [Visualization](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty/)
 
@@ -53,7 +52,7 @@
 ### Narrative investigation of who has made the artworks in the collection by gender, the top collected artists by gender, what medium the artworks are, and the relation between medium and gender.
 
 ### [Visualizations](https://churc.github.io/MajorStudio1/Interactive/genderObj/) 
-### Begin with two visualizations from the Gender at The Met project and then explore connections between medium and gender in the collection:
+### Two visualizations from the Gender at The Met project are included here and then connections between medium and gender in the collection are explored:
 ### 1)   Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: Gender  
 ### 2)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What year were these artworks made?
 ### 3)   Using the classification column identifying 105 mediums, vertical bar visualization of medium by gender: What medium are being collected by gender?
@@ -77,8 +76,7 @@
 
  &nbsp; 
 
-### Examine ways the gender quantitative project might exist within a museum and engage the viewer.
-### The project depicts a spatial line installation an art gallery space that represents the percent of female / male artists by gender within each room; lines of color that run across the floor – making the viewer step over them – and wrap up the walls to end at specific artworks; % at the end of each line specify the % gender representation within each room.
+### The project depicts a spatial line installation an art gallery space that represents the percent of female / male artists by gender within each room; lines of color that run across the floor – making the viewer step over them – and wrap up the walls to end at specific artworks; % at the end of each line specify the % gender representation within each room. The idea was to examine ways the gender quantitative project might exist within a museum situation and engage the viewer.
 
 ### [Spatial context - gallery entrance](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_extRev2_24.png)
 
