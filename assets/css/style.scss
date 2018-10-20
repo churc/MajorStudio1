@@ -25,7 +25,8 @@ body {
 section{
     width:950px;
     float:right;
-    padding-bottom:50px
+    padding-bottom:50px;
+    padding-right: 35px;
 }
 
 small{
@@ -51,8 +52,8 @@ h3 {
 	font-variant: normal;
 	font-weight: 548;
 	line-height: 18px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+// 	padding-top: 10px;
+// 	padding-bottom: 10px;
 }
 p {
 	font-family: 'Inconsolata', monospace, "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
@@ -67,9 +68,9 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 8px;
-  padding: 0px;
-  padding-bottom: 8px;
+//   margin: 8px;
+//   padding: 0px;
+//   padding-bottom: 8px;
   color: #0A0A0A;
 }
 img {
