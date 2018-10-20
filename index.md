@@ -1,4 +1,4 @@
-#### **Quantitative Project:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
+#### **Quantitative Project Part 1:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
 ### What percent of The Metropolitan Museum of Art Modern & Contemporary Art Collection's 14,350 works are by women?
 ![by Year](MetProjects/gender/assets/gender_images_1b.png)
 ### Source: [MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/MetProjects/gender/assets/ModContGenderfinalazsort.csv): 14,350 artworks in the Modern and Contemporary Art Collection, ranging from 1437 – 2017 together with undated, most 'Object Begin Date' entries fall after 1850. ‘Artist Display Name’ column used to identify artists by gender. 
@@ -20,29 +20,7 @@
  &nbsp; &nbsp; &nbsp; &nbsp;
 
 
-#### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
-### The incidence of the word "uncertain" in The Met's collection
-
- &nbsp;&nbsp;
-
-![where uncertainty falls](MetProjectsQual/uncertainty/assets/whereuncertainty.png)
-
- &nbsp;
-
-
-### The project uses public domain images from the whole of The Met database using ‘uncertain’ and ‘uncertainty’ as a search term and organizing principle to view what is assessed in the text as ‘uncertain.’ The visualization focuses on the relation of text and image.
-### The word uncertain/ty is depicted where it occurs within the web label text, on titles or on dates. Titles, dates and descriptions are hidden, visible on hover. 
-### Click on red 'uncertainty' text in the header (where uncertainty falls) to view all titles, dates. 204 artworks have uncertain/ty in their web label descriptions. Since the web labels are not in the public domain, each artwork is linked to The Met web label. Click on the green button for random reload.
-
-### [Visualization](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty/)
-
-
-### Source: [Json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets/UncertainPub.json)
-
-
- &nbsp; &nbsp; &nbsp; &nbsp;
-
-#### **Interactive Narrative Project:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
+#### **Quantitative Project Part 2:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 ### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
 ![gender and medium](Interactive/interactive_artworks.png)
 
@@ -60,12 +38,33 @@
 
 ### Source: [MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
 
-### [Project process webpage](https://churc.github.io/MajorStudio1/process/)
-
 
 
  &nbsp; &nbsp; &nbsp; &nbsp;
 
+#### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
+### The incidence of the word "uncertain" in The Met's collection
+
+ &nbsp;&nbsp;
+
+![where uncertainty falls](MetProjectsQual/uncertainty/assets/whereuncertainty.png)
+
+ &nbsp;
+
+### The project uses public domain images from the whole of The Met database using ‘uncertain’ and ‘uncertainty’ as a search term and organizing principle to view what is assessed in the text as ‘uncertain.’ The visualization focuses on the relation of text and image.
+### The word uncertain/ty is depicted where it occurs within the web label text, on titles or on dates. Titles, dates and descriptions are hidden, visible on hover. 
+### Click on red 'uncertainty' text in the header (where uncertainty falls) to view all titles, dates. 204 artworks have uncertain/ty in their web label descriptions. Since the web labels are not in the public domain, each artwork is linked to The Met web label. Click on the green button for random reload.
+
+### [Visualization](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty/)
+
+
+### Source: [Json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets/UncertainPub.json)
+
+
+### [Project process webpage](https://churc.github.io/MajorStudio1/process/)
+
+ &nbsp; &nbsp; &nbsp; &nbsp;
+ 
 
 #### **Spatial Contexts Project:** [Who's in this room by gender?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html) 
 ### If you were a woman - a man - would your work be in this collection?
