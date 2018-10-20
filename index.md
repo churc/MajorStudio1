@@ -45,11 +45,11 @@
 #### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 ### The incidence of the word "uncertain" in The Met's collection
 
- &nbsp;&nbsp;
+ &nbsp;
 
 ![where uncertainty falls](MetProjectsQual/uncertainty/assets/whereuncertainty.png)
 
-&nbsp;
+
 
 ### The project uses public domain images from the whole of The Met database using ‘uncertain’ and ‘uncertainty’ as a search term and organizing principle to view what is assessed in the text as ‘uncertain.’ The visualization focuses on the relation of text and image.
 ### The word uncertain/ty is depicted where it occurs within the web label text, on titles or on dates. Titles, dates and descriptions are hidden, visible on hover. 
