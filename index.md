@@ -1,7 +1,7 @@
 #### **Quantitative Project Part 1:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
 ### What percent of The Metropolitan Museum of Art Modern & Contemporary Art Collection's 14,350 works are by women?
 
-### As part of MSDV Major Studio 1 at Parsons, we were undertook quantitative and qualitative projects using The Metropolitan Museum of Art's Digital Collection's [open access data](https://github.com/metmuseum/openaccess). The collection spans over 5,000 years and includes roughly one and a half million objects from an array of cultures; over 460,000 of these artworks are in the online database.
+### As part of MSDV Major Studio 1 at Parsons, we undertook quantitative and qualitative projects using The Metropolitan Museum of Art's Digital Collection's [open access data](https://github.com/metmuseum/openaccess). The collection spans over 5,000 years and includes roughly one and a half million objects from an array of cultures; over 460,000 of these artworks are in the online database.
 
 ### I did two - related - quantitative projects: Gender at The Met, and Gender & medium. They both focus on The Modern & Contemporary Art Collection, one of The Met's seventeen collection departments. Gender is not formally tracked across The Met's holdings, and this project aims to: 1) establish the percentage of artworks made by women; 2) identify the artworks by medium; 3) identify who the top collected artists are by gender in the Collection; and 4) examine correlations between particular mediums and gender.
 
@@ -90,3 +90,5 @@
 
  &nbsp; 
 ### [Projects process webpage](https://churc.github.io/MajorStudio1/process/)
+### Huge thanks to Professor Richard The, Data Visualization, The New School, for helping me realize these projects from data analysis to design, and to The Met's Digital Collection experts who gave their time and shared their incredible knowledge of the collection with us. In particular, Jennie Choi, General Manager of Collection Information, who along with Spencer Kiser, Media Technology Manager, introduced the Museum’s digital work to us, and to Jennie and to Loic Tallon, Chief Digital Officer, who we presented our projects to, for invaluable feedback.  
+
