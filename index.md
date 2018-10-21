@@ -20,7 +20,7 @@
 ### 3)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What year were these artworks made?
 
 &nbsp; &nbsp;
-![by Year](MetProjects/gender/assets/gender_timelineChart.png)
+![by Year](MetProjects/gender/assets/gender_timelineChart_b.png)
 
 
 ### Note - spike in the number of artworks in 1900: hundreds of objects have Object Begin Date (and Object End Date) recorded as 1900, most of these are manufacturing companies noted as 'unknown designer.'
