@@ -24,8 +24,7 @@
 ### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
 ![gender and medium](Interactive/interactive_artworks.png)
 
-
-### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
+ 
 ### Using the 12,856 artworks made either by women or by men from the total collection of 14,350 artwork, and the 'classification' column contains 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc.)
 ### Narrative investigation of who has made the artworks in the collection by gender, the top collected artists by gender, what medium the artworks are, and the relation between medium and gender.
 
