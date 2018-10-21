@@ -91,5 +91,5 @@
 &nbsp; 
 ### [Projects process webpage](https://churc.github.io/MajorStudio1/process/)
 &nbsp;
-### Huge thanks to Professor Richard The, Data Visualization, The New School, for helping me realize these projects from data analysis to design, and to The Met's Digital Collection experts who generously shared their time and their incredible knowledge of the collection with us. In particular, Jennie Choi, General Manager of Collection Information, who along with Spencer Kiser, Media Technology Manager, introduced the Museum’s digital work to us, and to Jennie and to Loic Tallon, Chief Digital Officer, who we presented our projects to, for their invaluable feedback.  
+### Huge thanks to Professor Richard The, Data Visualization, The New School, for help realizing these projects from data analysis to design, and to The Met's Digital Collection experts who generously shared their time and their incredible knowledge of the collection with us. In particular, Jennie Choi, General Manager of Collection Information, who along with Spencer Kiser, Media Technology Manager, introduced the Museum’s digital work to us, and to Jennie and to Loic Tallon, Chief Digital Officer, who we presented our projects to, for their invaluable feedback.  
 
