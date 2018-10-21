@@ -88,7 +88,8 @@
 
 ### [AR](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_intRev2-mobile-blur-24-final.png) - looking through your phone as you enter a gallery, you can ‘see’ the lines as if they are in the physical space, depicting the gender of the artists with work in that room.
 
- &nbsp; 
+&nbsp; 
 ### [Projects process webpage](https://churc.github.io/MajorStudio1/process/)
-### Huge thanks to Professor Richard The, Data Visualization, The New School, for helping me realize these projects from data analysis to design, and to The Met's Digital Collection experts who gave their time and shared their incredible knowledge of the collection with us. In particular, Jennie Choi, General Manager of Collection Information, who along with Spencer Kiser, Media Technology Manager, introduced the Museum’s digital work to us, and to Jennie and to Loic Tallon, Chief Digital Officer, who we presented our projects to, for invaluable feedback.  
+&nbsp;
+### Huge thanks to Professor Richard The, Data Visualization, The New School, for helping me realize these projects from data analysis to design, and to The Met's Digital Collection experts who generously shared their time and their incredible knowledge of the collection with us. In particular, Jennie Choi, General Manager of Collection Information, who along with Spencer Kiser, Media Technology Manager, introduced the Museum’s digital work to us, and to Jennie and to Loic Tallon, Chief Digital Officer, who we presented our projects to, for their invaluable feedback.  
 
