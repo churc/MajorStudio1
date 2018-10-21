@@ -1,7 +1,7 @@
 #### **Quantitative Project Part 1:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
 ### What percent of The Metropolitan Museum of Art Modern & Contemporary Art Collection's 14,350 works are by women?
-&nbsp;
-### As part of MSDV Major Studio 1 at Parsons, we were undertook quantitative and qualitative projects with The Metropolitan Museum of Art's Digital Collection's [open access database](https://github.com/metmuseum/openaccess). The collection spans over 5,000 years and includes roughly one and a half million objects from an array of cultures; over 460,000 of these artworks are in the online database.
+
+### As part of MSDV Major Studio 1 at Parsons, we were undertook quantitative and qualitative projects using The Metropolitan Museum of Art's Digital Collection's [open access data](https://github.com/metmuseum/openaccess). The collection spans over 5,000 years and includes roughly one and a half million objects from an array of cultures; over 460,000 of these artworks are in the online database.
 
 ### I did two - related - quantitative projects: Gender at The Met, and Gender & medium. They both focus on The Modern & Contemporary Art Collection, one of The Met's seventeen collection departments. Gender is not formally tracked across The Met's holdings, and this project aims to: 1) establish the percentage of artworks made by women; 2) identify the artworks by medium; 3) identify who the top collected artists are by gender in the Collection; and 4) examine correlations between particular mediums and gender.
 
@@ -59,7 +59,7 @@
 
 
 
-### The project uses public domain images from the whole of The Met database using ‘uncertain’ and ‘uncertainty’ as a search term and organizing principle to view what is assessed in the text as ‘uncertain.’ The visualization focuses on the relation of text and image.
+### This qualitative project uses public domain images from the whole of The Met database using ‘uncertain’ and ‘uncertainty’ as a search term and organizing principle to view what is assessed in the text as ‘uncertain.’ The visualization focuses on the relation of text and image.
 ### The word uncertain/ty is depicted where it occurs within the web label text, on titles or on dates. Titles, dates and descriptions are hidden, visible on hover. 
 ### Click on red 'uncertainty' text in the header (where uncertainty falls) to view all titles, dates. 204 artworks have uncertain/ty in their web label descriptions. Since the web labels are not in the public domain, each artwork is linked to The Met web label. Click on the green button for random reload.
 
