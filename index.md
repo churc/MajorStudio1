@@ -35,7 +35,7 @@
 
  
 ### Using the 12,856 artworks made either by women or by men from the total collection of 14,350 artwork, and the 'classification' column contains 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc.)
-### Narrative investigation of who has made the artworks in the collection by gender, the top collected artists by gender, what medium the artworks are, and the relation between medium and gender.
+### Quantitative part 2 looked at the artworks by medium, identified who the top collected artists are by gender in the Collection, and looked at the relation between particular mediums and gender.
 
 ### [Visualizations](https://churc.github.io/MajorStudio1/Interactive/genderObj/) 
 ### Two visualizations from the Gender at The Met project are included here and then connections between medium and gender in the collection are explored:
@@ -43,6 +43,15 @@
 ### 2)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What year were these artworks made?
 ### 3)   Using the classification column identifying 105 mediums, vertical bar visualization of medium by gender: What medium are being collected by gender?
 ### 4)   Identifying the top ten collected women and the top ten collected men and their artworks by medium: Who are the most collected women and men in this collection and what did they make?
+
+### Findings include:
+### Selecting the 12,856 artworks either by women or by men in the Modern & Contemporary Art Collection, 15.77% artworks are made by women, and 84.23% are by men.
+### Dorothy Liebes has the most number of artworks in the Modern & Contemporary Art Collection with 89 artworks. This compares to the most collected man, Raymond Marsh, who is represented by 927 artworks. 
+### Notably, of the top ten women collected, only 4 out of 10: Margarete Willers, Lygia Pape, Georgia O’Keeffe and Hilde Reindl, are predominantly represented in the Collection with drawings and paintings. The opposite holds true for men, with 8 out of 10 men principally represented in the Collection with paintings, drawings and prints.
+### And 6 out of the top ten women collected are mainly represented by textiles, ceramics, and metalwork, compared to only 2 out of the top ten collected men. 
+### Looking at mediums that contain more than 10 artworks, men outnumber women in each of the mediums collected by the department with the exception of textile-related mediums. Here, women outnumber men in the following classifications: ‘textiles-miscellaneous’: 12 by women, 0 by men; ‘textiles-samples books’: 13 women, 1 man; ‘textiles-tapestries’: 21 women, 9 men; ‘textiles’: 59 women, 7 men; ‘textiles-woven’ 251 women, 36 men.
+### There are 2,137 paintings in the Collection, 280 paintings are by female artists and 1,857 are by male artists; similarly with drawings, 523 are by women and 4,553 are by men.
+
 
 ### Source: [MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
 
