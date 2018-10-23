@@ -39,10 +39,10 @@
 
 ### [Visualizations](https://churc.github.io/MajorStudio1/Interactive/genderObj/) 
 ### Two visualizations from the Gender at The Met project are included here and then connections between medium and gender in the collection are explored:
-### 1)   Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: Gender  
-### 2)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What year were these artworks made?
-### 3)   Using the classification column identifying 105 mediums, vertical bar visualization of medium by gender: What medium are being collected by gender?
-### 4)   Identifying the top ten collected women and the top ten collected men and their artworks by medium: Who are the most collected women and men in this collection and what did they make?
+### 1)   Gender: using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks   
+### 2)   What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks) 
+### 3)   What medium are being collected by gender?: using the Classification column identifying 105 mediums, vertical bar visualization of medium by gender 
+### 4)   Who are the most collected women and men in this collection and what did they make?: showing the top ten collected women and the top ten collected men in the Collection, and drawing connections between the artwork medium collected in the case of the top female artists and the top male artists.
 
 ### Findings include:
 ### Selecting the 12,856 artworks either by women or by men in the Modern & Contemporary Art Collection, 15.77% artworks are made by women, and 84.23% are by men.
