@@ -62,8 +62,6 @@
 #### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 ### The incidence of the word "uncertain" in The Met's collection
 
- &nbsp;
-
 ![where uncertainty falls](MetProjectsQual/uncertainty/assets/whereuncertainty2.png)
 
 
