@@ -68,7 +68,7 @@
 
 ### This qualitative project uses public domain images from the whole of The Met database using ‘uncertain’ and ‘uncertainty’ as a search term and organizing principle to view what is assessed in the text as ‘uncertain.’ The visualization focuses on the relation of text and image.
 ### The word uncertain/ty is depicted where it occurs within the web label text, on titles or on dates. Titles, dates and descriptions are hidden, visible on hover. 
-### Click on red 'uncertainty' text in the header (where uncertainty falls) to view all titles, dates. 204 artworks have uncertain/ty in their web label descriptions. Since the web labels are not in the public domain, each artwork is linked to The Met web label. Click on the green button for random reload.
+### Click on red 'uncertainty' text in the header (where uncertainty falls) to view the text. 204 artworks have uncertain/ty in their web label descriptions. Click on the green button for random reload.
 
 ### [Visualization](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty/)
 
@@ -88,7 +88,7 @@
 
  &nbsp; 
 
-### The project depicts a spatial line installation an art gallery space that represents the percent of female / male artists by gender within each room; lines of color that run across the floor – making the viewer step over them – and wrap up the walls to end at specific artworks; % at the end of each line specify the % gender representation within each room. The idea was to examine ways the gender quantitative project might exist within a museum situation and engage the viewer.
+### The project depicts a spatial line installation in an art gallery space - the line lengths represent the percent of female / male artists by gender within each room; lines of color run across the floor – making the viewer step over them – and wrap up the walls to end at specific artworks; the percent number at the end of each line specifies the % gender representation within each room. The idea was to explore ways the gender quantitative project might exist within a museum situation and engage the viewer.
 
 ### [Spatial context - gallery entrance](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_extRev2_24.png)
 
