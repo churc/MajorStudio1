@@ -35,14 +35,14 @@
 
  
 ### Using the 12,856 artworks made either by women or by men from the total 14,350 artworks in the department, and the ‘Classification’ column containing 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc), I investigated correspondences between artwork medium and gender. 
-### Gender & medium focuses on who (female/male) made the artworks in the collection, who the top collected artists are by gender, what medium the artworks are, and the relation between medium and gender.
+### Gender & medium focuses on who (female/male) made the artworks in the collection, who the top collected artists are by gender, what medium their artworks are, and the relation between medium and gender.
 
 ### [Visualizations](https://churc.github.io/MajorStudio1/Interactive/genderObj/) 
-### Two visualizations from the Gender at The Met project are included here and then connections between medium and gender in the collection are explored:
+### Two visualizations from the Gender at The Met project are included here and connections between medium and gender in the collection are explored:
 ### 1)   Gender: using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks   
 ### 2)   What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks) 
-### 3)   What medium are being collected by gender?: using the Classification column identifying 105 mediums, vertical bar visualization of medium by gender 
-### 4)   Who are the most collected women and men in this collection and what did they make?: showing the top ten collected women and the top ten collected men in the Collection, and drawing connections between the artwork medium collected in the case of the top female artists and the top male artists.
+### 3)   What medium are being collected by gender?: vertical bar visualization of medium by gender using the Classification column identifying 105 mediums
+### 4)   Who are the most collected women and men in the Modern & Contemporary Art Collection and what did they make?: showing the top ten collected women and the top ten collected men in the Collection, and drawing connections between the artwork medium collected in the case of the top female artists and the top male artists.
 
 ### Findings include:
 ### Selecting the 12,856 artworks either by women or by men in the Modern & Contemporary Art Collection, 15.77% artworks are made by women, and 84.23% are by men.
