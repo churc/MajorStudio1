@@ -10,20 +10,20 @@
 ### I used The Met's Modern & Contemporary Art Collection department for a few reasons: most artworks in the department were made since 1850 thus the artworks are easier to track, issues of gender equality were coming to the forefront, and, on a practical note, the department's excel spreadsheet as of January 2018 listed 14,350 artworks – a manageable number of names to identify by gender. 
 ### I used The Met Open Access spreadsheet's ‘Artist Display Name’ column to identify artists by gender. Many artists have first names that are gender specific, and I used an online genderchecker, The Met website and wiki to identify the remaining names. After reviewing the data, in addition to 'female' and 'male', I added three more categories: 1) "unknown" for artists who are not identified by any name in the spreadsheet (often these are artworks made by manufacturing companies); 2) "named, gender not identified" where I have not yet been able to identify the gender of the artist despite knowing their name; and 3) "couple/collaborative with both genders" where an artwork was made by two or more people of both genders (if the couple or collaborative contained artists of only one gender, the artwork was noted as such as either 'female' or 'male'.)
 ### Gender categories: female; male; couple/collaborative with both genders; unknown; and artist name but not yet identified. 
-### Of the 14,350 artworks in the department, most 'Object Begin Date' entries fall after 1850, however 66 are either undated or range from 1437 – 1850. I used the ‘Object Begin Date’ column for the date of the artwork. The timeline chart uses the 14,284 artworks dated 1850-2017.
+### I used the ‘Object Begin Date’ column for the date of the artwork. Of the 14,350 artworks in the department, most 'Object Begin Date' entries fall after 1850, however 66 are either undated or range from 1437 – 1850. The timeline chart uses the 14,284 artworks dated 1850-2017.
  
 
 
 ### [Visualizations](https://churc.github.io/MajorStudio1/MetProjects/gender):
-### 1)   Using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks: Gender  
-### 2)   Using total numbers, vertical bar visualization: Another view of all artworks by gender
-### 3)   For a timeline, visualization years 1850-2017 (14,284 artworks):  What year were these artworks made?
+### 1)   Gender: using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks 
+### 2)   Another view of all artworks by gender: using total numbers, vertical bar visualization
+### 3)   What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks) 
 
 &nbsp; &nbsp;
 ![by Year](MetProjects/gender/assets/gender_timelineChart_b.png)
 
 
-### Note - spike in the number of artworks in 1900: hundreds of objects have Object Begin Date (and Object End Date) recorded as 1900, most of these are manufacturing companies noted as 'unknown designer.'
+### Note: there is a spike in the number of artworks in 1900. Hundreds of objects have Object Begin Date (and Object End Date) recorded as 1900 - most of these are manufacturing companies noted as 'unknown designer.'
 
 
  &nbsp; &nbsp; &nbsp; &nbsp;
