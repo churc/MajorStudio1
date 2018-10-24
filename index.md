@@ -30,7 +30,7 @@
 
 #### **Quantitative Project Part 2:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 ### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
-![gender and medium](Interactive/interactive_artworks.png)
+![gender and medium](Interactive/genderObj/assets/interactive_images_4b.png)
 
  
 ### Using the 12,856 artworks made either by women or by men from the total 14,350 artworks in the department, and the ‘Classification’ column containing 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc), I investigated correspondences between artwork medium and gender. 
