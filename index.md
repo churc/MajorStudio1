@@ -18,7 +18,7 @@
 ### 1)   Gender: using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks 
 ### 2)   Another view of all artworks by gender: using total numbers, vertical bar visualization
 ### 3)   What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks) 
-&nbsp;
+
 ![by Year](MetProjects/gender/assets/gender_images_timeline2.png)
 
 
