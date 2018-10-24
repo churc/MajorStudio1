@@ -33,7 +33,8 @@
 
 ![gender and medium](Interactive/interactive_artworks.png)
 
- 
+### Source: [MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
+
 ### Using the 12,856 artworks made either by women or by men from the total 14,350 artworks in the department, and the ‘Classification’ column containing 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc), I investigated correspondences between artwork medium and gender. 
 ### Gender & medium focuses on who (female/male) made the artworks in the collection, who the top collected artists are by gender, what medium their artworks are, and the relation between medium and gender.
 
@@ -51,9 +52,6 @@
 ### And 6 out of the top ten women collected are mainly represented by textiles, ceramics, and metalwork, compared to only 2 out of the top ten collected men. 
 ### Looking at mediums that contain more than 10 artworks, men outnumber women in each of the mediums collected by the department with the exception of textile-related mediums. Here, women outnumber men in the following classifications: ‘textiles-miscellaneous’: 12 by women, 0 by men; ‘textiles-samples books’: 13 women, 1 man; ‘textiles-tapestries’: 21 women, 9 men; ‘textiles’: 59 women, 7 men; ‘textiles-woven’ 251 women, 36 men.
 ### There are 2,137 paintings in the Collection, 280 paintings are by female artists and 1,857 are by male artists; similarly with drawings, 523 are by women and 4,553 are by men.
-
-
-### Source: [MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
 
 
 
