@@ -19,7 +19,6 @@
 ### 2)   Another view of all artworks by gender: using total numbers, vertical bar visualization
 ### 3)   What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks) 
 
-![by Year](Interactive/genderObj/assets/timeline.png)
 ![by Year](MetProjects/gender/assets/gender_timelineChart_b.png)
 
 
