@@ -63,7 +63,7 @@ function showImg() {
 	 				// unc.id='unc'+n;
 	 			
 					var obj_url = document.createElement('a');
-					obj_url.target = "blank";
+// 					obj_url.target = "blank";
 	 				obj_url.href = "https://www.metmuseum.org" + items[n].media.images.primaryImage.objectUrl;
 	 				obj_url.appendChild(unc);
 
