@@ -6,7 +6,8 @@ var MetArray = [];
 var rSelect;
 
 function preload() {
-    items = loadJSON("assets/UncertainPub.json", showImg);
+//     items = loadJSON("assets/UncertainPub.json", showImg);
+    items = loadJSON("assets/UncertainPub_img.json", showImg);
 }
 
 
