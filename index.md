@@ -19,7 +19,7 @@
 ### 2)   Another view of all artworks by gender: using total numbers, vertical bar visualization
 ### 3)   What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks) 
 
-![by Year](MetProjects/gender/assets/gender_timelineChart_b.png)
+[![by Year](MetProjects/gender/assets/gender_timelineChart_b.png)](https://churc.github.io/MajorStudio1/MetProjects/gender)
 
 
 ### Note: there is a spike in the number of artworks in 1900. Hundreds of objects have 'Object Begin Date' (and 'Object End Date') recorded as 1900 - most of these are manufacturing companies noted as 'unknown designer.'
@@ -31,7 +31,8 @@
 #### **Quantitative Project Part 2:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 ### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
 
-![gender and medium](Interactive/interactive_artworks.png)
+[![gender and medium](Interactive/interactive_artworks.png)](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
+
 ### Source: [MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
 
 ### Using the 12,856 artworks made either by women or by men from the total 14,350 artworks in the department, and the ‘Classification’ column containing 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc), I investigated correspondences between artwork medium and gender. 
@@ -59,7 +60,7 @@
 #### **Qualitative Project:** [Where uncertainty falls](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 ### The incidence of the word "uncertain" in The Met's collection
 
-![where uncertainty falls](MetProjectsQual/uncertainty/assets/whereuncertainty2.png)
+[![where uncertainty falls](MetProjectsQual/uncertainty/assets/whereuncertainty2.png)](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty)
 
 
 
@@ -81,7 +82,7 @@
 
  &nbsp; &nbsp;
 
-![who's in this room by gender](SpatialContexts/museum_intRev2_final_24.png)
+[![who's in this room by gender](SpatialContexts/museum_intRev2_final_24.png)](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html)
 
  &nbsp; 
 
