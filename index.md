@@ -38,8 +38,8 @@
 ### Using the 12,856 artworks made either by women or by men from the total 14,350 artworks in the department, and the ‘Classification’ column containing 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc), I investigated correspondences between artwork medium and gender. 
 ### Gender & medium focuses on who (female/male) made the artworks in the collection, who the top collected artists are by gender, what medium their artworks are, and the relation between medium and gender.
 
-### [Gender & medium visualizations](https://churc.github.io/MajorStudio1/Interactive/genderObj/) 
-### Two visualizations from the Gender at The Met project are included here and connections between medium and gender in the collection are explored:
+### [Gender & medium visualizations](https://churc.github.io/MajorStudio1/Interactive/genderObj/): 
+### Two visualizations from the Gender at The Met project are included here and connections between medium and gender in the collection are explored.
 ### 1)   Gender: using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks   
 ### 2)   What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks) 
 ### 3)   What medium are being collected by gender?: vertical bar visualization of medium by gender using the Classification column identifying 105 mediums
