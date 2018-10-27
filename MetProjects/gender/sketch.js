@@ -164,8 +164,10 @@ var s = function(p){
     p.textStyle(p.NORMAL);
     p.textAlign(p.LEFT);
     p.text("Gender at The Met", 370,95);
+	p.textSize(20);
+	p.text("A data visualization project by Clare Churchouse", 907,95);
     p.textSize(28);
-    p.text("What % of the Modern & Contemporary Art Collection's 14,350 works are by women?", 370,132);
+    p.text("What % of The Met's Modern & Contemporary Art Collection's 14,350 works are by women?", 370,132);
     p.textSize(20);
     p.text("1 pixel = 2 artworks", 370,160);
     p.pop();
@@ -453,7 +455,7 @@ var w = function(p) {
 
    p.setup = function(){
      p.createCanvas(p.windowWidth,950);
-     p.background(100,5);
+//     p.background(100,5);
      p.analyzeData();
      p.analyzeGender();
      p.displayData();
