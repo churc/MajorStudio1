@@ -1,9 +1,12 @@
 #### **Quantitative Project Part 1:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
 ### What percent of the 14,350 works in The Metropolitan Museum of Art’s Modern & Contemporary Art Collection are by women?
+
 <div class="smallSpace"></div>
+
 ### As part of the MS Data Visualization’s Major Studio 1 class at Parsons, we undertook quantitative and qualitative projects using The Metropolitan Museum of Art's Digital Collection [Open Access data](https://github.com/metmuseum/openaccess). The Met's collection spans over 5,000 years and includes roughly one and a half million objects from an array of cultures; over 460,000 of these artworks are in the online database.
 
-### I worked on two closely related quantitative projects: Gender at The Met, and Gender & medium. Both projects are based on data from The Modern & Contemporary Art Collection, one of The Met's seventeen collection departments. Gender is not formally tracked across The Met's holdings, this project focuses on the one department and aims to: 
+### I worked on two closely related quantitative projects: Gender at The Met, and Gender & medium. Both projects are based on data from The Modern & Contemporary Art Collection, one of The Met's seventeen collection departments. 
+### Gender is not formally tracked across The Met's holdings, this project focuses on the one department and aims to: 
 ###  &nbsp; &nbsp; 1) identify the gender of the artists whose artworks are in The Modern & Contemporary Art Collection; 
 ###  &nbsp; &nbsp; 2) establish the percentage of artworks made by women; 
 ###  &nbsp; &nbsp; 3) identify the artworks by medium; 
@@ -34,6 +37,7 @@
 
 
  &nbsp; &nbsp; &nbsp; &nbsp;
+ 
 <div class="smallSpace"></div>
 
 #### **Quantitative Project Part 2:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
@@ -42,18 +46,30 @@
 [![gender and medium](Interactive/interactive_artworks.png)](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 
 ### Source: [MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
+
 <br>
+
 ### Using the 12,856 artworks made either by women or by men from the total 14,350 artworks in the department, and the ‘Classification’ column containing 105 medium types (e.g. drawings, furniture, vases, ceramics, textiles etc), I investigated correspondences between artwork medium and gender.
 
 ### Gender & medium focuses on who (female/male) made the artworks in the collection, who the top collected artists are by gender, what medium their artworks are, and the relation between medium and gender.
+
 <br>
+
 ### [Gender & medium visualizations](https://churc.github.io/MajorStudio1/Interactive/genderObj/): 
 ### Two visualizations from the Gender at The Met project are included here and connections between medium and gender in the collection are explored.
-### &nbsp; &nbsp; - Gender: using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks   
-### &nbsp; &nbsp; -  What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks) 
-### &nbsp; &nbsp; - What medium are being collected by gender?: vertical bar visualization of medium by gender using the 'Classification' column identifying 105 mediums
-### &nbsp; &nbsp; - Who are the most collected women and men in the Modern & Contemporary Art Collection and what did they make?: showing the top ten collected women and the top ten collected men in the Collection, and drawing connections between the artwork medium collected in the case of the top female artists and the top male artists.
+
+<div class="wrapList">
+ <ul><h3>
+  <li>Gender: using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks</li>
+ <li>What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks)</li>
+  <li>What medium are being collected by gender?: vertical bar visualization of medium by gender using the 'Classification' column identifying 105 mediums</li>
+  <li>Who are the most collected women and men in the Modern & Contemporary Art Collection and what did they make?: showing the top ten collected women and the top ten collected men in the Collection, and drawing connections between the artwork medium collected in the case of the top female artists and the top male artists</li>
+  </h3>
+ </ul>
+</div>
+
 <br>
+
 ### Findings include:
 ### Selecting the 12,856 artworks either by women or by men in the Modern & Contemporary Art Collection, 15.77% artworks are made by women, and 84.23% are by men.
 ### Dorothy Liebes has the most number of artworks in the Modern & Contemporary Art Collection with 89 artworks. This compares to the most collected man, Raymond Marsh, who is represented by 927 artworks. 
@@ -61,7 +77,9 @@
 ### And 6 out of the top ten women collected are mainly represented by textiles, ceramics, and metalwork, compared to only 2 out of the top ten collected men. 
 ### It is striking to note that of the mediums that contain more than 10 artworks, men outnumber women in each of the mediums collected by the department with the exception of textile-related mediums. Here, women outnumber men in the following classifications: ‘Textiles-miscellaneous’: 12 by women, 0 by men; ‘Textiles-samples books’: 13 women, 1 man; ‘Textiles-tapestries’: 21 women, 9 men; ‘Textiles’: 59 women, 7 men; ‘Textiles-woven’ 251 women, 36 men.
 ### There are 2,137 paintings in the Collection, 280 paintings are by female artists and 1,857 are by male artists; similarly with drawings, 523 are by women and 4,553 are by men.
-<br>
+
+<div class="smallSpace"></div>
+
 ### The ten women with the highest number of artworks in the Modern & Contemporary Art Collection:
 ###  &nbsp; &nbsp; 1) Dorothy Liebes, 89
 ###  &nbsp; &nbsp; 2) Anni Albers, 80
@@ -73,7 +91,9 @@
 ###  &nbsp; &nbsp; 8) Marion Weeber, 35
 ###  &nbsp; &nbsp; 9) Lygia Pape, 32
 ###  &nbsp; &nbsp; 10) Georgia O'Keeffe, 22
-<br>
+
+<div class="smallSpace"></div>
+
 ### The ten men with the highest number of artworks in the Modern & Contemporary Art Collection:
 ###  &nbsp; &nbsp; 1) Raymond Marsh, 927
 ###  &nbsp; &nbsp; 2) Carlo Scarpa, 244
@@ -97,17 +117,17 @@
 
 
 ### Source: [Json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets/UncertainPub.json)
+
 <div class="smallSpace"></div>
+
 ### This qualitative project uses public domain images from the whole of The Met database using ‘uncertain’ and ‘uncertainty’ as a search term and organizing principle to view what is assessed in the text as ‘uncertain.’ The visualization focuses on the relation of text and image.
 ### The word uncertain/ty is depicted where it occurs within the web label text, on titles or on dates. Titles, dates and descriptions are hidden, visible on hover. 
 ### Click on red 'uncertainty' text in the header (where uncertainty falls) to view the text. 204 artworks have uncertain/ty in their web label descriptions. Click on the green button for random reload.
 
 ### [Where uncertainty falls visualization](https://churc.github.io/MajorStudio1/MetProjectsQual/uncertainty/)
 
-
-
-
  &nbsp; &nbsp; &nbsp; &nbsp;
+ 
  <div class="smallSpace"></div>
 
 #### **Spatial Contexts Project:** [Who's in this room by gender?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html) 
@@ -125,8 +145,11 @@
 
 ### [AR](https://github.com/churc/MajorStudio1/blob/master/SpatialContexts/museum_intRev2-mobile-blur-24-final.png) - looking through your phone as you enter a gallery, you can ‘see’ the lines as if they are in the physical space, depicting the gender of the artists with work in that room.
 
-&nbsp; 
-### [Projects process webpage](https://churc.github.io/MajorStudio1/process/)
 &nbsp;
+
+### [Projects process webpage](https://churc.github.io/MajorStudio1/process/)
+
+&nbsp;
+
 ### Huge thanks to Professor Richard The, Data Visualization, The New School, for help realizing these projects from data analysis to design, and to The Met's Digital Collection experts who generously shared their time and their incredible knowledge of the collection with us. In particular, Jennie Choi, General Manager of Collection Information, who along with Spencer Kiser, Lead Developer, introduced the Museum’s digital work to us, and to Jennie and to Loic Tallon, Chief Digital Officer, who we presented our projects to, for their invaluable feedback.  
 
