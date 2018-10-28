@@ -450,13 +450,8 @@ p.drawLabelsCh = function(){
 //////get info on each object and return on screen
     p.push();
     var width = 1440, 
-        height = p.windowHeight
-    
-//     var width = 1440, 
-//           height = 5500,
-//           margin = 50,
-//           w = p.width - 2 * margin, // chart area width and height
-//           h = p.height - 2 * margin;
+//         height = p.windowHeight
+            height = 2800;
 
 //////return list of classification types & numbers
 /////note taken this off the page 
@@ -494,8 +489,8 @@ p.pop();
 ////axis number of objects
 p.push();
     p.scale(0.5);
-    p.translate(width*1.66,4790);
-//     p.translate(h*2-margin*8.5, w-h/1.88);
+//     p.translate(width*1.66,4790);
+    p.translate(width*2-margin*6, height*1.65+margin/2);
       
     upperLimit = barTotals[barTotals.length - 1]['f']
     lowerLimit = -1 * (barTotals[barTotals.length - 1]['m'])
