@@ -363,7 +363,8 @@ barTotalsSort = barTotals;
           // bars.push({x:160 + (i * 10), y:$(window).height()/2.87, width: 10, height: barTotals[i]['f']/2, name:barTotals[i].name, maleHeight: barTotals[i]['m']/2});
          
           p.push();
-          p.translate(0, 0);  
+//           p.translate(0, 0);
+          p.translate(15, 0);  
           p.rotate(p.radians(270));
           p.textSize(14);
           p.text(barTotalsSort[i].name+barTotalsSort[i].total, 5+7, 105+(i * 10)); // text-names
