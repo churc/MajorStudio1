@@ -112,7 +112,11 @@ mark {
 
 ul,
 ol {
-  margin: 40px 0;
+//   margin: 40px 0;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 0px;
+  margin-right: 0px;
   padding-left: 50px;
   list-style-position: outside;
   li {
