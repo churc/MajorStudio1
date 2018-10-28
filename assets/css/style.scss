@@ -103,8 +103,10 @@ ul,
 ol {
   margin: 40px 0;
   padding-left: 50px;
+  list-style-position: outside;
   li {
     word-wrap: break-word;
+   list-style-position: outside;
   }
   img {
     margin: 40px 0;
