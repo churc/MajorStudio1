@@ -26,9 +26,16 @@
 <br>
 
 ### [Gender at The Met visualizations](https://churc.github.io/MajorStudio1/MetProjects/gender):
-### &nbsp; &nbsp; - Gender: using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks 
-### &nbsp; &nbsp; -  Another view of all artworks by gender: using total numbers, vertical bar visualization
-### &nbsp; &nbsp; - What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks) 
+
+<div class="wrapList">
+ <ul><h3>
+  <li>-  Gender: using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks</li>
+  <li>-  Another view of all artworks by gender: using total numbers, vertical bar visualization</li>
+  <li>-  What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks)</li>
+  </h3>
+ </ul>
+</div>
+ 
 
 [![by Year](MetProjects/gender/assets/gender_timelineChart_b.png)](https://churc.github.io/MajorStudio1/MetProjects/gender)
 
