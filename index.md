@@ -5,7 +5,7 @@
 
 ### As part of the [MS Data Visualization’s Major Studio 1](https://parsons.nyc/met-museum/) class at Parsons, we undertook quantitative and qualitative projects using The Metropolitan Museum of Art's Digital Collection [Open Access data](https://github.com/metmuseum/openaccess). The Met's collection spans over 5,000 years and includes roughly one and a half million objects from an array of cultures; over 460,000 of these artworks are in the online database.
 
-### I worked on two closely related quantitative projects: Gender at The Met, and Gender & medium. Both projects are based on data from The Modern & Contemporary Art Collection, one of The Met's seventeen collection departments. 
+### I worked on two closely related quantitative projects: [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender), and [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj). Both projects are based on data from The Modern & Contemporary Art Collection, one of The Met's seventeen collection departments. 
 ### Gender is not formally tracked across The Met's holdings, this project focuses on the one department and aims to: 
 ###  &nbsp; &nbsp; 1) identify the gender of the artists whose artworks are in The Modern & Contemporary Art Collection; 
 ###  &nbsp; &nbsp; 2) establish the percentage of artworks made by women; 
@@ -47,10 +47,10 @@
  
 <div class="smallSpace"></div>
 
-#### **Quantitative Project Part 2:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
+#### **Quantitative Project Part 2:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj)
 ### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
 
-[![gender and medium](Interactive/interactive_artworks.png)](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
+[![gender and medium](Interactive/interactive_artworks.png)](https://churc.github.io/MajorStudio1/Interactive/genderObj)
 
 ### Source: [MetObjects.csv, January 2018](https://github.com/churc/MajorStudio1/blob/master/Interactive/genderObj/assets/ModContGenderfinalazsort.csv)
 
