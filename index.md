@@ -12,7 +12,7 @@
 &nbsp;
 ### I used The Met Open Access spreadsheet's ‘Artist Display Name’ column to identify artists by gender. Many artists have first names that are gender specific, and I used an online genderchecker, The Met website and wiki to identify the remaining names. After reviewing the data, in addition to 'female' and 'male', I added three more categories: 1) "unknown" for artists who are not identified by any name in the spreadsheet (often these are artworks made by manufacturing companies); 2) "named, gender not identified" where I have not yet been able to identify the gender of the artist despite knowing their name; and 3) "couple/collaborative with both genders" where an artwork was made by two or more people of both genders (if the couple or collaborative contained artists of only one gender, the artwork was noted as such - either 'female' or 'male'.)
 ### Gender categories: female; male; couple/collaborative with both genders; unknown; and artist name known but gender not yet identified. 
-&nbsp;
+<br/>
 ### I used the spreadsheet’s ‘Object Begin Date’ column for the date of the artwork. Of the 14,350 artworks in the department, most 'Object Begin Date' entries fall after 1850, however 66 are either undated or range from 1437 – 1850. The timeline chart uses the 14,284 artworks dated 1850-2017.
  
 &nbsp;
