@@ -1,6 +1,6 @@
 #### **Quantitative Project Part 1:** [Gender at The Met](https://churc.github.io/MajorStudio1/MetProjects/gender)
 ### What percent of the 14,350 works in The Metropolitan Museum of Art’s Modern & Contemporary Art Collection are by women?
-<br>
+&ensp;
 ### As part of the MS Data Visualization’s Major Studio 1 class at Parsons, we undertook quantitative and qualitative projects using The Metropolitan Museum of Art's Digital Collection [Open Access data](https://github.com/metmuseum/openaccess). The Met's collection spans over 5,000 years and includes roughly one and a half million objects from an array of cultures; over 460,000 of these artworks are in the online database.
 
 ### I worked on two closely related quantitative projects: Gender at The Met, and Gender & medium. Both projects are based on data from The Modern & Contemporary Art Collection, one of The Met's seventeen collection departments. Gender is not formally tracked across The Met's holdings, this project focuses on the one department and aims to: 
