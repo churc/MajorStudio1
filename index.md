@@ -69,7 +69,7 @@
  <ul><h3>
   <li>-  Gender: using total numbers, wrapped bar visualization, 1 pixel represents 2 artworks</li>
   <li>-  What year were these artworks made?: timeline visualization, years 1850-2017 (14,284 artworks)</li>
-  <li>-  What medium are being collected by gender?: vertical bar visualization of medium by gender using the 'Classification' column identifying 105 mediums</li>
+  <li>-  <a href="https://churc.github.io/MajorStudio1/Interactive/genderObj/#canvas-sketchBar-vertical">What medium are being collected by gender?</a>: vertical bar visualization of medium by gender using the 'Classification' column identifying 105 mediums</li>
   <li>-  Who are the most collected women and men in the Modern & Contemporary Art Collection and what did they make?: showing the top ten collected women and the top ten collected men in the Collection, and drawing connections between the artwork medium collected in the case of the top female artists and the top male artists</li>
   </h3>
  </ul>
