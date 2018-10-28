@@ -81,6 +81,11 @@ h5 {
   padding-right: 60px;
 }
 
+.tinySpace {
+  padding: 0px;
+  padding-bottom: 6px;
+}
+
 .smallSpace {
   padding: 0px;
   padding-bottom: 10px;
@@ -112,7 +117,8 @@ ol {
   list-style-position: outside;
   li {
     word-wrap: break-word;
-   list-style-position: outside;
+    list-style-position: outside;
+    margin-bottom: 10px;
   }
   img {
     margin: 40px 0;
