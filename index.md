@@ -137,12 +137,12 @@
  
  <div class="smallSpace"></div>
 
-#### **Spatial Contexts Project:** [Who's in this room by gender?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html) 
+#### **Spatial Contexts Project:** [Who's in this room by gender?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial) 
 ### If you were a woman - a man - would your work be in this collection?
 
  &nbsp; &nbsp;
 
-[![who's in this room by gender](SpatialContexts/museum_intRev2_final_24.png)](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html)
+[![who's in this room by gender](SpatialContexts/museum_intRev2_final_24.png)](https://churc.github.io/MajorStudio1/SpatialContexts/spatial)
 
 <br> 
 
