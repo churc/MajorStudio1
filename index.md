@@ -3,7 +3,7 @@
 
 <div class="smallSpace"></div>
 
-### As part of the MS Data Visualization’s Major Studio 1 class at Parsons, we undertook quantitative and qualitative projects using The Metropolitan Museum of Art's Digital Collection [Open Access data](https://github.com/metmuseum/openaccess). The Met's collection spans over 5,000 years and includes roughly one and a half million objects from an array of cultures; over 460,000 of these artworks are in the online database.
+### As part of the [MS Data Visualization’s Major Studio 1](https://parsons.nyc/met-museum/) class at Parsons, we undertook quantitative and qualitative projects using The Metropolitan Museum of Art's Digital Collection [Open Access data](https://github.com/metmuseum/openaccess). The Met's collection spans over 5,000 years and includes roughly one and a half million objects from an array of cultures; over 460,000 of these artworks are in the online database.
 
 ### I worked on two closely related quantitative projects: Gender at The Met, and Gender & medium. Both projects are based on data from The Modern & Contemporary Art Collection, one of The Met's seventeen collection departments. 
 ### Gender is not formally tracked across The Met's holdings, this project focuses on the one department and aims to: 
@@ -160,5 +160,5 @@
 
 &nbsp;
 
-### Huge thanks to Professor Richard The, Data Visualization, The New School, for help realizing these projects from data analysis to design, and to The Met's Digital Collection experts who generously shared their time and their incredible knowledge of the collection with us. In particular, Jennie Choi, General Manager of Collection Information, who along with Spencer Kiser, Lead Developer, introduced the Museum’s digital work to us, and to Jennie and to Loic Tallon, Chief Digital Officer, who we presented our projects to, for their invaluable feedback.  
+### Huge thanks to Professor Richard The, Assistant Professor of Interaction Design, Parsons The New School, for help realizing these projects from data analysis to design, and to The Met's Digital Collection experts who generously shared their time and their incredible knowledge of the collection with us. In particular, Jennie Choi, General Manager of Collection Information, who along with Spencer Kiser, Lead Developer, introduced the Museum’s digital work to us, and to Jennie and to Loic Tallon, Chief Digital Officer, who we presented our projects to, for their invaluable feedback.  
 
