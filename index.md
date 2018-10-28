@@ -50,8 +50,30 @@
 ### Dorothy Liebes has the most number of artworks in the Modern & Contemporary Art Collection with 89 artworks. This compares to the most collected man, Raymond Marsh, who is represented by 927 artworks. 
 ### Notably, of the top ten women collected, only 4 out of 10: Margarete Willers, Lygia Pape, Georgia O’Keeffe and Hilde Reindl, are predominantly represented in the Collection with drawings and paintings. The opposite holds true for men, with 8 out of 10 men principally represented in the Collection with paintings, drawings and prints.
 ### And 6 out of the top ten women collected are mainly represented by textiles, ceramics, and metalwork, compared to only 2 out of the top ten collected men. 
-### Looking at mediums that contain more than 10 artworks, men outnumber women in each of the mediums collected by the department with the exception of textile-related mediums. Here, women outnumber men in the following classifications: ‘textiles-miscellaneous’: 12 by women, 0 by men; ‘textiles-samples books’: 13 women, 1 man; ‘textiles-tapestries’: 21 women, 9 men; ‘textiles’: 59 women, 7 men; ‘textiles-woven’ 251 women, 36 men.
+### It is striking to note that of the mediums that contain more than 10 artworks, men outnumber women in each of the mediums collected by the department with the exception of textile-related mediums. Here, women outnumber men in the following classifications: ‘Textiles-miscellaneous’: 12 by women, 0 by men; ‘Textiles-samples books’: 13 women, 1 man; ‘Textiles-tapestries’: 21 women, 9 men; ‘Textiles’: 59 women, 7 men; ‘Textiles-woven’ 251 women, 36 men.
 ### There are 2,137 paintings in the Collection, 280 paintings are by female artists and 1,857 are by male artists; similarly with drawings, 523 are by women and 4,553 are by men.
+### The ten women who have the greatest number of artworks in the Modern & Contemporary Art Collection:
+### 1. Dorothy Liebes, 89
+### 2. Anni Albers, 80
+### 3. Margarete Willers, 65
+### 4. Vuokko Eskolin-Nurmesniemi, 52
+### 5. Eva Zeisel, 51
+### 6. Hilde Reindl, 48
+### 7. Gunta Stolzl, 39
+### 8. Marion Weeber, 35
+### 9. Lygia Pape, 32
+### 10. Georgia O'Keeffe, 22
+### The ten men who have the greatest number of artworks in the Modern & Contemporary Art Collection:
+### 1. Raymond Marsh, 927
+### 2. Carlo Scarpa, 244
+### 3. Louis A. Stirn, 172
+### 4. Abraham Walkowitz, 167
+### 5. Pablo Picasso, 149
+### 6. Jackson Pollock, 117
+### 7. Henri Matisse, 105
+### 8. Marsden Hartley, 104
+### 9. Paul Klee, 98
+### 10. Arthur Dove, 81
 
 
 
