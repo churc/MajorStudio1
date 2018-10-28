@@ -490,7 +490,7 @@ p.pop();
 p.push();
     p.scale(0.5);
 //     p.translate(width*1.66,4790);
-    p.translate(width*2-margin*6, height*1.65+margin/2);
+    p.translate(width*2-margin*6, height*1.65+margin);
       
     upperLimit = barTotals[barTotals.length - 1]['f']
     lowerLimit = -1 * (barTotals[barTotals.length - 1]['m'])
