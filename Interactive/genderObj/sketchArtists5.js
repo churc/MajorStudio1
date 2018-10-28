@@ -364,7 +364,7 @@ barTotalsSort = barTotals;
          
           p.push();
 //           p.translate(0, 0);
-          p.translate(20, 0);  
+          p.translate(20, 5);  
           p.rotate(p.radians(270));
           p.textSize(14);
           p.text(barTotalsSort[i].name+barTotalsSort[i].total, 5+7, 105+(i * 10)); // text-names
