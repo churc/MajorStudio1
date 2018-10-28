@@ -34,7 +34,7 @@
 
 
  &nbsp; &nbsp; &nbsp; &nbsp;
-
+<div class="smallSpace"></div>
 
 #### **Quantitative Project Part 2:** [Gender & medium](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html)
 ### Who are the most collected women and men in The Met’s Modern & Contemporary Art Collection and what did they make? 
@@ -97,6 +97,7 @@
 
 
 ### Source: [Json file](https://github.com/churc/MajorStudio1/tree/master/MetProjectsQual/uncertainty/assets/UncertainPub.json)
+<div class="smallSpace"></div>
 ### This qualitative project uses public domain images from the whole of The Met database using ‘uncertain’ and ‘uncertainty’ as a search term and organizing principle to view what is assessed in the text as ‘uncertain.’ The visualization focuses on the relation of text and image.
 ### The word uncertain/ty is depicted where it occurs within the web label text, on titles or on dates. Titles, dates and descriptions are hidden, visible on hover. 
 ### Click on red 'uncertainty' text in the header (where uncertainty falls) to view the text. 204 artworks have uncertain/ty in their web label descriptions. Click on the green button for random reload.
@@ -107,7 +108,7 @@
 
 
  &nbsp; &nbsp; &nbsp; &nbsp;
- 
+ <div class="smallSpace"></div>
 
 #### **Spatial Contexts Project:** [Who's in this room by gender?](https://churc.github.io/MajorStudio1/SpatialContexts/spatial/index.html) 
 ### If you were a woman - a man - would your work be in this collection?
