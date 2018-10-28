@@ -88,30 +88,30 @@
 <div class="smallSpace"></div>
 
 ### The ten women with the highest number of artworks in the Modern & Contemporary Art Collection:
-###  &nbsp; &nbsp; 1) Dorothy Liebes, 89
-###  &nbsp; &nbsp; 2) Anni Albers, 80
-###  &nbsp; &nbsp; 3) Margarete Willers, 65
-###  &nbsp; &nbsp; 4) Vuokko Eskolin-Nurmesniemi, 52
-###  &nbsp; &nbsp; 5) Eva Zeisel, 51
-###  &nbsp; &nbsp; 6) Hilde Reindl, 48
-###  &nbsp; &nbsp; 7) Gunta Stolzl, 39
-###  &nbsp; &nbsp; 8) Marion Weeber, 35
-###  &nbsp; &nbsp; 9) Lygia Pape, 32
-###  &nbsp; &nbsp; 10) Georgia O'Keeffe, 22
+###  &nbsp; &nbsp; 1) Dorothy Liebes: 89 artworks
+###  &nbsp; &nbsp; 2) Anni Albers: 80
+###  &nbsp; &nbsp; 3) Margarete Willers: 65
+###  &nbsp; &nbsp; 4) Vuokko Eskolin-Nurmesniemi: 52
+###  &nbsp; &nbsp; 5) Eva Zeisel: 51
+###  &nbsp; &nbsp; 6) Hilde Reindl: 48
+###  &nbsp; &nbsp; 7) Gunta Stolzl: 39
+###  &nbsp; &nbsp; 8) Marion Weeber: 35
+###  &nbsp; &nbsp; 9) Lygia Pape: 32
+###  &nbsp; &nbsp; 10) Georgia O'Keeffe: 22
 
 <div class="smallSpace"></div>
 
 ### The ten men with the highest number of artworks in the Modern & Contemporary Art Collection:
-###  &nbsp; &nbsp; 1) Raymond Marsh, 927
-###  &nbsp; &nbsp; 2) Carlo Scarpa, 244
-###  &nbsp; &nbsp; 3) Louis A. Stirn, 172
-###  &nbsp; &nbsp; 4) Abraham Walkowitz, 167
-###  &nbsp; &nbsp; 5) Pablo Picasso, 149
-###  &nbsp; &nbsp; 6) Jackson Pollock, 117
-###  &nbsp; &nbsp; 7) Henri Matisse, 105
-###  &nbsp; &nbsp; 8) Marsden Hartley, 104
-###  &nbsp; &nbsp; 9) Paul Klee, 98
-###  &nbsp; &nbsp; 10) Arthur Dove, 81
+###  &nbsp; &nbsp; 1) Raymond Marsh: 927 artworks
+###  &nbsp; &nbsp; 2) Carlo Scarpa: 244
+###  &nbsp; &nbsp; 3) Louis A. Stirn: 172
+###  &nbsp; &nbsp; 4) Abraham Walkowitz: 167
+###  &nbsp; &nbsp; 5) Pablo Picasso: 149
+###  &nbsp; &nbsp; 6) Jackson Pollock: 117
+###  &nbsp; &nbsp; 7) Henri Matisse: 105
+###  &nbsp; &nbsp; 8) Marsden Hartley: 104
+###  &nbsp; &nbsp; 9) Paul Klee: 98
+###  &nbsp; &nbsp; 10) Arthur Dove: 81
 
 <br>
 
