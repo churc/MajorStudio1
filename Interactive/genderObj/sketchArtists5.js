@@ -523,7 +523,7 @@ p.push();
         p.noStroke();
         p.textSize(28);
         p.fill(110,101,115,110);
-        p.translate(0,0);
+        p.translate(0,-80);
         p.rotate(p.radians(270));     
         p.text("Number of artworks by medium", -541, 1320);
         p.fill(105,105,105);
