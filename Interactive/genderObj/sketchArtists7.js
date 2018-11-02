@@ -166,8 +166,8 @@ var g = function(p){
 
     p.setup = function(){
 
-		canvas = p.createCanvas(p.windowWidth, p.windowHeight*3.8);
-    // p.translate(0,80);
+	canvas = p.createCanvas(p.windowWidth, p.windowHeight*3.8);
+  
     p.analyzeData();
     p.analyzeYears();
     p.barChart();
@@ -440,15 +440,12 @@ p.drawLabelsCh = function(){
 //////get info on each object and return on screen
     p.push();
 
-//	var width = 1440, 
-//        height = p.windowHeight;
-   
 	var width = 1440, 
-        height = 2800;
+        height = p.windowHeight;
+   
+//	var width = 1440, 
+//        height = 2800;
 	
-	
-
-
 
 //////return list of classification types & numbers
 /////NOTE taken this off the page 
@@ -489,7 +486,9 @@ p.push();
 	
 ////axis lined up	
 
-	p.translate(width*2-margin*6,($(window).height()*6.39));
+//	p.translate(width*2-margin*6,($(window).height()*6.39));
+	
+	p.translate(($(window).width()*1.67), ($(window).height()*6.4));
 	
     upperLimit = barTotals[barTotals.length - 1]['f']
     lowerLimit = -1 * (barTotals[barTotals.length - 1]['m'])

@@ -20,7 +20,8 @@ body{
 }
 
 .canvas{
-  width: 90%;  
+/*  width: 90%;  */
+  width: 100%;
   height: auto;  
   padding-left: 0;
   padding-right: 0;
@@ -202,6 +203,10 @@ h1{
   color:#777777;
   font-size:17.5px;
   margin-right: 70px;
+}
+
+#footer h4 {
+	margin-top: 0px;
 }
 
 .hidden {
