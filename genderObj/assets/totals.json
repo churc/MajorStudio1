@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Metalwork-Silver",
+    "f": 10,
+    "m": 179,
+    "total": 189,
+    "addClass": "bars"
+  },
+  {
+    "name": "Textiles-Embroidered",
+    "f": 11,
+    "m": 28,
+    "total": 39,
+    "addClass": "bars"
+  },
+  {
+    "name": "Textiles-Miscellaneous",
+    "f": 12,
+    "m": 0,
+    "total": 12,
+    "addClass": "bars"
+  },
+  {
+    "name": "Variable Media",
+    "f": 13,
+    "m": 23,
+    "total": 36,
+    "addClass": "bars"
+  },
+  {
+    "name": "Textiles-Sample Books",
+    "f": 13,
+    "m": 1,
+    "total": 14,
+    "addClass": "bars"
+  },
+  {
+    "name": "Textiles-Painted and Printed",
+    "f": 15,
+    "m": 34,
+    "total": 49,
+    "addClass": "bars"
+  },
+  {
+    "name": "Medals and Plaquettes",
+    "f": 16,
+    "m": 96,
+    "total": 112,
+    "addClass": "bars"
+  },
+  {
+    "name": "Textiles-Tapestries",
+    "f": 21,
+    "m": 9,
+    "total": 30,
+    "addClass": "bars"
+  },
+  {
+    "name": "Metalwork",
+    "f": 45,
+    "m": 96,
+    "total": 141,
+    "addClass": "bars"
+  },
+  {
+    "name": "Jewelry",
+    "f": 49,
+    "m": 136,
+    "total": 185,
+    "addClass": "bars"
+  },
+  {
+    "name": "Textiles",
+    "f": 59,
+    "m": 7,
+    "total": 66,
+    "addClass": "bars"
+  },
+  {
+    "name": "Glass",
+    "f": 63,
+    "m": 646,
+    "total": 709,
+    "addClass": "bars"
+  },
+  {
+    "name": "Prints",
+    "f": 89,
+    "m": 878,
+    "total": 967,
+    "addClass": "bars"
+  },
+  {
+    "name": "Ceramics-Porcelain",
+    "f": 94,
+    "m": 128,
+    "total": 222,
+    "addClass": "bars"
+  },
+  {
+    "name": "Textiles-Printed",
+    "f": 117,
+    "m": 402,
+    "total": 519,
+    "addClass": "bars"
+  },
+  {
+    "name": "Sculpture",
+    "f": 128,
+    "m": 529,
+    "total": 657,
+    "addClass": "bars"
+  },
+  {
+    "name": "Ceramics-Pottery",
+    "f": 132,
+    "m": 274,
+    "total": 406,
+    "addClass": "bars"
+  },
+  {
+    "name": "Textiles-Woven",
+    "f": 251,
+    "m": 36,
+    "total": 287,
+    "addClass": "bars"
+  },
+  {
+    "name": "Paintings",
+    "f": 280,
+    "m": 1857,
+    "total": 2137,
+    "addClass": "bars"
+  },
+  {
+    "name": "Drawings",
+    "f": 523,
+    "m": 4553,
+    "total": 5076,
+    "addClass": "bars"
+  }
+]
