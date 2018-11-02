@@ -20,7 +20,6 @@ body{
 }
 
 .canvas{
-/*  width: 90%;  */
   width: 100%;
   height: auto;  
   padding-left: 0;
@@ -196,7 +195,6 @@ h1{
 
 #footer{
   position: absolute;
-/*  top: 8805;*/
   left: 140;
   font-family: 'Khand', sans-serif;
   font-weight: 70;
