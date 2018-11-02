@@ -62,7 +62,7 @@
 
 <br>
 
-### [Gender & medium visualizations](https://churc.github.io/MajorStudio1/Interactive/genderObj/): 
+### [Gender & medium visualizations](https://churc.github.io/MajorStudio1/Interactive/genderObj/index.html): 
 ### Two visualizations from the Gender at The Met project are included here and connections between medium and gender in the collection are explored.
 
 <div class="wrapList">
