@@ -26,7 +26,7 @@ body{
   padding-right: 0;
   margin: 0;
   resize: both;
-  position: relative;
+  position: relative;	
 }
 
 p{
@@ -66,7 +66,7 @@ h1{
 
 #header2{
   position: absolute;
-  top: 79;
+  top: 82;
   left: 370;
   /*left: 606px;*/
   font-family: 'Khand', sans-serif;
@@ -146,11 +146,14 @@ h1{
   padding-bottom: 40;
 }
 
+
 #canvas-sketchBar-vertical{
   width: 100%;  /*overide canvas width - increase to full page */
   height: auto;
 
- /* margin: 0 auto;
+	/*	ADD rotate */
+/*transform: rotate(90deg);	*/
+	/* margin: 0 auto;
   width: 1340; */ /*for 1440 screen */
   /*width: 1440;*/ /*for 1980 screen */
 }
@@ -196,8 +199,9 @@ h1{
   left: 140;
   font-family: 'Khand', sans-serif;
   font-weight: 70;
-  font-size:17.5px;
   color:#777777;
+  font-size:17.5px;
+  margin-right: 70px;
 }
 
 .hidden {

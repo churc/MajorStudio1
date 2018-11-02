@@ -166,7 +166,7 @@ var g = function(p){
 
     p.setup = function(){
 
-		canvas = p.createCanvas(p.windowWidth, p.windowHeight*4.2);
+		canvas = p.createCanvas(p.windowWidth, p.windowHeight*3.8);
     // p.translate(0,80);
     p.analyzeData();
     p.analyzeYears();
@@ -489,7 +489,7 @@ p.push();
 	
 ////axis lined up	
 
-	p.translate(width*2-margin*6,($(window).height()*7.2));
+	p.translate(width*2-margin*6,($(window).height()*6.39));
 	
     upperLimit = barTotals[barTotals.length - 1]['f']
     lowerLimit = -1 * (barTotals[barTotals.length - 1]['m'])
