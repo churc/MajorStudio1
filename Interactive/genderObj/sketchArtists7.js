@@ -505,10 +505,12 @@ p.push();
         p.noStroke();
         p.fill(77,77,77);
         p.textSize(30);
-        p.text(i+3, x, y);  //numbers along the axis - these are correct
+// 	    temp
+//         p.text(i+3, x, y);  //numbers along the axis - these are correct
         p.stroke(77,77,77);
         p.strokeWeight(1.5);
-        p.line(x-30,y-9.4,x,y-9.4);  //draws the short horizontal lines at the midpoint on each number on the axis - this is correct
+// 	    temp
+//         p.line(x-30,y-9.4,x,y-9.4);  //draws the short horizontal lines at the midpoint on each number on the axis - this is correct
 
     }
   p.pop(); 
