@@ -2,6 +2,8 @@
 <head>
   <title>Gender &amp; Medium</title>
   <meta charset="UTF-8">
+	<meta name="robots" content="noindex, nofollow"/>
+	
   <link href="https://fonts.googleapis.com/css?family=Khand" rel="stylesheet">
 
  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -14,23 +16,23 @@
   <script language="javascript" src="libraries/p5.dom.js"></script>
   
 
-  <script language="javascript" type="text/javascript" src="sketchArtists7.js"></script>
+  <script language="javascript" type="text/javascript" src="sketchArtists8.js"></script>
 
   <link rel="stylesheet" src="libraries/Khand-Regular.ttf">
 
   <style> body {padding: 0; margin: 0;} </style>
 
 
-  <link rel="stylesheet" href="style3.css">
+  <link rel="stylesheet" href="style4.css">
 </head>
 
 
 <body>
   
-  <div id="page-wrap">
+  <div id="pageWrap">
 
   <div id="header" style="font-family:Khand" ><h1>Gender &amp; Medium</h1></div>
-<!--  <div id="header2"><h3>A data visualization project by Clare Churchouse that - mostly - investigates<br>gender in The Met's Modern & Contemporary Art Collection</h3></div>-->
+
 	  
 	  <div id="header2"><h3>A data visualization project by Clare Churchouse that investigates who are the most collected female and male artists in <br>The Metropolitan Museum of Art’s Modern &amp; Contemporary Art Collection &nbsp;-&nbsp; and looks at connections between particular <br>mediums and gender</h3></div>
 
@@ -51,10 +53,22 @@
   <div id="medium-header" ><h2>What mediums are being collected by gender?</h2></div>
 
             <div id="canvas-sketchBar-vertical"></div> 
-         <div id="tooltip" class="tip" style="position: absolute; padding: 70px 0px 0px 150px; left: -40px"> </div>
 
- </container>         
 
+<!--		<div id="tooltip" class="tip" style="position: absolute; padding: 20px 0px 0px 150px; left: -60px"> </div>-->
+
+	<div id="tooltip" class="tip" style="padding: 5px 0px 20px 5px; "> </div>
+	
+	<input type="button" id="button1"  onclick="showTypes()" >
+	<input type="button" id="button2" onclick="showTypes2()">
+	<div id="female"><h3>female</h3></div>
+	<div id="male"><h3>male</h3></div>
+<div id="contn">
+<div id="types" style="display:none;">
+	<p><h3 class="listing"></h3></p></div>
+
+</div>         
+	  </container>
 
 
 <div id="artworks-header" ><h2>Who are the most collected women &amp; men<br>in this collection &amp; what did they make?</h2></div>

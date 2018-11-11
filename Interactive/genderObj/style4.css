@@ -11,12 +11,22 @@ body{
   margin: 0 auto;
   padding: 0;
   padding-bottom: 20;
+/*
   justify-content: center;
   align-items: center;
+*/
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-font-smoothing: antialiased;
+}
+
+#pageWrap{
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .canvas{
@@ -151,25 +161,17 @@ h1{
 #canvas-sketchBar-vertical{
 	width: 100%; 
 /*  height: auto;*/
-
+	margin: 0 auto; 
 /*	changed to specific width and height*/
 /*width: 1350px;  overide canvas width - increase to full page 
   height: 2800px;*/
-/*	center*/
-	margin: 0 auto;  
-/*	border: 1px solid red;*/
-	
-	/*	ADD rotate */
-/*transform: rotate(90deg);	*/
-	/* margin: 0 auto;
-  width: 1340; */ /*for 1440 screen */
+/*  width: 1340;  for 1440 screen */
   /*width: 1440;*/ /*for 1980 screen */
 }
 
 #canvas-artworks{
   width: 100%;  /*overide canvas width - increase to full page */
   height: auto;
-/*border: 1px solid blue;*/
  /* margin: 0 auto;
   width: 1340; */ /*for 1440 screen */
   /*width: 1440;*/ /*for 1980 screen */
@@ -189,10 +191,11 @@ h1{
   background-color: rgb(109,101,73, .01);
 }
 
- #button1{
+#button1{
     position: absolute;  /*important*/
-    top: 2095px;
-	left: 132px;
+    top: 2030px;
+	left: 131px;
+	 z-index:300;
 	background-color: rgb(179,118,244, .5);
 	color: rgb(179,118,244, .5);
 	width: 20px;
@@ -207,9 +210,10 @@ h1{
 #button2{
     position: absolute;  /*important*/
     top: 2245px;
-	left: 132px;
-	background-color: rgb(92,242,145, .5);
-	color: rgb(92,242,145, .5);
+	left: 131px;
+	z-index:300;
+	background-color: rgb(92,242,145, .6);
+	color: rgb(92,242,145, .6);
 	width: 20px;
   	height: 20px;
   	-moz-border-radius: 50%;
@@ -219,31 +223,35 @@ h1{
     outline: none;
 }
 
-button:focus{
+#button1:focus{
+  color: none;
   border: none;
   outline: none;
 }
 
-button:active {
+#button1:active {
+  color: none;
   border: none;
   outline: none;
 }
 
-button2:focus{
+#button2:focus{
+  color: none;
   border: none;
   outline: none;
 }
 
-button2:active {
+#button2:active {
+  color: none;
   border: none;
   outline: none;
 }
-
 
 input[type=button] #button1{
     position: absolute;  /*important*/
-	top: 2095px;
-	left: 132px;
+    top: 2030px;
+	left: 131px;
+	z-index:300;
 	width: 20px;
   	height: 20px;
   	-moz-border-radius: 50%;
@@ -251,14 +259,13 @@ input[type=button] #button1{
   	border-radius: 50%;
 	color: none;
 	border: none;
-  	outline: none;
-	
+  	outline: none;	
 }
 
 input[type=button] #button2{
     position: absolute;  /*important*/
 	top: 2245px;
-	left: 132px;
+	left: 131px;
 	width: 20px;
   	height: 20px;
   	-moz-border-radius: 50%;
@@ -269,8 +276,29 @@ input[type=button] #button2{
   	outline: none;
 }
 
+#female {
+	position: absolute;
+	top: 1934px;
+	left: 104px;
+	font-family: 'Khand', sans-serif;
+    color: rgb(105,105,105);
+    font-size:26px;
+	-webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg); 
+}
+
+#male {
+	position: absolute;
+	top: 2160px;
+	left: 114px;
+	font-family: 'Khand', sans-serif;
+    color: rgb(105,105,105);
+    font-size:26px;
+	-webkit-transform: rotate(-90deg); 
+    -moz-transform: rotate(-90deg); 
+}
 span{
-    position: absolute;  important
+    position: absolute;  /*important*/
     top: 702px;
     left: 40px;
     font-family: 'Khand', sans-serif;
@@ -291,7 +319,7 @@ span{
   grid-gap: 5px;
   justify-items: start;
   position: absolute; /*important*/
-  top: 2245px;
+  top: 2255px;
   left: 220px;
   right: 20px;
 }
@@ -337,7 +365,7 @@ span{
   font-family: 'Khand', sans-serif;
   font-size:15px;
 }
-/*end*/
+
 span.span2{    
  position: absolute; /*important*/
   font-family: 'Khand', sans-serif;
@@ -373,7 +401,6 @@ span.span2{
 
 #footer{
   position: absolute;
-/*  top: 8805;*/
   top: 8700;
   left: 140;
   font-family: 'Khand', sans-serif;
@@ -381,16 +408,17 @@ span.span2{
   color:#777777;
   font-size:17.5px;
   margin-right: 70px;
+  text-align: left;
 }
 
 #footer h4 {
 	margin-top: 0px;
+	text-align: left;
 }
 
 .hidden {
   display: none;
 }
-
 
 #tooltip:before{
   z-index:200;
@@ -406,34 +434,36 @@ span.span2{
 
 #tooltip{
   z-index:200;
-  position: absolute; /*needs position for z-index to work*/
-  top: 2000px;
+/*  position: absolute; *//*needs position for z-index to work*/
+  top: 2045px;
   /* left: -40px;*/ /* 1980 screen */
   /*left: 40px;*/
-  left: 60px;
-  max-width: 100px;
-  width: 100px;
-  height:auto;
-  /*padding: 25px 25px;*/
-  padding: 70px 0px 0px 150px;
   font-family: 'Khand', sans-serif;
   color:#777777;
   font-size:20px;
   line-height:19px;
   cursor: pointer;
   text-transform: lowercase;
+  text-align: left;	
+  max-width: 40px;
+  width: 20px;
+  height: 70px;
+  transform: translate(-10px, -25px);
 }
 
-container#tooltip.tip{
-  top: 2000px;
+.tip{
+	top: 2045px;
  /* left: -40px;*/ /* 1980 screen */
-  left: 40px;
-  padding: 70px 0px 0px 150px;
+/*
+	left: 60px;*/
+	width: 20px;
+    height: 70px;
+	transform: translate(-10px, -25px);
 }
 
 #tooltip-left:before {
   margin-left: 0;
-  margin-right:22px;
+/*  margin-right:22px;*/
 }
 
 #tooltip.active {
@@ -447,15 +477,14 @@ container#tooltip.tip{
   opacity: 0;
 }
 
-
 @media screen and (max-width:720px){
-  #page-wrap{
+  #pageWrap{
     width: 600px;
   }
 }
 
 @media print, screen and (max-width: 480px) {
-  #page-wrap {
+  #pageWrap {
     width: 380px; 
   }
 }

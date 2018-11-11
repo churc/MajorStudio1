@@ -29,6 +29,29 @@ p.setup = function() {
   p.noLoop();
 }
 
+//ADDD
+//var cnv;
+//
+//p.centerCanvas = function() {
+//  var x = (p.windowWidth - p.width) / 2;
+//  var y = (p.windowHeight - p.height) / 2;
+//  cnv.position(x, y);
+//}
+//
+//p.setup = function() {
+//  cnv = p.createCanvas(1440, 900);
+//  p.centerCanvas();
+//	
+//  p.showWrappedBars();
+//  p.noLoop();
+//}
+//
+//p.windowResized = function() {
+//  p.centerCanvas();
+//}
+
+//end
+	
 ////display png
 p.showWrappedBars = function(){
   p.scale(0.5);
@@ -134,14 +157,17 @@ function switchText(indivType, x, y){
 //move it to the x y position
     $('#tooltip').css('position', 'absolute');
     // $('#tooltip').css('top', y); 
-    // $('#tooltip').css('left', x); 
-  ////github screen
-    $('#tooltip').css('top', y-610 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
-    $('#tooltip').css('left', x-230);
-  ////1440 screen
+    // $('#tooltip').css('left', x);
 	
-//     $('#tooltip').css('top', y-640 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
-//     $('#tooltip').css('left', x-140);
+//  ////1440 screen
+
+//     $('#tooltip').css('top', y-630 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
+//     $('#tooltip').css('left', x-210);
+	
+	
+	 $('#tooltip').css('top', y + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
+     $('#tooltip').css('left', x );
+	
   ////1980 screen
     // $('#tooltip').css('top', y-630 + $('#canvas-sketchBar-vertical').position().y); ////position of canvas
    // $('#tooltip').css('left', x-70);
@@ -457,15 +483,22 @@ for (var i = barTotalsSort.length-1; i >= 0; i--) {
 
 }
 
-//////listen for mouse, show tooltips
+  //////listen for mouse, show tooltips
 p.draw = function(){
+	
+  var margin = 50;
+	
   var onLabel = false;
   for (var i = bars.length - 1; i >= 0; i--) {
     var d = p.dist(p.mouseX, p.mouseY, bars[i].x, bars[i].y )
-
-   if ((p.mouseX >= bars[i].x) && (p.mouseX <= bars[i].x + 10) && (p.mouseY >= (bars[i].y-bars[i].height) && p.mouseY <= (bars[i].y +bars[i].maleHeight))){
-      console.log('x:', p.mouseX)
-      console.log('y:', p.mouseY)
+	   
+      console.log('x:', p.mouseX )
+      console.log('y:', p.mouseY + (margin*1.7))
+	  
+//   if ((p.mouseX >= bars[i].x) && (p.mouseX <= bars[i].x + 10) && (p.mouseY >= (bars[i].y-bars[i].height) && p.mouseY <= (bars[i].y +bars[i].maleHeight))){
+	   
+  if ((p.mouseX >= bars[i].x) && (p.mouseX <= bars[i].x + 10) && (p.mouseY >= ((bars[i].y-bars[i].height) - margin) && p.mouseY  <= ((bars[i].y + bars[i].maleHeight)+ margin/2))){
+	  
 ////tooltip text
       switchText((bars[i].name + ": "+((bars[i].height+bars[i].maleHeight)*2)+","+"     "+"female: "+(bars[i].height*2)+", "+"  male: "+(bars[i].maleHeight*2)), p.mouseX, p.mouseY);
       onLabel = true;
@@ -603,16 +636,11 @@ p.push();
         p.fill(110,101,115,110);
         p.translate(0, -55);  
         p.rotate(p.radians(270));  
-	
-        p.text("Number of artworks by medium", -541, 1320);
-        p.fill(105,105,105);
-        p.textSize(30);
-        p.text("male", -470, 150);
-        p.text("female", -320, 150);
-        p.fill(92,242,145,150);
-        p.ellipse(-485, 142,20,20);
-//        p.fill(179,118,244,130);
-//        p.ellipse(-335, 142,20,20);
+	 	p.text("Number of artworks by medium", -525, 1320);
+//      p.fill(105,105,105);
+//      p.textSize(30);
+//      p.text("male", -470, 150);
+//		p.text("female", -255, 150);
 
       p.pop();
     p.pop();
@@ -622,8 +650,8 @@ p.labels = function(){
     p.push();
         p.stroke(112,112,112);
         p.noFill();
-        p.ellipse(1179,248,5,5);
-        p.line(1178,247,1015, 168);  //pointer
+        p.ellipse(1189,216,5,5);
+        p.line(1187,215,1080,162);  //pointer
         p.textFont('Khand');
         p.textStyle(p.NORMAL);
         p.noStroke();
