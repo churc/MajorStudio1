@@ -42,11 +42,13 @@ var s = function(p){
   }
 
   p.setup = function(){
-    p.createCanvas(p.windowWidth,800);
+//    p.createCanvas(p.windowWidth,800);
+	  
+	  p.createCanvas(1440,800);
     p.drawLabelsTot();
     p.drawLabelsBar();
 
-    p.push(); ;
+    p.push(); 
     p.translate(350,100);
 
     p.push();
@@ -274,33 +276,42 @@ var t = function(p) {
   }
 
   p.setup = function(){
-    p.createCanvas(p.windowWidth, 5665);
+//    p.createCanvas(p.windowWidth, 5665);
+	  
+//	  add
+	p.createCanvas(1440, 5595); 
+	var margin = 40; 
+	var  w = p.width - 2 * margin, // chart area width and height
+         h = p.height - 2 * margin;
+//	  end
+	  console.log(h);
     p.displaySingleBars();
     // p.drawLabelsBar();
     p.drawmeasureline();
   }
 
-  p.windowResized = function() {
-   p.resizeCanvas(p.windowWidth, p.windowHeight);
-  }
+//  p.windowResized = function() {
+//   p.resizeCanvas(p.windowWidth, p.windowHeight);
+//  }
 
   p.displaySingleBars = function(){
  
     p.noStroke();
     p.fill(255,0,0);
 
-    var x,y,w,h;
+    var x,y;
 
     var singleData = [48,128, 1318, 2027,10829];
 
-    var width = 5800,
-        height = p.windowHeight,
-        margin = 40,
-        w = width - 2 * margin, // chart area width and height
-        h = height - 2 * margin;
+//	  change
+//    var width = 5800,
+//        height = p.windowHeight,
+	var margin = 40; 
+	var  w = p.width - 2 * margin, // chart area width and height
+         h = p.height - 2 * margin;
     
-    var barWidth =  (h / singleData.length) * 0.15; // width of bar
-    var barMargin = (h / singleData.length) * 0.2; // margin between two bars
+    var barWidth =  (h / singleData.length) * 0.05; // width of bar
+    var barMargin = (h / singleData.length) * 0.01; // margin between two bars
     
     p.textFont('Khand');
     p.textSize(15);
@@ -334,10 +345,14 @@ var genFill = singleData[b];
       p.noStroke();
       p.textSize(20);
       p.rotate(p.radians(90));   // rotate to vertical
-      p.translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar 
-      p.rect(100, -p.windowWidth/1.5, singleData[b]/2, barWidth/2);
-      p.fill(0,0,0);
-      p.text(singleData[b], 100, barWidth/2 + -p.windowWidth/1.53); // write data label
+      p.translate(0, b* (barWidth + barMargin)); // jump to the top right corner of the bar
+	   
+	   p.rect(margin*2.5, -h/6, singleData[b]/2, barWidth/4); /// draw data lines
+	  
+      p.fill(105,105,105);
+	  
+//	  p.text(singleData[b], margin*2.51, barWidth - w*0.715); // write data label, number of artworks
+	  p.text(singleData[b], margin*2.51, barWidth - w*0.725);
     p.pop();   // reset, restore
   } 
 
@@ -349,40 +364,43 @@ var genFill = singleData[b];
         p.noStroke();
         p.fill(77,77,77);
         p.textSize(26);
-        p.text("The Met Modern & Contemporary Art Collection", 100, barWidth/20 + -p.windowWidth/2);
+	    p.text("The Met Modern & Contemporary Art Collection", margin*2.50, barWidth - w*0.54);		
         p.textSize(18);
-        p.text("Scale: 1 pixel = 2 artworks", 100, barWidth/20 + -p.windowWidth/2.13);
+	    p.text("Scale: 1 pixel = 2 artworks", margin*2.50, barWidth - w*0.51);
     p.pop();
 
 ///text by end of each bar
 
 p.push();   
-  var x,y,w,h;
+
 
   var singleData = [48, 128, 1318, 2027,10829];
    
-//x axis
+// notations for length of bars
   p.textFont('Khand');
   p.textStyle(p.NORMAL);
-  p.textSize(20);
+  p.textSize(18);
   p.fill(77,77,77); 
   p.stroke(77,77,77);
   p.strokeWeight(1);
 
-  p.line(p.windowWidth/2.46,48/2+100,p.windowWidth/2.065,48/2+100);
-  p.line(p.windowWidth/2.46,128/2+100,p.windowWidth/2.065,128/2+100);
-  p.line(p.windowWidth/2.46,1318/2+100,p.windowWidth/2.065,1318/2+100);
-  p.line(p.windowWidth/2.46,2027/2+100,p.windowWidth/2.065,2027/2+100);
-  p.line(p.windowWidth/2.46,10829/2+100,p.windowWidth/2.065,10829/2+100);
+	  console.log(w);
+	  
+  p.line(w*0.34,48/2+100,w*0.415,48/2+margin*2.5);
+  p.line(w*0.34,128/2+100,w*0.415,128/2+margin*2.5);
+  p.line(w*0.34,1318/2+100,w*0.415,1318/2+margin*2.5);
+  p.line(w*0.34,2027/2+100,w*0.415,2027/2+margin*2.5);
+  p.line(w*0.34,10829/2+100,w*0.415,10829/2+margin*2.5);	  
  
 //text
   p.noStroke();
   p.textSize(18.5);
-  p.text("unidentified: 48", p.windowWidth/2.46,48/2+95);
-  p.text("couple: 128", p.windowWidth/2.46,128/2+95);
-  p.text("unknown: 1318", p.windowWidth/2.46,1318/2+95);
-  p.text("female: 2027", p.windowWidth/2.46,2027/2+95);
-  p.text("male: 10829", p.windowWidth/2.46,10829/2+95);
+	  
+  p.text("unidentified: 48", w*0.34, 48/2+margin*2.4);
+  p.text("couple: 128", w*0.34, 128/2+margin*2.4);
+  p.text("unknown: 1318", w*0.34, 1318/2+margin*2.4);
+  p.text("female: 2027", w*0.34, 2027/2+margin*2.4);
+  p.text("male: 10829", w*0.34, 10829/2+margin*2.4);
 p.pop();
 
 }
@@ -390,12 +408,16 @@ p.pop();
 
 p.drawmeasureline = function(){
     p.push();
+	
+	var margin = 40; 
+	var  w = p.width - 2 * margin, // chart area width and height
+         h = p.height - 2 * margin;
     
-    var x,y,w,h;
+    var x,y;
 
-  var singleData = [48, 128, 1318, 2027,10829];
+  var singleData = [48, 128, 1318, 2027, 10829];
    
-   //x axis
+ //x axis
   p.textFont('Khand');
   p.textStyle(p.NORMAL);
   p.textSize(20);
@@ -406,8 +428,13 @@ p.drawmeasureline = function(){
   p.noStroke();
   p.textSize(20);
   p.textAlign(p.CENTER);
-  p.translate(1265,100);
+//	p.translate(1265,100);
+	
+//  p.translate(w-margin*4, margin*2.6);
+	p.translate(w-margin*4, margin*2.52);
   p.rotate(p.radians(90));
+	
+//  p.translate(w*2, margin);
   p.textStyle(p.NORMAL);
   p.text("Number of Artworks", 69, -55);
   // draw the sections and add text for each section
@@ -454,8 +481,8 @@ var w = function(p) {
   }
 
    p.setup = function(){
-     p.createCanvas(p.windowWidth,950);
-//     p.background(100,5);
+//	   p.createCanvas(p.windowWidth,950);
+     p.createCanvas(1440,950);
      p.analyzeData();
      p.analyzeGender();
      p.displayData();
@@ -727,9 +754,9 @@ for(var i=1850; i<=2017; i+=10){
 //source
   p.textAlign(p.LEFT);
   p.noStroke();
-  p.textSize(18);
-  p.text("Source: MetObjects.csv, January 2018, spreadsheet shared with The New School.", margin-15,747-margin+105);
-  p.text("Modern & Contemporary Art Collection Department, 14,350 artworks. Object Begin Date, Gender identified by Artist Display Name, 1850-2017 (14,284 artworks.)", margin-15,747-margin+135);
+  p.textSize(16);
+  p.text("Source: MetObjects.csv, January 2018, spreadsheet shared with The New School.", margin,747-margin+105);
+  p.text("Modern & Contemporary Art Collection Department, 14,350 artworks. Object Begin Date, Gender identified by Artist Display Name, 1850-2017 (14,284 artworks.)", margin,747-margin+135);
 
 ////draw the y Axis
   p.stroke(77,77,77);
