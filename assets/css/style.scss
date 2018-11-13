@@ -189,6 +189,16 @@ table {
   }
 }
 
+@media print, screen and (max-width: 720px) {
+  .wrapper {
+	    width: 100%; 
+	  }
+	
+  section {
+   	width:100%;
+	}
+}
+
 @media print, screen and (max-width: 480px) {
  .wrapper {
 	    width: 100%; 
