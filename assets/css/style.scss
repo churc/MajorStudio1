@@ -189,6 +189,9 @@ table {
 }
 
 @media print, screen and (max-width: 960px) {
+    header {
+	  padding-top: 15px;
+	}
     div.wrapper {
 		width: 100%;
     		}
@@ -199,6 +202,9 @@ table {
 }
 
 @media print, screen and (max-width: 720px) {
+   header {
+	  padding-top: 15px;
+	}
   div.wrapper {
 	    width: 100%; 
 	  }
@@ -210,6 +216,9 @@ table {
 }
 
 @media print, screen and (max-width: 480px) {
+  header {
+	  padding-top: 12px;
+	}
  div.wrapper {
 	    width: 100%; 
 	  }
