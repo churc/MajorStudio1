@@ -168,7 +168,6 @@ pre {
   }
 }
 .wrapper {
-//     width:1200px;
     width:1240px;
     margin:0 auto
 }
@@ -189,8 +188,17 @@ table {
   }
 }
 
+@media print, screen and (max-width: 960px) {
+    div.wrapper {
+		width: 100%;
+    		}
+    section {
+        width: 100%;
+    }
+}
+
 @media print, screen and (max-width: 720px) {
-  .wrapper {
+  div.wrapper {
 	    width: 100%; 
 	  }
 	
@@ -200,7 +208,7 @@ table {
 }
 
 @media print, screen and (max-width: 480px) {
- .wrapper {
+ div.wrapper {
 	    width: 100%; 
 	  }
 	
