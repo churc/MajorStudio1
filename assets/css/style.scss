@@ -167,7 +167,7 @@ pre {
     padding: 0;
   }
 }
-.wrapper{
+.wrapper {
 //     width:1200px;
     width:1240px;
     margin:0 auto
@@ -187,5 +187,15 @@ table {
   td {
     padding: 4px 0;
   }
+}
+
+@media print, screen and (max-width: 480px) {
+ .wrapper {
+	    width: 100%; 
+	  }
+	
+ section {
+     	  width:100%;
+	}	  
 }
 
